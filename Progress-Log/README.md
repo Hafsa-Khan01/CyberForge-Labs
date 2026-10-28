@@ -3,7 +3,7 @@
 Add a dated entry after each work session. Keep wording factual and concise.
 
 ## Entry template
-### YYYY-MM-DD — Week / task
+### YYYY-MM-DD — Internship / task
 - **Objective:**
 - **Work performed:**
 - **Commands/tools used:**
@@ -12,4 +12,4 @@ Add a dated entry after each work session. Keep wording factual and concise.
 - **Issue and resolution:**
 - **Next step:**
 
-Do not report a task as completed unless you performed it and verified the result.
+Do not report a task as completed unless you performed it and verified the result. Do not include passwords, tokens, or unnecessary private network details.
