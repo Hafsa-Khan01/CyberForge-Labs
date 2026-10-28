@@ -1,44 +1,71 @@
-# Technical Lab Report — Template
+# Practical Report
 
-> Replace every prompt with verified information. Remove sections that do not apply. Do not submit a report containing unverified claims.
+**Report title:** [Use the exact name of the assigned practical]  
+**Programme:** Networkwalks Internship  
+**Prepared by:** Hafsa Khan  
+**Date performed:** [Actual date]  
+**Report status:** Draft / Reviewed
 
-## 1. Overview
-- **Program / internship:** Networkwalks
-- **Task / lab title:**
-- **Date performed:**
-- **Status:** Not started / In progress / Verified
+---
+
+## 1. Summary
+
+In a short paragraph, explain what this practical was about, what environment was used, and the main result that the evidence supports. Write this section last. Do not claim success until the relevant checks have been verified.
 
 ## 2. Objective
-State the exact learning or verification goal from the assignment.
 
-## 3. Scope and authorization
-Describe only the approved lab system/network and assigned activity. Note any exclusions.
+Describe the specific question or skill this practical was intended to address, using the wording of the official task where appropriate.
 
-## 4. Environment
-- Host OS:
-- Guest OS:
-- Virtualization/network mode:
-- Tools and versions:
+## 3. Lab environment and scope
 
-## 5. Procedure
-List the actual steps performed in order. Include commands only when they were run.
+| Item | Details |
+|---|---|
+| Host system | [Actual host OS] |
+| Lab system | [Actual guest OS / lab target] |
+| Network configuration | [Actual configuration used] |
+| Tools | [Tools and versions actually used] |
+| Authorised scope | [Only the assigned lab systems and activities] |
 
-## 6. Observations and results
-Separate raw observations from interpretation. Include relevant sanitized output or screenshots.
+Do not publish private addresses, account details, or infrastructure information unless the assignment requires them and sharing is permitted.
 
-## 7. Analysis
-Explain what the evidence supports, what it does not establish, and any uncertainty.
+## 4. Method
 
-## 8. Troubleshooting
-Document the real issue, diagnostic steps, fix, and verification. Write “None encountered” only if accurate.
+Describe the actions in the order they were performed. Include only commands that were actually run and explain the purpose of each important step. Keep long terminal output in the evidence section rather than filling the report with raw command dumps.
 
-## 9. Evidence index
-| Filename | What it demonstrates | Sanitized? |
+## 5. Results and observations
+
+Present the actual outcome in a readable way. Use a small table where it improves clarity.
+
+| Check | Observation | Result |
 |---|---|---|
-| Add actual filename | Describe actual evidence | Yes / No |
+| [Check performed] | [What the output showed] | [Verified / Not verified] |
 
-## 10. Conclusion and next steps
-Summarize the verified outcome and the next assigned action.
+Distinguish observed facts from expected values. If a check failed or could not be completed, state that clearly.
 
-## 11. Safety and privacy review
-Confirm that credentials, tokens, personal data, unrelated traffic, and unauthorized target details are excluded.
+## 6. Technical analysis
+
+Explain what the observations mean. State what the evidence confirms and what it does not prove. Avoid assumptions about devices, services, or causes that were not verified.
+
+## 7. Issues and resolution
+
+Describe any real issue encountered, the diagnostic steps taken, the change made, and the verification performed afterwards. If no issue occurred, include this section only if it is useful and accurate.
+
+## 8. Evidence
+
+| Evidence | What it demonstrates |
+|---|---|
+| [Screenshot filename] | [Specific visible result] |
+
+Place sanitised screenshots in the relevant lab's Evidence folder. Give each screenshot a meaningful filename and refer to it in the report. Never add an empty placeholder as if it were evidence.
+
+## 9. Conclusion
+
+Summarise the verified outcome in a few sentences and connect it to the original objective. Mention any incomplete checks or limitations.
+
+## 10. Learning and next step
+
+Record the most useful technical lesson from the practical and the next action required by the official task brief.
+
+---
+
+*Review before submission: verify every claim against the actual output, remove sensitive information, and ensure that all referenced evidence files exist.*
