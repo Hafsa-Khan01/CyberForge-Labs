@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a101b">
+<meta name="description" content="CyberForge Labs — a cybersecurity learning portfolio documenting practical labs, packet analysis, technical research, and evidence-led progress.">
+<title>CyberForge Labs | Cybersecurity Portfolio</title>
+<style>
+:root{color-scheme:dark;--bg:#080d16;--panel:#101927;--panel2:#0c1421;--line:#233247;--text:#edf4fc;--muted:#9aaabd;--cyan:#59d6e8;--blue:#6f9dff;--green:#8dd9bd;--amber:#f2c879;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 78% -10%,#142a43 0,transparent 42%),var(--bg);color:var(--text);font:15px/1.7 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--cyan);text-decoration:none}a:hover{color:#b2f4fb}a:focus-visible{outline:2px solid var(--cyan);outline-offset:4px}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}.topbar{border-bottom:1px solid #1b293b;background:#080d16cc}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;color:var(--text);font-weight:750;letter-spacing:.04em}.mark{width:34px;height:34px;border:1px solid #397587;border-radius:10px;display:grid;place-items:center;color:var(--cyan);background:#10232e;font-size:18px}.navlinks{display:flex;gap:24px;flex-wrap:wrap;font-size:13px;color:var(--muted)}.navlinks a{color:var(--muted)}.hero{padding:92px 0 74px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(270px,.65fr);gap:54px;align-items:center}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--cyan);font-weight:750}.hero h1{font-size:clamp(42px,6vw,72px);line-height:1.04;letter-spacing:-.055em;margin:18px 0 22px;max-width:720px}.hero h1 span{color:var(--cyan)}.lead{font-size:18px;color:#b4c2d3;max-width:650px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 17px;border-radius:9px;border:1px solid #34465e;color:var(--text);font-weight:650;font-size:13px}.btn.primary{background:var(--cyan);color:#07131b;border-color:var(--cyan)}.btn:hover{transform:translateY(-1px)}.hero-card{border:1px solid var(--line);border-radius:18px;padding:23px;background:linear-gradient(155deg,#132238,#0b121e 75%);box-shadow:0 22px 70px #0004}.card-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:18px;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}.live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--amber);margin-right:7px}.metric{padding:17px 0;border-bottom:1px solid #1d2a3b}.metric:last-child{border:0;padding-bottom:0}.metric strong{display:block;font-size:22px;letter-spacing:-.03em}.metric small{color:var(--muted);font-size:12px}.section{padding:62px 0;border-top:1px solid #192638}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:27px}.kicker{font-size:11px;text-transform:uppercase;letter-spacing:.17em;color:var(--cyan);font-weight:750}.section h2{font-size:clamp(26px,3.5vw,38px);line-height:1.2;letter-spacing:-.035em;margin:8px 0}.section-intro{color:var(--muted);max-width:610px;margin:0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.project{border:1px solid var(--line);border-radius:14px;padding:22px;background:linear-gradient(160deg,#111c2b,#0b121d);min-height:240px;display:flex;flex-direction:column}.project .num{font-size:11px;letter-spacing:.13em;color:#6f849c}.project h3{font-size:18px;line-height:1.35;margin:18px 0 8px}.project p{color:var(--muted);font-size:13px;margin:0 0 18px}.project a{font-size:13px;font-weight:700;margin-top:auto}.status{display:inline-flex;align-items:center;gap:7px;border:1px solid #51432b;border-radius:100px;padding:4px 9px;font-size:10px;letter-spacing:.04em;color:var(--amber);width:max-content}.status:before{content:"";width:5px;height:5px;background:currentColor;border-radius:50%}.status.ready{color:var(--green);border-color:#294c43}.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.info{border:1px solid var(--line);background:var(--panel2);border-radius:14px;padding:24px}.info h3{margin:0 0 10px;font-size:17px}.info p,.info li{color:var(--muted);font-size:13px}.info ul{padding-left:19px;margin-bottom:0}.workflow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{padding:17px;border-top:2px solid #2e6a7b;background:#0c1522}.step b{display:block;margin:8px 0 4px}.step p{font-size:12px;color:var(--muted);margin:0}.step span{font-size:11px;color:var(--cyan);letter-spacing:.1em}.footer{padding:30px 0 42px;border-top:1px solid #192638;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.note{color:var(--muted);font-size:12px;margin-top:20px}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding:64px 0 52px;gap:32px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.workflow{grid-template-columns:repeat(2,1fr)}.nav{height:auto;min-height:72px;padding:16px 0;align-items:flex-start}.navlinks{justify-content:flex-end;gap:12px}}
+@media(max-width:560px){.wrap{width:min(100% - 28px,var(--max))}.nav{display:block}.navlinks{justify-content:flex-start;margin-top:12px}.hero h1{font-size:44px}.grid,.split,.workflow{grid-template-columns:1fr}.section{padding:44px 0}.section-head{display:block}.section-head .section-intro{margin-top:10px}.hero-card{padding:19px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;transform:none!important}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap nav">
+<a class="brand" href="#home"><span class="mark">⌘</span><span>CYBERFORGE <span style="color:var(--cyan)">LABS</span></span></a>
+<nav class="navlinks" aria-label="Main navigation"><a href="#portfolio">Portfolio</a><a href="#method">Methodology</a><a href="#standards">Standards</a><a href="https://github.com/Hafsa-Khan01/CyberForge-Labs">GitHub ↗</a></nav>
+</div></header>
+<main id="home">
+<section class="wrap hero">
+<div><div class="eyebrow">Cybersecurity learning portfolio</div>
+<h1>Build skills.<br><span>Prove the process.</span></h1>
+<p class="lead">A structured record of hands-on cybersecurity labs, network investigation, packet analysis, troubleshooting, and technical reporting — built around careful methodology and verifiable evidence.</p>
+<div class="actions"><a class="btn primary" href="#portfolio">Explore the portfolio ↓</a><a class="btn" href="https://github.com/Hafsa-Khan01/CyberForge-Labs">View repository ↗</a></div></div>
+<aside class="hero-card" aria-label="Portfolio principles">
+<div class="card-top"><span>PORTFOLIO SNAPSHOT</span><span><i class="live-dot"></i>In progress</span></div>
+<div class="metric"><strong>Evidence-led</strong><small>Observations separated from assumptions</small></div>
+<div class="metric"><strong>Lab-focused</strong><small>Practical work, tools, and reproducible steps</small></div>
+<div class="metric"><strong>Responsible by design</strong><small>Authorised scope and privacy-aware reporting</small></div>
+</aside>
+</section>
+<section class="section" id="portfolio"><div class="wrap">
+<div class="section-head"><div><div class="kicker">01 / Selected workspaces</div><h2>Portfolio areas</h2></div><p class="section-intro">Each workspace is designed to become a concise technical case study as practical evidence is reviewed and documented.</p></div>
+<div class="grid">
+<article class="project"><span class="num">LAB 01</span><h3>Virtual Lab Environment</h3><p>VirtualBox and Kali Linux setup, network configuration, connectivity validation, and troubleshooting notes.</p><span class="status">Evidence review pending</span><p style="margin-top:16px"><a href="../Networkwalks/Week-01-VirtualBox-Lab/README.md">Open lab documentation ↗</a></p></article>
+<article class="project"><span class="num">LAB 02</span><h3>Network Scanning</h3><p>A structured workspace for scope definition, authorised discovery, command records, and interpretation of actual outputs.</p><span class="status">Workspace prepared</span><p style="margin-top:16px"><a href="../Networkwalks/Week-02-Network-Scanning/README.md">Open workspace ↗</a></p></article>
+<article class="project"><span class="num">LAB 03</span><h3>Wireshark & Packet Analysis</h3><p>Protocol-focused practicals, display filters, packet observations, and concise explanations of what the capture supports.</p><span class="status">Reports in progress</span><p style="margin-top:16px"><a href="../Networkwalks/Wireshark-Labs/README.md">Explore Wireshark labs ↗</a></p></article>
+<article class="project"><span class="num">DOC 01</span><h3>Technical Reporting</h3><p>A consistent reporting format for objective, scope, method, observations, limitations, evidence, and lessons learned.</p><span class="status ready">Template available</span><p style="margin-top:16px"><a href="../Networkwalks/Reports/REPORT-TEMPLATE.md">View report template ↗</a></p></article>
+<article class="project"><span class="num">DOC 02</span><h3>Troubleshooting Journal</h3><p>Record symptoms, diagnostics, root-cause reasoning, resolution, and follow-up validation without overstating certainty.</p><span class="status ready">Guide available</span><p style="margin-top:16px"><a href="../Networkwalks/Week-01-VirtualBox-Lab/Troubleshooting.md">View troubleshooting guide ↗</a></p></article>
+<article class="project"><span class="num">LOG 01</span><h3>Progress & Reflection</h3><p>A working log for weekly goals, verified accomplishments, blockers, learning outcomes, and next actions.</p><span class="status ready">Log structure available</span><p style="margin-top:16px"><a href="../Progress-Log/README.md">View progress log ↗</a></p></article>
+</div>
+<p class="note">Status labels refer to the documentation currently present in this repository. They do not claim independent verification of local lab results.</p>
+</div></section>
+<section class="section" id="method"><div class="wrap">
+<div class="section-head"><div><div class="kicker">02 / Working method</div><h2>From practical to proof</h2></div><p class="section-intro">A clear process makes each lab easier to review, reproduce, and learn from.</p></div>
+<div class="workflow">
+<div class="step"><span>STEP 01</span><b>Define</b><p>Set the objective, environment, authorisation, and boundaries.</p></div>
+<div class="step"><span>STEP 02</span><b>Investigate</b><p>Run the practical and record commands, versions, and observations.</p></div>
+<div class="step"><span>STEP 03</span><b>Validate</b><p>Compare claims with actual output and note limitations or uncertainty.</p></div>
+<div class="step"><span>STEP 04</span><b>Document</b><p>Add sanitised evidence, explain the result, and capture lessons learned.</p></div>
+</div>
+</div></section>
+<section class="section" id="standards"><div class="wrap">
+<div class="section-head"><div><div class="kicker">03 / Quality & responsibility</div><h2>Standards that matter</h2></div></div>
+<div class="split">
+<div class="info"><h3>Technical integrity</h3><ul><li>Only report results that were actually observed.</li><li>Keep expected values separate from verified configuration.</li><li>Document failed attempts and limitations honestly.</li><li>Make methods understandable and repeatable.</li></ul></div>
+<div class="info"><h3>Responsible practice</h3><ul><li>Test only systems owned by you or explicitly authorised.</li><li>Remove secrets, personal details, and unnecessary identifiers.</li><li>Keep sensitive packet captures and VM images out of Git.</li><li>Follow the repository's <a href="../SECURITY.md">security guidance</a>.</li></ul></div>
+</div>
+</div></section>
+</main>
+<footer class="wrap footer"><span>© CyberForge Labs · Learning portfolio</span><span><a href="https://github.com/Hafsa-Khan01/CyberForge-Labs">Source repository ↗</a> &nbsp;·&nbsp; Built for clarity, not inflated claims.</span></footer>
+</body></html>
