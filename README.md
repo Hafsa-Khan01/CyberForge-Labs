@@ -1,95 +1,50 @@
-<div align="center">
-
 # CYBERFORGE LABS
 
 ### Cybersecurity • Network Defense • Practical Research
 
-A curated portfolio documenting hands-on labs, technical investigations, troubleshooting, and evidence-led learning.
+A professional record of hands-on cybersecurity learning, practical investigations, packet analysis, troubleshooting, and technical reporting.
 
-[**Explore the Portfolio**](#portfolio) · [**Internship Workspace**](Networkwalks/README.md) · [**Progress Log**](Progress-Log/README.md)
-
-</div>
+**Start here:** [Internship portfolio](Networkwalks/README.md) · [Practical reports](Networkwalks/Reports/REPORT-TEMPLATE.md) · [Progress log](Progress-Log/README.md)
 
 ---
 
-## Overview
+## Practical work
 
-CyberForge Labs is my working portfolio for practical cybersecurity development. It is organised around reproducible lab notes, clear methodology, honest observations, and evidence that can be reviewed by mentors and peers.
+### VirtualBox and Kali Linux
+Environment setup, network configuration, connectivity checks, and troubleshooting.
 
-> **Portfolio standard:** Every result should be traceable to work actually performed. Planned activities and unverified results are never presented as completed achievements.
+[Open lab documentation](Networkwalks/Week-01-VirtualBox-Lab/README.md)
 
-## Portfolio
+### Wireshark and packet analysis
+Document the assigned practicals with actual packet observations, filters, screenshots, and explanations.
 
-| Area | Focus | Workspace |
-|---|---|---|
-| **Virtual Lab Environment** | VirtualBox, Kali Linux, network configuration, connectivity checks, and troubleshooting | [Week 01 lab](Networkwalks/Week-01-VirtualBox-Lab/README.md) |
-| **Network Scanning** | Scope, safe discovery workflow, command notes, and result documentation | [Week 02 workspace](Networkwalks/Week-02-Network-Scanning/README.md) |
-| **Packet Analysis** | Wireshark observations, display filters, protocol analysis, and lab reports | [Wireshark labs](Networkwalks/Wireshark-Labs/README.md) |
-| **Technical Reporting** | Consistent structure for objectives, methodology, findings, limitations, and evidence | [Report template](Networkwalks/Reports/REPORT-TEMPLATE.md) |
-| **Troubleshooting** | Diagnostic steps, issues encountered, resolution, and lessons learned | [Troubleshooting guide](Networkwalks/Week-01-VirtualBox-Lab/Troubleshooting.md) |
-| **Progress & Reflection** | Weekly updates, learning outcomes, and next steps | [Progress log](Progress-Log/README.md) |
+[Open Wireshark labs](Networkwalks/Wireshark-Labs/README.md)
 
-## Current work status
+### Reports and learning notes
+Use a consistent report structure for real practical work. The final report should explain the task, method, observed result, technical meaning, limitations, and evidence.
 
-| Workstream | Portfolio status |
-|---|---|
-| Week 01 — VirtualBox / Kali environment | Documentation prepared; evidence review pending |
-| Week 02 — Network scanning | Workspace prepared; results not yet documented here |
-| Wireshark practicals | Lab framework prepared; individual reports require evidence review |
+[Open report format](Networkwalks/Reports/REPORT-TEMPLATE.md) · [View progress log](Progress-Log/README.md)
 
-*These statuses describe this repository's documentation, not independent verification of the local lab environment.*
+## How work is presented
 
-## How each practical is documented
+Each practical should contain:
 
-Each report should make it easy for a reviewer to understand:
+- The exact objective from the assigned task.
+- The lab environment and authorised scope.
+- Steps and commands actually performed.
+- Observations supported by output or screenshots.
+- Technical interpretation, limitations, and lessons learned.
+- Sanitised evidence with meaningful filenames.
 
-1. **Objective** — the question or skill being practised.
-2. **Scope & authorisation** — the permitted lab environment and boundaries.
-3. **Environment & tools** — relevant OS, tool versions, and configuration.
-4. **Method** — the commands or steps used, with sensitive values removed.
-5. **Observations** — what the output or packet capture actually showed.
-6. **Analysis** — what the observations mean, including limitations.
-7. **Evidence** — sanitised screenshots or supporting artefacts.
-8. **Reflection** — troubleshooting, lessons learned, and next steps.
+## Current portfolio status
 
-## Working principles
+This repository includes the documentation structure for the VirtualBox/Kali environment and Wireshark practicals. Individual results should be treated as verified only after the corresponding output and evidence have been reviewed. No unassigned weekly tasks are listed as completed work.
 
-- **Evidence first:** distinguish observed facts from assumptions and expected values.
-- **Authorised testing only:** run discovery and security tools only in an owned or explicitly approved environment.
-- **Privacy by design:** never commit passwords, tokens, private keys, personal data, or unnecessary network identifiers.
-- **Reproducibility:** include enough context for a reviewer to understand the procedure without exposing sensitive details.
-- **Continuous improvement:** update reports when evidence or analysis changes.
+## Responsible practice
 
-## Repository map
+- Use security tools only on systems and networks you own or have explicit permission to test.
+- Never commit credentials, tokens, private keys, or unnecessary personal/network details.
+- Keep sensitive packet captures and virtual-machine files out of the repository.
+- Clearly distinguish expected configuration from what was actually observed.
 
-```text
-CyberForge-Labs/
-├── Networkwalks/
-│   ├── Week-01-VirtualBox-Lab/
-│   ├── Week-02-Network-Scanning/
-│   ├── Wireshark-Labs/
-│   ├── Reports/
-│   └── SUBMISSION-CHECKLIST.md
-├── Progress-Log/
-├── Skills-and-Notes/
-├── SECURITY.md
-└── README.md
-```
-
-## Before publishing evidence
-
-- [ ] Remove credentials, tokens, email addresses, and unrelated personal information.
-- [ ] Check screenshots for sensitive IPs, hostnames, open tabs, and account details.
-- [ ] Confirm the output belongs to the stated lab and date.
-- [ ] Explain what the evidence demonstrates; do not overstate the conclusion.
-- [ ] Keep raw packet captures and virtual-machine files out of the public repository unless there is a clear, safe reason to share them.
-
-## About this portfolio
-
-This repository is a learning record that will grow as practical work is completed, reviewed, and documented. Its goal is clarity, technical accuracy, and professional presentation—not inflated claims.
-
-<div align="center">
-
-**Learn deliberately. Test responsibly. Document clearly.**
-
-</div>
+**CyberForge Labs — Learn deliberately. Test responsibly. Document clearly.**
