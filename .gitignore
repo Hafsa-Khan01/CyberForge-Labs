@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials/
+
+# VM images and private captures
+*.ova
+*.ovf
+*.vdi
+*.vmdk
+*.vbox
+*.pcap
+*.pcapng
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
