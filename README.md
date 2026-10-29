@@ -4,41 +4,32 @@
 
 A professional record of hands-on cybersecurity learning, practical investigations, packet analysis, troubleshooting, and technical reporting.
 
-**Start here:** [Internship portfolio](Networkwalks/README.md) · [Practical reports](Networkwalks/Reports/REPORT-TEMPLATE.md) · [Progress log](Progress-Log/README.md)
+**Start here:** [Networkwalks internship portfolio](Networkwalks/README.md) · [Practical reports](Networkwalks/Reports/REPORT-TEMPLATE.md) · [Progress log](Progress-Log/README.md)
 
 ---
 
 ## Practical work
 
 ### VirtualBox and Kali Linux
-Environment setup, network configuration, connectivity checks, and troubleshooting.
+Week 1 environment setup and troubleshooting notes for the NAT Network, connectivity, shared folder, clipboard integration, and snapshot.
 
-[Open lab documentation](Networkwalks/Week-01-VirtualBox-Lab/README.md)
+[Open Week 1 lab documentation](Networkwalks/Week-01-VirtualBox-Lab/README.md)
 
 ### Wireshark and packet analysis
-Document the assigned practicals with actual packet observations, filters, screenshots, and explanations.
+The assigned Wireshark practical is documented separately with the reported findings and the correction confirmed against the official solution.
 
-[Open Wireshark labs](Networkwalks/Wireshark-Labs/README.md)
+[Open Wireshark labs and Lab 3 report](Networkwalks/Wireshark-Labs/README.md)
 
 ### Reports and learning notes
-Use a consistent report structure for real practical work. The final report should explain the task, method, observed result, technical meaning, limitations, and evidence.
+Use a consistent report structure for real practical work. Reports should explain the task, method, observed result, technical meaning, limitations, and available evidence.
 
 [Open report format](Networkwalks/Reports/REPORT-TEMPLATE.md) · [View progress log](Progress-Log/README.md)
 
-## How work is presented
+## Current status
 
-Each practical should contain:
+The learner reports that Networkwalks Week 1 work is complete. Wireshark Lab 3 — *Identify the Attacker's IP* — is documented with a reported score of 89/100; Question 2's official answer is 73 displayed packets.
 
-- The exact objective from the assigned task.
-- The lab environment and authorised scope.
-- Steps and commands actually performed.
-- Observations supported by output or screenshots.
-- Technical interpretation, limitations, and lessons learned.
-- Sanitised evidence with meaningful filenames.
-
-## Current portfolio status
-
-This repository includes the documentation structure for the VirtualBox/Kali environment and Wireshark practicals. Individual results should be treated as verified only after the corresponding output and evidence have been reviewed. No unassigned weekly tasks are listed as completed work.
+This repository documents the work and notes available. A report is not a substitute for screenshots or other evidence, and no evidence is claimed unless it is actually present in the repository. Do not list unassigned weekly tasks as completed work.
 
 ## Responsible practice
 
