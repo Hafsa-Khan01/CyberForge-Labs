@@ -1,42 +1,44 @@
 # CyberForge Labs
 
-### Cybersecurity • Network Defense • Hands-on Learning
+**Cybersecurity | Network Defense | Practical Research | Technical Documentation**
 
-A structured portfolio of practical cybersecurity work, lab environments, packet analysis, troubleshooting, and technical reports.
+CyberForge Labs is a hands-on cybersecurity portfolio documenting practical lab work, network analysis, security investigations, troubleshooting, and structured technical learning across internship programmes.
 
-## Internship folders
+The repository is organised by programme and workstream so that practical exercises, supporting evidence, and technical reports remain clear, traceable, and independently reviewable.
 
-| Internship | Contents |
+## Portfolio structure
+
+| Programme | Overview |
 |---|---|
-| [NetworkWalks](Networkwalks/README.md) | [Week 01 — VirtualBox, Kali Linux & Wireshark](Networkwalks/Week-01/README.md) |
-| [DG Interns Hub](DG%20Interns%20Hub/README.md) | [Week 01](DG%20Interns%20Hub/Week-01/README.md) · [Week 02](DG%20Interns%20Hub/Week-02/README.md) |
+| [NetworkWalks](Networkwalks/README.md) | Virtual lab setup, Kali Linux, Wireshark traffic analysis, and Week 01 technical documentation. |
+| [DG Interns Hub](DG%20Interns%20Hub/README.md) | Practical cybersecurity learning activities and weekly progress documentation. |
 
-## NetworkWalks — Week 01 snapshot
+## Featured work — NetworkWalks, Week 01
 
-Six Wireshark browser labs are documented with supplied result cards. The complete [Week 01 Practical Evidence & Technical Report](Networkwalks/Week-01/Wireshark-SOC-Labs/REPORT.md) includes technical summaries, defensive takeaways, evidence inventory, and verification limits.
+The Week 01 workspace brings together the virtual lab environment and network traffic analysis exercises.
 
-| Lab | Practical | Result |
-|---|---|---:|
-| 03 | Identify the Attacker's IP | 89% |
-| 04 | Follow TCP Stream | 90% |
-| 05 | Follow TCP Stream — Part 2 | 100% |
-| 06 | HTTP Plain-Text Credentials | 99% |
-| 07 | FTP Brute-Force Detection | 100% |
-| 08 | VoIP Call Analysis | 98% |
-| **Overall** | **6 labs** | **96% average** |
+- [Week 01 overview](Networkwalks/Week-01/README.md) — entry point for the practical work and evidence.
+- [VirtualBox & Kali Linux](Networkwalks/Week-01/VirtualBox-Kali-Lab/README.md) — virtual machine setup, network configuration, shared-folder setup, and verification guidance.
+- [Wireshark SOC Labs](Networkwalks/Week-01/Wireshark-SOC-Labs/README.md) — documentation for browser-based practical labs, analysis notes, and supporting evidence.
+- [Consolidated technical report](Networkwalks/Week-01/Wireshark-SOC-Labs/REPORT.md) — practical summaries, observations, defensive relevance, and evidence notes.
+- [Windows Wireshark workspace](Networkwalks/Week-01/Windows-Wireshark/README.md) — separate location for Windows-host Wireshark supporting evidence.
+- [Week 01 evidence index](Networkwalks/Week-01/EVIDENCE-INDEX.md) — evidence inventory and organisation notes.
 
-## Other portfolio resources
+## Additional resources
 
-- [Progress Log](Progress-Log/README.md)
-- [Security Policy](SECURITY.md)
-- [Skills and Notes](Skills-and-Notes/README.md)
+- [Progress log](Progress-Log/README.md)
+- [Skills and technical notes](Skills-and-Notes/README.md)
+- [Security policy](SECURITY.md)
 
-## Responsible practice
+## Documentation and evidence standards
 
-- Test only systems and networks you own or have explicit permission to assess.
-- Never commit passwords, tokens, private keys, personal information, or sensitive packet captures.
-- Sanitize screenshots before public release; preserve original evidence privately where needed.
-- Distinguish expected configuration, learner-reported results, and independently verified observations.
-- Keep internship evidence separated by programme and do not mix it with unrelated projects.
+- Record practical work accurately and distinguish completed actions from planned or reference configuration.
+- Keep evidence organised by internship programme and workstream.
+- Include screenshots and technical observations where they support the report.
+- Redact credentials, tokens, personal information, account identifiers, and sensitive host or network details before publishing.
+- Do not commit private keys, VM disk images, saved-state files, or unreviewed packet captures.
+- Perform testing only on systems and networks owned by you or explicitly authorised for assessment.
 
-**CyberForge Labs — Learn deliberately. Test responsibly. Document clearly.**
+---
+
+**CyberForge Labs — Practical learning. Responsible testing. Clear technical evidence.**
