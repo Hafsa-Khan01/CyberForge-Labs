@@ -13,7 +13,7 @@ A structured portfolio of practical cybersecurity work, lab environments, packet
 
 ## NetworkWalks — Week 01 snapshot
 
-Six Wireshark browser labs are recorded as completed, with learner result screenshots supplied for Labs 3–8.
+Six Wireshark browser labs are documented with supplied result cards. The complete [Week 01 Practical Evidence & Technical Report](Networkwalks/Week-01/Wireshark-SOC-Labs/REPORT.md) includes technical summaries, defensive takeaways, evidence inventory, and verification limits.
 
 | Lab | Practical | Result |
 |---|---|---:|
