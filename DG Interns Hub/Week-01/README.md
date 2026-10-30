@@ -1,13 +1,58 @@
-# DG Interns Hub — Week 1
-## Lab Setup, Linux and Networking Foundations
+# DG Interns Hub | Week 01
+## Linux Foundations, Network Fundamentals & Security Lab Environment
 
-This week covers the assigned theory, TryHackMe rooms, OverTheWire Bandit levels 0–10, lab setup, Linux practice, network mapping, cheat sheet, weekly report and presentation.
+**Workstream:** Cybersecurity Internship  
+**Coverage:** Lab preparation · Linux administration fundamentals · Networking concepts · Introductory security operations  
+**Repository scope:** DG Interns Hub only
 
-### Deliverable structure
-- **Notes:** separate answers for cybersecurity/CIA triad; SOC, VAPT and incident responder roles; OSI vs TCP/IP; IP/MAC/DNS/DHCP/ports; Linux hierarchy and permissions; threat/vulnerability/risk/exploit; VM networking modes; legal and ethical practice in Pakistan.
-- **Writeups:** individual TryHackMe room writeups and Bandit level 0–10 guides. Do not publish Bandit passwords.
-- **Findings:** lab setup, VM IPs and ping tests, Linux users/groups/permissions/commands/cron, network map and Bandit evidence.
-- **Cheat Sheet:** at least 30 Linux commands.
-- **Report and presentation:** weekly summary and learning outcomes.
+---
 
-The Week 1 completion package and original evidence are maintained as the Week 1 submission. Keep actual screenshots and command outputs as the source of truth; do not invent machine-specific values.
+## 1. Technical scope
+
+Week 01 establishes the working environment and foundational knowledge required for subsequent security assessment and monitoring exercises.
+
+| Work area | Coverage |
+|---|---|
+| Lab environment | Virtual-machine preparation, network configuration, connectivity validation and lab documentation |
+| Linux | Filesystem navigation, users and groups, permissions, processes, package/service basics and command-line operations |
+| Networking | OSI and TCP/IP models, addressing, ports, DNS, DHCP, MAC addressing, LAN concepts and network troubleshooting |
+| Security foundations | CIA triad, threat/vulnerability/risk concepts, security roles, ethical boundaries and introductory attack-surface awareness |
+| Guided learning | Assigned TryHackMe rooms and OverTheWire Bandit Levels 00–10 |
+
+## 2. Repository structure
+
+- **Study notes:** Topic-based technical notes covering the assigned foundational concepts.
+- **TryHackMe writeups:** Individual room notes organized by topic. Writeups should explain the objective, approach, commands or concepts used, observations and learning outcome.
+- **OverTheWire Bandit:** Level-by-level study notes for Levels 00–10. Credentials and passwords are intentionally excluded.
+- **Practical workbook:** Linux command-line exercises and lab procedures.
+- **Cheat sheets:** Reference commands and concise operational syntax.
+- **Evidence and reporting:** Original screenshots, command output, evidence register, weekly report and presentation where supplied.
+
+## 3. Documentation standard
+
+Each practical record should make it possible for another learner or reviewer to understand and reproduce the work:
+
+1. **Objective** — the task or question being addressed.
+2. **Environment** — relevant operating system, VM or lab context.
+3. **Procedure** — commands and steps in execution order.
+4. **Observation** — the actual output or visible behaviour.
+5. **Analysis** — what the observation demonstrates and any relevant limitation.
+6. **Evidence** — screenshot or output filename, where available.
+
+Commands shown as examples must be distinguished from commands actually executed. Machine-specific values, IP addresses and successful outcomes must come from the original evidence; they must not be guessed.
+
+## 4. Review checklist
+
+- [ ] Lab setup and network configuration are documented.
+- [ ] Linux exercises include commands and meaningful explanations.
+- [ ] Networking concepts are described accurately.
+- [ ] Assigned learning-room notes are organized individually.
+- [ ] Bandit notes do not expose passwords or credentials.
+- [ ] Evidence references point to the corresponding original artifacts.
+- [ ] Report and presentation reflect work that was actually completed.
+
+## 5. Scope and integrity
+
+This directory is reserved for **DG Interns Hub Week 01**. Keep other internship and personal projects separate. In particular, do not move, rename, edit or otherwise modify the NetworkWalks directory as part of this work.
+
+Original evidence is the source of truth. Any missing artifact or unverified result should be identified as unavailable rather than reconstructed or presented as completed.
