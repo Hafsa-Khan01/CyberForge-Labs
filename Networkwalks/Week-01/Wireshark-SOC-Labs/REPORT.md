@@ -213,23 +213,24 @@ The mean is calculated from the six recorded exercise scores.
 
 ## 7. Evidence Register
 
-The Week 01 evidence archive contains **46 images** covering the six Wireshark exercises and the VirtualBox/Kali environment. The repository includes the six lab result cards and eight VirtualBox/Kali setup screenshots; the full set of practical screenshots is retained in the source evidence archive.
+The original Week 01 source package was inventoried as **46 images**. The public repository currently contains **41 images**: eight VirtualBox/Kali setup screenshots, 27 Windows-host Wireshark practical screenshots and six learner result cards. Five source-package images are not currently published. See the [Week 01 Evidence Register](../EVIDENCE-INDEX.md) for the exact upload status.
 
 | Evidence group | Quantity | Recommended use |
 |---|---:|---|
 | Wireshark result cards | 6 | One compact results panel/table; retain originals in each lab folder |
 | Kali desktop / VM view | 1 | One representative image in the environment section |
 | VirtualBox configuration views | 7 | Select the clearest network-adapter and shared-folder views |
-| Wireshark packet-analysis views | 32 | Select only the clearest packet/stream screenshot(s) for key exercises; archive the rest |
+| Wireshark packet-analysis views | 32 source images | 27 are published in the Windows-host evidence folder; five are not currently uploaded |
 
 **Recommended report visuals:** one Kali/VirtualBox environment image, one VirtualBox network configuration image, and a small selection of Wireshark analysis images that directly support the most important findings. Avoid repeating near-identical screenshots.
 
 **Repository evidence paths:**
 - `VirtualBox-Kali-Lab/Evidence/` — reviewed VM and network configuration images.
-- `Wireshark-SOC-Labs/Evidence/Lab-03/` through `Lab-08/` — lab-specific screenshots.
+- `Wireshark-SOC-Labs/Evidence/Lab-03/` through `Lab-08/` — learner result-card screenshots.
+- `Windows-Wireshark/Evidence/` — 27 Windows-host practical screenshots.
 - `Wireshark-SOC-Labs/Reports/` — individual exercise reports.
 
-The repository evidence is organised by practical area and lab number. The result cards and setup screenshots are available in the folders below, while the complete packet-analysis screenshot set is retained in the Week 01 source archive.
+The repository evidence is organised by practical area and lab number. The six result cards and eight setup screenshots are in their dedicated folders; the 27 uploaded Windows-host practical screenshots are in a separate supporting-evidence folder. Five source-package images remain unpublished.
 
 ## 8. Security Recommendations Derived from the Exercises
 
@@ -243,9 +244,10 @@ The repository evidence is organised by practical area and lab number. The resul
 
 ## 9. Evidence Integrity
 
-- The VirtualBox/Kali setup and all six Wireshark practical exercises were performed as part of the Week 01 work.
-- Screenshots were captured during the practical work and organised in the corresponding evidence folders.
-- The six result percentages are recorded from the completed lab result cards.
+- The Week 01 VirtualBox/Kali setup and six guided Wireshark exercises are documented in this report.
+- Published screenshots are organised in the corresponding setup, Windows-host and lab result-card evidence folders.
+- The six result percentages are transcribed from the completed learner result cards; they are not independent packet-capture validation.
+- The evidence register distinguishes the 46-image source package from the 41 images currently published.
 - Training credentials, passwords, personal conversation content and payment information are deliberately omitted from this report to protect sensitive information.
 - Evidence is grouped by lab so that the setup process, packet-analysis work and final results can be reviewed in context.
 
