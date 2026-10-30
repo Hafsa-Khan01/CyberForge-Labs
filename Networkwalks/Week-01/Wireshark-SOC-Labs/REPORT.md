@@ -215,6 +215,14 @@ The supplied archive contains **46 images** in total. The portfolio should show 
 
 The evidence folders are organised by practical area and lab number so that setup screenshots, packet-analysis captures and result cards can be reviewed alongside this report.
 
+### Windows-based Wireshark practical evidence
+
+The Windows host was also used to perform Wireshark practical work. Screenshots from that environment are kept separately from the Kali Linux and VirtualBox setup evidence so the two environments remain easy to distinguish.
+
+**Evidence folder:** `Evidence/Windows-Wireshark/`
+
+This folder is reserved for the Windows Wireshark screenshots, such as the application view, selected capture/interface views, packet-list and packet-detail analysis, and any relevant stream-analysis views. The screenshots should retain their original context and should not expose passwords, tokens or unrelated personal information.
+
 ## 8. Security Recommendations Derived from the Exercises
 
 1. Prefer encrypted protocols and enforce TLS for web and application traffic.
