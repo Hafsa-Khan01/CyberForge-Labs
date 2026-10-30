@@ -30,7 +30,7 @@ Week 01 establishes the working environment and foundational knowledge required 
 
 ## 3. Documentation standard
 
-Each practical record should make it possible for another learner or reviewer to understand and reproduce the work:
+Each practical record should make it possible for a technical reviewer to understand and reproduce the work:
 
 1. **Objective** — the task or question being addressed.
 2. **Environment** — relevant operating system, VM or lab context.
@@ -55,4 +55,4 @@ Commands shown as examples must be distinguished from commands actually executed
 
 This directory is reserved for **DG Interns Hub Week 01**. Keep other internship and personal projects separate. In particular, do not move, rename, edit or otherwise modify the NetworkWalks directory as part of this work.
 
-Original evidence is the source of truth. Any missing artifact or unverified result should be identified as unavailable rather than reconstructed or presented as completed.
+Original evidence is the source of truth. All reported results must be traceable to original evidence. Clearly distinguish illustrative examples from verified execution records.
