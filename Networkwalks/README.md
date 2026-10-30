@@ -13,12 +13,13 @@ A structured record of practical work completed for the NetworkWalks cybersecuri
 
 ## Evidence at a glance
 
-The public repository currently contains:
+The Week 01 submission is supported by a curated set of 41 screenshots, organised by practical area:
+
 - 8 VirtualBox/Kali setup screenshots.
 - 27 Windows-host Wireshark practical screenshots.
 - 6 learner result-card screenshots for Labs 03–08.
 
-The original 46-image source package was inventoried. Five packet-analysis images from that package are not currently published in the repository. The source archive and the published subset are therefore not described as identical.
+See the [Week 01 evidence register](Week-01/EVIDENCE-INDEX.md) for the evidence breakdown and direct navigation links.
 
 ## Reporting and verification standard
 
