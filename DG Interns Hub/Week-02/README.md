@@ -25,9 +25,9 @@ Week 02 focuses on observing network behaviour, interpreting scan activity and u
 - **Study notes:** Topic-based technical reference material for networking, Nmap and Windows.
 - **TryHackMe writeups:** Individual writeups for the assigned Further Nmap, host-discovery, port-scan and Windows learning rooms.
 - **Practical writeups:** Wireshark, Nmap, Windows Event Viewer and PowerShell investigation exercises.
-- **Capture analysis:** Notes for the supplied sample traffic captures, where available.
+- **Capture analysis:** Notes for the supplied sample traffic captures, in the corresponding evidence set.
 - **Cheat sheets:** Wireshark display-filter reference and Windows Event ID reference.
-- **Evidence and reporting:** Original PCAP/PCAPNG files, screenshots, scan exports, CSV records, weekly report, presentation and LinkedIn drafts where supplied.
+- **Evidence and reporting:** Original PCAP/PCAPNG files, screenshots, scan exports, CSV records, weekly report, presentation and LinkedIn drafts in the corresponding submission package.
 
 ## 3. Investigation and evidence standard
 
@@ -38,7 +38,7 @@ For each practical exercise, record:
 3. **Method** — document the filters, scan options, commands or event queries used.
 4. **Raw observation** — preserve the actual packet, scan output or event fields.
 5. **Interpretation** — explain what the evidence supports; distinguish observation from inference.
-6. **Limitations** — note visibility gaps, missing logs, encrypted payloads or other constraints.
+6. **Limitations** — note visibility gaps, log-visibility constraints, encrypted payloads or other constraints.
 7. **Evidence reference** — identify the original screenshot, capture or export.
 
 Do not infer a vulnerability from an open port alone. Do not label traffic malicious without supporting indicators and context. Keep example commands separate from verified execution results.
@@ -47,7 +47,7 @@ Do not infer a vulnerability from an open port alone. Do not label traffic malic
 
 - Preserve original PCAP/PCAPNG files and exported scan or event records.
 - Retain Nmap normal and XML output when those files are part of the original exercise.
-- Keep PowerShell exports in their original format where available.
+- Keep PowerShell exports in their original format in the corresponding evidence set.
 - Reference screenshots by their actual filenames and connect them to the relevant practical.
 - Avoid publishing credentials, personal data or unrelated internship material.
 - Perform intrusive or destructive actions only in an explicitly authorized, disposable lab environment.
