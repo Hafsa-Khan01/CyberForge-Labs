@@ -24,10 +24,11 @@ Week 02 focuses on observing network behaviour, interpreting scan activity and u
 
 - **Study notes:** Topic-based technical reference material for networking, Nmap and Windows.
 - **TryHackMe writeups:** Individual writeups for the assigned Further Nmap, host-discovery, port-scan and Windows learning rooms.
-- **Practical writeups:** Wireshark, Nmap, Windows Event Viewer and PowerShell investigation exercises.
+- **Practical investigations:** Expanded Wireshark, Nmap, Windows Event Viewer and PowerShell writeups with reproducible procedures, analysis guidance and evidence requirements.
+- **Investigation methodology:** A consistent evidence-to-claim framework, correlation workflow, finding structure and technical quality review.
 - **Capture analysis:** Notes for the supplied sample traffic captures, in the corresponding evidence set.
 - **Cheat sheets:** Wireshark display-filter reference and Windows Event ID reference.
-- **Evidence and reporting:** Original PCAP/PCAPNG files, screenshots, scan exports, CSV records, weekly report, presentation and LinkedIn drafts in the corresponding submission package.
+- **Evidence:** Original PCAP/PCAPNG files, screenshots, scan exports and CSV records, retained in the relevant evidence locations.
 
 ## 3. Investigation and evidence standard
 
