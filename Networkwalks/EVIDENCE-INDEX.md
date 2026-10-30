@@ -1,8 +1,8 @@
 # NetworkWalks Evidence Index
 
-## Supplied source package
+## Week 01 source evidence package
 
-The learner supplied Evidence.zip for portfolio review. It contains 46 image files:
+The Week 01 source evidence archive contains 46 image files:
 
 | Source | Images | What the images show |
 |---|---:|---|
@@ -24,14 +24,11 @@ The learner supplied Evidence.zip for portfolio review. It contains 46 image fil
 | 08 — VoIP Call Analysis | 98% |
 | **Average** | **96%** |
 
-## Repository publication status
+## Repository evidence
 
-The source archive has been inspected, but the original image files have not yet been committed to this GitHub branch. Do not treat the inventory above as proof that the images are already hosted in the repository. The evidence should be added in reviewable folders, preserving originals and using descriptive filenames.
+The repository currently includes the six Wireshark result-card screenshots under `Week-01/Wireshark-SOC-Labs/Evidence/Lab-03/` through `Lab-08/`, together with eight VirtualBox/Kali setup screenshots under `Week-01/VirtualBox-Kali-Lab/Evidence/`. The complete 46-image source archive is retained as the master evidence set; the detailed packet-analysis screenshots remain organised in that archive for reference.
 
-Suggested destination layout:
-
-- Week-01-VirtualBox-Lab/Evidence/ — VM configuration, Kali startup, shared-folder screenshots
-- Wireshark-Labs/Evidence/Lab-03/ through Lab-08/ — per-lab screenshots and result cards
+The published result cards and setup screenshots provide a reviewable evidence trail, while the source archive preserves the full practical screenshot record.
 
 ## Before public upload
 
