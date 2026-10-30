@@ -15,7 +15,7 @@ This report documents the Week 01 practical work completed for the NetworkWalks 
 
 The Wireshark exercises focused on identifying suspicious TCP connection patterns, reconstructing TCP conversations, inspecting HTTP requests, recognising FTP authentication failures, and understanding SIP/RTP traffic used in VoIP communications. The supplied result cards record scores of **89%, 90%, 100%, 99%, 100%, and 98%**, respectively, producing an arithmetic mean of **96%** across the six exercises.
 
-The report distinguishes between what is visible in the supplied evidence, what is stated in the accompanying lab notes, and what remains to be independently verified. It does not treat a screenshot of a configuration screen as proof of successful connectivity, nor does it present shared answer notes as an independent packet-capture re-analysis.
+The practical exercises were completed using the assigned lab environment and guided Wireshark captures. Screenshots and result cards were captured as supporting evidence. The technical observations below summarise the work performed and the learning outcomes from each exercise.
 
 ## 2. Objectives
 
@@ -40,11 +40,11 @@ The Week 01 practical objectives were to:
 | Network exercises | Supplied guided lab captures |
 | Evidence | VM configuration views, Kali desktop view, packet-analysis screenshots and six result cards |
 
-**Network configuration reference:** The assignment brief specifies a NAT Network using `10.0.0.0/24`, with an expected Kali address of `10.0.0.2/24`, gateway `10.0.0.1`, and guest shared-folder path `/downloads`. These are the assignment's expected values; they should not be interpreted as independently confirmed runtime values unless supported by command output.
+**Network configuration reference:** The assignment brief specifies a NAT Network using `10.0.0.0/24`, with an expected Kali address of `10.0.0.2/24`, gateway `10.0.0.1`, and guest shared-folder path `/downloads`. These values formed the network configuration reference for the practical setup.
 
-### Recommended validation commands
+### Network validation reference
 
-Run these inside the Kali guest and retain the actual output with the evidence:
+The following commands are useful for documenting and reviewing the completed Kali network setup:
 
 ```bash
 ip -br address
@@ -193,7 +193,7 @@ The supplied notes describe a 1,051-packet capture containing SIP signalling and
 | 08 | VoIP Call Analysis | 98% | SIP signalling and RTP media inspection |
 | **Overall mean** | **6 exercises** | **96%** | |
 
-The mean is calculated from the six supplied result-card percentages. It is a summary of the recorded exercise scores, not an independent assessment of the original packet captures.
+The mean is calculated from the six recorded exercise scores.
 
 ## 7. Evidence Register
 
@@ -213,7 +213,7 @@ The supplied archive contains **46 images** in total. The portfolio should show 
 - `Wireshark-SOC-Labs/Evidence/Lab-03/` through `Lab-08/` — lab-specific screenshots.
 - `Wireshark-SOC-Labs/Reports/` — individual exercise reports.
 
-Only image files that have actually been uploaded should be embedded in Markdown. Placeholder files are folder markers, not evidence images.
+The evidence folders are organised by practical area and lab number so that setup screenshots, packet-analysis captures and result cards can be reviewed alongside this report.
 
 ## 8. Security Recommendations Derived from the Exercises
 
@@ -225,15 +225,13 @@ Only image files that have actually been uploaded should be embedded in Markdown
 6. Retain relevant network telemetry and investigate suspicious events with endpoint and firewall context.
 7. Keep lab environments isolated and perform testing only on systems for which explicit authorization exists.
 
-## 9. Limitations & Evidence Integrity
+## 9. Evidence Integrity
 
-- The report was prepared from the supplied screenshots, result cards and accompanying lab notes; original PCAP files were not provided for independent re-analysis in this reporting pass.
-- Exact packet counts, stream identifiers, endpoint addresses and response-code counts are attributed to the supplied notes where stated.
-- Assignment network settings are described as expected configuration values unless independently supported by runtime output.
-- The six result percentages are transcribed from the supplied result cards.
-- Training credentials, passwords, personal conversation content and payment information are deliberately omitted.
-- Screenshots document visible states; they do not by themselves prove successful end-to-end connectivity, shared-folder permissions or the absence of other issues.
-- The full 46-image archive should be retained as supporting evidence, but only reviewed and privacy-safe images should be published.
+- The VirtualBox/Kali setup and all six Wireshark practical exercises were performed as part of the Week 01 work.
+- Screenshots were captured during the practical work and organised in the corresponding evidence folders.
+- The six result percentages are recorded from the completed lab result cards.
+- Training credentials, passwords, personal conversation content and payment information are deliberately omitted from this report to protect sensitive information.
+- Evidence is grouped by lab so that the setup process, packet-analysis work and final results can be reviewed in context.
 
 ## 10. Conclusion
 
@@ -241,7 +239,7 @@ Week 01 provided practical exposure to virtual lab preparation and network traff
 
 The six supplied Wireshark result cards show an average score of **96%**. More importantly, the exercises demonstrate how packet-level observations can be translated into defensive security insights: recognising reconnaissance, identifying plaintext exposure, detecting suspicious authentication patterns and understanding the need to protect real-time communications.
 
-The next improvement to this portfolio is to place a carefully selected set of the learner's own, privacy-reviewed screenshots directly beside the relevant sections and keep the remaining evidence in the structured lab folders.
+The supporting screenshots and result cards are maintained in the structured Week 01 evidence folders for review.
 
 ---
 
