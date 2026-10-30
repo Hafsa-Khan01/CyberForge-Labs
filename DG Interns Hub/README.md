@@ -24,4 +24,4 @@ This directory contains the weekly technical documentation, practical exercises,
 
 This directory is exclusively for **DG Interns Hub** materials. Other workstreams are independent and must not be mixed into this repository area. The **NetworkWalks folder is explicitly out of scope and must not be accessed for editing, renamed, moved, deleted, reorganized or otherwise changed** while maintaining these DG materials.
 
-When a required artifact is not available or cannot be verified, document the gap instead of inventing content.
+Keep every reported result traceable to original evidence. Clearly distinguish illustrative examples from verified execution records.
