@@ -1,79 +1,50 @@
-# NetworkWalks Week 01 — Practical Evidence & Technical Report
+# NetworkWalks Cybersecurity Internship — Week 01
+## Practical Lab Report: VirtualBox, Kali Linux & Wireshark Traffic Analysis
 
 **Prepared by:** Hafsa Khan  
 **Programme:** NetworkWalks Cybersecurity Internship  
-**Scope:** VirtualBox/Kali setup and Wireshark SOC Labs 03–08  
-**Source archive:** Evidence.zip supplied 30 October 2026
+**Reporting period:** Week 01  
+**Practical scope:** Virtual lab setup and Wireshark SOC exercises (Labs 03–08)  
+**Evidence source:** Learner-supplied screenshots and result cards in the Week 01 evidence archive
 
-## Executive summary
+---
 
-The supplied archive was extracted and its image inventory checked. It contains **46 images**: six Wireshark result cards, one Kali-in-VirtualBox desktop screenshot, seven VirtualBox configuration screenshots, and 32 Wireshark packet-analysis screenshots.
+## 1. Executive Summary
 
-The six result cards show scores of 89%, 90%, 100%, 99%, 100%, and 98%, giving a mean of **96%**. The exercises cover TCP SYN scan recognition, TCP stream reconstruction, HTTP request inspection, FTP authentication-failure analysis, and SIP/RTP VoIP traffic.
+This report documents the Week 01 practical work completed for the NetworkWalks cybersecurity internship. The work covered two connected areas: preparing a Kali Linux virtual lab in Oracle VirtualBox and analysing network traffic through six guided Wireshark exercises.
 
-These images document practical activity and learner-reported results. They do not prove that every packet-level value was independently recalculated from original PCAPs or that every VM setting and connectivity test succeeded.
+The Wireshark exercises focused on identifying suspicious TCP connection patterns, reconstructing TCP conversations, inspecting HTTP requests, recognising FTP authentication failures, and understanding SIP/RTP traffic used in VoIP communications. The supplied result cards record scores of **89%, 90%, 100%, 99%, 100%, and 98%**, respectively, producing an arithmetic mean of **96%** across the six exercises.
 
-## 1. Evidence inventory
+The report distinguishes between what is visible in the supplied evidence, what is stated in the accompanying lab notes, and what remains to be independently verified. It does not treat a screenshot of a configuration screen as proof of successful connectivity, nor does it present shared answer notes as an independent packet-capture re-analysis.
 
-| Evidence group | Count | Description |
-|---|---:|---|
-| Wireshark result cards | 6 | Learner results for Labs 03–08 |
-| Kali desktop / VirtualBox | 1 | Kali Linux running in the VM |
-| VirtualBox setup archive | 7 | VM, network adapter and shared-folder configuration views |
-| Wireshark analysis archive | 32 | Packet lists, packet details and protocol/stream views |
-| **Total** | **46** | |
+## 2. Objectives
 
-## 2. Wireshark results
+The Week 01 practical objectives were to:
 
-| Lab | Practical | Score |
-|---|---|---:|
-| 03 | Identify the Attacker's IP | 89% |
-| 04 | Follow TCP Stream | 90% |
-| 05 | Follow TCP Stream — Part 2 | 100% |
-| 06 | HTTP Plain-Text Credentials | 99% |
-| 07 | FTP Brute-Force Detection | 100% |
-| 08 | VoIP Call Analysis | 98% |
-| **Average** | **6 labs** | **96%** |
+1. Prepare a controlled Kali Linux environment using VirtualBox.
+2. Understand virtual network adapter and shared-folder configuration.
+3. Become familiar with Wireshark's packet-list, packet-detail and stream-analysis views.
+4. Identify indicators of network scanning and suspicious authentication activity.
+5. Inspect application-layer traffic and understand the exposure risks of unencrypted protocols.
+6. Interpret basic SIP signalling and RTP media traffic.
+7. Record results and technical observations in a traceable evidence-based format.
 
-## 3. Technical findings and learning outcomes
+## 3. Lab Environment & Tools
 
-### Lab 03 — Identify the Attacker's IP
-The supplied lab notes/official solution describe a 309-packet capture, 73 packets matching the SYN filter, source 192.168.10.66, target 192.168.10.20, source port 52311, 40 probed ports, and open ports 22, 80 and 443. Closed-port responses were described as RST/ACK. These exact values are attributed to the shared solution and were not independently recomputed from the original PCAP in this report-writing pass.
+| Component | Environment / purpose |
+|---|---|
+| Host platform | Windows host (as shown in the supplied setup material) |
+| Hypervisor | Oracle VirtualBox |
+| Guest operating system | Kali Linux |
+| Packet analysis | Wireshark |
+| Network exercises | Supplied guided lab captures |
+| Evidence | VM configuration views, Kali desktop view, packet-analysis screenshots and six result cards |
 
-**Learning:** identify initial SYN traffic, correlate endpoints and interpret TCP responses as scan indicators.
+**Network configuration reference:** The assignment brief specifies a NAT Network using `10.0.0.0/24`, with an expected Kali address of `10.0.0.2/24`, gateway `10.0.0.1`, and guest shared-folder path `/downloads`. These are the assignment's expected values; they should not be interpreted as independently confirmed runtime values unless supported by command output.
 
-### Lab 04 — Follow TCP Stream
-The supplied notes describe a 246-packet capture, TCP port 5000, stream 5 and a 413-byte conversation between the exercise client and server.
+### Recommended validation commands
 
-**Learning:** reconstruct both directions of a TCP conversation and understand why unencrypted application messages can be exposed.
-
-### Lab 05 — Follow TCP Stream, Part 2
-The supplied notes identify a request for /staff.html, stream 7 and an HTTP 200 response. The exercise demonstrated that HTML comments are still delivered to the browser and can be inspected in page source.
-
-**Learning:** never store secrets in client-delivered HTML, comments or JavaScript; enforce access control on the server.
-
-### Lab 06 — HTTP Plain-Text Credentials
-The supplied notes describe a 255-packet capture, HTTP POST /login and two login attempts. Actual credential values are intentionally excluded.
-
-**Learning:** HTTP does not encrypt form data. Use correctly configured HTTPS/TLS and secure session handling.
-
-### Lab 07 — FTP Brute-Force Detection
-The supplied notes describe a 369-packet capture, 24 FTP failure responses (530) and a later success response (230). Password values are omitted.
-
-**Learning:** repeated authentication failures followed by success warrant investigation and correlation. Prefer SFTP or properly configured FTPS, rate limits and monitoring.
-
-### Lab 08 — VoIP Call Analysis
-The supplied notes describe a 1,051-packet capture, SIP signalling, RTP media and PCMU codec. Personal/payment details from the training conversation are excluded.
-
-**Learning:** signalling and media require protection; use TLS-protected SIP signalling and SRTP media where supported.
-
-## 4. VirtualBox and Kali Linux
-
-The archive includes screenshots of Kali running in VirtualBox and views of VM, network adapter and shared-folder configuration.
-
-The assignment brief specifies a NAT Network of 10.0.0.0/24, expected Kali address 10.0.0.2/24, gateway 10.0.0.1 and guest shared-folder path /downloads. These are **expected assignment settings**, not blanket claims that each value was independently verified.
-
-Suggested repeatable checks:
+Run these inside the Kali guest and retain the actual output with the evidence:
 
 ```bash
 ip -br address
@@ -85,29 +56,195 @@ findmnt
 ls -la /downloads
 ```
 
-Record actual command output and date when performing these checks. A configuration screenshot alone does not establish successful connectivity or shared-folder read/write access.
+These checks help verify interface addressing, routing, gateway reachability, DNS resolution, mounted filesystems and shared-folder visibility. A successful ping alone does not prove that every service or shared-folder permission is working.
 
-## 5. Evidence mapping
+## 4. Methodology
 
-- `VirtualBox-Kali-Lab/Evidence/` — setup and VM configuration screenshots.
-- `Wireshark-SOC-Labs/Evidence/Lab-03/` through `Lab-08/` — matching result and analysis screenshots.
-- `Wireshark-SOC-Labs/Reports/` — individual technical reports.
-- `EVIDENCE-INDEX.md` — source inventory, result summary and upload state.
+The practical workflow followed a repeatable analysis sequence:
 
-## 6. Privacy and safe handling
+1. **Prepare:** Open the assigned lab capture or the configured Kali virtual machine.
+2. **Scope:** Identify the protocol, endpoints and question being investigated.
+3. **Filter:** Apply a relevant Wireshark display filter to reduce unrelated traffic.
+4. **Inspect:** Review packet-list entries and expand protocol fields in the packet-details pane.
+5. **Correlate:** Compare source/destination addresses, ports, flags, response codes, timestamps and stream direction.
+6. **Interpret:** Relate observed traffic to a network or application-security behaviour.
+7. **Document:** Record the result, the security significance and the supporting evidence reference.
 
-Before public release, review screenshots for credentials, session tokens, personal/payment information, host usernames, local paths, MAC addresses and unrelated device identifiers. Do not commit VM disk images, saved-state files, private keys or unreviewed PCAP files. The written reports deliberately omit training secrets.
+Useful Wireshark filters for revisiting these exercises include:
 
-## 7. Limitations
+| Investigation | Example display filter |
+|---|---|
+| TCP SYN packets | `tcp.flags.syn == 1 && tcp.flags.ack == 0` |
+| One endpoint | `ip.addr == 192.168.10.66` |
+| HTTP requests | `http.request` |
+| FTP control traffic | `ftp || ftp-response` |
+| SIP signalling | `sip` |
+| RTP media | `rtp` |
 
-1. Supplied screenshots are visual evidence, not original PCAP files.
-2. Packet-level values are attributed to supplied notes or official lab answers where stated; they were not independently recomputed from PCAPs here.
-3. Assignment network values are distinguished from independently verified configuration.
-4. The archive contains 46 images; this does not mean the binary images are already committed to GitHub.
-5. No connectivity test is marked successful unless actual output supports it.
+Filters are starting points; the correct filter depends on the capture and Wireshark's protocol dissection.
 
-## Conclusion
+## 5. Practical Exercises & Technical Analysis
 
-Week 01 documents a practical sequence spanning Kali virtual-lab setup and six Wireshark exercises. The learner result cards average 96%. The portfolio records the technical learning, defensive implications, evidence sources, and verification limits without overstating what the screenshots prove.
+### 5.1 Lab 03 — Identify the Attacker's IP
 
-*Evidence principle: map every screenshot to a task, attribute every result to its source, and separate observation from interpretation.*
+**Recorded result:** 89%
+
+**Investigation focus:** Recognising TCP SYN scanning and identifying the system initiating the connection attempts.
+
+The supplied lab notes describe a 309-packet capture, with 73 packets matching the SYN-focused filter. The notes identify `192.168.10.66` as the suspected source and `192.168.10.20` as the target, with 40 ports probed. They report open ports 22, 80 and 443 and closed-port responses using TCP RST/ACK.
+
+**Analysis:** A sequence of initial SYN packets directed at multiple destination ports can indicate port scanning. The analyst should correlate the source, target, destination-port spread, timing and response flags before classifying the behaviour. A single SYN packet is not sufficient evidence of malicious activity.
+
+**Defensive relevance:** Monitor unusual connection rates and broad port coverage, baseline legitimate scanners, and correlate network detections with firewall and endpoint telemetry.
+
+**Learning outcome:** Use TCP flags and endpoint/port patterns to recognise reconnaissance behaviour.
+
+*Evidence reference: Lab 03 result card and corresponding packet-analysis screenshots.*
+
+### 5.2 Lab 04 — Follow TCP Stream
+
+**Recorded result:** 90%
+
+**Investigation focus:** Reconstructing an application conversation carried over TCP.
+
+The supplied notes describe a 246-packet capture involving TCP port 5000, with stream 5 containing a 413-byte conversation between the exercise endpoints.
+
+**Analysis:** Wireshark's Follow TCP Stream feature reassembles application data in both directions, making it easier to understand a conversation than examining isolated packets. If an application sends sensitive information without encryption, a person with access to the traffic may be able to read it.
+
+**Defensive relevance:** Use TLS for application protocols that carry sensitive data, avoid transmitting credentials or confidential content in clear text, and validate certificate and transport-security configuration.
+
+**Learning outcome:** Reconstruct TCP conversations and explain the confidentiality risk of plaintext application protocols.
+
+*Evidence reference: Lab 04 result card and TCP stream-analysis screenshots.*
+
+### 5.3 Lab 05 — Follow TCP Stream, Part 2
+
+**Recorded result:** 100%
+
+**Investigation focus:** Inspecting HTTP content and understanding information exposed in client-delivered web pages.
+
+The supplied notes refer to a request for `/staff.html`, stream 7 and an HTTP 200 response. The exercise highlighted information present in an HTML comment.
+
+**Analysis:** HTML comments and other client-side content are delivered to the browser and can be inspected. Hiding a value in a comment, JavaScript file or page source does not make it secret. Access restrictions must be enforced by the server, not by obscuring client-side content.
+
+**Defensive relevance:** Never place passwords, API keys, internal notes or sensitive business information in client-delivered source. Apply server-side authorization and keep secrets in protected server-side configuration.
+
+**Learning outcome:** Inspect HTTP responses and distinguish visible client-side content from properly protected server-side resources.
+
+*Evidence reference: Lab 05 result card and HTTP stream/page-source screenshots.*
+
+### 5.4 Lab 06 — HTTP Plain-Text Credentials
+
+**Recorded result:** 99%
+
+**Investigation focus:** Identifying login submissions and understanding why HTTP is unsuitable for transmitting credentials.
+
+The supplied notes describe a 255-packet capture containing an HTTP POST request to `/login` and two login attempts. Credential values are intentionally excluded from this report.
+
+**Analysis:** Standard HTTP does not encrypt request contents. Form submissions can therefore be exposed to an observer who can capture traffic along the communication path. The presence of a POST request does not itself make data secure; transport encryption and secure application handling are required.
+
+**Defensive relevance:** Enforce HTTPS across the application, redirect HTTP to HTTPS, configure modern TLS, set secure session-cookie attributes, and avoid logging passwords or authentication tokens.
+
+**Learning outcome:** Recognise HTTP form submissions in packet captures and explain the risk of transmitting authentication data without TLS.
+
+*Evidence reference: Lab 06 result card and HTTP request-analysis screenshots. Sensitive form values are not reproduced.*
+
+### 5.5 Lab 07 — FTP Brute-Force Detection
+
+**Recorded result:** 100%
+
+**Investigation focus:** Recognising repeated FTP authentication failures and a subsequent successful response.
+
+The supplied notes describe a 369-packet capture, 24 FTP failure responses (code 530) and a later success response (code 230). Account and password details are not reproduced.
+
+**Analysis:** Repeated authentication failures followed by a successful login may indicate password guessing or credential abuse. The analyst should correlate the attempts by source, account, timing and destination, then check whether the successful session performed unusual actions.
+
+**Defensive relevance:** Replace legacy FTP with SFTP or appropriately configured FTPS, enforce strong unique credentials and multi-factor authentication where available, apply rate limiting or lockout controls carefully, and alert on repeated failures followed by success.
+
+**Learning outcome:** Interpret FTP response codes and identify an authentication pattern that merits investigation.
+
+*Evidence reference: Lab 07 result card and FTP control-channel screenshots.*
+
+### 5.6 Lab 08 — VoIP Call Analysis
+
+**Recorded result:** 98%
+
+**Investigation focus:** Separating call signalling from media traffic in a VoIP capture.
+
+The supplied notes describe a 1,051-packet capture containing SIP signalling and RTP media, with PCMU identified as the codec. Personal conversation and payment-related details from the training material are intentionally excluded.
+
+**Analysis:** SIP is commonly used to establish, manage and terminate sessions, while RTP carries real-time audio/video media. Analysing both protocol layers helps an analyst understand call setup and media flow. Exposed signalling or media can create privacy and confidentiality risks.
+
+**Defensive relevance:** Use SIP over TLS where supported and SRTP for media protection, restrict access to voice infrastructure, segment voice networks appropriately, and monitor unusual call patterns.
+
+**Learning outcome:** Identify the roles of SIP and RTP and explain why signalling and media require appropriate protection.
+
+*Evidence reference: Lab 08 result card and SIP/RTP analysis screenshots.*
+
+## 6. Results Summary
+
+| Lab | Exercise | Score | Main skill demonstrated |
+|---|---|---:|---|
+| 03 | Identify the Attacker's IP | 89% | TCP scan pattern recognition |
+| 04 | Follow TCP Stream | 90% | TCP conversation reconstruction |
+| 05 | Follow TCP Stream, Part 2 | 100% | HTTP response and source inspection |
+| 06 | HTTP Plain-Text Credentials | 99% | HTTP authentication exposure analysis |
+| 07 | FTP Brute-Force Detection | 100% | Authentication-failure pattern analysis |
+| 08 | VoIP Call Analysis | 98% | SIP signalling and RTP media inspection |
+| **Overall mean** | **6 exercises** | **96%** | |
+
+The mean is calculated from the six supplied result-card percentages. It is a summary of the recorded exercise scores, not an independent assessment of the original packet captures.
+
+## 7. Evidence Register
+
+The supplied archive contains **46 images** in total. The portfolio should show only a small number of high-value screenshots in the main report, while retaining the complete evidence set in the relevant folders.
+
+| Evidence group | Quantity | Recommended use |
+|---|---:|---|
+| Wireshark result cards | 6 | One compact results panel/table; retain originals in each lab folder |
+| Kali desktop / VM view | 1 | One representative image in the environment section |
+| VirtualBox configuration views | 7 | Select the clearest network-adapter and shared-folder views |
+| Wireshark packet-analysis views | 32 | Select only the clearest packet/stream screenshot(s) for key exercises; archive the rest |
+
+**Recommended report visuals:** one Kali/VirtualBox environment image, one VirtualBox network configuration image, and a small selection of Wireshark analysis images that directly support the most important findings. Avoid repeating near-identical screenshots.
+
+**Repository evidence paths:**
+- `VirtualBox-Kali-Lab/Evidence/` — reviewed VM and network configuration images.
+- `Wireshark-SOC-Labs/Evidence/Lab-03/` through `Lab-08/` — lab-specific screenshots.
+- `Wireshark-SOC-Labs/Reports/` — individual exercise reports.
+
+Only image files that have actually been uploaded should be embedded in Markdown. Placeholder files are folder markers, not evidence images.
+
+## 8. Security Recommendations Derived from the Exercises
+
+1. Prefer encrypted protocols and enforce TLS for web and application traffic.
+2. Avoid exposing secrets in HTML, JavaScript, comments, URLs or client-side configuration.
+3. Monitor SYN patterns and unusual port coverage to detect reconnaissance.
+4. Correlate repeated authentication failures with subsequent successful logins.
+5. Protect voice signalling and media with supported encryption mechanisms.
+6. Retain relevant network telemetry and investigate suspicious events with endpoint and firewall context.
+7. Keep lab environments isolated and perform testing only on systems for which explicit authorization exists.
+
+## 9. Limitations & Evidence Integrity
+
+- The report was prepared from the supplied screenshots, result cards and accompanying lab notes; original PCAP files were not provided for independent re-analysis in this reporting pass.
+- Exact packet counts, stream identifiers, endpoint addresses and response-code counts are attributed to the supplied notes where stated.
+- Assignment network settings are described as expected configuration values unless independently supported by runtime output.
+- The six result percentages are transcribed from the supplied result cards.
+- Training credentials, passwords, personal conversation content and payment information are deliberately omitted.
+- Screenshots document visible states; they do not by themselves prove successful end-to-end connectivity, shared-folder permissions or the absence of other issues.
+- The full 46-image archive should be retained as supporting evidence, but only reviewed and privacy-safe images should be published.
+
+## 10. Conclusion
+
+Week 01 provided practical exposure to virtual lab preparation and network traffic analysis. The work progressed from understanding the Kali/VirtualBox environment to examining TCP behaviour, application streams, web authentication exposure, FTP login patterns and VoIP traffic.
+
+The six supplied Wireshark result cards show an average score of **96%**. More importantly, the exercises demonstrate how packet-level observations can be translated into defensive security insights: recognising reconnaissance, identifying plaintext exposure, detecting suspicious authentication patterns and understanding the need to protect real-time communications.
+
+The next improvement to this portfolio is to place a carefully selected set of the learner's own, privacy-reviewed screenshots directly beside the relevant sections and keep the remaining evidence in the structured lab folders.
+
+---
+
+**Report prepared for:** NetworkWalks Cybersecurity Internship — Week 01  
+**Author:** Hafsa Khan  
+**Use:** Educational and authorized cybersecurity training
