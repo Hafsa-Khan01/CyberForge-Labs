@@ -41,15 +41,15 @@ Each practical record should make it possible for a technical reviewer to unders
 
 Commands shown as examples must be distinguished from commands actually executed. Machine-specific values, IP addresses and successful outcomes must come from the original evidence; they must not be guessed.
 
-## 4. Review checklist
+## 4. Technical quality standards
 
-- [ ] Lab setup and network configuration are documented.
-- [ ] Linux exercises include commands and meaningful explanations.
-- [ ] Networking concepts are described accurately.
-- [ ] Assigned learning-room notes are organized individually.
-- [ ] Bandit notes do not expose passwords or credentials.
-- [ ] Evidence references point to the corresponding original artifacts.
-- [ ] Report and presentation reflect work that was actually completed.
+- Lab setup and network configuration are documented.
+- Linux exercises include commands and meaningful explanations.
+- Networking concepts are described accurately.
+- Assigned technical-room writeups are organized individually.
+- Bandit notes do not expose passwords or credentials.
+- Evidence references point to the corresponding original artifacts.
+- Report and presentation reflect work that was actually completed.
 
 ## 5. Scope and integrity
 
