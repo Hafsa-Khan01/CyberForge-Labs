@@ -1,18 +1,18 @@
 # NetworkWalks Week 01 — Evidence Index
 
-## Supplied source package inventory
+## Supplied archive inventory
 
-The supplied archive contains 46 image files:
+The supplied `Evidence.zip` was extracted and inspected. It contains **46 images**.
 
-| Source | Images | Description |
+| Group | Count | Description |
 |---|---:|---|
-| Wireshark Lab 3–8 result screenshots | 6 | Individual lab performance results |
-| Standalone setup screenshot | 1 | Kali Linux VM running in VirtualBox |
-| Nested screenshot archive A | 7 | VirtualBox settings, network adapter/shared-folder configuration, and setup evidence |
-| Nested screenshot archive B | 32 | Wireshark packet lists, packet details, and stream/protocol analysis windows |
+| Wireshark Lab 03–08 result cards | 6 | Learner score screenshots |
+| Kali desktop in VirtualBox | 1 | Kali VM running in the virtualisation application |
+| VirtualBox setup archive | 7 | VM settings, adapter and shared-folder configuration views |
+| Wireshark analysis archive | 32 | Packet lists, packet details and protocol/stream views |
 | **Total** | **46** | |
 
-## Wireshark result summary
+## Result summary
 
 | Lab | Score |
 |---|---:|
@@ -24,8 +24,15 @@ The supplied archive contains 46 image files:
 | 08 | 98% |
 | **Average** | **96%** |
 
-## GitHub upload status
+## Destination folders
 
-The archive has been inspected and indexed, but the original image files have not yet been committed to this repository branch. Add reviewed images to the matching Evidence folders under VirtualBox-Kali-Lab and Wireshark-SOC-Labs.
+- VirtualBox/Kali: `VirtualBox-Kali-Lab/Evidence/`
+- Wireshark: `Wireshark-SOC-Labs/Evidence/Lab-03/` through `Lab-08/`
 
-Before publishing, redact credentials, personal information, host usernames, and sensitive network details. Do not upload VM disks, saved-state files, private keys, or unreviewed PCAP files.
+## Upload state
+
+The source archive is available in the working conversation and has been inventoried. Verify the GitHub tree for each binary image before describing it as uploaded. A README, evidence index or `.gitkeep` file is not itself a screenshot.
+
+## Privacy
+
+Before public release, redact credentials, tokens, personal/payment information, host usernames, local paths, MAC addresses and unrelated identifiers. Do not commit VM disks, saved states, private keys or unreviewed PCAPs.
