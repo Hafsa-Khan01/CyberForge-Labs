@@ -27,4 +27,4 @@ Sensitive notes placed in HTML comments are still delivered to the browser and c
 Do not place secrets or internal-only information in client-delivered HTML, comments, JavaScript, or other public response content. Enforce server-side authorisation.
 
 ## Evidence and limitation
-The learner supplied the result screenshot and Wireshark screenshots in the source archive. The original PCAP was not independently re-analysed for this write-up.
+The completed Lab 05 result card is published in the corresponding GitHub Evidence folder. Additional practical screenshots are retained in the Week 01 source evidence archive.
