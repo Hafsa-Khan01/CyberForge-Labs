@@ -21,14 +21,16 @@ Six browser-based Wireshark SOC labs (Labs 3–8) have been completed. The resul
 - SIP call signalling, RTP media, and codec identification
 - Translating packet observations into defensive recommendations
 
-## Lab reports
+## Canonical lab reports
 
-- [Lab 03 — Identify the Attacker's IP](Lab-03-Identify-the-Attackers-IP.md)
-- [Lab 04 — Follow TCP Stream](Lab-04-Follow-TCP-Stream.md)
-- [Lab 05 — Follow TCP Stream, Part 2](Lab-05-Follow-TCP-Stream-Part-2.md)
-- [Lab 06 — HTTP Plain-Text Credentials](Lab-06-HTTP-Plain-Text-Credentials.md)
-- [Lab 07 — FTP Brute-Force Detection](Lab-07-FTP-Brute-Force-Detection.md)
-- [Lab 08 — VoIP Call Analysis](Lab-08-VoIP-Call-Analysis.md)
+The duplicate report copies previously stored in this legacy folder have been removed. The maintained reports are in the Week 01 structure:
+
+- [Lab 03 — Identify the Attacker's IP](../Week-01/Wireshark-SOC-Labs/Reports/Lab-03-Identify-the-Attackers-IP.md)
+- [Lab 04 — Follow TCP Stream](../Week-01/Wireshark-SOC-Labs/Reports/Lab-04-Follow-TCP-Stream.md)
+- [Lab 05 — Follow TCP Stream, Part 2](../Week-01/Wireshark-SOC-Labs/Reports/Lab-05-Follow-TCP-Stream-Part-2.md)
+- [Lab 06 — HTTP Plain-Text Credentials](../Week-01/Wireshark-SOC-Labs/Reports/Lab-06-HTTP-Plain-Text-Credentials.md)
+- [Lab 07 — FTP Brute-Force Detection](../Week-01/Wireshark-SOC-Labs/Reports/Lab-07-FTP-Brute-Force-Detection.md)
+- [Lab 08 — VoIP Call Analysis](../Week-01/Wireshark-SOC-Labs/Reports/Lab-08-VoIP-Call-Analysis.md)
 
 ## Evidence
 
