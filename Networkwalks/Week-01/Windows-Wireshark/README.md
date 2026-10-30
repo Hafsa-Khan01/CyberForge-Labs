@@ -1,29 +1,27 @@
-# Windows Wireshark — Week 01 Supporting Evidence
+# Windows-Host Wireshark — Week 01 Evidence
 
 ## Purpose
 
-This folder is reserved for supporting evidence from Wireshark practical work performed on the Windows host. It is kept separate from the Kali Linux / VirtualBox setup evidence and from the main Wireshark lab reports.
+This folder contains supporting screenshots from Wireshark practical work performed on the Windows host. It is separate from the Kali Linux guest setup evidence and the individual lab reports.
 
-## Evidence organisation
+## Evidence inventory
 
-Place genuine Windows Wireshark screenshots in the `Evidence/` subfolder. Use descriptive filenames, for example:
+The repository currently contains 27 numbered JPEG screenshots in [Evidence](Evidence/). They are provided as supporting practical views; consult the individual lab reports for the exercise objective, observations, security interpretation and limitations.
 
-- `01-wireshark-on-windows.png`
-- `02-capture-interface-selection.png`
-- `03-packet-list-and-display-filter.png`
-- `04-tcp-analysis.png`
-- `05-http-or-dns-analysis.png`
+## How to review
 
-Only retain examples that correspond to work actually performed. Do not use these example filenames as proof that screenshots exist.
+1. Open the evidence folder and review screenshots in numerical order.
+2. Match each screenshot to the relevant practical context described in the Week 01 lab reports.
+3. Treat only visible packet fields and interface details as observed facts.
+4. Do not infer a successful check, hidden payload value or security conclusion from a screenshot that does not show it.
 
-## Reporting guidance
+## Related documentation
 
-- Identify this material as Windows host evidence, not as a separate Windows virtual machine.
-- Keep the primary exercise write-ups in [Wireshark-SOC-Labs](../Wireshark-SOC-Labs/).
-- Keep Kali and VirtualBox configuration screenshots in [VirtualBox-Kali-Lab](../VirtualBox-Kali-Lab/).
-- Redact credentials, tokens, private IPs where appropriate, MAC addresses, usernames and unrelated personal information before public sharing.
-- Do not include PCAP files containing sensitive or personal traffic unless they have been reviewed and sanitised.
+- [Wireshark SOC Labs index](../Wireshark-SOC-Labs/README.md)
+- [Consolidated technical report](../Wireshark-SOC-Labs/REPORT.md)
+- [Individual lab reports](../Wireshark-SOC-Labs/Reports/)
+- [Week 01 evidence register](../EVIDENCE-INDEX.md)
 
-## Evidence status
+## Privacy and handling
 
-The folder structure has been restored. Add the original Windows Wireshark screenshots to `Evidence/` before describing them as present in this repository.
+Before public sharing, inspect images for credentials, tokens, personal information, host usernames, local paths, MAC addresses and unrelated network identifiers. Do not upload unreviewed PCAP files or packet payloads containing sensitive data.
