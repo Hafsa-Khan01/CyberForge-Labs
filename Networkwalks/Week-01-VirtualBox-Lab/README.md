@@ -1,34 +1,36 @@
-# Week 01 — VirtualBox and Kali Lab
+# Week 01 — VirtualBox and Kali Linux Lab
 
 ## Objective
-Document the local virtual lab setup and verify basic network connectivity before later exercises.
 
-## Expected environment
-Use the values in the internship brief and confirm them in VirtualBox and Kali before recording completion.
-- NAT Network: `10.0.0.0/24`
-- Expected gateway: `10.0.0.1`
-- Expected Kali address: `10.0.0.2/24`
-- Internet and DNS access
-- Shared Downloads folder, if configured
-- Clipboard and drag-and-drop settings, if required
-- A VirtualBox snapshot after the base setup is stable
+Set up a local virtual cybersecurity lab and prepare Kali Linux for networking and packet-analysis exercises.
 
-These are expected values from the lab instructions, not a claim that this repository independently verified the machine.
+## Environment recorded in the internship brief
 
-## Verification checklist
-- [ ] VirtualBox NAT Network settings reviewed
-- [ ] Kali IP and default route checked
-- [ ] Gateway reachability checked
-- [ ] Internet reachability checked
-- [ ] DNS resolution checked
-- [ ] Required website reachability checked
-- [ ] Shared folder checked, if configured
-- [ ] Clipboard / drag-and-drop checked
-- [ ] Snapshot created
-- [ ] Evidence screenshots captured and reviewed
+- Virtualisation platform: Oracle VirtualBox
+- Guest operating system: Kali Linux
+- NAT Network: 10.0.0.0/24
+- Expected Kali address: 10.0.0.2/24
+- Expected gateway: 10.0.0.1
+- Shared folder path inside the guest: /downloads
 
-## Evidence
-Save reviewed screenshots in `Evidence/`. Do not upload passwords, tokens, personal information, or unrelated private network details.
+These are the assignment's expected settings. Refer to screenshots and actual command outputs before treating an individual setting as independently verified.
 
-## Results
-Add actual outputs and observations after running the checks. Do not mark the checklist complete until each item has been verified.
+## Work and evidence supplied
+
+The submitted evidence package includes screenshots showing VirtualBox VM configuration, network adapter settings, shared-folder configuration, Kali Linux running in VirtualBox, and terminal/network-analysis activity.
+
+## Practical verification guide
+
+When reproducing or reviewing the environment, check:
+
+    ip -br address
+    ip route
+    ping -c 4 10.0.0.1
+    ping -c 4 1.1.1.1
+    getent hosts example.com
+
+For a configured shared folder, verify the mount and read/write access using the actual guest mount path. Avoid recording host usernames or personal directory names in public screenshots.
+
+## Evidence and safety
+
+See the [Evidence Index](../EVIDENCE-INDEX.md). Do not commit VM disk files, saved-state files, passwords, private keys, or unredacted personal data.
