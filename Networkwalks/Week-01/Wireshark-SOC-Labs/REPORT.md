@@ -29,22 +29,36 @@ The Week 01 practical objectives were to:
 6. Interpret basic SIP signalling and RTP media traffic.
 7. Record results and technical observations in a traceable evidence-based format.
 
-## 3. Lab Environment & Tools
+## 3. Virtual Lab Environment: Oracle VirtualBox & Kali Linux
 
-| Component | Environment / purpose |
+The first part of the Week 01 work was preparing a Kali Linux virtual machine in Oracle VirtualBox for cybersecurity and network-analysis practice. The setup evidence records the VM running, its general configuration, network-adapter settings, shared-folder configuration, NAT Network manager, Kali network-interface details and connectivity-check activity.
+
+| Component | Setup / role |
 |---|---|
-| Host platform | Windows host (as shown in the supplied setup material) |
-| Hypervisor | Oracle VirtualBox |
+| Host platform | Windows |
+| Virtualisation platform | Oracle VirtualBox |
 | Guest operating system | Kali Linux |
-| Packet analysis | Wireshark |
-| Network exercises | Supplied guided lab captures |
-| Evidence | VM configuration views, Kali desktop view, packet-analysis screenshots and six result cards |
+| Virtual network | NAT Network, configured against the internship brief |
+| Shared-folder location | `/downloads` (assignment reference path) |
+| Network inspection | Kali terminal network-interface and connectivity checks |
+| Subsequent analysis tool | Wireshark |
 
-**Network configuration reference:** The assignment brief specifies a NAT Network using `10.0.0.0/24`, with an expected Kali address of `10.0.0.2/24`, gateway `10.0.0.1`, and guest shared-folder path `/downloads`. These values formed the network configuration reference for the practical setup.
+### 3.1 Setup and configuration workflow
 
-### Network validation reference
+1. **Virtual machine preparation:** Opened the Kali Linux virtual machine in Oracle VirtualBox and reviewed its general VM settings.
+2. **Network configuration:** Reviewed the VM network adapter and the VirtualBox NAT Network configuration for the assigned lab environment.
+3. **Shared-folder configuration:** Reviewed the shared-folder settings intended to make the host/guest working files accessible inside the Kali environment.
+4. **Guest startup:** Started the Kali Linux VM and confirmed the guest desktop was available for practical work.
+5. **Network inspection:** Used Kali network-interface and connectivity checks to inspect the guest's network configuration.
+6. **Evidence capture:** Captured screenshots of the running VM, VirtualBox settings, adapter and NAT Network configuration, shared-folder settings, and Kali network checks.
 
-The following commands are useful for documenting and reviewing the completed Kali network setup:
+### 3.2 Assignment network reference
+
+The internship brief specifies a NAT Network of `10.0.0.0/24`, an expected Kali address of `10.0.0.2/24`, gateway `10.0.0.1`, and guest shared-folder path `/downloads`. These are the assignment's reference settings; the exact active IP address and successful shared-folder permissions should be read from the relevant configuration screenshots or terminal output rather than assumed from the brief alone.
+
+### 3.3 Network and shared-folder checks
+
+The following Kali commands are suitable for inspecting the configured environment:
 
 ```bash
 ip -br address
@@ -56,7 +70,9 @@ findmnt
 ls -la /downloads
 ```
 
-These checks help verify interface addressing, routing, gateway reachability, DNS resolution, mounted filesystems and shared-folder visibility. A successful ping alone does not prove that every service or shared-folder permission is working.
+Together, these checks help inspect interface addressing, routing, gateway reachability, DNS resolution, mounted filesystems and shared-folder visibility. A successful ping alone does not establish that every service or shared-folder permission is working.
+
+**Setup evidence:** The VirtualBox/Kali evidence folder contains eight setup screenshots covering the running Kali VM, VM settings, network adapter, shared-folder configuration, network connectivity/interface checks, Snapshot Manager and NAT Network Manager.
 
 ## 4. Methodology
 
