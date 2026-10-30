@@ -1,68 +1,111 @@
-# Week 1 — Study Notes
+# Week 01 | Cybersecurity Foundations & Network Architecture
 
-## Cybersecurity and the CIA Triad
-Cybersecurity protects systems, networks, applications and information from unauthorized access, disruption, alteration and destruction. The CIA triad is:
-- **Confidentiality:** only authorized people or systems can access information.
-- **Integrity:** information remains accurate and is changed only through authorized actions.
-- **Availability:** systems and information remain accessible when needed.
+## 1. Cybersecurity Principles
 
-## Security Roles
-- **SOC Analyst:** monitors alerts and telemetry, triages suspicious activity, investigates indicators and escalates incidents.
-- **VAPT / Penetration Tester:** performs authorized security testing within an agreed scope and documents validated weaknesses and remediation.
-- **Incident Responder:** coordinates containment, investigation, eradication, recovery and lessons learned.
+Cybersecurity is the discipline of protecting information assets, endpoints, applications and networks against unauthorized disclosure, modification, disruption or destruction. Security controls are selected according to the assets being protected, the threats they face and the operational requirements of the environment.
 
-## OSI and TCP/IP
-| OSI layer | Examples | Security considerations |
+### CIA security objectives
+
+| Objective | Security requirement | Example control |
 |---|---|---|
-| 7 Application | HTTP, DNS, SMTP | injection, malicious requests, phishing |
-| 6 Presentation | TLS, encoding | weak cryptography, unsafe parsing |
-| 5 Session | session management | hijacking, replay |
-| 4 Transport | TCP, UDP | port exposure, scanning, SYN abuse |
-| 3 Network | IP, ICMP | spoofing, routing attacks |
-| 2 Data Link | Ethernet, ARP | ARP spoofing, MAC abuse |
-| 1 Physical | cabling, radio | device tampering, interception |
+| Confidentiality | Information is accessible only to authorized identities. | Access control, encryption, least privilege |
+| Integrity | Data and system state remain accurate and changes are authorized. | Hash verification, change control, file integrity monitoring |
+| Availability | Services and information remain accessible when required. | Redundancy, backups, recovery testing, capacity management |
 
-TCP/IP groups these functions into Application, Transport, Internet and Network Access layers.
+A control may support more than one objective. For example, access control can protect confidentiality and integrity.
 
-## Network Fundamentals
-- **IP address:** logical address used to route packets.
-- **MAC address:** link-layer interface identifier.
-- **DNS:** resolves names to records such as IP addresses.
-- **DHCP:** leases network configuration to clients.
-- **Ports:** identify application endpoints on a host.
+## 2. Operational Security Roles
 
-| Port | Common service |
-|---:|---|
-| 21 | FTP control |
-| 22 | SSH |
-| 23 | Telnet |
-| 25 | SMTP |
-| 53 | DNS |
-| 80 | HTTP |
-| 110 | POP3 |
-| 143 | IMAP |
-| 443 | HTTPS |
-| 445 | SMB |
-| 3306 | MySQL |
-| 3389 | RDP |
+| Role | Primary responsibility | Typical operational output |
+|---|---|---|
+| SOC Analyst | Monitor security telemetry, validate alerts, triage suspicious activity and escalate incidents. | Alert disposition, investigation notes, escalation record |
+| VAPT / Penetration Tester | Assess systems within an approved scope and validate security weaknesses safely. | Technical findings, impact analysis, remediation guidance |
+| Incident Responder | Coordinate investigation, containment, eradication, recovery and post-incident review. | Incident timeline, containment actions, recovery record |
 
-## Linux Filesystem and Permissions
-- `/etc`: system and service configuration.
-- `/var/log`: system and application logs.
-- `/home`: users' home directories.
-- `/tmp`: temporary files.
-- `chmod` changes permission bits; `chown` changes ownership.
-- SUID runs an executable with the file owner's effective UID. Unexpected SUID files deserve investigation.
+These roles may collaborate, but their authority and responsibilities depend on the organization's procedures and Rules of Engagement.
 
-## Threat, Vulnerability, Risk and Exploit
-A **threat** may cause harm; a **vulnerability** is a weakness; **risk** combines likelihood and impact; an **exploit** is a method or code that takes advantage of a weakness.
+## 3. Network Architecture Models
 
-## Virtual Machine Networking
-- **NAT:** guest accesses external networks through host translation.
-- **NAT Network:** guests on the same NAT network can communicate, subject to configuration.
-- **Host-only:** guest communication is limited to the host-only network.
-- **Bridged:** guest joins the physical LAN as another device.
-Use isolated NAT Network or Host-only for vulnerable practice systems. Bridging can expose intentionally vulnerable services to the real LAN.
+### OSI reference model
 
-## Legal and Ethical Practice
-Obtain explicit authorization, define targets and exclusions, agree on time windows and Rules of Engagement, avoid unnecessary data access, preserve evidence, and report findings responsibly. In Pakistan, check the current text and applicability of the Prevention of Electronic Crimes Act (PECA) and obtain qualified legal advice for legal questions. Never test systems without permission.
+| Layer | Function | Representative protocols / technologies | Security relevance |
+|---:|---|---|---|
+| 7 — Application | Network services used by applications | HTTP, DNS, SMTP | Application abuse, malicious requests, insecure service configuration |
+| 6 — Presentation | Data representation, encoding and cryptographic presentation | TLS-related presentation functions, encoding formats | Cryptographic configuration, unsafe parsing |
+| 5 — Session | Establishes and manages communication sessions | Session-control concepts | Session misuse, replay and session-management weaknesses |
+| 4 — Transport | End-to-end transport and port addressing | TCP, UDP | Exposed ports, connection abuse, transport-layer filtering |
+| 3 — Network | Logical addressing and packet routing | IPv4, IPv6, ICMP | Spoofing, routing and filtering issues |
+| 2 — Data Link | Local-segment framing and hardware addressing | Ethernet, ARP | ARP spoofing, unauthorized Layer-2 access |
+| 1 — Physical | Transmission of bits over a physical medium | Copper, fibre, radio | Physical tampering and interception |
+
+The TCP/IP model groups networking functions into Application, Transport, Internet and Network Access layers. The models are conceptual references; protocol placement can vary by teaching convention.
+
+## 4. Addressing and Core Network Services
+
+- **IP address:** logical address used to identify an interface for packet delivery across networks.
+- **MAC address:** link-layer address used for local-segment frame delivery.
+- **DNS:** resolves names and provides other resource records; it is not limited to IPv4 lookups.
+- **DHCP:** leases network configuration such as IP address, subnet mask, gateway and DNS resolver.
+- **Port:** identifies a transport-layer endpoint associated with an application or service. A port number alone does not prove which software is listening.
+
+### Common service ports
+
+| Port | Common association | Transport / note |
+|---:|---|---|
+| 21 | FTP control | TCP |
+| 22 | SSH | TCP |
+| 23 | Telnet | TCP; plaintext protocol |
+| 25 | SMTP | TCP |
+| 53 | DNS | UDP and TCP |
+| 80 | HTTP | TCP |
+| 110 | POP3 | TCP |
+| 143 | IMAP | TCP |
+| 443 | HTTPS | TCP; HTTP/3 commonly uses QUIC over UDP 443 |
+| 445 | SMB | TCP |
+| 3306 | MySQL | TCP |
+| 3389 | RDP | TCP and UDP |
+
+Port assignments are conventional defaults, not guarantees. Services can be configured to use non-standard ports.
+
+## 5. Linux Filesystem and Access Control
+
+| Path | Common purpose |
+|---|---|
+| `/etc` | System-wide configuration |
+| `/var/log` | System and application logs |
+| `/home` | Regular users' home directories |
+| `/tmp` | Temporary files |
+| `/usr` | User-space applications, libraries and shared resources |
+
+Linux permissions define read, write and execute rights for the file owner, group and other users. `chmod` changes permission bits; `chown` changes ownership. Apply least privilege to shared directories and service accounts.
+
+SUID executables run with the effective user ID of the file owner. Unexpected SUID binaries should be inventoried and assessed in context; their presence alone does not establish a vulnerability.
+
+## 6. Security Terminology
+
+| Term | Definition |
+|---|---|
+| Threat | A circumstance, actor or event capable of causing harm to an asset. |
+| Vulnerability | A weakness that could be exploited or otherwise cause an adverse impact. |
+| Exploit | A technique or code that takes advantage of a vulnerability. |
+| Risk | The potential for loss, commonly assessed using likelihood and impact. |
+| Control | A safeguard intended to modify risk or meet a security requirement. |
+
+An exposed service is an observation, not automatically a vulnerability. A defensible finding requires validation, context and impact assessment.
+
+## 7. Virtual Machine Network Modes
+
+| Mode | Connectivity model | Lab consideration |
+|---|---|---|
+| NAT | Guest initiates outbound connectivity through host translation. | Useful for basic internet access; inbound reachability is restricted unless configured. |
+| NAT Network | Guests attached to the same NAT network can communicate, subject to configuration. | Suitable for a contained multi-VM lab. |
+| Host-only | Communication is limited to the host-only virtual network. | Useful for isolated host/guest exercises. |
+| Bridged | Guest joins the physical LAN as a peer device. | Can expose intentionally vulnerable services to the real network; avoid unless explicitly required and controlled. |
+
+Choose the least-exposed mode that satisfies the exercise. Record the actual adapter configuration and assigned addresses.
+
+## 8. Authorization and Responsible Testing
+
+Before security testing, obtain explicit authorization and establish scope, exclusions, permitted techniques, test windows, points of contact and evidence-handling requirements. Avoid unnecessary access to personal or production data. Preserve relevant evidence and report findings through the approved channel.
+
+For work in Pakistan, consult the current applicable legal text and qualified legal guidance where necessary. This note is an operational reminder, not legal advice. Never scan, access or test systems without permission.
