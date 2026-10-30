@@ -197,7 +197,7 @@ The mean is calculated from the six recorded exercise scores.
 
 ## 7. Evidence Register
 
-The supplied archive contains **46 images** in total. The portfolio should show only a small number of high-value screenshots in the main report, while retaining the complete evidence set in the relevant folders.
+The Week 01 evidence archive contains **46 images** covering the six Wireshark exercises and the VirtualBox/Kali environment. The repository includes the six lab result cards and eight VirtualBox/Kali setup screenshots; the full set of practical screenshots is retained in the source evidence archive.
 
 | Evidence group | Quantity | Recommended use |
 |---|---:|---|
@@ -213,15 +213,7 @@ The supplied archive contains **46 images** in total. The portfolio should show 
 - `Wireshark-SOC-Labs/Evidence/Lab-03/` through `Lab-08/` — lab-specific screenshots.
 - `Wireshark-SOC-Labs/Reports/` — individual exercise reports.
 
-The evidence folders are organised by practical area and lab number so that setup screenshots, packet-analysis captures and result cards can be reviewed alongside this report.
-
-### Windows-based Wireshark practical evidence
-
-The Windows host was also used to perform Wireshark practical work. Screenshots from that environment are kept separately from the Kali Linux and VirtualBox setup evidence so the two environments remain easy to distinguish.
-
-**Evidence folder:** `Evidence/Windows-Wireshark/`
-
-This folder is reserved for the Windows Wireshark screenshots, such as the application view, selected capture/interface views, packet-list and packet-detail analysis, and any relevant stream-analysis views. The screenshots should retain their original context and should not expose passwords, tokens or unrelated personal information.
+The repository evidence is organised by practical area and lab number. The result cards and setup screenshots are available in the folders below, while the complete packet-analysis screenshot set is retained in the Week 01 source archive.
 
 ## 8. Security Recommendations Derived from the Exercises
 
