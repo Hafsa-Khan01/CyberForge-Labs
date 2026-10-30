@@ -1,18 +1,36 @@
-# NetworkWalks — Internship Portfolio
+# NetworkWalks — Cybersecurity Internship
 
-All Week 01 work is grouped under [NetworkWalks/Week-01](Week-01/README.md).
+A structured record of practical work completed for the NetworkWalks cybersecurity internship. The Week 01 submission is organised around the virtual lab environment, Wireshark exercises, technical reports and supporting evidence.
 
-## Week 01 contents
+## Week 01 — practical work
 
-- [VirtualBox & Kali Linux Lab](Week-01/VirtualBox-Kali-Lab/README.md) — VM setup, adapter/shared-folder configuration and verification guidance.
-- [Wireshark SOC Labs 03–08](Week-01/Wireshark-SOC-Labs/README.md) — six completed browser labs, result summary and individual reports.
-- [Complete Practical Evidence & Technical Report](Week-01/Wireshark-SOC-Labs/REPORT.md) — consolidated report, technical lessons, limitations and privacy handling.
-- [Evidence Index](Week-01/EVIDENCE-INDEX.md) — source archive inventory and destination folders.
+| Workstream | Documentation |
+|---|---|
+| VirtualBox and Kali Linux | [Lab overview](Week-01/VirtualBox-Kali-Lab/README.md) · [Commands](Week-01/VirtualBox-Kali-Lab/Commands.md) · [Troubleshooting guide](Week-01/VirtualBox-Kali-Lab/Troubleshooting.md) |
+| Wireshark SOC Labs 03–08 | [Lab index](Week-01/Wireshark-SOC-Labs/README.md) · [Consolidated technical report](Week-01/Wireshark-SOC-Labs/REPORT.md) |
+| Individual analysis notes | [Six lab reports](Week-01/Wireshark-SOC-Labs/Reports/) |
+| Evidence | [Week 01 evidence register](Week-01/EVIDENCE-INDEX.md) |
 
-## Evidence handling
+## Evidence at a glance
 
-The supplied archive contains 46 images covering VirtualBox/Kali setup and Wireshark analysis. Review and redact credentials, personal information, host usernames, local paths, MAC addresses and sensitive network details before public upload. Never commit VM disk images, saved-state files, private keys or unreviewed PCAPs.
+The Week 01 submission is supported by a curated set of 41 screenshots, organised by practical area:
 
-## Reporting standard
+- 8 VirtualBox/Kali setup screenshots.
+- 27 Windows-host Wireshark practical screenshots.
+- 6 learner result-card screenshots for Labs 03–08.
 
-Document only completed work. Attribute learner scores and supplied solution details accurately, and distinguish screenshots from independent PCAP verification.
+See the [Week 01 evidence register](Week-01/EVIDENCE-INDEX.md) for the evidence breakdown and direct navigation links.
+
+## Reporting and verification standard
+
+- Separate observed evidence, supplied lab notes, expected configuration and interpretation.
+- Treat assessment percentages as learner result-card records, not independent packet-capture validation.
+- Do not claim a command succeeded unless its output or screenshot supports that claim.
+- Reference the exact evidence location used by each report.
+- Redact credentials, tokens, personal information, host paths and unrelated network identifiers.
+- Keep VM disks, saved-state files, private keys and unreviewed raw captures out of the public repository.
+- Perform testing only within the assigned training environment or another explicitly authorised scope.
+
+---
+**Prepared by:** Hafsa Khan  
+**Programme:** NetworkWalks Cybersecurity Internship

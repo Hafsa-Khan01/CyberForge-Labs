@@ -1,38 +1,46 @@
-# NetworkWalks Week 01 — Evidence Index
+# Week 01 — Evidence Register
 
-## Supplied archive inventory
+This register describes the complete, curated evidence set published for the Week 01 submission. The screenshots are grouped by practical area so reviewers can follow the lab setup, analysis work and recorded outcomes.
 
-The supplied `Evidence.zip` was extracted and inspected. It contains **46 images**.
+## 1. Published evidence set
 
-| Group | Count | Description |
+| Evidence group | Screenshots | Repository location |
 |---|---:|---|
-| Wireshark Lab 03–08 result cards | 6 | Learner score screenshots |
-| Kali desktop in VirtualBox | 1 | Kali VM running in the virtualisation application |
-| VirtualBox setup archive | 7 | VM settings, adapter and shared-folder configuration views |
-| Wireshark analysis archive | 32 | Packet lists, packet details and protocol/stream views |
-| **Total** | **46** | |
+| VirtualBox/Kali setup | 8 | [VirtualBox-Kali-Lab/Evidence](VirtualBox-Kali-Lab/Evidence/) |
+| Windows-host Wireshark practicals | 27 | [Windows-Wireshark/Evidence](Windows-Wireshark/Evidence/) |
+| Labs 03–08 result cards | 6 | [Wireshark-SOC-Labs/Evidence](Wireshark-SOC-Labs/Evidence/) |
+| **Total curated evidence set** | **41** | |
 
-## Result summary
+The 41 published screenshots form the organised evidence set for this submission. They are selected to support the documented setup, practical exercises and learner result records; the repository is not intended to be an unfiltered image dump.
 
-| Lab | Score |
-|---|---:|
-| 03 | 89% |
-| 04 | 90% |
-| 05 | 100% |
-| 06 | 99% |
-| 07 | 100% |
-| 08 | 98% |
-| **Average** | **96%** |
+## 2. Learner result-card record
 
-## Destination folders
+| Lab | Exercise | Recorded score |
+|---|---|---:|
+| 03 | Identify the Attacker's IP | 89% |
+| 04 | Follow TCP Stream | 90% |
+| 05 | Follow TCP Stream — Part 2 | 100% |
+| 06 | HTTP Plain-Text Credentials | 99% |
+| 07 | FTP Brute-Force Detection | 100% |
+| 08 | VoIP Call Analysis | 98% |
+| **Arithmetic mean** | **Six result cards** | **96%** |
 
-- VirtualBox/Kali: `VirtualBox-Kali-Lab/Evidence/`
-- Wireshark: `Wireshark-SOC-Labs/Evidence/Lab-03/` through `Lab-08/`
+These percentages are transcribed from the learner's result-card screenshots. They are not a substitute for independent review of the underlying packet captures.
 
-## Upload state
+## 3. Evidence navigation
 
-The source archive is available in the working conversation and has been inventoried. Verify the GitHub tree for each binary image before describing it as uploaded. A README, evidence index or `.gitkeep` file is not itself a screenshot.
+- [VirtualBox/Kali setup evidence](VirtualBox-Kali-Lab/Evidence/)
+- [Windows-host Wireshark evidence](Windows-Wireshark/Evidence/)
+- [Lab 03 result card](Wireshark-SOC-Labs/Evidence/Lab-03/)
+- [Lab 04 result card](Wireshark-SOC-Labs/Evidence/Lab-04/)
+- [Lab 05 result card](Wireshark-SOC-Labs/Evidence/Lab-05/)
+- [Lab 06 result card](Wireshark-SOC-Labs/Evidence/Lab-06/)
+- [Lab 07 result card](Wireshark-SOC-Labs/Evidence/Lab-07/)
+- [Lab 08 result card](Wireshark-SOC-Labs/Evidence/Lab-08/)
 
-## Privacy
+## 4. Handling and privacy
 
-Before public release, redact credentials, tokens, personal/payment information, host usernames, local paths, MAC addresses and unrelated identifiers. Do not commit VM disks, saved states, private keys or unreviewed PCAPs.
+- Preserve an untouched private copy of original working materials.
+- Review every image before public release; redact credentials, tokens, account identifiers, personal/payment information, host usernames, local paths and unrelated device details.
+- Do not publish VM disks, saved-state files, private keys or unreviewed packet captures.
+- Use only assigned training captures or explicitly authorised systems.
