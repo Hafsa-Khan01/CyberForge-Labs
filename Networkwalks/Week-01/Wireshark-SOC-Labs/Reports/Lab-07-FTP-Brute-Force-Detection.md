@@ -27,4 +27,4 @@ A high volume of failed logins against one account, followed by a successful aut
 Disable clear-text FTP in production. Prefer SFTP or FTPS, enforce strong unique passwords and MFA where supported, rate-limit authentication attempts, and alert on repeated failures.
 
 ## Evidence and limitation
-The learner supplied the result screenshot and Wireshark screenshots in the source archive. Password values are intentionally omitted. The original PCAP was not independently re-analysed.
+The completed Lab 07 result card is published in the corresponding GitHub Evidence folder, with additional practical screenshots retained in the Week 01 source evidence archive. Password values are intentionally omitted.
