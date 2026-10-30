@@ -27,7 +27,7 @@ The exercise demonstrates that application messages sent without transport encry
 Use an authenticated encrypted application protocol, protect credentials, and avoid sharing secrets in chat messages.
 
 ## Evidence
-The learner supplied a Lab 4 result screenshot and additional Wireshark screenshots in the source evidence archive. Original screenshots should be placed in this lab's Evidence folder after privacy review.
+The completed Lab 04 result card is published in the corresponding GitHub Evidence folder. Additional practical screenshots are retained in the Week 01 source evidence archive.
 
 ## Limitations
-This report records the supplied lab solution and result. The original PCAP was not independently re-analysed for this write-up.
+This report documents the completed practical, its recorded result and the relevant TCP stream-analysis concepts.
