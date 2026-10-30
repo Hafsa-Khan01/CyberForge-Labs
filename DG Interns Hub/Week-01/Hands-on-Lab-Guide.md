@@ -4,11 +4,11 @@
 
 **Purpose:** Prepare a controlled virtual lab and validate foundational Linux and network-administration tasks.
 
-**Scope:** Only virtual machines and addresses assigned to the learner for this exercise.
+**Scope:** Only virtual machines and addresses assigned for this exercise.
 
 **Preconditions**
 - Virtualization software and guest operating systems are installed.
-- The learner has administrative access to the lab VMs.
+- Administrative access to the lab VMs is available.
 - A dedicated NAT Network or Host-only network is configured where practical.
 - A clean VM snapshot is available before configuration changes.
 
@@ -36,7 +36,7 @@ ip route
 resolvectl status
 ```
 
-If `resolvectl` is unavailable, inspect the resolver configuration using the tools provided by the guest OS.
+If `resolvectl` is not installed, inspect the resolver configuration using the tools provided by the guest OS.
 
 ## 3. Validate connectivity
 
