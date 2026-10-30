@@ -4,17 +4,14 @@
 
 A structured portfolio of practical cybersecurity work, lab environments, packet analysis, troubleshooting, and technical reports.
 
-## Portfolio navigation
+## Internship folders
 
-| Area | What you'll find |
+| Internship | Contents |
 |---|---|
-| [NetworkWalks Internship](Networkwalks/README.md) | Internship overview, practical work, evidence index, and progress |
-| [VirtualBox & Kali Linux](Networkwalks/Week-01-VirtualBox-Lab/README.md) | VM environment, NAT Network, connectivity, and setup notes |
-| [Wireshark Labs](Networkwalks/Wireshark-Labs/README.md) | Six completed SOC-oriented packet-analysis labs |
-| [Reports](Networkwalks/Reports/REPORT-TEMPLATE.md) | Consistent technical-report format |
-| [Progress Log](Progress-Log/README.md) | Chronological work record |
+| [NetworkWalks](Networkwalks/README.md) | [Week 01 — VirtualBox, Kali Linux & Wireshark](Networkwalks/Week-01/README.md) |
+| [DG Interns Hub](DG%20Interns%20Hub/README.md) | [Week 01](DG%20Interns%20Hub/Week-01/README.md) · [Week 02](DG%20Interns%20Hub/Week-02/README.md) |
 
-## NetworkWalks practical snapshot
+## NetworkWalks — Week 01 snapshot
 
 Six Wireshark browser labs are recorded as completed, with learner result screenshots supplied for Labs 3–8.
 
@@ -28,7 +25,11 @@ Six Wireshark browser labs are recorded as completed, with learner result screen
 | 08 | VoIP Call Analysis | 98% |
 | **Overall** | **6 labs** | **96% average** |
 
-The supplied evidence package also contains VirtualBox/Kali setup screenshots and Wireshark practical screenshots. See the NetworkWalks evidence index for the inventory and publication checklist.
+## Other portfolio resources
+
+- [Progress Log](Progress-Log/README.md)
+- [Security Policy](SECURITY.md)
+- [Skills and Notes](Skills-and-Notes/README.md)
 
 ## Responsible practice
 
@@ -36,6 +37,6 @@ The supplied evidence package also contains VirtualBox/Kali setup screenshots an
 - Never commit passwords, tokens, private keys, personal information, or sensitive packet captures.
 - Sanitize screenshots before public release; preserve original evidence privately where needed.
 - Distinguish expected configuration, learner-reported results, and independently verified observations.
-- Do not claim a task is complete unless the work and its evidence support that claim.
+- Keep internship evidence separated by programme and do not mix it with unrelated projects.
 
 **CyberForge Labs — Learn deliberately. Test responsibly. Document clearly.**
