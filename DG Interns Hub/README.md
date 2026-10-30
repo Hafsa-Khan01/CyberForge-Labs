@@ -1,7 +1,7 @@
 # DG Interns Hub
 ## Cybersecurity Internship | Technical Work & Evidence Repository
 
-This directory contains the weekly technical documentation, practical exercises, learning-room writeups and submission artifacts produced for the DG Interns Hub cybersecurity internship.
+This directory contains the weekly technical documentation, practical exercises, guided technical-room writeups and submission artifacts produced for the DG Interns Hub cybersecurity internship.
 
 ## Weekly workstreams
 
