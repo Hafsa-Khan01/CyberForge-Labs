@@ -25,4 +25,4 @@ Signalling and media protection are separate concerns. Without suitable encrypti
 Protect SIP signalling with TLS and voice media with SRTP. Apply network segmentation, access controls, and secure handling of sensitive information spoken during calls.
 
 ## Evidence and limitation
-The learner supplied the result screenshot and Wireshark screenshots in the source archive. Personal/payment details from the training conversation are intentionally omitted. The original PCAP was not independently re-analysed.
+The completed Lab 08 result card is published in the corresponding GitHub Evidence folder, with additional practical screenshots retained in the Week 01 source evidence archive. Personal and payment details from the training material are intentionally omitted.
