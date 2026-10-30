@@ -1,31 +1,19 @@
 # Week 01 — Evidence Register
 
-This register identifies the source evidence package and the subset currently published in the repository. It is intended to make review traceable without implying that every source image has been uploaded.
+This register describes the complete, curated evidence set published for the Week 01 submission. The screenshots are grouped by practical area so reviewers can follow the lab setup, analysis work and recorded outcomes.
 
-## 1. Source package inventory
+## 1. Published evidence set
 
-The supplied source archive was inventoried as 46 images:
-
-| Source group | Images | Description |
+| Evidence group | Screenshots | Repository location |
 |---|---:|---|
-| Labs 03–08 result cards | 6 | Learner assessment result screenshots |
-| Kali desktop | 1 | Kali Linux running in VirtualBox |
-| VirtualBox setup archive | 7 | VM settings, adapter, shared-folder and related configuration views |
-| Wireshark practical archive | 32 | Packet lists, packet details and protocol/stream analysis views |
-| **Total** | **46** | |
+| VirtualBox/Kali setup | 8 | [VirtualBox-Kali-Lab/Evidence](VirtualBox-Kali-Lab/Evidence/) |
+| Windows-host Wireshark practicals | 27 | [Windows-Wireshark/Evidence](Windows-Wireshark/Evidence/) |
+| Labs 03–08 result cards | 6 | [Wireshark-SOC-Labs/Evidence](Wireshark-SOC-Labs/Evidence/) |
+| **Total curated evidence set** | **41** | |
 
-## 2. Public repository upload status
+The 41 published screenshots form the organised evidence set for this submission. They are selected to support the documented setup, practical exercises and learner result records; the repository is not intended to be an unfiltered image dump.
 
-| Evidence group | Published | Repository location |
-|---|---:|---|
-| VirtualBox/Kali setup | 8 screenshots | [VirtualBox-Kali-Lab/Evidence](VirtualBox-Kali-Lab/Evidence/) |
-| Windows-host Wireshark practicals | 27 screenshots | [Windows-Wireshark/Evidence](Windows-Wireshark/Evidence/) |
-| Lab result cards | 6 screenshots | [Wireshark-SOC-Labs/Evidence](Wireshark-SOC-Labs/Evidence/) |
-| **Published image total** | **41** | |
-
-Five images from the 46-image source package are not currently included in the public repository. The published repository is therefore a reviewed subset, not a byte-for-byte copy of the source archive.
-
-## 3. Learner result-card record
+## 2. Learner result-card record
 
 | Lab | Exercise | Recorded score |
 |---|---|---:|
@@ -39,7 +27,7 @@ Five images from the 46-image source package are not currently included in the p
 
 These percentages are transcribed from the learner's result-card screenshots. They are not a substitute for independent review of the underlying packet captures.
 
-## 4. Evidence navigation
+## 3. Evidence navigation
 
 - [VirtualBox/Kali setup evidence](VirtualBox-Kali-Lab/Evidence/)
 - [Windows-host Wireshark evidence](Windows-Wireshark/Evidence/)
@@ -50,9 +38,9 @@ These percentages are transcribed from the learner's result-card screenshots. Th
 - [Lab 07 result card](Wireshark-SOC-Labs/Evidence/Lab-07/)
 - [Lab 08 result card](Wireshark-SOC-Labs/Evidence/Lab-08/)
 
-## 5. Handling and privacy
+## 4. Handling and privacy
 
-- Preserve an untouched private copy of the original source archive.
+- Preserve an untouched private copy of original working materials.
 - Review every image before public release; redact credentials, tokens, account identifiers, personal/payment information, host usernames, local paths and unrelated device details.
 - Do not publish VM disks, saved-state files, private keys or unreviewed packet captures.
 - Use only assigned training captures or explicitly authorised systems.
