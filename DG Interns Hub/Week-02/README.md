@@ -52,18 +52,18 @@ Do not infer a vulnerability from an open port alone. Do not label traffic malic
 - Avoid publishing credentials, personal data or unrelated internship material.
 - Perform intrusive or destructive actions only in an explicitly authorized, disposable lab environment.
 
-## 5. Review checklist
+## 5. Technical quality standards
 
-- [ ] Packet-analysis notes explain the observed protocol behaviour.
-- [ ] Wireshark filters are identified as capture filters or display filters correctly.
-- [ ] Nmap procedures identify the scan purpose and options used.
-- [ ] Windows notes distinguish event source, Event ID and event meaning.
-- [ ] Logon types and event interpretations are not conflated.
-- [ ] Practical conclusions are supported by the original evidence.
-- [ ] Report and presentation accurately reflect completed work.
+- Packet-analysis notes explain the observed protocol behaviour.
+- Wireshark filters are identified as capture filters or display filters correctly.
+- Nmap procedures identify the scan purpose and options used.
+- Windows notes distinguish event source, Event ID and event meaning.
+- Logon types and event interpretations are not conflated.
+- Practical conclusions are supported by the original evidence.
+- Report and presentation accurately reflect completed work.
 
 ## 6. Scope and integrity
 
 This directory is reserved for **DG Interns Hub Week 02**. NetworkWalks is a separate internship workstream and must remain completely untouched. Do not edit, rename, move, delete or reorganize any NetworkWalks files or folders.
 
-Only DG Week 02 materials belong here. If an artifact is missing or an observation cannot be verified, state that limitation explicitly; never fabricate packet details, IP addresses, scan results, event records or completion claims.
+Only DG Week 02 materials belong here. Maintain traceability between each conclusion and its source evidence. Clearly label examples, observed results and analytical inferences; never fabricate packet details, IP addresses, scan results, event records or completion claims.
