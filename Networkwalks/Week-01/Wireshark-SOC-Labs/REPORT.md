@@ -5,7 +5,7 @@
 **Programme:** NetworkWalks Cybersecurity Internship  
 **Reporting period:** Week 01  
 **Practical scope:** Virtual lab setup and Wireshark SOC exercises (Labs 03–08)  
-**Evidence source:** Learner-supplied screenshots and result cards in the Week 01 evidence archive
+**Evidence source:** Week 01 practical screenshots and completed lab result cards
 
 ---
 
