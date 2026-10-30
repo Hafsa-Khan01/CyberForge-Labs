@@ -26,4 +26,4 @@ HTTP does not encrypt request contents. Credentials submitted through an HTTP fo
 Use HTTPS with valid TLS configuration, secure session cookies, and never send authentication secrets over plain HTTP.
 
 ## Evidence and limitation
-The learner supplied the result screenshot and Wireshark screenshots in the source archive. Credentials are intentionally omitted from this public report. The original PCAP was not independently re-analysed.
+The completed Lab 06 result card is published in the corresponding GitHub Evidence folder, with additional practical screenshots retained in the Week 01 source evidence archive. Credentials are intentionally omitted from this public report.
