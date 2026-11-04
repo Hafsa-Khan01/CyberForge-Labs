@@ -12,10 +12,10 @@ Build an understanding of endpoint telemetry and network intrusion detection by 
 | System | Availability | Planned use |
 |---|---|---|
 | Windows VM | Available | Sysmon installation and event generation |
+| Ubuntu VM | Available | auditd and Snort installation, configuration, and testing |
 | Kali VM | Available | Authorized traffic generation and Nmap testing |
-| Ubuntu VM | Not currently available | auditd and Snort practicals — pending environment setup |
 
-**Important:** Ubuntu-dependent tasks are not marked complete until an Ubuntu environment is available and the commands/evidence are verified. Kali is not silently substituted for the assigned Ubuntu VM; any approved alternative will be documented transparently.
+All three required virtual machines are available. Practical tasks will be performed on their assigned systems; Kali will be used as the traffic-generation/test machine where appropriate.
 
 ## Repository structure
 - `Notes/` — ten separate theory question-and-answer files.
@@ -32,9 +32,9 @@ All ten question files are prepared in `Notes/`. Review them in your own words a
 ## Practical evidence checklist
 - [ ] Install Sysmon on Windows and verify the Operational channel.
 - [ ] Generate and inspect Sysmon Event IDs 1, 3, and 11.
-- [ ] Set up Ubuntu and install/configure auditd.
-- [ ] Set up Snort, configure HOME_NET/EXTERNAL_NET, and validate rules.
-- [ ] Test starter alerts and the SYN-scan detection rule.
+- [ ] Install/configure auditd on Ubuntu and capture verified audit records.
+- [ ] Install Snort on Ubuntu, configure HOME_NET/EXTERNAL_NET, and validate rules.
+- [ ] Use Kali for authorized test traffic; verify starter alerts and the SYN-scan detection rule.
 - [ ] Complete assigned TryHackMe rooms and LetsDefend lessons; write up only completed work.
 - [ ] Build the 15+ entry cheat sheet.
 - [ ] Prepare PDF, presentation, LinkedIn posts, and final shared folder.
