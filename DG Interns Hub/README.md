@@ -9,6 +9,7 @@ This directory contains the weekly technical documentation, practical exercises,
 |---|---|---|
 | **01** | Linux foundations, networking fundamentals and lab preparation | [Week 01 repository](Week-01/README.md) |
 | **02** | Network traffic analysis, Nmap and Windows security telemetry | [Week 02 repository](Week-02/README.md) |
+| **03** | Linux logs, Sysmon, auditd, Snort IDS rules and MITRE ATT&CK mapping | [Week 03 repository](Week-03/README.md) |
 
 ## Repository conventions
 
