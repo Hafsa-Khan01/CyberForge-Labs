@@ -1,14 +1,14 @@
 # Technical Lab Report
 ## Endpoint Telemetry, Linux Auditing and Network Intrusion Detection
 
-**Programme:** DG Interns Hub · 15 October 2026 Batch  
+**Programme:** DG Interns Hub · Week 03  
 **Author:** Hafsa Khan  
 **Reporting date:** 6 November 2026
 
 ## 1. Executive Summary
-The Week 03 lab examined three complementary areas of security visibility: endpoint telemetry on Windows, audit logging on Linux, and network intrusion detection. Sysmon was used to inspect process, network, file, registry and DNS events. Ubuntu exercises covered auditd event collection and Snort rule-based alerting, while Kali Linux provided the network testing environment through Nmap.
+This technical lab examines three complementary areas of security visibility: endpoint telemetry on Windows, audit logging on Linux, and network intrusion detection. Sysmon provides process, network, file, registry and DNS event visibility. Linux auditd records security-relevant system activity, while Snort evaluates network traffic against detection rules. Kali Linux and Nmap provide controlled network-testing capabilities within the authorized lab environment.
 
-The central operational lesson is that individual log records provide only partial context. Stronger detection and investigation come from correlating endpoint, identity, audit and network evidence.
+The principal operational finding is that individual records provide only partial context. Stronger detection and investigation depend on correlating endpoint, identity, audit and network evidence.
 
 ## 2. Objectives
 - Examine endpoint detection and response (EDR) telemetry and distinguish it from traditional antivirus.
@@ -28,7 +28,6 @@ The central operational lesson is that individual log records provide only parti
 | Kali Linux VM | Authorized network testing | Nmap 7.95 |
 
 ## 4. Windows Endpoint Telemetry — Sysmon
-
 Sysmon was deployed with the SwiftOnSecurity configuration. The Sysmon64 service and the `Microsoft-Windows-Sysmon/Operational` event channel were verified.
 
 **Configuration SHA-256:**  
@@ -51,12 +50,9 @@ The Event ID 13 record showed a SetValue operation under the user's Run registry
 The plain-text test file did not produce the expected Event ID 11 under the active SwiftOnSecurity filters, whereas the PowerShell `.ps1` test file did. This demonstrates that Sysmon visibility depends on configuration choices and file-type filters. Event absence must be interpreted in the context of collection policy.
 
 ## 5. Linux Audit Logging — auditd
-
-The Ubuntu audit exercise focused on service validation, targeted rule configuration and event inspection using `ausearch`. The primary audit log is:
+The Ubuntu audit exercise covers service validation, targeted rule configuration and event inspection using `ausearch`. The primary audit log is:
 
 `/var/log/audit/audit.log`
-
-Relevant audit record types include:
 
 | Record | Purpose |
 |---|---|
@@ -71,7 +67,6 @@ Relevant audit record types include:
 A single audit event can consist of multiple records sharing the same audit event serial number. Correlating SYSCALL, EXECVE, PATH and CWD records provides a more complete view of the operation. The `auid` field is particularly useful for tracing the login identity associated with activity performed after privilege changes.
 
 ## 6. Network Intrusion Detection — Snort
-
 Snort was used as a network IDS to inspect selected lab traffic and evaluate local detection rules. The local rule set covers ICMP, TCP traffic to SSH and HTTP ports, and thresholded TCP SYN activity.
 
 | SID | Detection objective |
@@ -84,8 +79,7 @@ Snort was used as a network IDS to inspect selected lab traffic and evaluate loc
 The SYN rule uses the TCP SYN flag and a source-based threshold. It is a heuristic indicator of possible network service discovery, not a unique signature of Nmap. Ordinary connections and other network tools can generate SYN packets. Reliable interpretation requires port-distribution analysis, timing, source context and corroborating telemetry.
 
 ## 7. Kali Linux — Nmap
-
-Nmap 7.95 was used for authorized service/version identification and TCP SYN scanning in the virtual lab. The principal command patterns were:
+Nmap 7.95 supports authorized service/version identification and TCP SYN scanning in the virtual lab. Principal command patterns include:
 
 ```bash
 nmap -sV -sC <authorized-lab-target> -oN service-detection.txt
@@ -103,7 +97,6 @@ T1046 describes discovery of services running on remote systems. A pattern of TC
 Registry Run-key changes may be relevant when investigating persistence. The observed Microsoft Edge auto-launch value should be assessed in its application context rather than automatically classified as malicious.
 
 ## 9. SIEM Collection and Investigation Workflow
-
 1. **Collection:** Gather endpoint, authentication, audit, DNS and network telemetry.
 2. **Normalization:** Standardize timestamps, host identifiers, usernames and network fields.
 3. **Correlation:** Link events by host, process, user, time and source/destination.
@@ -121,7 +114,14 @@ Registry Run-key changes may be relevant when investigating persistence. The obs
 - ATT&CK mapping should describe observed behavior and should not replace evidence-based analysis.
 
 ## 11. Evidence and Reproducibility
-The supporting evidence set consists of original VM screenshots, configuration captures, event records, Snort alerts and Nmap output. Evidence should preserve the relevant command, event ID, timestamp and system context. Credentials and unrelated personal information should be excluded from published captures.
+The supporting evidence set comprises original VM screenshots, configuration captures, event records, Snort alerts and Nmap output. Evidence should preserve the relevant command, event ID, timestamp and system context. Credentials and unrelated personal information should be excluded from published captures.
 
 ## 12. Conclusion
-The lab demonstrates how endpoint telemetry, Linux audit records and network IDS alerts complement one another. Sysmon helps establish what ran on a Windows endpoint; auditd records security-relevant Linux activity; Snort provides visibility into network patterns; and Nmap supplies controlled test traffic for evaluating detection. Correlation across these sources provides a more reliable basis for SOC investigation than any single event in isolation.
+Endpoint telemetry, Linux audit records and network IDS alerts provide complementary visibility. Sysmon helps establish what ran on a Windows endpoint; auditd records security-relevant Linux activity; Snort provides visibility into network patterns; and Nmap supplies controlled test traffic for evaluating detection. Correlation across these sources provides a more reliable basis for SOC investigation than any single event in isolation.
+
+## Technical References
+- [Microsoft Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+- [Linux Audit Documentation](https://github.com/linux-audit/audit-documentation)
+- [Snort Documentation](https://docs.snort.org/)
+- [Nmap Reference Guide](https://nmap.org/book/man.html)
+- [MITRE ATT&CK T1046](https://attack.mitre.org/techniques/T1046/)
