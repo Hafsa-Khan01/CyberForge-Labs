@@ -1,35 +1,40 @@
-# Practical Write-up — Kali Linux and Nmap
+# Network Reconnaissance with Nmap
 
 **Platform:** Kali Linux VM  
 **Tool:** Nmap 7.95  
-**Status:** User reports the Kali practical and controlled lab testing were completed.
+**Scope:** Authorized lab systems only
 
 ## Objective
-Use Nmap to enumerate services and perform a controlled SYN scan against an authorized lab target.
+Use Nmap to identify exposed services and versions, and examine TCP SYN scan behavior in a controlled virtual lab.
 
-## Environment checks
+## Network and tool verification
 ```bash
 ip -br addr
 ip route
 nmap --version
 ```
 
-The initial environment check showed Nmap 7.95 installed. The first network snapshot showed `eth0` UP but without an IPv4 address and no default route; VirtualBox networking was then being corrected. Use the final successful network output and actual target address from the saved evidence in the submission.
+Confirm that the Kali interface has the expected lab address and that a valid route exists before initiating a scan.
 
-## Scan examples
+## Service and version detection
 ```bash
 nmap -sV -sC <authorized-lab-target> -oN service-detection.txt
+```
+
+- `-sV` probes open ports to identify service and version information.
+- `-sC` runs Nmap's default script set.
+- `-oN` writes the results in normal human-readable format.
+
+## TCP SYN scan
+```bash
 sudo nmap -sS -p 1-1000 <authorized-lab-target> -oN syn-scan.txt
 ```
 
-- `-sV`: probe open ports to identify service/version information.
-- `-sC`: run Nmap's default script set.
-- `-sS`: TCP SYN scan; requires appropriate privileges.
-- `-p 1-1000`: limit the scan to the selected TCP port range.
-- `-oN`: save human-readable output.
+- `-sS` performs a TCP SYN scan and generally requires elevated privileges.
+- `-p 1-1000` limits the scan to the selected TCP port range.
 
 ## SOC relevance
-Unexpected exposed services can increase attack surface. A scan should be assessed using source and destination addresses, timing, port distribution, authorization context and corroborating network/endpoint logs. A scan result alone does not establish compromise.
+Unexpected exposed services may increase an environment's attack surface. Scan activity should be assessed using source and destination addresses, timestamps, port distribution, authorization context and corroborating network or endpoint telemetry. A scan result does not, by itself, establish that a host is compromised.
 
 ## Evidence
-Place original Kali screenshots and the saved Nmap text outputs in `Findings/Kali/Nmap/`. Include the exact target, date/time, command and result from the original lab output. Do not substitute an Internet host or a third-party screenshot for lab evidence.
+Retain the actual target details, commands and Nmap output from the authorized lab in `Findings/Kali/Nmap/`. Include the network-interface and route verification that corresponds to the successful test session.
