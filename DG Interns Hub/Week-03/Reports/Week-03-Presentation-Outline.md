@@ -48,4 +48,3 @@ Illustrate: telemetry sources → collection/normalization → correlation/detec
 ## Slide 12 — Conclusion
 Endpoint, Linux audit and network IDS telemetry provide complementary visibility. Correlation turns individual records into an investigation narrative.
 
-**Presentation note:** Insert only genuine VM screenshots from the completed lab. Do not use web screenshots as evidence of execution.
