@@ -1,14 +1,13 @@
-# Practical Write-up — Ubuntu auditd
+# Linux Security Auditing with auditd
 
 **Platform:** Ubuntu VM  
-**Tool:** Linux Audit daemon (auditd)  
-**Status:** User reports the practical was completed; preserve the VM's original command output and screenshots as the evidence of execution.
+**Component:** Linux Audit daemon (`auditd`)  
+**Log location:** `/var/log/audit/audit.log`
 
 ## Objective
-Capture security-relevant Linux activity through kernel audit records and inspect the resulting events.
+Use the Linux Audit subsystem to record selected security-relevant activity and inspect the resulting audit records.
 
-## Setup and service verification
-Typical installation and service checks:
+## Service installation and validation
 ```bash
 sudo apt-get update
 sudo apt-get install -y auditd audispd-plugins
@@ -16,32 +15,39 @@ sudo systemctl enable auditd --now
 sudo systemctl status auditd
 ```
 
-## Example targeted execution rule
-A key-based search only returns events associated with a rule carrying that key. Installing a package alone does not automatically create an audit key named `nano`.
+## Targeted execution monitoring
+The following example monitors execution of the `nano` binary. Confirm the executable path on the system before adding the rule.
 
-Example rule to monitor execution of the nano binary (confirm the binary path with `command -v nano`):
 ```bash
 command -v nano
 sudo auditctl -w /usr/bin/nano -p x -k nano_exec
+nano
 sudo ausearch -k nano_exec -i
 ```
 
-Alternatively, inspect recent execution records:
+The watch path must match the executable path returned by `command -v`. A key-based search returns events associated with a rule carrying that key; installing a package alone does not create an audit key.
+
+## Inspecting recent execution records
 ```bash
 sudo ausearch -m EXECVE -ts recent -i
+sudo tail -n 40 /var/log/audit/audit.log
 ```
 
-## What to inspect
-- `type`: record type, such as SYSCALL, EXECVE, PATH or CWD.
-- `msg`: audit event identifier and timestamp.
-- `exe`: executable path.
-- `comm`: command name.
-- `uid`, `euid`, `auid`: real, effective and audit login identities.
-- `pid`, `ppid`: process and parent process identifiers.
-- `success` and `exit`: syscall outcome.
+## Important audit fields
+
+| Field | Description |
+|---|---|
+| `type` | Record type, such as SYSCALL, EXECVE, PATH or CWD |
+| `msg` | Audit event identifier and timestamp |
+| `exe` | Executable path |
+| `comm` | Command name |
+| `uid` / `euid` | Real and effective user IDs |
+| `auid` | Login identity associated with the audit session |
+| `pid` / `ppid` | Process and parent process identifiers |
+| `success` / `exit` | System-call outcome |
 
 ## Analysis
-An audit event may comprise multiple records with the same audit event serial. Correlate those records to reconstruct the action. Use the login identity (auid) and effective identity (euid) together when investigating privilege changes.
+A single audit event can be represented by several records sharing the same audit event serial number. SYSCALL, EXECVE, PATH and CWD records should therefore be correlated before drawing conclusions about a command or file operation. The audit login identity (`auid`) is useful when examining actions performed after privilege changes.
 
 ## Evidence
-Place the actual Ubuntu screenshots in `Findings/Ubuntu/auditd/`: service status, active audit rule, generated test action and corresponding `ausearch` result. Replace example paths or commands in this document if the executed lab used a different rule.
+Retain the original terminal captures for auditd service status, the active rule, the test action and its corresponding `ausearch` output in `Findings/Ubuntu/auditd/`.
