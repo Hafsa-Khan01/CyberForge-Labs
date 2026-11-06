@@ -1,5 +1,7 @@
 # LetsDefend — Incident Response on Linux
 
+> **Access status:** Premium access is being requested for this LetsDefend training content in the current account. This item is **not marked as completed** under the free-tier requirement. No completion claim or course-specific findings are asserted here. If free access becomes available, update this report with the actual session date, topics and observations.
+
 **Location:** LetsDefend training library
 
 ## Learning focus
