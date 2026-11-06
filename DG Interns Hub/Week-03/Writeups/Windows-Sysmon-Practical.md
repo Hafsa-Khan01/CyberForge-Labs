@@ -1,39 +1,42 @@
-# Practical Write-up — Windows Sysmon
+# Windows Endpoint Telemetry with Sysmon
 
-**Platform:** Windows VM  
+**Platform:** Windows 64-bit VM  
 **Tool:** Microsoft Sysmon 15.22  
 **Configuration:** SwiftOnSecurity Sysmon configuration  
-**Status:** Practical execution and event generation confirmed.
+**Event channel:** `Microsoft-Windows-Sysmon/Operational`
 
 ## Objective
-Collect endpoint telemetry and inspect process, network, file, registry and DNS activity using Sysmon's Operational event channel.
+Configure Sysmon to collect detailed endpoint telemetry and examine process, network, file, registry and DNS activity through the Windows event channel.
 
-## Setup and verification
-- Sysmon was installed using the 64-bit Sysmon executable and the SwiftOnSecurity configuration.
-- The Sysmon64 service was verified as running.
-- The event channel `Microsoft-Windows-Sysmon/Operational` was available.
-- Configuration SHA-256 recorded during setup: `055FEBC600E6D7448CDF3812307275912927A62B1F94D0D933B64B294BC87162`.
+## Deployment and validation
+Sysmon was installed with the 64-bit executable and the selected SwiftOnSecurity configuration. The Sysmon64 service was verified as running, and the Operational event channel was available.
 
-## Verified event observations
+**Configuration SHA-256**
 
-| Event ID | Event type | Observation | SOC relevance |
+`055FEBC600E6D7448CDF3812307275912927A62B1F94D0D933B64B294BC87162`
+
+## Event analysis
+
+| Event ID | Event type | Observed telemetry | Investigation value |
 |---|---|---|---|
-| 1 | ProcessCreate | Process creation events included Notepad and other Windows/Edge processes. | Establish process lineage and inspect image, command line, user and parent process. |
-| 3 | NetworkConnect | PowerShell made a TCP connection to `142.250.202.142:443`; the observed source address was `192.168.100.33`. | Correlate a process with remote network activity. |
-| 11 | FileCreate | PowerShell created `C:\Users\hiras\Desktop\Week3-Sysmon-Test.ps1`. | Identify file drops and associate them with the creating process and user. |
-| 13 | RegistryEvent / SetValue | Microsoft Edge set a Run-key value for `MicrosoftEdgeAutoLaunch`; process was `msedge.exe`. | Review startup configuration changes. This event was consistent with a legitimate Edge auto-launch entry and is not proof of compromise. |
-| 22 | DNS query | PowerShell queried `google.com`; query status was 0. | Link DNS activity to the process and investigate unusual domains. |
+| 1 | ProcessCreate | Process creation records included Notepad and Windows/Edge processes. | Review image path, command line, user, parent process and hashes. |
+| 3 | NetworkConnect | PowerShell initiated a TCP connection to `142.250.202.142:443`; source address recorded as `192.168.100.33`. | Associate outbound network activity with the originating process. |
+| 11 | FileCreate | PowerShell created `C:\Users\hiras\Desktop\Week3-Sysmon-Test.ps1`. | Identify file creation, process attribution and file path. |
+| 13 | RegistryEvent / SetValue | Microsoft Edge set a user Run-key value for its auto-launch command. | Review startup configuration changes and validate the owning application. |
+| 22 | DNS query | PowerShell queried `google.com`; query status was `0`. | Correlate domain lookups with process and network activity. |
 
-## Event ID 13 detail
-The event recorded a SetValue operation under the user's Run registry key. The value data launched Microsoft Edge with `--win-session-start`. Run-key modifications can be relevant to ATT&CK T1547.001 (Registry Run Keys / Startup Folder), but this observed vendor application entry is not, by itself, malicious.
+## Registry event assessment
+Event ID 13 recorded a SetValue operation under the user's Run registry key. The value data referenced Microsoft Edge with the `--win-session-start` argument. Run-key changes can be relevant to persistence investigations, including MITRE ATT&CK T1547.001; however, this specific Edge auto-launch entry is not, by itself, evidence of malicious activity.
 
-## Configuration lesson
-The initial plain-text test file did not trigger Event ID 11 under the selected SwiftOnSecurity filters. A PowerShell `.ps1` test file did trigger Event ID 11. FileCreate coverage depends on the active configuration and file-type filters; absence of an event for an excluded extension is not evidence that Sysmon is broken.
+## Configuration observation
+The plain-text test file did not generate the expected Event ID 11 under the active SwiftOnSecurity filters, while the PowerShell `.ps1` test file did. Sysmon event coverage depends on the active configuration and its file-type filters. An event that is not collected by a filter should not be interpreted as proof that the underlying activity did not occur.
 
 ## Verification commands
 ```powershell
 Get-Service *Sysmon*
+
 Get-WinEvent -LogName 'Microsoft-Windows-Sysmon/Operational' -MaxEvents 20
+
 Get-WinEvent -FilterHashtable @{
     LogName = 'Microsoft-Windows-Sysmon/Operational'
     Id = 13
@@ -42,4 +45,4 @@ Get-WinEvent -FilterHashtable @{
 ```
 
 ## Evidence
-Attach the original screenshots for service status and Event IDs 1, 3, 11, 13 and 22 in the repository's `Findings/Windows/` folder. Screenshots must be captured from the actual VM and must not expose credentials or unrelated personal data.
+Store the original service-status and Event Viewer captures under `Findings/Windows/Sysmon/`. Retain the event ID, timestamp and relevant event fields in each capture.
