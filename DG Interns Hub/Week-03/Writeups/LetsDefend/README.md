@@ -1,3 +1,5 @@
+> **Free-tier access note:** The assigned LetsDefend training items are currently prompting for Premium access in the account being used. They are therefore documented as **not completed** for this submission unless free access is confirmed. No paid subscription is required for this portfolio, and no completion evidence is claimed.
+
 # LetsDefend — Week 03 Course Reports
 
 Each assigned course/lesson has a separate report. Add completion dates and observations from the actual course session.
