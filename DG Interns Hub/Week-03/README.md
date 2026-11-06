@@ -1,48 +1,46 @@
-# Week 3 — Linux Logs, Sysmon, auditd & Snort
+# Week 03 — Endpoint Telemetry, Linux Auditing & Network Intrusion Detection
 
-**Programme:** DG Interns Hub — 15 October 2026 Batch  
-**Intern:** Hafsa Khan  
-**Deadline:** 6 November 2026, 11:59 PM
+**Programme:** DG Interns Hub · 15 October 2026 Batch  
+**Focus areas:** Sysmon · auditd · Snort IDS · Nmap · MITRE ATT&CK · SIEM
 
-## Goal
-Understand endpoint telemetry, Windows Sysmon, Linux auditd, Snort IDS, MITRE ATT&CK T1046 and SIEM log ingestion.
+## Overview
+This module brings together endpoint monitoring, Linux audit logging and network-based intrusion detection. The lab work examines how operating-system and network telemetry can be collected, interpreted and correlated during a security investigation.
 
 ## Lab environment
-| System | Role | Tooling |
+
+| Platform | Function | Tools |
 |---|---|---|
-| Windows VM | Endpoint telemetry | Sysmon 15.22, Event Viewer / PowerShell |
-| Ubuntu VM | Linux auditing and IDS | auditd, Snort |
-| Kali VM | Authorized test traffic | Nmap 7.95 |
+| Windows VM | Endpoint telemetry collection | Sysmon 15.22, Event Viewer, PowerShell |
+| Ubuntu VM | Linux auditing and network IDS | auditd, Snort |
+| Kali Linux VM | Authorized network testing | Nmap 7.95 |
 
-The intern reports that the Windows, Ubuntu and Kali practicals are complete and screenshots have been saved. Original VM screenshots and raw outputs remain the authoritative evidence.
+## Repository map
 
-## Repository contents
-- `Notes/` — ten theory question-and-answer files.
-- `Writeups/Windows-Sysmon-Practical.md` — Windows practical and observed event IDs 1, 3, 11, 13 and 22.
-- `Writeups/Ubuntu-auditd-Practical.md` — Linux auditd practical.
-- `Writeups/Ubuntu-Snort-Practical.md` — Snort IDS setup and rule interpretation.
-- `Writeups/Kali-Nmap-Practical.md` — authorized Nmap practical.
-- `Findings/` — upload original screenshots and raw command/alert outputs.
-- `Cheat-Sheet/` — endpoint and network detection quick reference.
-- `Snort-Rules/` — local starter rules and possible T1046 SYN-scan indicator.
-- `Reports/` — final report and presentation outline.
+| Directory | Contents |
+|---|---|
+| `Notes/` | Ten technical theory notes covering the weekly syllabus |
+| `Writeups/` | Practical documentation for Windows, Ubuntu and Kali |
+| `Findings/` | Original screenshots, terminal output and alert evidence |
+| `Cheat-Sheet/` | Windows, Sysmon, auditd and Snort quick reference |
+| `Snort-Rules/` | Local detection rules used for the lab |
+| `Reports/` | Technical report and presentation materials |
 
-## Completion checklist
-- [x] Ten theory notes prepared.
-- [x] Windows Sysmon practical reported complete.
-- [x] Ubuntu auditd practical reported complete.
-- [x] Ubuntu Snort practical reported complete.
-- [x] Kali Nmap practical reported complete.
-- [x] Practical screenshots saved locally by the intern.
-- [x] Cheat sheet and Snort rules prepared.
-- [x] Final report draft and presentation outline prepared.
-- [ ] Upload genuine screenshots and raw outputs into `Findings/`.
-- [ ] Add TryHackMe/LetsDefend write-ups only for rooms/lessons actually completed.
-- [ ] Export final PDF and presentation after inserting verified evidence.
-- [ ] Submit using the official DG Interns Hub submission channel.
+## Practical coverage
 
-## Evidence integrity
-Do not invent timestamps, IP addresses, command output, alerts, room completion or screenshots. Record limitations accurately. Do not expose credentials, tokens or private data. Conceptual images are illustrations, not practical evidence.
+- **Windows Sysmon:** Process creation, network connection, file creation, registry modification and DNS query telemetry (Event IDs 1, 3, 11, 13 and 22).
+- **Ubuntu auditd:** Audit service configuration, targeted rules and event inspection.
+- **Snort IDS:** Local rule configuration, rule validation and alert interpretation for ICMP, SSH, HTTP and scan-like TCP SYN activity.
+- **Kali Linux / Nmap:** Service/version identification and controlled port scanning against authorized lab systems.
+
+## Technical references
+- [Microsoft Sysmon documentation](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+- [Linux Audit documentation](https://github.com/linux-audit/audit-documentation)
+- [Snort documentation](https://docs.snort.org/)
+- [Nmap Reference Guide](https://nmap.org/book/man.html)
+- [MITRE ATT&CK — T1046 Network Service Discovery](https://attack.mitre.org/techniques/T1046/)
+
+## Evidence standards
+Screenshots and command output in `Findings/` should come directly from the lab virtual machines. Preserve visible timestamps and command context where possible, and redact passwords, tokens, personal identifiers and unrelated desktop information. Conceptual diagrams are supplementary material and are not substitutes for practical evidence.
 
 ## Scope
-This Week 3 work is confined to this directory. Other repository projects and the NetworkWalks directory are out of scope.
+All Week 03 material is maintained within this directory. Other projects and the NetworkWalks lab directory are outside this module's scope.
