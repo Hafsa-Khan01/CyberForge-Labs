@@ -44,4 +44,4 @@ A reliable assessment should consider destination-port diversity, packet timing,
 T1046 — Network Service Discovery describes activity intended to identify services running on remote systems. The SYN threshold rule is a heuristic detection aid for possible T1046 behavior; an alert alone does not establish tool identity, intent or compromise.
 
 ## Evidence
-Keep the original configuration, successful validation output and console alert captures in `Findings/Ubuntu/Snort/`. Preserve the alert message and timestamp in the evidence.
+Original configuration, validation output and console alert captures are maintained in `Findings/Ubuntu/Snort/`. Preserve the alert message and timestamp in the evidence.
