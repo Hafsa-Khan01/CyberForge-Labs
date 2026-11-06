@@ -34,9 +34,7 @@ The plain-text test file did not generate the expected Event ID 11 under the act
 ## Verification commands
 ```powershell
 Get-Service *Sysmon*
-
 Get-WinEvent -LogName 'Microsoft-Windows-Sysmon/Operational' -MaxEvents 20
-
 Get-WinEvent -FilterHashtable @{
     LogName = 'Microsoft-Windows-Sysmon/Operational'
     Id = 13
@@ -45,4 +43,4 @@ Get-WinEvent -FilterHashtable @{
 ```
 
 ## Evidence
-Store the original service-status and Event Viewer captures under `Findings/Windows/Sysmon/`. Retain the event ID, timestamp and relevant event fields in each capture.
+Original service-status and Event Viewer captures are maintained under `Findings/Windows/Sysmon/`. Each capture should retain the event ID, timestamp and relevant event fields.
