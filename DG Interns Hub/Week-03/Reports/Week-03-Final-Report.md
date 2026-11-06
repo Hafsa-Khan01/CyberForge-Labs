@@ -1,73 +1,127 @@
-# Week 3 Final Report — Linux Logs, Sysmon, auditd and Snort
+# Technical Lab Report
+## Endpoint Telemetry, Linux Auditing and Network Intrusion Detection
 
-**Programme:** DG Interns Hub — 15 October 2026 Batch  
-**Intern:** Hafsa Khan  
+**Programme:** DG Interns Hub · 15 October 2026 Batch  
+**Author:** Hafsa Khan  
 **Reporting date:** 6 November 2026
 
-## 1. Executive summary
-This week's work focused on endpoint telemetry, Linux auditing, network intrusion detection and mapping observable behavior to MITRE ATT&CK. The theory set contains ten separate notes. The practical environment used Windows, Ubuntu and Kali virtual machines. The user reports completion of the practical work on all three systems; original screenshots and command outputs should accompany this report.
+## 1. Executive Summary
+The Week 03 lab examined three complementary areas of security visibility: endpoint telemetry on Windows, audit logging on Linux, and network intrusion detection. Sysmon was used to inspect process, network, file, registry and DNS events. Ubuntu exercises covered auditd event collection and Snort rule-based alerting, while Kali Linux provided the network testing environment through Nmap.
 
-## 2. Learning objectives
-- Explain EDR telemetry and distinguish EDR from traditional antivirus.
-- Understand Windows Security logs and Sysmon event telemetry.
-- Configure and interpret Linux auditd records.
-- Explain Snort IDS/IPS operation and rule structure.
-- Distinguish signature-based and anomaly-based detection.
-- Map possible network service discovery to MITRE ATT&CK T1046.
-- Understand endpoint/network log ingestion into a SIEM.
+The central operational lesson is that individual log records provide only partial context. Stronger detection and investigation come from correlating endpoint, identity, audit and network evidence.
 
-## 3. Lab environment
-| VM | Role | Main tooling |
+## 2. Objectives
+- Examine endpoint detection and response (EDR) telemetry and distinguish it from traditional antivirus.
+- Collect and interpret Windows events using Sysmon.
+- Configure Linux audit collection and inspect audit records with auditd tools.
+- Understand Snort IDS operation, rule structure and alert interpretation.
+- Compare signature-based and anomaly-based detection.
+- Relate network service discovery behavior to MITRE ATT&CK T1046.
+- Describe the flow from log collection to SIEM alert triage.
+
+## 3. Lab Environment
+
+| Platform | Role | Tooling |
 |---|---|---|
-| Windows | Endpoint telemetry source | Sysmon 15.22, Event Viewer / PowerShell |
-| Ubuntu | Linux auditing and network IDS | auditd, Snort |
-| Kali | Authorized test traffic generation | Nmap 7.95 |
+| Windows 64-bit VM | Endpoint telemetry | Sysmon 15.22, Event Viewer, PowerShell |
+| Ubuntu VM | Linux audit and network IDS | auditd, Snort |
+| Kali Linux VM | Authorized network testing | Nmap 7.95 |
 
-## 4. Windows Sysmon findings
-Sysmon was installed with a SwiftOnSecurity configuration and its Operational event channel was verified. Event IDs 1, 3, 11, 13 and 22 were observed.
+## 4. Windows Endpoint Telemetry — Sysmon
 
-- Event 1: process creation telemetry, including image, command line, user and parent process context.
-- Event 3: a PowerShell TCP connection to `142.250.202.142:443` was recorded; the observed source address was `192.168.100.33`.
-- Event 11: PowerShell created `C:\Users\hiras\Desktop\Week3-Sysmon-Test.ps1`.
-- Event 13: Microsoft Edge set a user Run-key value for its auto-launch command. This is registry startup telemetry; the observed entry is not by itself evidence of malicious persistence.
-- Event 22: PowerShell queried `google.com`; query status was 0.
+Sysmon was deployed with the SwiftOnSecurity configuration. The Sysmon64 service and the `Microsoft-Windows-Sysmon/Operational` event channel were verified.
 
-A configuration-specific observation was that a plain `.txt` test file did not match the selected FileCreate filters, while a `.ps1` file generated Event ID 11.
+**Configuration SHA-256:**  
+`055FEBC600E6D7448CDF3812307275912927A62B1F94D0D933B64B294BC87162`
 
-## 5. Ubuntu auditd
-The auditd practical is reported complete. The submitted evidence should show the service state, configured rule, generated test action and matching audit records. Audit records such as SYSCALL, EXECVE, PATH and CWD should be correlated by their shared audit event identifier. A key-based `ausearch` query is valid only when a matching keyed rule exists.
+### 4.1 Event observations
 
-## 6. Snort IDS
-The Snort practical is reported complete. The lab rules cover ICMP, SSH, HTTP and thresholded SYN activity. The SYN rule is a heuristic indicator of possible network service discovery; it is not uniquely attributable to Nmap. The final evidence should include the actual configuration, rule validation and console alerts.
+| Event ID | Event type | Observation | Security relevance |
+|---|---|---|---|
+| 1 | ProcessCreate | Process creation records included Notepad and Windows/Edge processes. | Process lineage, command-line review and user attribution. |
+| 3 | NetworkConnect | PowerShell initiated a TCP connection to `142.250.202.142:443`; source address recorded as `192.168.100.33`. | Process-to-network correlation and outbound connection review. |
+| 11 | FileCreate | PowerShell created `C:\Users\hiras\Desktop\Week3-Sysmon-Test.ps1`. | File creation attribution and investigation of unexpected files. |
+| 13 | RegistryEvent / SetValue | Microsoft Edge set a user Run-key value for its auto-launch command. | Review of startup configuration and possible persistence mechanisms. |
+| 22 | DNS query | PowerShell queried `google.com`; query status was `0`. | Domain lookup attribution and DNS-based investigation. |
 
-## 7. Kali and Nmap
-The Kali practical is reported complete. Nmap 7.95 was verified. The final evidence should include the actual authorized lab target, service/version scan output, SYN scan output and relevant observations. The first captured network state showed eth0 UP without an IPv4 address and no default route; use the later successful verification screenshot for the final lab state.
+### 4.2 Registry event assessment
+The Event ID 13 record showed a SetValue operation under the user's Run registry key. The value data referenced Microsoft Edge with the `--win-session-start` argument. Run-key modifications can be relevant to MITRE ATT&CK T1547.001, Registry Run Keys / Startup Folder. The observed Edge auto-launch entry is consistent with application startup behavior and is not, in isolation, evidence of malicious persistence.
 
-## 8. MITRE ATT&CK mapping
-T1046 — Network Service Discovery is relevant when activity identifies services running on remote systems. A burst of TCP SYN packets across multiple destination ports may be a detection indicator. Validate with port diversity, source context, timing, authorization and corroborating logs. Do not infer tool identity or malicious intent from SYN packets alone.
+### 4.3 Configuration consideration
+The plain-text test file did not produce the expected Event ID 11 under the active SwiftOnSecurity filters, whereas the PowerShell `.ps1` test file did. This demonstrates that Sysmon visibility depends on configuration choices and file-type filters. Event absence must be interpreted in the context of collection policy.
 
-Registry Run-key modifications may be associated with T1547.001, Registry Run Keys / Startup Folder. The observed Edge auto-launch value was legitimate-looking application behavior and should not be labeled malicious without further evidence.
+## 5. Linux Audit Logging — auditd
 
-## 9. SIEM investigation workflow
-1. Ingest endpoint, authentication, audit and network telemetry.
-2. Normalize timestamps, host identity, user and network fields.
-3. Correlate events by host, process, user, time and source/destination.
-4. Validate the alert against expected administrative or application behavior.
-5. Preserve evidence and document scope, confidence and limitations.
-6. Map to ATT&CK only where behavior is supported.
+The Ubuntu audit exercise focused on service validation, targeted rule configuration and event inspection using `ausearch`. The primary audit log is:
 
-## 10. Limitations and evidence integrity
-This report intentionally does not invent Ubuntu audit event IDs, Snort alert timestamps, Nmap target addresses or scan results that were not present in the conversation record. Insert the exact values from original VM screenshots and saved output files before final PDF export. Use only genuine lab screenshots; external images may be used as clearly attributed conceptual illustrations, never as practical proof.
+`/var/log/audit/audit.log`
 
-## 11. Repository evidence map
-- `Notes/`: ten theory answers.
-- `Writeups/Windows-Sysmon-Practical.md`: Windows practical.
-- `Writeups/Ubuntu-auditd-Practical.md`: Linux audit practical.
-- `Writeups/Ubuntu-Snort-Practical.md`: IDS practical.
-- `Writeups/Kali-Nmap-Practical.md`: Nmap practical.
-- `Snort-Rules/local-week3.rules`: local rules.
-- `Cheat-Sheet/Week-03-Endpoint-and-Network-Detection-Cheat-Sheet.md`: quick reference.
-- `Findings/`: add original screenshots and scan/alert exports.
+Relevant audit record types include:
+
+| Record | Purpose |
+|---|---|
+| SYSCALL | System-call metadata and outcome |
+| EXECVE | Command arguments |
+| PATH | File-system object associated with an event |
+| CWD | Working directory |
+| USER_AUTH | Authentication activity |
+| USER_LOGIN | Login/session activity |
+| CONFIG_CHANGE | Audit configuration changes |
+
+A single audit event can consist of multiple records sharing the same audit event serial number. Correlating SYSCALL, EXECVE, PATH and CWD records provides a more complete view of the operation. The `auid` field is particularly useful for tracing the login identity associated with activity performed after privilege changes.
+
+## 6. Network Intrusion Detection — Snort
+
+Snort was used as a network IDS to inspect selected lab traffic and evaluate local detection rules. The local rule set covers ICMP, TCP traffic to SSH and HTTP ports, and thresholded TCP SYN activity.
+
+| SID | Detection objective |
+|---|---|
+| 1000001 | ICMP traffic directed to HOME_NET |
+| 1000002 | TCP traffic to destination port 22 |
+| 1000003 | TCP traffic to destination port 80 |
+| 1000004 | Possible SYN-based port-scan activity |
+
+The SYN rule uses the TCP SYN flag and a source-based threshold. It is a heuristic indicator of possible network service discovery, not a unique signature of Nmap. Ordinary connections and other network tools can generate SYN packets. Reliable interpretation requires port-distribution analysis, timing, source context and corroborating telemetry.
+
+## 7. Kali Linux — Nmap
+
+Nmap 7.95 was used for authorized service/version identification and TCP SYN scanning in the virtual lab. The principal command patterns were:
+
+```bash
+nmap -sV -sC <authorized-lab-target> -oN service-detection.txt
+sudo nmap -sS -p 1-1000 <authorized-lab-target> -oN syn-scan.txt
+```
+
+Service identification helps establish which applications are exposed. Port-scan observations can support network discovery investigations when correlated with sensor alerts, firewall records and endpoint activity. Scan output alone does not establish compromise.
+
+## 8. MITRE ATT&CK Mapping
+
+### T1046 — Network Service Discovery
+T1046 describes discovery of services running on remote systems. A pattern of TCP SYN packets across multiple destination ports may provide a detection lead. The assessment should consider port diversity, source identity, timing, network topology and whether the activity was authorized.
+
+### T1547.001 — Registry Run Keys / Startup Folder
+Registry Run-key changes may be relevant when investigating persistence. The observed Microsoft Edge auto-launch value should be assessed in its application context rather than automatically classified as malicious.
+
+## 9. SIEM Collection and Investigation Workflow
+
+1. **Collection:** Gather endpoint, authentication, audit, DNS and network telemetry.
+2. **Normalization:** Standardize timestamps, host identifiers, usernames and network fields.
+3. **Correlation:** Link events by host, process, user, time and source/destination.
+4. **Detection:** Apply rules and behavioral analytics to identify suspicious patterns.
+5. **Triage:** Validate the alert against expected administrative and application activity.
+6. **Investigation:** Preserve relevant records, establish scope and document confidence.
+7. **Response:** Escalate or contain only when the evidence supports the action.
+
+## 10. Key Findings and Operational Considerations
+- Sysmon provides process-level context that complements standard Windows event logging.
+- Event coverage depends on the selected Sysmon configuration.
+- Linux audit events may span multiple records and should be correlated by their event identifier.
+- Snort thresholds help control alert volume but require tuning against the environment.
+- A SYN-based alert is an indicator for investigation, not proof of a specific tool or intent.
+- ATT&CK mapping should describe observed behavior and should not replace evidence-based analysis.
+
+## 11. Evidence and Reproducibility
+The supporting evidence set consists of original VM screenshots, configuration captures, event records, Snort alerts and Nmap output. Evidence should preserve the relevant command, event ID, timestamp and system context. Credentials and unrelated personal information should be excluded from published captures.
 
 ## 12. Conclusion
-The exercises connect endpoint process and registry telemetry with Linux audit records and network IDS observations. Their combined value comes from correlation: a network alert gains context from the originating host and process, while endpoint events gain significance when correlated with network behavior and authentication records.
+The lab demonstrates how endpoint telemetry, Linux audit records and network IDS alerts complement one another. Sysmon helps establish what ran on a Windows endpoint; auditd records security-relevant Linux activity; Snort provides visibility into network patterns; and Nmap supplies controlled test traffic for evaluating detection. Correlation across these sources provides a more reliable basis for SOC investigation than any single event in isolation.
