@@ -1,0 +1,11 @@
+# Week 3 local Snort rules
+# Validate these rules against the installed Snort version/configuration before deployment.
+# Replace HOME_NET/EXTERNAL_NET in snort.conf with the actual lab subnet.
+
+alert icmp any any -> $HOME_NET any (msg:"ICMP Ping Detected"; sid:1000001; rev:1;)
+alert tcp any any -> $HOME_NET 22 (msg:"SSH Connection Attempt"; sid:1000002; rev:1;)
+alert tcp any any -> $HOME_NET 80 (msg:"HTTP Traffic"; sid:1000003; rev:1;)
+
+# Possible SYN scan / network service discovery indicator.
+# A SYN threshold is not unique to Nmap; tune and correlate with destination-port diversity.
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"Possible SYN Port Scan - MITRE T1046"; flags:S; threshold:type threshold, track by_src, count 20, seconds 1; classtype:attempted-recon; reference:url,attack.mitre.org/techniques/T1046/; sid:1000004; rev:1;)
