@@ -50,4 +50,4 @@ sudo tail -n 40 /var/log/audit/audit.log
 A single audit event can be represented by several records sharing the same audit event serial number. SYSCALL, EXECVE, PATH and CWD records should therefore be correlated before drawing conclusions about a command or file operation. The audit login identity (`auid`) is useful when examining actions performed after privilege changes.
 
 ## Evidence
-Retain the original terminal captures for auditd service status, the active rule, the test action and its corresponding `ausearch` output in `Findings/Ubuntu/auditd/`.
+Original terminal captures for auditd service status, the active rule, the test action and its corresponding `ausearch` output are maintained in `Findings/Ubuntu/auditd/`.
