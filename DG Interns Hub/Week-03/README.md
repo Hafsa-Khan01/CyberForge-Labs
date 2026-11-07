@@ -10,8 +10,7 @@ This portfolio brings together the Week 03 work on endpoint, operating-system an
 | Directory | Contents |
 |---|---|
 | [Notes](Notes/) | Ten theory topics covering endpoint and network monitoring |
-| [Writeups](Writeups/) | TryHackMe room reports and LetsDefend course status/write-ups |
-| [Practicals](Practicals/) | Hands-on Windows, Ubuntu and Kali lab documentation |
+| [Writeups](Writeups/) | TryHackMe room reports, LetsDefend access status and practical documentation |
 | [Evidence](Evidence/) | Original practical screenshots and evidence index |
 | [Cheat-Sheet](Cheat-Sheet/) | Sysmon, Windows events, auditd and Snort reference |
 | [Snort-Rules](Snort-Rules/) | Local detection rules and configuration notes |
