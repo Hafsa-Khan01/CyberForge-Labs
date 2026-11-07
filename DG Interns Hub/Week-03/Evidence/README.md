@@ -20,15 +20,14 @@ This folder contains the original screenshots retained for Week 3 practical work
 | `12-Ubuntu-auditd-Service-Unit-Status.png` | Ubuntu auditd service-unit status (not Snort evidence) |
 | `13-Ubuntu-auditd-Package-Installation-Output.jpeg` | Ubuntu auditd package installation output |
 | `14-Ubuntu-Systemd-Service-Inventory.jfif` | Ubuntu systemd service inventory; active services are listed, but this image alone does not prove auditd is active |
-| `15-Kali-Nmap-Service-Version-Scan-2021.jpg` | Historical Nmap service/version scan dated 2021-11-18; retained as historical reference, not current lab evidence |
 | `16-Ubuntu-Systemd-Active-Units-Listing.png` | Ubuntu systemd active-units listing; output shown is an inventory, not proof of auditd event collection |
 
 ## Review notes
 
 - Windows Sysmon screenshots show service/configuration activity and selected event records, including Event IDs 1, 11, 13 and 22.
-- Kali screenshots show network connectivity checks and Nmap service/version scan output. The additional Nmap image is dated 2021-11-18 and must be treated as historical reference, not as proof of a current scan.
+- Kali screenshots show network connectivity checks and Nmap service/version scan output.
 - Snort evidence includes local-rule configuration and TCP port-scan alert output. The former `09` screenshot is Linux strace output, and the former `12` screenshot is an auditd service-unit listing; neither proves Snort initialization or a Snort rule test.
 - Ubuntu evidence includes an auditd package-installation output, a service-unit listing that reports `auditd.service` as not found, and two systemd inventory screenshots. The inventory screenshots do not establish that auditd is running or collecting events. These files do not prove configured audit rules or successful `ausearch` verification; capture those outputs before marking the auditd practical complete.
-- Duplicate copies, blank/irrelevant images, unrelated boot-error output, and screenshots from unrelated/older Event Viewer environments were excluded.
+- Duplicate copies, blank/irrelevant images, unrelated boot-error output, and screenshots from unrelated Event Viewer environments were excluded.
 
 Only the files listed above are retained here. Original screenshot bytes were preserved; filenames were made descriptive.
