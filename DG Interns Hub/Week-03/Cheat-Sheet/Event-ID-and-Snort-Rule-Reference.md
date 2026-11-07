@@ -1,32 +1,68 @@
-# Week 03 — Event ID & Rule Cheat Sheet
+# Week 03 — Event ID & Snort SID Lookup
 
-| Event ID / Rule | Source | What It Means | When to Use It |
-|---|---|---|---|
-| 4624 | Windows Security | Successful logon | Establish normal access and investigate unusual logons |
-| 4625 | Windows Security | Failed logon | Identify password guessing or brute-force patterns |
-| 4688 | Windows Security | Process creation, when auditing is enabled | Review executable launches and parent/child activity |
-| 4720 | Windows Security | User account created | Investigate unexpected account creation; correlate actor and host |
-| 1 | Sysmon | Process Create | Review image, command line, parent process, user and hashes |
-| 3 | Sysmon | Network Connection | Associate a process with network endpoints; config-dependent |
-| 11 | Sysmon | File Create | Track created files and possible payload staging |
-| 22 | Sysmon | DNS Query | Investigate queried domains and requesting process |
-| 13 | Sysmon | Registry Value Set | Review selected registry value modifications |
-| EXECVE | Linux audit | Executed command arguments | Reconstruct command execution with related audit records |
-| USER_LOGIN | Linux audit | Login-related event | Review login outcome and identity context |
-| USER_AUTH | Linux audit | Authentication attempt | Investigate authentication success/failure |
-| 1000001 | Snort | ICMP Ping Detected | Observe ICMP traffic directed to HOME_NET |
-| 1000002 | Snort | SSH Connection Attempt | Observe TCP traffic destined for port 22 |
-| 1000003 | Snort | HTTP Traffic | Observe TCP traffic destined for port 80 |
-| 1000004 | Snort | Thresholded SYN scan-like activity | Investigate scan behavior mapped to T1046 |
+A compact lookup table for triage. Use the main [SOC Analyst Quick Reference](./Week-03-Endpoint-and-Network-Detection-Cheat-Sheet.md) for commands, auditd queries, Nmap validation and investigation workflow.
 
-## Analyst cautions
-- Windows Security event availability depends on Advanced Audit Policy settings.
-- Sysmon coverage depends on its active configuration; missing events do not prove no activity.
-- Linux audit events may span multiple records sharing one serial number; correlate them.
-- The starter Snort rules are broad indicators, not proof of malicious activity.
-- A SYN threshold can identify scan-like behavior but cannot uniquely identify Nmap.
+## Windows Security
 
-## MITRE references
-- T1046 — Network Service Discovery: https://attack.mitre.org/techniques/T1046/
-- T1110 — Brute Force: https://attack.mitre.org/techniques/T1110/
-- T1136 — Create Account: https://attack.mitre.org/techniques/T1136/
+| Event ID | Meaning | First fields to inspect |
+|---|---|---|
+| 4624 | Successful logon | Target account, logon type, source address, workstation |
+| 4625 | Failed logon | Account, failure reason/status, source address |
+| 4688 | Process creation (audit policy dependent) | New process, creator process, command line if enabled |
+| 4720 | User account created | New account, actor/subject, host, timestamp |
+
+## Sysmon
+
+| Event ID | Meaning | First fields to inspect |
+|---|---|---|
+| 1 | Process creation | Image, command line, parent image, user, hashes |
+| 3 | Network connection | Process, protocol, source/destination IP and port |
+| 7 | Image/DLL load | Image, loaded module, process |
+| 11 | File creation | Target filename, process, timestamp |
+| 12 | Registry object create/delete | Event type, registry target, process |
+| 13 | Registry value set | Target object, value name, writing process |
+| 22 | DNS query | Query name, requesting process, query status/results |
+
+Sysmon coverage is configuration-dependent. An absent event is not proof that the activity did not occur.
+
+## Linux auditd
+
+| Record type | Meaning |
+|---|---|
+| SYSCALL | System-call metadata and process/identity context |
+| EXECVE | Command and arguments |
+| PATH | Filesystem object involved |
+| CWD | Working directory |
+| USER_AUTH | Authentication-related activity |
+| USER_LOGIN | Login/session-related activity |
+| CONFIG_CHANGE | Audit configuration/rule change |
+
+Correlate records with the same audit serial identifier; one logical event can contain several record types.
+
+## Snort local lab SIDs
+
+| SID | Rule purpose | Do not overstate |
+|---|---|---|
+| 1000001 | ICMP echo traffic | Does not establish hostile intent |
+| 1000002 | TCP traffic destined for SSH/22 | Does not prove an SSH login succeeded |
+| 1000003 | TCP traffic destined for HTTP/80 | Does not prove an HTTP exploit |
+| 1000004 | Thresholded SYN scan-like activity | Does not uniquely identify Nmap |
+
+## MITRE ATT&CK
+
+| ID | Technique |
+|---|---|
+| T1046 | Network Service Discovery |
+| T1110 | Brute Force |
+| T1136 | Create Account |
+| T1547.001 | Registry Run Keys / Startup Folder |
+
+Map techniques only when observed behavior supports the mapping. An event ID or alert alone is not a complete finding.
+
+## Triage reminders
+
+1. Confirm timestamp, timezone, host and data source.
+2. Identify the account, process and network endpoints.
+3. Correlate related events using process identifiers, timestamps and audit serials.
+4. Check configuration and telemetry coverage before treating missing events as meaningful.
+5. Preserve evidence and document confidence, benign explanations and limitations.
