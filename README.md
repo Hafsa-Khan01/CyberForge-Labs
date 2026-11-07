@@ -1,17 +1,17 @@
 # CyberForge Labs
 
-**Cybersecurity | Network Defense | Practical Research | Technical Documentation**
+**Cybersecurity | Network Defense | Technical Research | Evidence-Based Analysis**
 
-CyberForge Labs is a hands-on cybersecurity portfolio documenting practical lab work, network analysis, security investigations, troubleshooting, and structured technical learning across internship programmes.
+CyberForge Labs is a cybersecurity portfolio documenting practical security work, network analysis, technical investigations, lab operations and supporting evidence across independent workstreams.
 
-The repository is organised by programme and workstream so that practical exercises, supporting evidence, and technical reports remain clear, traceable, and independently reviewable.
+The repository is organised by programme and technical area. Each section maintains its own documentation and evidence so that procedures, observations and reports remain traceable and independently reviewable.
 
 ## Portfolio structure
 
 | Programme | Overview |
 |---|---|
-| [NetworkWalks](Networkwalks/README.md) | Virtual lab setup, Kali Linux, Wireshark traffic analysis, and Week 01 technical documentation. |
-| [DG Interns Hub](DG%20Interns%20Hub/README.md) | Practical cybersecurity learning activities and weekly progress documentation. |
+| [NetworkWalks](Networkwalks/README.md) | Virtual lab configuration, Kali Linux, Wireshark traffic analysis and technical reports. |
+| [DG Interns Hub](DG%20Interns%20Hub/README.md) | Weekly cybersecurity workstreams, practical documentation, technical notes and evidence. |
 
 ## Featured work — NetworkWalks, Week 01
 
@@ -33,12 +33,12 @@ The Week 01 workspace brings together the virtual lab environment and network tr
 ## Documentation and evidence standards
 
 - Record practical work accurately and distinguish completed actions from planned or reference configuration.
-- Keep evidence organised by internship programme and workstream.
+- Keep evidence organised by programme and workstream.
 - Include screenshots and technical observations where they support the report.
-- Redact credentials, tokens, personal information, account identifiers, and sensitive host or network details before publishing.
-- Do not commit private keys, VM disk images, saved-state files, or unreviewed packet captures.
+- Redact credentials, tokens, personal information, account identifiers and sensitive host or network details before publishing.
+- Do not commit private keys, VM disk images, saved-state files or unreviewed packet captures.
 - Perform testing only on systems and networks owned by you or explicitly authorised for assessment.
 
 ---
 
-**CyberForge Labs — Practical learning. Responsible testing. Clear technical evidence.**
+**CyberForge Labs — Practical security work. Responsible testing. Verifiable evidence.**
