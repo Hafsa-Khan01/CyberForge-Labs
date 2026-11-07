@@ -2,12 +2,14 @@
 
 **Platform:** Ubuntu VM  
 **Component:** Linux Audit daemon (`auditd`)  
-**Log location:** `/var/log/audit/audit.log`
+**Default log location:** `/var/log/audit/audit.log`
 
 ## Objective
-Use the Linux Audit subsystem to record selected security-relevant activity and inspect the resulting audit records.
+Review the Linux Audit subsystem, its service/package state, audit rule workflow and the structure of records used to investigate security-relevant host activity.
 
-## Service installation and validation
+## Installation and service checks
+The following commands are useful when setting up and validating auditd on a compatible Ubuntu system:
+
 ```bash
 sudo apt-get update
 sudo apt-get install -y auditd audispd-plugins
@@ -15,8 +17,10 @@ sudo systemctl enable auditd --now
 sudo systemctl status auditd
 ```
 
-## Targeted execution monitoring
-The following example monitors execution of the `nano` binary. Confirm the executable path on the system before adding the rule.
+Package installation, service availability, service state, loaded rules and recorded events are separate validation points. A package-installation message does not establish that the daemon is active, and a service status alone does not prove that a particular event was recorded.
+
+## Targeted execution monitoring — reference workflow
+The example below adds a temporary execution watch for the `nano` binary. Confirm the actual executable path first; the watch must match the path returned by `command -v`.
 
 ```bash
 command -v nano
@@ -25,12 +29,23 @@ nano
 sudo ausearch -k nano_exec -i
 ```
 
-The watch path must match the executable path returned by `command -v`. A key-based search returns events associated with a rule carrying that key; installing a package alone does not create an audit key.
+Remove the temporary rule after testing:
 
-## Inspecting recent execution records
 ```bash
+sudo auditctl -W /usr/bin/nano -k nano_exec
+```
+
+These commands describe a repeatable workflow. They should only be reported as completed when the corresponding terminal output and matching audit record have been captured.
+
+## Useful audit inspection commands
+
+```bash
+sudo auditctl -s
+sudo auditctl -l
+sudo ausearch -ts recent
+sudo ausearch -m USER_AUTH,USER_LOGIN
 sudo ausearch -m EXECVE -ts recent -i
-sudo tail -n 40 /var/log/audit/audit.log
+sudo less /var/log/audit/audit.log
 ```
 
 ## Important audit fields
@@ -38,7 +53,7 @@ sudo tail -n 40 /var/log/audit/audit.log
 | Field | Description |
 |---|---|
 | `type` | Record type, such as SYSCALL, EXECVE, PATH or CWD |
-| `msg` | Audit event identifier and timestamp |
+| `msg` | Audit timestamp and event serial identifier |
 | `exe` | Executable path |
 | `comm` | Command name |
 | `uid` / `euid` | Real and effective user IDs |
@@ -46,8 +61,15 @@ sudo tail -n 40 /var/log/audit/audit.log
 | `pid` / `ppid` | Process and parent process identifiers |
 | `success` / `exit` | System-call outcome |
 
-## Analysis
-A single audit event can be represented by several records sharing the same audit event serial number. SYSCALL, EXECVE, PATH and CWD records should therefore be correlated before drawing conclusions about a command or file operation. The audit login identity (`auid`) is useful when examining actions performed after privilege changes.
+## Record correlation
+One logical audit event can contain multiple records sharing the same audit event serial number. Correlate SYSCALL, EXECVE, PATH and CWD records by their event identifier before interpreting the operation. The `auid` field can help identify the original login identity when a process performs actions after a privilege change.
 
-## Evidence
-Original terminal captures for auditd service status, the active rule, the test action and its corresponding `ausearch` output are maintained in `Findings/Ubuntu/auditd/`.
+## Evidence and scope
+The currently published [Evidence](../Evidence/) captures show:
+
+- [12 — auditd service-unit status](../Evidence/12-Ubuntu-auditd-Service-Unit-Status.png)
+- [13 — auditd package installation output](../Evidence/13-Ubuntu-auditd-Package-Installation-Output.jpeg)
+- [14 — systemd service inventory](../Evidence/14-Ubuntu-Systemd-Service-Inventory.jfif)
+- [16 — active systemd units](../Evidence/16-Ubuntu-Systemd-Active-Units-Listing.png)
+
+The service-unit capture reports that `auditd.service` was not found at the time of that capture. The published screenshots do not include a clear matching `ausearch` result or audit event record; therefore, they are not presented as proof of successful audit-event collection.
