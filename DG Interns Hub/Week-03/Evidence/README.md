@@ -1,22 +1,34 @@
 # Week 3 — Practical Evidence
 
-Upload all original Week 3 practical screenshots directly into this single folder.
+Original Week 3 screenshots are stored directly in this folder. Filenames are descriptive and numbered for easier review.
 
-## Suggested screenshot filenames
+## Windows / PowerShell evidence
+- `01-Windows-PowerShell-Event-Generation-01.jpeg`
+- `02-Windows-PowerShell-Event-Generation-02.jpeg`
+- `03-Windows-PowerShell-Event-Generation-03.jpeg`
+- `04-Windows-PowerShell-Event-Generation-04.jpeg`
+- `05-Windows-PowerShell-Event-Generation-05.jpeg`
+- `06-Windows-PowerShell-Event-Generation-06.jpeg`
 
-- `01-Sysmon-Installation-and-Configuration.png`
-- `02-Sysmon-Event-ID-1-Process-Creation.png`
-- `03-Sysmon-Event-ID-3-Network-Connection.png`
-- `04-Sysmon-Event-ID-11-File-Creation.png`
-- `05-Sysmon-Event-ID-13-Registry-Value-Set.png`
-- `06-Sysmon-Event-ID-22-DNS-Query.png`
-- `07-Kali-Network-Verification.png`
-- `08-Kali-Nmap-Scan-Results.png`
-- `09-Snort-Installation-and-Configuration.png`
-- `10-Snort-Custom-Rules.png`
-- `11-Snort-Detection-Alerts.png`
-- `12-auditd-Service-and-Event-Verification.png`
+## Linux auditd and network activity
+- `07-Ubuntu-auditd-Installation.jpeg`
+- `08-Ubuntu-auditd-Log-Verification.png`
+- `09-Network-Scan-Output.png`
+- `10-Network-Scanner-Results.jfif`
+- `16-Linux-Terminal-Practical-Output.jpeg`
 
-Use only screenshots that genuinely show the relevant activity. Redact credentials, tokens, and unrelated personal information. Do not upload unrelated portraits, promotional posters, or stock images.
+## Snort
+- `11-Snort-Console-Output.png`
+- `12-Snort-Detection-Output.png`
+- `13-Snort-Local-Rules-Configuration.png`
+- `14-Snort-Installation-and-Configuration.jfif`
+- `15-Snort-Rule-Test-and-Alert-Output.png`
 
-**Status:** This is the single evidence-upload folder. The README is an upload guide, not proof of practical completion. Add each screenshot directly beside this file.
+## Windows Sysmon / Event Viewer
+- `17-Sysmon-Event-Viewer-Overview.jpeg`
+- `18-Sysmon-Event-Viewer-Event-Records.jpeg`
+- `19-Sysmon-Event-Viewer-Filtered-Events.jpeg`
+- `20-Sysmon-Event-Viewer-Additional-View.jpeg`
+- `21-Sysmon-Event-Viewer-Additional-Records.jpeg`
+
+**Evidence note:** Filenames describe the visible screenshot context; they do not independently certify a specific Event ID or successful service state. Refer to the individual screenshot contents and the practical write-ups before making completion claims. Credentials, tokens, and unrelated personal information should be redacted.
