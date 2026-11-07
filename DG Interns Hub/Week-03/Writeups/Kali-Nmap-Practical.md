@@ -1,11 +1,11 @@
-# Network Reconnaissance with Nmap
+# Network Reconnaissance and Service Identification with Nmap
 
 **Platform:** Kali Linux VM  
 **Tool:** Nmap 7.95  
 **Scope:** Authorized lab systems only
 
 ## Objective
-Use Nmap to identify exposed services and versions, and examine TCP SYN scan behavior in a controlled virtual lab.
+Verify the Kali network path and use Nmap to identify exposed services and versions on an explicitly authorized lab target.
 
 ## Network and tool verification
 ```bash
@@ -14,16 +14,16 @@ ip route
 nmap --version
 ```
 
-Confirm that the Kali interface has the expected lab address and that a valid route exists before initiating a scan.
+Confirm the active interface, assigned address and route before initiating a scan. Record the target and test window so that scan activity can be correlated with network sensor output.
 
 ## Service and version detection
 ```bash
 nmap -sV -sC <authorized-lab-target> -oN service-detection.txt
 ```
 
-- `-sV` probes open ports to identify service and version information.
-- `-sC` runs Nmap's default script set.
-- `-oN` writes results in normal human-readable format.
+- `-sV` probes discovered open ports to identify service/version information.
+- `-sC` runs Nmap's default script set; review script behavior and scope before use.
+- `-oN` saves results in normal human-readable format.
 
 ## TCP SYN scan
 ```bash
@@ -31,10 +31,15 @@ sudo nmap -sS -p 1-1000 <authorized-lab-target> -oN syn-scan.txt
 ```
 
 - `-sS` performs a TCP SYN scan and generally requires elevated privileges.
-- `-p 1-1000` limits the scan to the selected TCP port range.
+- `-p 1-1000` restricts the scan to the selected TCP port range.
 
-## SOC relevance
-Unexpected exposed services may increase an environment's attack surface. Scan activity should be assessed using source and destination addresses, timestamps, port distribution, authorization context and corroborating network or endpoint telemetry. A scan result does not, by itself, establish that a host is compromised.
+## SOC investigation relevance
+Unexpected exposed services may increase attack surface, but service discovery is not evidence of compromise. Assess scan activity using source and destination addresses, timestamps, port distribution, authorization context and corroborating network or endpoint telemetry. Compare the scan window with Snort alerts where sensor visibility permits.
 
 ## Evidence
-The actual target details, commands and Nmap output from the authorized lab are maintained in `Findings/Kali/Nmap/`. Include the network-interface and route verification corresponding to the test session.
+Original screenshots are stored in [Evidence](../Evidence/):
+
+- [07 — Kali network connectivity verification](../Evidence/07-Kali-Network-Connectivity-Verification.jpeg)
+- [08 — Nmap service/version scan output](../Evidence/08-Kali-Nmap-Service-Version-Scan.jfif)
+
+Use the captured output as the source for any target-specific result. The command examples above are reproducible reference commands and should not be treated as additional scan results.
