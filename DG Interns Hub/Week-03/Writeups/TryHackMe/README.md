@@ -1,6 +1,6 @@
 # TryHackMe — Week 03 Room Reports
 
-Each assigned room has an individual report. Complete the room in the free tier and enter session-specific observations only after completing it. Do not publish platform-restricted answers or flags.
+Individual reports for the assigned rooms are listed below. They focus on the relevant logging, event-analysis and intrusion-detection concepts. Platform-restricted answers and flags are not reproduced.
 
 - [Linux Logging for SOC](Linux-Logging-for-SOC.md) — https://tryhackme.com/room/linuxloggingforsoc
 - [Intro to Logs](Intro-to-Logs.md) — https://tryhackme.com/room/introtologs
