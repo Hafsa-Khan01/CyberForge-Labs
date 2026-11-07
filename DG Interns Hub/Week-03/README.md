@@ -1,67 +1,78 @@
 # Week 03 — Linux Logs, Sysmon, auditd & Snort
 
 **Programme:** DG Interns Hub  
-**Focus:** Endpoint telemetry · Windows Sysmon · Linux auditd · Snort IDS · MITRE ATT&CK · SIEM
+**Technical areas:** Endpoint telemetry · Linux auditing · Network intrusion detection · MITRE ATT&CK · SIEM operations
 
 ## Overview
-This portfolio brings together the Week 03 work on endpoint, operating-system and network security telemetry. It includes ten theory notes, individual training write-ups, practical documentation, local Snort rules, a detection reference sheet and supporting screenshots.
 
-## Repository structure
+This directory consolidates the Week 03 technical documentation across Windows endpoint monitoring, Linux audit logging and network intrusion detection. It contains topic notes, individual TryHackMe reports, practical records, local Snort rules, a reference sheet and the supporting screenshots.
+
+## Repository map
+
 | Directory | Contents |
 |---|---|
-| [Notes](Notes/) | Ten theory topics covering endpoint and network monitoring |
-| [Writeups](Writeups/) | TryHackMe room reports, LetsDefend access status and practical documentation |
-| [Evidence](Evidence/) | Original practical screenshots and evidence index |
+| [Notes](Notes/) | Ten technical notes covering endpoint and network monitoring |
+| [Writeups](Writeups/) | TryHackMe room reports and LetsDefend access-status record |
+| [Evidence](Evidence/) | Original screenshots and evidence index |
 | [Cheat-Sheet](Cheat-Sheet/) | Sysmon, Windows events, auditd and Snort reference |
 | [Snort-Rules](Snort-Rules/) | Local detection rules and configuration notes |
 | [Reports](Reports/) | Consolidated technical lab report |
 
-## Theory coverage
+## Technical coverage
+
 1. EDR and endpoint telemetry.
-2. Sysmon and key Event IDs.
-3. Linux auditd compared with syslog.
+2. Sysmon architecture, configuration and key Event IDs.
+3. Linux auditd and audit record structure.
 4. Snort IDS/IPS operation.
 5. Snort rule structure and options.
-6. Signature-based vs anomaly-based detection.
+6. Signature-based and anomaly-based detection.
 7. MITRE ATT&CK T1046 — Network Service Discovery.
-8. Windows Event Log vs Sysmon vs auditd.
-9. Key Linux log files.
-10. Log ingestion and SIEM workflow.
+8. Windows Event Log, Sysmon and auditd comparison.
+9. Linux log locations and common sources.
+10. Log ingestion, correlation and SIEM triage.
 
-## Training assignments
+## Platform reports and access status
 
 ### TryHackMe
+
+The following room reports are included:
+
 - [Linux Logging for SOC](https://tryhackme.com/room/linuxloggingforsoc)
 - [Intro to Logs](https://tryhackme.com/room/introtologs)
 - [Intro to Log Analysis](https://tryhackme.com/room/introtologanalysis)
 - [Snort](https://tryhackme.com/room/snort)
 
-Individual room reports are available in [Writeups/TryHackMe](Writeups/TryHackMe/).
+See [Writeups/TryHackMe](Writeups/TryHackMe/) for the individual reports.
 
 ### LetsDefend
-The assigned lessons were reviewed for access availability. The listed lessons prompted for Premium access and were not completed; their status is recorded transparently in [Writeups/LetsDefend](Writeups/LetsDefend/).
 
-## Practical coverage
+The six assigned lessons displayed a Premium access requirement and were not completed. This is recorded in [Writeups/LetsDefend](Writeups/LetsDefend/); no course completion or lesson-specific practical result is claimed.
+
+## Practical scope
+
 - **Windows:** Sysmon installation/configuration and review of process, network, file, registry and DNS events.
-- **Ubuntu:** Linux audit logging, auditd service/rule concepts and record interpretation.
-- **Ubuntu:** Snort configuration, local rules and alert analysis.
-- **Kali:** Network connectivity checks and authorized Nmap service/version testing.
-- **Detection mapping:** MITRE ATT&CK T1046 — Network Service Discovery.
+- **Ubuntu:** audit logging concepts, auditd package/service checks and audit-record interpretation.
+- **Ubuntu:** Snort local-rule configuration and alert review.
+- **Kali Linux:** Network connectivity verification and authorized Nmap service/version testing.
+- **Detection mapping:** Network service discovery behavior mapped to MITRE ATT&CK T1046.
 
-## Detection considerations
-- Sysmon event coverage depends on the active configuration.
-- Linux audit events can span multiple records sharing one serial identifier.
-- Snort only inspects traffic visible to the sensor.
-- A threshold-based SYN alert is an investigative indicator, not proof of Nmap attribution or malicious intent.
-- Correlation across endpoint, host-audit and network telemetry improves investigative confidence.
+## Detection and evidence considerations
 
-## Evidence integrity
-The [Evidence index](Evidence/README.md) describes the original screenshots currently published with this portfolio. Each description is limited to what the corresponding capture visibly demonstrates. Configuration, installation and service-inventory screenshots are not presented as proof of successful event collection unless the relevant output is visible.
+- Sysmon event coverage depends on the active configuration and its filters.
+- Linux audit events can span multiple records sharing one event serial number.
+- Snort can only inspect traffic visible to the configured sensor.
+- A threshold-based SYN alert is an investigative indicator; it does not uniquely identify Nmap or establish malicious intent.
+- Installation, configuration and service-status captures do not by themselves prove successful event collection.
+- Correlation across endpoint, host-audit and network telemetry provides stronger context than an isolated alert.
 
-## Report
-- [Week 03 Technical Lab Report](Reports/Week-03-Final-Report.md)
+The [Evidence index](Evidence/README.md) describes the original screenshots currently published and limits each description to what the capture demonstrates.
 
-## References
+## Consolidated report
+
+[Week 03 Technical Lab Report](Reports/Week-03-Final-Report.md)
+
+## Technical references
+
 - [Microsoft Sysmon](https://learn.microsoft.com/sysinternals/downloads/sysmon)
 - [Linux Audit documentation](https://github.com/linux-audit/audit-documentation)
 - [Snort documentation](https://docs.snort.org/)
