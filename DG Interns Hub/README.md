@@ -1,28 +1,26 @@
 # DG Interns Hub
-## Cybersecurity Internship | Technical Work & Evidence Repository
+## Cybersecurity Technical Portfolio
 
-This directory contains the weekly technical documentation, practical exercises, guided technical-room writeups and submission artifacts produced for the DG Interns Hub cybersecurity internship.
+This section contains the technical records, practical documentation, room reports and supporting evidence associated with the DG Interns Hub cybersecurity programme.
 
 ## Weekly workstreams
 
-| Week | Technical focus | Documentation |
+| Week | Technical focus | Repository |
 |---|---|---|
-| **01** | Linux foundations, networking fundamentals and lab preparation | [Week 01 repository](Week-01/README.md) |
-| **02** | Network traffic analysis, Nmap and Windows security telemetry | [Week 02 repository](Week-02/README.md) |
-| **03** | Linux logs, Sysmon, auditd, Snort IDS rules and MITRE ATT&CK mapping | [Week 03 repository](Week-03/README.md) |
+| **01** | Linux foundations, networking fundamentals and lab preparation | [Week 01](Week-01/README.md) |
+| **02** | Network traffic analysis, Nmap and Windows security telemetry | [Week 02](Week-02/README.md) |
+| **03** | Linux logs, Sysmon, auditd, Snort IDS rules and MITRE ATT&CK mapping | [Week 03](Week-03/README.md) |
 
-## Repository conventions
+## Documentation standards
 
-- Keep each week's notes, practical records and evidence within its corresponding weekly directory.
-- Prefer topic-specific documentation over one large, unstructured file.
-- Preserve original screenshots, packet captures, command output and exported records.
-- Separate raw observations from analysis and conclusions.
-- Use reproducible procedures and identify tool options or filters where relevant.
-- Do not include passwords, tokens or other credentials in published documentation.
-- Do not claim a test succeeded unless the available evidence supports that conclusion.
+- Keep each week's notes, practical records and evidence in its corresponding directory.
+- Record commands, tool versions, relevant configuration and observed output where available.
+- Separate direct observations from interpretation and recommendations.
+- Preserve original evidence and use descriptive filenames.
+- State limitations where screenshots or logs do not establish the full result.
+- Do not claim a task, course or test was completed unless the available record supports it.
+- Remove credentials, tokens, personal information and sensitive network details before publication.
 
-## Strict project boundary
+## Project boundary
 
-This directory is exclusively for **DG Interns Hub** materials. Other workstreams are independent and must not be mixed into this repository area. The **NetworkWalks folder is explicitly out of scope and must not be accessed for editing, renamed, moved, deleted, reorganized or otherwise changed** while maintaining these DG materials.
-
-Keep every reported result traceable to original evidence. Clearly distinguish illustrative examples from verified execution records.
+This directory is reserved for DG Interns Hub materials. Other repositories and workstreams remain separate. The **NetworkWalks** directory is outside this workstream and must not be edited, moved, renamed, deleted or reorganized as part of DG Interns Hub maintenance.
