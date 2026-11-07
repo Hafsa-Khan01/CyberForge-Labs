@@ -1,25 +1,22 @@
 # Week 3 — Practical Evidence
 
-Original lab screenshots belong in the folders below. The archive was reviewed and relevant evidence was separated from unrelated personal/promotional images.
+Upload all original Week 3 practical screenshots directly into this single folder.
 
-## Upload folders
+## Suggested screenshot filenames
 
-- `Windows-Sysmon/` — Sysmon installation, configuration, and Event IDs 1, 3, 11, 13, 22.
-- `Kali-Nmap/` — Kali network verification and authorized Nmap scans.
-- `Ubuntu-Snort/` — Snort setup, rules, test traffic, and alerts.
-- `Ubuntu-auditd/` — auditd installation, active service status, audit rules, and event queries.
+- `01-Sysmon-Installation-and-Configuration.png`
+- `02-Sysmon-Event-ID-1-Process-Creation.png`
+- `03-Sysmon-Event-ID-3-Network-Connection.png`
+- `04-Sysmon-Event-ID-11-File-Creation.png`
+- `05-Sysmon-Event-ID-13-Registry-Value-Set.png`
+- `06-Sysmon-Event-ID-22-DNS-Query.png`
+- `07-Kali-Network-Verification.png`
+- `08-Kali-Nmap-Scan-Results.png`
+- `09-Snort-Installation-and-Configuration.png`
+- `10-Snort-Custom-Rules.png`
+- `11-Snort-Detection-Alerts.png`
+- `12-auditd-Service-and-Event-Verification.png`
 
-## Naming convention
+Use only screenshots that genuinely show the relevant activity. Redact credentials, tokens, and unrelated personal information. Do not upload unrelated portraits, promotional posters, or stock images.
 
-Use descriptive names such as:
-- `Sysmon-Event-ID-1-Process-Creation.png`
-- `Sysmon-Event-ID-3-Network-Connection.png`
-- `Kali-Nmap-Scan-Results.png`
-- `Snort-T1046-Scan-Detection.png`
-- `auditd-Service-Status.png`
-
-Only genuine, relevant screenshots should be uploaded. Exclude unrelated portraits, posters, promotional images, and non-informative files. Redact credentials and personal information before publishing.
-
-**Status:** Evidence folders are prepared. Screenshot binaries still need to be added. Folder presence is not a completion claim.
-
-See the [Week 3 Practical Evidence Report](../Reports/Week-03-Practical-Evidence-Report.md) for the review and remaining verification items.
+**Status:** This is the single evidence-upload folder. The README is an upload guide, not proof of practical completion. Add each screenshot directly beside this file.
