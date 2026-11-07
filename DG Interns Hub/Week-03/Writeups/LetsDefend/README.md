@@ -1,10 +1,16 @@
-# LetsDefend — Week 03 Course Reports
+# LetsDefend — Week 03 Access Status
 
-The following assigned lessons displayed a Premium access requirement and were not completed. They are listed for scope and access transparency; no completion dates, certificates or session results are claimed.
+The six assigned lessons listed for this workstream displayed a Premium access requirement in the current account. They were not completed.
 
-- [How to Investigate a SIEM Alert](How-to-Investigate-a-SIEM-Alert.md)
-- [Security Solutions](Security-Solutions.md)
-- [Network Log Analysis](Network-Log-Analysis.md)
-- [SIEM 101](SIEM-101.md)
-- [Incident Management](Incident-Management.md)
-- [Incident Response on Linux](Incident-Response-on-Linux.md)
+No completion dates, certificates, lesson results or course-specific findings are claimed. The topics remain listed below solely to document the assignment scope and access limitation.
+
+| Assigned lesson | Status |
+|---|---|
+| How to Investigate a SIEM Alert | Premium access required — not completed |
+| Security Solutions | Premium access required — not completed |
+| Network Log Analysis | Premium access required — not completed |
+| SIEM 101 | Premium access required — not completed |
+| Incident Management | Premium access required — not completed |
+| Incident Response on Linux | Premium access required — not completed |
+
+This status record is the complete LetsDefend entry for Week 03. General SOC concepts are documented separately in the technical notes and lab report; they are not presented as completed LetsDefend coursework.
