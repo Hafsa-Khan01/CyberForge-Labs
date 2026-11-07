@@ -1,20 +1,21 @@
 # Week 03 — Linux Logs, Sysmon, auditd & Snort
 
 **Programme:** DG Interns Hub  
-**Focus:** Endpoint telemetry · Windows Sysmon · Linux auditd · Snort IDS/IPS · MITRE ATT&CK · SIEM
+**Focus:** Endpoint telemetry · Windows Sysmon · Linux auditd · Snort IDS · MITRE ATT&CK · SIEM
 
 ## Overview
-This technical portfolio covers security telemetry across endpoint, operating-system and network layers. It includes ten theory notes, separate training reports, hands-on lab documentation, local Snort rules, an event cheat sheet, and an evidence index.
+This portfolio brings together the Week 03 work on endpoint, operating-system and network security telemetry. It includes ten theory notes, individual training write-ups, practical documentation, local Snort rules, a detection reference sheet and supporting screenshots.
 
 ## Repository structure
 | Directory | Contents |
 |---|---|
-| [Notes](Notes/) | Ten separate theoretical answers |
-| [Writeups](Writeups/) | Individual TryHackMe, LetsDefend and practical reports |
-| [Findings](Findings/) | Original screenshots and evidence index |
-| [Cheat-Sheet](Cheat-Sheet/) | Windows Security, Sysmon, auditd and Snort reference |
-| [Snort-Rules](Snort-Rules/) | Starter rules, T1046 rule and deployment notes |
-| [Reports](Reports/) | Technical report and exactly-10-slide presentation outline |
+| [Notes](Notes/) | Ten theory topics covering endpoint and network monitoring |
+| [Writeups](Writeups/) | TryHackMe room reports and LetsDefend course status/write-ups |
+| [Practicals](Practicals/) | Hands-on Windows, Ubuntu and Kali lab documentation |
+| [Evidence](Evidence/) | Original practical screenshots and evidence index |
+| [Cheat-Sheet](Cheat-Sheet/) | Sysmon, Windows events, auditd and Snort reference |
+| [Snort-Rules](Snort-Rules/) | Local detection rules and configuration notes |
+| [Reports](Reports/) | Consolidated technical lab report |
 
 ## Theory coverage
 1. EDR and endpoint telemetry.
@@ -30,47 +31,42 @@ This technical portfolio covers security telemetry across endpoint, operating-sy
 
 ## Training assignments
 
-### TryHackMe — assigned free rooms
+### TryHackMe
 - [Linux Logging for SOC](https://tryhackme.com/room/linuxloggingforsoc)
 - [Intro to Logs](https://tryhackme.com/room/introtologs)
 - [Intro to Log Analysis](https://tryhackme.com/room/introtologanalysis)
 - [Snort](https://tryhackme.com/room/snort)
 
-### LetsDefend
-- [How to Investigate a SIEM Alert](https://app.letsdefend.io/training/lessons/how-to-investigate-a-siem-alert)
-- Security Solutions
-- Network Log Analysis
-- SIEM 101
-- Incident Management
-- Incident Response on Linux
+Individual room reports are available in [Writeups/TryHackMe](Writeups/TryHackMe/).
 
-Each assigned room/course has its own report under `Writeups/TryHackMe/` or `Writeups/LetsDefend/`. Session completion details must reflect the actual platform activity.
+### LetsDefend
+The assigned lessons were reviewed for access availability. The listed lessons prompted for Premium access and were not completed; their status is recorded transparently in [Writeups/LetsDefend](Writeups/LetsDefend/).
 
 ## Practical coverage
-- Windows: Sysmon installation/configuration and Event IDs 1, 3, 11, 13 and 22.
-- Ubuntu: auditd service, ausearch and audit record interpretation.
-- Ubuntu: Snort configuration, local rules, validation and alert monitoring.
-- Kali: authorized Nmap SYN scan against a lab target.
-- MITRE mapping: T1046 — Network Service Discovery.
+- **Windows:** Sysmon installation/configuration and review of process, network, file, registry and DNS events.
+- **Ubuntu:** Linux audit logging, auditd service/rule concepts and record interpretation.
+- **Ubuntu:** Snort configuration, local rules and alert analysis.
+- **Kali:** Network connectivity checks and authorized Nmap service/version testing.
+- **Detection mapping:** MITRE ATT&CK T1046 — Network Service Discovery.
 
-## Detection engineering considerations
+## Detection considerations
 - Sysmon event coverage depends on the active configuration.
 - Linux audit events can span multiple records sharing one serial identifier.
 - Snort only inspects traffic visible to the sensor.
-- Starter rules are broad indicators; an alert is not a verdict.
-- A SYN threshold detects scan-like behavior, not proof of Nmap attribution.
+- A threshold-based SYN alert is an investigative indicator, not proof of Nmap attribution or malicious intent.
+- Correlation across endpoint, host-audit and network telemetry improves investigative confidence.
 
 ## Evidence integrity
-Only original screenshots from actual Windows, Ubuntu, Kali, TryHackMe and LetsDefend sessions belong in `Findings/`. No fabricated outputs, stock screenshots, invented timestamps or unsupported completion claims. Redact personal identifiers and sensitive network details before public sharing.
+The [Evidence index](Evidence/README.md) describes the original screenshots currently published with this portfolio. Each description is limited to what the corresponding capture visibly demonstrates. Configuration, installation and service-inventory screenshots are not presented as proof of successful event collection unless the relevant output is visible.
 
-## Reports
-- [Week 03 Technical Report](Reports/Week-03-Technical-Report.md)
-- [Exactly-10-slide Presentation Outline](Reports/Presentation-Outline-10-Slides.md)
+## Report
+- [Week 03 Technical Lab Report](Reports/Week-03-Final-Report.md)
 
 ## References
 - [Microsoft Sysmon](https://learn.microsoft.com/sysinternals/downloads/sysmon)
-- [Linux Audit](https://linux.die.net/man/8/auditd)
-- [Snort documentation](https://www.snort.org/documents)
+- [Linux Audit documentation](https://github.com/linux-audit/audit-documentation)
+- [Snort documentation](https://docs.snort.org/)
+- [Nmap Reference Guide](https://nmap.org/book/man.html)
 - [MITRE ATT&CK T1046](https://attack.mitre.org/techniques/T1046/)
 - [Wazuh documentation](https://documentation.wazuh.com/)
 - [Splunk documentation](https://docs.splunk.com/)
