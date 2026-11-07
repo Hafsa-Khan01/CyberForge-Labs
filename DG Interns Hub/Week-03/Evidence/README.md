@@ -1,34 +1,31 @@
 # Week 3 — Practical Evidence
 
-Original Week 3 screenshots are stored directly in this folder. Filenames are descriptive and numbered for easier review.
+This folder contains the original screenshots retained for Week 3 practical work. Filenames identify visible activity; they do not imply that every required task was successfully completed.
 
-## Windows / PowerShell evidence
-- `01-Windows-PowerShell-Event-Generation-01.jpeg`
-- `02-Windows-PowerShell-Event-Generation-02.jpeg`
-- `03-Windows-PowerShell-Event-Generation-03.jpeg`
-- `04-Windows-PowerShell-Event-Generation-04.jpeg`
-- `05-Windows-PowerShell-Event-Generation-05.jpeg`
-- `06-Windows-PowerShell-Event-Generation-06.jpeg`
+## Evidence index
 
-## Linux auditd and network activity
-- `07-Ubuntu-auditd-Installation.jpeg`
-- `08-Ubuntu-auditd-Log-Verification.png`
-- `09-Network-Scan-Output.png`
-- `10-Network-Scanner-Results.jfif`
-- `16-Linux-Terminal-Practical-Output.jpeg`
+| File | Evidence |
+|---|---|
+| `01-Windows-Sysmon-Installation-and-Configuration.jpeg` | Windows Sysmon Installation and Configuration |
+| `02-Sysmon-Event-ID-1-Process-Creation-and-DNS-Events.jpeg` | Sysmon Event ID 1 Process Creation and DNS Events |
+| `03-Sysmon-Event-ID-1-and-22-Event-Details.jpeg` | Sysmon Event ID 1 and 22 Event Details |
+| `04-Sysmon-Event-ID-11-File-Creation.jpeg` | Sysmon Event ID 11 File Creation |
+| `05-Sysmon-Event-ID-13-Registry-Value-Set.jpeg` | Sysmon Event ID 13 Registry Value Set |
+| `06-Sysmon-Service-and-Configuration-Verification.jpeg` | Sysmon Service and Configuration Verification |
+| `07-Kali-Network-Connectivity-Verification.jpeg` | Kali Network Connectivity Verification |
+| `08-Kali-Nmap-Service-Version-Scan.jfif` | Kali Nmap Service Version Scan |
+| `09-Snort-Initialization-and-Engine-Status.png` | Snort Initialization and Engine Status |
+| `10-Snort-Local-Rules-Configuration.png` | Snort Local Rules Configuration |
+| `11-Snort-TCP-Port-Scan-Detection-Alerts.png` | Snort TCP Port Scan Detection Alerts |
+| `12-Snort-Rule-Test-and-Alert-Output.png` | Snort Rule Test and Alert Output |
+| `13-Ubuntu-auditd-Package-Installation-Output.jpeg` | Ubuntu auditd Package Installation Output |
 
-## Snort
-- `11-Snort-Console-Output.png`
-- `12-Snort-Detection-Output.png`
-- `13-Snort-Local-Rules-Configuration.png`
-- `14-Snort-Installation-and-Configuration.jfif`
-- `15-Snort-Rule-Test-and-Alert-Output.png`
+## Review notes
 
-## Windows Sysmon / Event Viewer
-- `17-Sysmon-Event-Viewer-Overview.jpeg`
-- `18-Sysmon-Event-Viewer-Event-Records.jpeg`
-- `19-Sysmon-Event-Viewer-Filtered-Events.jpeg`
-- `20-Sysmon-Event-Viewer-Additional-View.jpeg`
-- `21-Sysmon-Event-Viewer-Additional-Records.jpeg`
+- Windows Sysmon screenshots show service/configuration activity and selected event records, including Event IDs 1, 11, 13 and 22.
+- Kali screenshots show network connectivity checks and an Nmap service/version scan.
+- Snort screenshots show engine initialization, local-rule configuration and scan/alert output.
+- The Ubuntu screenshot shows an auditd package-installation attempt only. It does not prove a running auditd service or successful audit-event verification. Capture fresh service and ausearch output before marking that practical complete.
+- Duplicate copies, blank/irrelevant images, unrelated boot-error output, and screenshots from unrelated/older Event Viewer environments were excluded.
 
-**Evidence note:** Filenames describe the visible screenshot context; they do not independently certify a specific Event ID or successful service state. Refer to the individual screenshot contents and the practical write-ups before making completion claims. Credentials, tokens, and unrelated personal information should be redacted.
+Only the files listed above are retained here. Original screenshot bytes were preserved; filenames were made descriptive.
