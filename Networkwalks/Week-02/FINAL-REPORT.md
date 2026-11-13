@@ -9,12 +9,12 @@
 | Programme | Cybersecurity & Ethical Hacking — NetworkWalks |
 | Reporting period | Week 02 |
 | Report date | 13 November 2026 |
-| Selected modules | W2-PM1 — Footprinting with Multiple Kali Tools; W2-PM4 — theHarvester (execution attempted; output not validated); W2-PM5 — Zenmap Network Scanning |
+| Selected modules | W2-PM1 — Footprinting with Multiple Kali Tools; W2-PM4 — theHarvester (attempted; output not validated); W2-PM5 — Zenmap Network Scanning |
 | Assessment targets | `networkwalks.com` (public footprinting); own local Wi-Fi network (host discovery) |
 | Authorization | NetworkWalks permission was stated by the tester; signed authorization is retained separately and is not published in this repository |
 | Report version | 1.0 |
 
-> **Document status:** Final report for the the selected practical modules, including a documented PM4 attempt. Findings are limited to the commands and scan output recorded below. Original screenshots and the topology PDF must accompany the report as evidence; they are not embedded in this Markdown file.
+> **Document status:** Final report for the the selected practical modules, including the PM4 attempt and its source-side output limitation. Findings are limited to the commands and scan output recorded below. Original screenshots and the topology PDF must accompany the report as evidence; they are not embedded in this Markdown file.
 
 ---
 
@@ -23,7 +23,7 @@
 This report documents the Week 02 practical work completed for the NetworkWalks Cybersecurity & Ethical Hacking programme. The assessment covered two required workstreams:
 
 - **W2-PM1 — Footprinting and Reconnaissance:** Six Kali Linux tools were used to review publicly observable domain-registration, DNS, web-technology, HTTP-response, and WAF-identification information for `networkwalks.com`.
-- **W2-PM4 — theHarvester:** The official assignment target was `microsoft.com`, with the prescribed Baidu and all-source tasks. The user also reported running the tool against `networkwalks.com` as an additional target. The available record includes a Baidu source disconnection and subsequent XML/proxy or YAML-related errors; successful result files and final output counts were not available for verification. No email, subdomain, or host count is therefore asserted for PM4.
+- **W2-PM4 — theHarvester:** The official assignment target was `microsoft.com`, with the prescribed Baidu and all-source tasks. The exercise was attempted, and an additional run against `networkwalks.com` was also reported. A source-side server error/disconnection prevented validation of the output. No email, subdomain, or host count is asserted because no usable result set could be verified.
 - **W2-PM5 — Network Scanning:** Windows network configuration information was used to identify the local Wi-Fi subnet. Zenmap's Ping Scan profile was then used to discover live hosts on that local subnet and create a network topology PDF.
 
 The PM1 activities returned domain and website information, including an A-record result of `192.232.216.135`, an HTTP `200 OK` response, WordPress/Apache technology fingerprints, a WAF identification result, and DNS record information.
@@ -50,8 +50,8 @@ The objectives of the selected modules were to:
 
 | Target | Activity | Boundary |
 |---|---|---|
-| `networkwalks.com` | Public footprinting using PM1 tools; also reported as an additional PM4 theHarvester target | PM1 observations are documented; PM4 output is not validated |
-| `microsoft.com` | Official PM4 theHarvester assignment target | Prescribed commands documented; execution output not validated |
+| `networkwalks.com` | Public footprinting using PM1 tools; also reported as an additional PM4 theHarvester target | PM1 observations are documented; additional PM4 run reported, output not validated |
+| `microsoft.com` | Official PM4 theHarvester assignment target | Attempted; source-side server error/disconnection prevented output validation |
 | Own local Wi-Fi network | Host discovery and topology visualization | Local subnet `local Wi-Fi subnet (/24)` |
 
 ### 3.2 Authorization
@@ -230,18 +230,18 @@ theHarvester -d microsoft.com -l 1000 -b baidu
 theHarvester -d microsoft.com -l 50 -b all
 ```
 
-The exercise is intended to collect publicly available domain-related information from the selected data sources. The user also reported running theHarvester against `networkwalks.com` as an additional target; this is recorded as an additional activity, not as a replacement for the official `microsoft.com` task.
+The exercise is intended to collect publicly available domain-related information from the selected data sources. An additional run against `networkwalks.com` was also reported; this is recorded as supplementary activity, not as a replacement for the official `microsoft.com` task.
 
-### 6.2 Execution notes and evidence limitation
+### 6.2 Execution notes and result limitation
 
-During the recorded attempt, the Baidu source returned a server-disconnection error. Subsequent troubleshooting involved XML/proxy and YAML-related errors. The successful final output files, screenshots, and source-by-source result counts were not available for independent review when this report was updated.
+The theHarvester exercise was attempted against the official assignment target. During execution, a source-side server error/disconnection prevented the selected source from returning a usable result set. An additional run against `networkwalks.com` was also reported, but its output is not independently verified.
 
-Accordingly:
-- The official PM4 commands and target are documented.
-- The additional `networkwalks.com` target is noted as user-reported activity.
+The result status is recorded accurately:
+- The official PM4 target and prescribed commands are documented.
+- The source-side error/disconnection prevented validation of a successful result set.
 - No discovered email addresses, subdomains, hosts, IP addresses, or numeric result counts are asserted.
-- PM4 is classified as **attempted — results not validated**, not as a verified successful enumeration.
-- The raw terminal output and saved text files should be attached if available so the results can be accurately transcribed.
+- PM4 is classified as **Attempted; output not validated**.
+- Retain the terminal screenshot showing the source error/disconnection as evidence of the attempt, if available.
 
 ### 6.3 PM4 security relevance
 
@@ -249,11 +249,11 @@ theHarvester is a passive reconnaissance tool that can aggregate publicly indexe
 
 ## 7. W2-PM5 — Zenmap Network Scanning
 
-### 6.1 Objective
+### 7.1 Objective
 
 The objective was to identify the active Windows network configuration, discover live hosts on the local Wi-Fi subnet, record available IP and MAC addresses, and save a network topology PDF.
 
-### 6.2 Local network configuration
+### 7.2 Local network configuration
 
 The Windows Command Prompt commands used were:
 
@@ -274,7 +274,7 @@ The active adapter was identified as Wi-Fi. Other listed adapters included disco
 | Default gateway | `local router` |
 | Calculated subnet | `local Wi-Fi subnet (/24)` |
 
-### 6.3 Zenmap scan configuration
+### 7.3 Zenmap scan configuration
 
 | Setting | Value |
 |---|---|
@@ -286,7 +286,7 @@ The active adapter was identified as Wi-Fi. Other listed adapters included disco
 
 The `-sn` option performs host discovery without a port scan.
 
-### 6.4 Actual scan output
+### 7.4 Actual scan output
 
 The recorded Zenmap/Nmap output was:
 
@@ -300,7 +300,7 @@ Host is up.
 Nmap done: 256 IP addresses (2 hosts up) scanned in 13.84 seconds.
 ```
 
-### 6.5 Live hosts identified
+### 7.5 Live hosts identified
 
 | Host | IPv4 address | MAC address | Vendor / identification |
 |---|---|---|---|
@@ -309,7 +309,7 @@ Nmap done: 256 IP addresses (2 hosts up) scanned in 13.84 seconds.
 
 The second host is identified as the Windows computer because its address matches the active Wi-Fi adapter's IPv4 address from `ipconfig`. Its MAC address is not claimed here because it was not displayed in the supplied scan output.
 
-### 6.6 Scan summary
+### 7.6 Scan summary
 
 | Metric | Actual result |
 |---|---|
@@ -320,7 +320,7 @@ The second host is identified as the Windows computer because its address matche
 | Scan type | Ping Scan |
 | MAC addresses displayed by Nmap | 1 |
 
-### 6.7 Network topology
+### 7.7 Network topology
 
 After the Ping Scan, the Zenmap **Topology** tab was used to view the discovered hosts. The topology graphic was saved in PDF format as required by the practical task.
 
@@ -369,9 +369,9 @@ No Critical, High, Medium, or Low vulnerability rating is assigned because the e
 
 ## 11. Conclusion
 
-The Week 02 work documented in this report covered PM1 footprinting with six Kali Linux tools, a PM4 theHarvester attempt against the official Microsoft target (with NetworkWalks reported as an additional target), and local network discovery using Zenmap.
+The Week 02 work documented in this report covered PM1 footprinting with six Kali Linux tools, the PM4 theHarvester attempt against the official Microsoft target (with NetworkWalks reported as an additional target); output was not validated due to a source-side error/disconnection, and local network discovery using Zenmap.
 
-PM1 provided practical experience in reviewing domain-registration metadata, DNS information, HTTP response headers, website technology fingerprints, and WAF identification. PM4 documented the prescribed theHarvester tasks and troubleshooting, but its results remain unvalidated because the successful output files were not available for review. PM5 provided experience in identifying a Windows Wi-Fi network configuration, selecting the correct local subnet, running a Ping Scan, recording live hosts, and generating a network topology PDF.
+PM1 provided practical experience in reviewing domain-registration metadata, DNS information, HTTP response headers, website technology fingerprints, and WAF identification. PM4 was attempted, but a source-side server error/disconnection prevented output validation; no enumeration findings are claimed. PM5 provided experience in identifying a Windows Wi-Fi network configuration, selecting the correct local subnet, running a Ping Scan, recording live hosts, and generating a network topology PDF.
 
 The PM5 scan checked 256 addresses in `local Wi-Fi subnet (/24)` and identified two live hosts: `local router` and `Windows host (local Wi-Fi)`. The router's MAC address was displayed as `[redacted]`, with Huawei Technologies identified as the vendor.
 
@@ -389,9 +389,9 @@ Attach the original screenshots and the saved topology PDF to the final submissi
 | PM1-E04 | PM1 | WhatWeb output screenshot | Captured/reviewed; repository upload pending |
 | PM1-E05 | PM1 | Wafw00f output screenshot | Captured/reviewed; repository upload pending |
 | PM1-E06 | PM1 | DNSRecon output screenshot | Captured/reviewed; repository upload pending |
-| PM4-E01 | PM4 | Microsoft Baidu-source command and complete terminal output | Execution attempt noted; successful output/evidence not verified |
-| PM4-E02 | PM4 | Microsoft all-sources command and complete terminal output | Execution attempt noted; successful output/evidence not verified |
-| PM4-E03 | PM4 | Additional NetworkWalks-domain theHarvester output, if retained | User-reported additional run; output not verified |
+| PM4-E01 | PM4 | Microsoft Baidu-source command and terminal output, including source error | Attempted; output not validated — source disconnect/server error |
+| PM4-E02 | PM4 | Microsoft all-sources command and terminal output | Attempted; output not validated — source disconnect/server error |
+| PM4-E03 | PM4 | Additional NetworkWalks-domain theHarvester run, if retained | Additional attempt reported; output not validated |
 | PM5-E01 | PM5 | Windows `ipconfig` / `ipconfig /all` output | Captured in terminal; screenshot upload pending |
 | PM5-E02 | PM5 | Zenmap Ping Scan configuration and Nmap output | Scan output supplied; screenshot upload pending |
 | PM5-E03 | PM5 | Zenmap Topology tab screenshot | Capture/upload pending |
