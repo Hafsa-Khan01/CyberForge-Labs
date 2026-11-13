@@ -1,36 +1,19 @@
 # NetworkWalks — Cybersecurity Internship
 
-A structured record of practical work completed for the NetworkWalks cybersecurity internship. The Week 01 submission is organised around the virtual lab environment, Wireshark exercises, technical reports and supporting evidence.
+Practical work and evidence for the NetworkWalks cybersecurity programme.
 
-## Week 01 — practical work
+## Weekly submissions
 
-| Workstream | Documentation |
-|---|---|
-| VirtualBox and Kali Linux | [Lab overview](Week-01/VirtualBox-Kali-Lab/README.md) · [Commands](Week-01/VirtualBox-Kali-Lab/Commands.md) · [Troubleshooting guide](Week-01/VirtualBox-Kali-Lab/Troubleshooting.md) |
-| Wireshark SOC Labs 03–08 | [Lab index](Week-01/Wireshark-SOC-Labs/README.md) · [Consolidated technical report](Week-01/Wireshark-SOC-Labs/REPORT.md) |
-| Individual analysis notes | [Six lab reports](Week-01/Wireshark-SOC-Labs/Reports/) |
-| Evidence | [Week 01 evidence register](Week-01/EVIDENCE-INDEX.md) |
+| Week | Focus | Contents |
+|---|---|---|
+| [Week 01](Week-01/) | Virtual lab setup and Wireshark | Kali/VirtualBox setup, Wireshark SOC labs, reports and supporting screenshots |
+| [Week 02](Week-02/) | Footprinting and network scanning | Kali footprinting, theHarvester attempt, Zenmap Ping Scan and final report |
 
-## Evidence at a glance
+Each week folder contains its own README, reports and evidence index. Only verified results are presented as completed; incomplete exercises and evidence gaps are identified clearly.
 
-The Week 01 submission is supported by a curated set of 41 screenshots, organised by practical area:
+## Evidence and safety
 
-- 8 VirtualBox/Kali setup screenshots.
-- 27 Windows-host Wireshark practical screenshots.
-- 6 learner result-card screenshots for Labs 03–08.
-
-See the [Week 01 evidence register](Week-01/EVIDENCE-INDEX.md) for the evidence breakdown and direct navigation links.
-
-## Reporting and verification standard
-
-- Separate observed evidence, supplied lab notes, expected configuration and interpretation.
-- Treat assessment percentages as learner result-card records, not independent packet-capture validation.
-- Do not claim a command succeeded unless its output or screenshot supports that claim.
-- Reference the exact evidence location used by each report.
-- Redact credentials, tokens, personal information, host paths and unrelated network identifiers.
-- Keep VM disks, saved-state files, private keys and unreviewed raw captures out of the public repository.
-- Perform testing only within the assigned training environment or another explicitly authorised scope.
-
----
-**Prepared by:** Hafsa Khan  
-**Programme:** NetworkWalks Cybersecurity Internship
+- Screenshots are grouped with the relevant weekly practical.
+- Public copies must not expose credentials, personal information, private network identifiers or unrelated traffic.
+- Signed authorization documents and other confidential records must remain private.
+- Testing must stay within the assigned training environment or explicitly authorised scope.

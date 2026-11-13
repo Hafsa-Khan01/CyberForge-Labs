@@ -15,11 +15,7 @@ Networkwalks/Week-02/
 │   └── PM5-Zenmap/
 ├── README.md
 ├── FINAL-REPORT.md
-├── EVIDENCE-INDEX.md
-├── PROGRESS-REPORT.md
-├── PM4-THEHARVESTER.md
-├── REPORT-TEMPLATE.md
-└── LOA-DRAFT.md
+└── EVIDENCE-INDEX.md
 ```
 
 ## Evidence register
@@ -42,15 +38,15 @@ Networkwalks/Week-02/
 | Item | Value |
 |---|---|
 | Active adapter | Wi-Fi |
-| Windows IPv4 | `192.168.100.33` |
+| Windows IPv4 | `Windows host (local Wi-Fi)` |
 | Subnet mask | `255.255.255.0` |
-| Default gateway | `192.168.100.1` |
-| Scanned subnet | `192.168.100.0/24` |
+| Default gateway | `local router` |
+| Scanned subnet | `local Wi-Fi subnet (/24)` |
 | Scan profile | Ping Scan |
-| Equivalent command | `nmap -sn 192.168.100.0/24` |
+| Equivalent command | `nmap -sn local Wi-Fi subnet (/24)` |
 | Addresses scanned | 256 |
 | Live hosts | 2 |
-| Router MAC | `30:D1:7E:4D:EC:10` |
+| Router MAC | `[redacted]` |
 | Router vendor | Huawei Technologies |
 | Windows host MAC | Not displayed in the recorded scan output |
 
