@@ -50,7 +50,8 @@ The objectives of the selected modules were to:
 
 | Target | Activity | Boundary |
 |---|---|---|
-| `networkwalks.com` | Public footprinting using PM1 tools; also reported as an additional PM4 theHarvester target | PM1 observations are documented; PM4 output is not validated |\n| `microsoft.com` | Official PM4 theHarvester assignment target | Prescribed commands documented; execution output not validated |
+| `networkwalks.com` | Public footprinting using PM1 tools; also reported as an additional PM4 theHarvester target | PM1 observations are documented; PM4 output is not validated |
+| `microsoft.com` | Official PM4 theHarvester assignment target | Prescribed commands documented; execution output not validated |
 | Own local Wi-Fi network | Host discovery and topology visualization | Local subnet `local Wi-Fi subnet (/24)` |
 
 ### 3.2 Authorization
@@ -388,7 +389,10 @@ Attach the original screenshots and the saved topology PDF to the final submissi
 | PM1-E04 | PM1 | WhatWeb output screenshot | Captured/reviewed; repository upload pending |
 | PM1-E05 | PM1 | Wafw00f output screenshot | Captured/reviewed; repository upload pending |
 | PM1-E06 | PM1 | DNSRecon output screenshot | Captured/reviewed; repository upload pending |
-| PM4-E01 | PM4 | Microsoft Baidu-source command and complete terminal output | Execution attempt noted; successful output/evidence not verified |\n| PM4-E02 | PM4 | Microsoft all-sources command and complete terminal output | Execution attempt noted; successful output/evidence not verified |\n| PM4-E03 | PM4 | Additional NetworkWalks-domain theHarvester output, if retained | User-reported additional run; output not verified |\n| PM5-E01 | PM5 | Windows `ipconfig` / `ipconfig /all` output | Captured in terminal; screenshot upload pending |
+| PM4-E01 | PM4 | Microsoft Baidu-source command and complete terminal output | Execution attempt noted; successful output/evidence not verified |
+| PM4-E02 | PM4 | Microsoft all-sources command and complete terminal output | Execution attempt noted; successful output/evidence not verified |
+| PM4-E03 | PM4 | Additional NetworkWalks-domain theHarvester output, if retained | User-reported additional run; output not verified |
+| PM5-E01 | PM5 | Windows `ipconfig` / `ipconfig /all` output | Captured in terminal; screenshot upload pending |
 | PM5-E02 | PM5 | Zenmap Ping Scan configuration and Nmap output | Scan output supplied; screenshot upload pending |
 | PM5-E03 | PM5 | Zenmap Topology tab screenshot | Capture/upload pending |
 | PM5-E04 | PM5 | `PM5-Network-Topology.pdf` | Saved locally; repository upload pending |

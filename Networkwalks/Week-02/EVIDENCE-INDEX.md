@@ -28,7 +28,10 @@ Networkwalks/Week-02/
 | PM1-E04 | PM1 | WhatWeb output screenshot | Visible web technology fingerprint | `Evidence/PM1-Footprinting/` | Upload pending |
 | PM1-E05 | PM1 | Wafw00f output screenshot | WAF detection result | `Evidence/PM1-Footprinting/` | Upload pending |
 | PM1-E06 | PM1 | DNSRecon output screenshot | DNS enumeration output | `Evidence/PM1-Footprinting/` | Upload pending |
-| PM4-E01 | PM4 | Microsoft Baidu-source command/output screenshot | Official assignment task; successful output not verified | `Evidence/PM4-theHarvester/` | Pending verification |\n| PM4-E02 | PM4 | Microsoft all-sources command/output screenshot | Official assignment task; successful output not verified | `Evidence/PM4-theHarvester/` | Pending verification |\n| PM4-E03 | PM4 | Additional NetworkWalks-domain run output, if retained | Additional target reported by user; output not verified | `Evidence/PM4-theHarvester/` | Pending verification |\n| PM5-E01 | PM5 | Windows `ipconfig` / `ipconfig /all` screenshot | Active Wi-Fi IPv4, subnet mask, gateway | `Evidence/PM5-Zenmap/` | Upload pending |
+| PM4-E01 | PM4 | Microsoft Baidu-source command/output screenshot | Official assignment task; successful output not verified | `Evidence/PM4-theHarvester/` | Pending verification |
+| PM4-E02 | PM4 | Microsoft all-sources command/output screenshot | Official assignment task; successful output not verified | `Evidence/PM4-theHarvester/` | Pending verification |
+| PM4-E03 | PM4 | Additional NetworkWalks-domain run output, if retained | Additional target reported by user; output not verified | `Evidence/PM4-theHarvester/` | Pending verification |
+| PM5-E01 | PM5 | Windows `ipconfig` / `ipconfig /all` screenshot | Active Wi-Fi IPv4, subnet mask, gateway | `Evidence/PM5-Zenmap/` | Upload pending |
 | PM5-E02 | PM5 | Zenmap Ping Scan screenshot | Target subnet and actual Nmap output | `Evidence/PM5-Zenmap/` | Upload pending |
 | PM5-E03 | PM5 | Zenmap Topology screenshot | Discovered-host topology view | `Evidence/PM5-Zenmap/` | Upload pending |
 | PM5-E04 | PM5 | `PM5-Network-Topology.pdf` | Saved topology graphic with legend, if enabled | `Evidence/PM5-Zenmap/` | Saved locally; upload pending |
@@ -38,15 +41,15 @@ Networkwalks/Week-02/
 | Item | Value |
 |---|---|
 | Active adapter | Wi-Fi |
-| Windows IPv4 | `Windows host (local Wi-Fi)` |
+| Windows IPv4 | Redacted in public copy |
 | Subnet mask | `255.255.255.0` |
-| Default gateway | `local router` |
-| Scanned subnet | `local Wi-Fi subnet (/24)` |
+| Default gateway | Redacted in public copy |
+| Scanned subnet | Redacted local /24 subnet |
 | Scan profile | Ping Scan |
-| Equivalent command | `nmap -sn local Wi-Fi subnet (/24)` |
+| Equivalent command | `nmap -sn <authorized-local-subnet>` |
 | Addresses scanned | 256 |
 | Live hosts | 2 |
-| Router MAC | `[redacted]` |
+| Router MAC | Redacted in public copy |
 | Router vendor | Huawei Technologies |
 | Windows host MAC | Not displayed in the recorded scan output |
 
