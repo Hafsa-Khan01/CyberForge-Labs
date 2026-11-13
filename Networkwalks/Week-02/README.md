@@ -13,16 +13,16 @@ The Week 02 brief requires at least one elective from PM1–PM4, plus both essen
 | W2-PM1 | Footprinting with multiple Kali tools | Completed practical work documented in the final report |
 | W2-PM2 | GHDB-based Footprinting Attacks | Not included as a completed module |
 | W2-PM3 | Maltego-based Footprinting Attacks | Not included as a completed module |
-| W2-PM4 | theHarvester-based Footprinting Attacks | Not included in the selected-module final report; retain separate evidence if required |
+| W2-PM4 | theHarvester-based Footprinting Attacks | Attempted; official Microsoft target and commands documented. Output not validated; see [PM4 notes](PM4-THEHARVESTER.md) |
 | W2-PM5 | Zenmap-based Network Scanning | Completed local Wi-Fi Ping Scan documented in the final report |
 | W2-PM-FINAL | Detailed report | Final report added |
 
-PM1 provides the selected elective. PM5 and PM-FINAL are the essential modules.
+PM1 provides the selected elective. PM5 and PM-FINAL are the essential modules. PM4 is additionally documented as an attempted elective exercise; its successful output has not yet been verified.
 
 ## Main documents
 
 - [Final Penetration Testing Report](FINAL-REPORT.md)
-- [Evidence Index](EVIDENCE-INDEX.md)
+- [Evidence Index](EVIDENCE-INDEX.md)\n- [PM4 theHarvester Notes](PM4-THEHARVESTER.md)
 - [Report Template](REPORT-TEMPLATE.md)
 - [LOA Draft / Request Template](LOA-DRAFT.md)
 
@@ -49,7 +49,7 @@ The [LOA-DRAFT.md](LOA-DRAFT.md) is an unsigned request/template and does not gr
 
 ## Evidence status
 
-The report identifies the required PM1 and PM5 evidence artifacts. Original screenshots and the topology PDF are not yet committed to this repository. Upload redacted originals to the appropriate evidence folders before treating the GitHub evidence pack as complete.
+The report identifies the PM1, PM4, and PM5 evidence artifacts. Original screenshots and the topology PDF are not yet committed to this repository. Upload redacted originals to the appropriate evidence folders before treating the GitHub evidence pack as complete.
 
 Do not upload credentials, tokens, private keys, VM disk images, or unrelated personal/network data.
 
