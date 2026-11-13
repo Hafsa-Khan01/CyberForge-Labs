@@ -103,9 +103,7 @@ The objective was to collect publicly accessible information about `networkwalks
 
 **Command**
 
-```bash
-whois networkwalks.com
-```
+> `whois networkwalks.com`
 
 **Observation**
 
@@ -119,9 +117,7 @@ Registration metadata can help establish the administrative footprint of a domai
 
 **Command**
 
-```bash
-whatweb --aggression=1 https://networkwalks.com
-```
+> `whatweb --aggression=1 https://networkwalks.com`
 
 **Observation**
 
@@ -135,21 +131,17 @@ Technology fingerprints can help defenders maintain an accurate asset inventory 
 
 **Commands**
 
-```bash
-nslookup -type=A networkwalks.com
-nslookup -type=AAAA networkwalks.com
-nslookup -type=MX networkwalks.com
-nslookup -type=NS networkwalks.com
-nslookup -type=TXT networkwalks.com
-```
+> `nslookup -type=A networkwalks.com`
+> `nslookup -type=AAAA networkwalks.com`
+> `nslookup -type=MX networkwalks.com`
+> `nslookup -type=NS networkwalks.com`
+> `nslookup -type=TXT networkwalks.com`
 
 **Observation**
 
 The A-record lookup returned:
 
-```text
-192.232.216.135
-```
+> `192.232.216.135`
 
 The exercise also queried AAAA, MX, NS, and TXT record types.
 
@@ -161,10 +153,8 @@ DNS records help describe how a domain resolves and which supporting services ar
 
 **Commands**
 
-```bash
-curl -I https://networkwalks.com
-curl -I http://networkwalks.com
-```
+> `curl -I https://networkwalks.com`
+> `curl -I http://networkwalks.com`
 
 **Observation**
 
@@ -178,9 +168,7 @@ HTTP headers can disclose implementation details. The system owner should decide
 
 **Command**
 
-```bash
-wafw00f https://networkwalks.com
-```
+> `wafw00f https://networkwalks.com`
 
 **Observation**
 
@@ -194,9 +182,7 @@ This is a tool-based identification result. It does not independently prove the 
 
 **Command**
 
-```bash
-dnsrecon -d networkwalks.com -t std
-```
+> `dnsrecon -d networkwalks.com -t std`
 
 **Observation**
 
@@ -225,10 +211,8 @@ DNS enumeration provides a view of publicly visible domain infrastructure. DNS r
 
 The official W2-PM4 practical specifies `microsoft.com` as the target domain and requires the following commands:
 
-```bash
-theHarvester -d microsoft.com -l 1000 -b baidu
-theHarvester -d microsoft.com -l 50 -b all
-```
+> `theHarvester -d microsoft.com -l 1000 -b baidu`
+> `theHarvester -d microsoft.com -l 50 -b all`
 
 The exercise is intended to collect publicly available domain-related information from the selected data sources. An additional run against `networkwalks.com` was also reported; this is recorded as supplementary activity, not as a replacement for the official `microsoft.com` task.
 
@@ -257,10 +241,8 @@ The objective was to identify the active Windows network configuration, discover
 
 The Windows Command Prompt commands used were:
 
-```cmd
-ipconfig
-ipconfig /all
-```
+> `ipconfig`
+> `ipconfig /all`
 
 The active adapter was identified as Wi-Fi. Other listed adapters included disconnected Ethernet and virtual adapters used by VirtualBox and VMware. Those virtual adapters were not selected as the target network for this PM5 scan.
 
@@ -290,15 +272,13 @@ The `-sn` option performs host discovery without a port scan.
 
 The recorded Zenmap/Nmap output was:
 
-```text
-Starting Nmap 7.991 ( https://nmap.org ) at 2026-11-13 09:58 +0500
-Nmap scan report for local router
-Host is up (0.0075s latency).
-MAC Address: [redacted] (Huawei Technologies)
-Nmap scan report for Windows host (local Wi-Fi)
-Host is up.
-Nmap done: 256 IP addresses (2 hosts up) scanned in 13.84 seconds.
-```
+> `Starting Nmap 7.991 ( https://nmap.org ) at 2026-11-13 09:58 +0500`
+> `Nmap scan report for local router`
+> `Host is up (0.0075s latency).`
+> `MAC Address: [redacted] (Huawei Technologies)`
+> `Nmap scan report for Windows host (local Wi-Fi)`
+> `Host is up.`
+> `Nmap done: 256 IP addresses (2 hosts up) scanned in 13.84 seconds.`
 
 ### 7.5 Live hosts identified
 
