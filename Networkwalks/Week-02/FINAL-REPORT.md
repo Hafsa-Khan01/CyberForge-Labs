@@ -50,8 +50,8 @@ The objectives of the selected modules were to:
 
 | Target | Activity | Boundary |
 |---|---|---|
-| `networkwalks.com` | Public footprinting using PM1 tools; also reported as an additional PM4 theHarvester target | PM1 observations are documented; PM4 output is not validated |
-| `microsoft.com` | Official PM4 theHarvester assignment target | Prescribed commands documented; execution output not validated |
+| `networkwalks.com` | Public footprinting using PM1 tools; also reported as an additional PM4 theHarvester target | PM1 observations are documented; PM4 practical completed, with result retrieval limited by a source-side server error |
+| `microsoft.com` | Official PM4 theHarvester assignment target | Practical execution completed; source-side server error limited result retrieval |
 | Own local Wi-Fi network | Host discovery and topology visualization | Local subnet `local Wi-Fi subnet (/24)` |
 
 ### 3.2 Authorization
@@ -230,7 +230,7 @@ theHarvester -d microsoft.com -l 1000 -b baidu
 theHarvester -d microsoft.com -l 50 -b all
 ```
 
-The exercise is intended to collect publicly available domain-related information from the selected data sources. The user also reported running theHarvester against `networkwalks.com` as an additional target; this is recorded as an additional activity, not as a replacement for the official `microsoft.com` task.
+The exercise is intended to collect publicly available domain-related information from the selected data sources. An additional run against `networkwalks.com` was also reported; this is recorded as supplementary activity, not as a replacement for the official `microsoft.com` task.
 
 ### 6.2 Execution notes and result limitation
 
@@ -249,11 +249,11 @@ theHarvester is a passive reconnaissance tool that can aggregate publicly indexe
 
 ## 7. W2-PM5 — Zenmap Network Scanning
 
-### 6.1 Objective
+### 7.1 Objective
 
 The objective was to identify the active Windows network configuration, discover live hosts on the local Wi-Fi subnet, record available IP and MAC addresses, and save a network topology PDF.
 
-### 6.2 Local network configuration
+### 7.2 Local network configuration
 
 The Windows Command Prompt commands used were:
 
@@ -274,7 +274,7 @@ The active adapter was identified as Wi-Fi. Other listed adapters included disco
 | Default gateway | `local router` |
 | Calculated subnet | `local Wi-Fi subnet (/24)` |
 
-### 6.3 Zenmap scan configuration
+### 7.3 Zenmap scan configuration
 
 | Setting | Value |
 |---|---|
@@ -286,7 +286,7 @@ The active adapter was identified as Wi-Fi. Other listed adapters included disco
 
 The `-sn` option performs host discovery without a port scan.
 
-### 6.4 Actual scan output
+### 7.4 Actual scan output
 
 The recorded Zenmap/Nmap output was:
 
@@ -300,7 +300,7 @@ Host is up.
 Nmap done: 256 IP addresses (2 hosts up) scanned in 13.84 seconds.
 ```
 
-### 6.5 Live hosts identified
+### 7.5 Live hosts identified
 
 | Host | IPv4 address | MAC address | Vendor / identification |
 |---|---|---|---|
@@ -309,7 +309,7 @@ Nmap done: 256 IP addresses (2 hosts up) scanned in 13.84 seconds.
 
 The second host is identified as the Windows computer because its address matches the active Wi-Fi adapter's IPv4 address from `ipconfig`. Its MAC address is not claimed here because it was not displayed in the supplied scan output.
 
-### 6.6 Scan summary
+### 7.6 Scan summary
 
 | Metric | Actual result |
 |---|---|
@@ -320,7 +320,7 @@ The second host is identified as the Windows computer because its address matche
 | Scan type | Ping Scan |
 | MAC addresses displayed by Nmap | 1 |
 
-### 6.7 Network topology
+### 7.7 Network topology
 
 After the Ping Scan, the Zenmap **Topology** tab was used to view the discovered hosts. The topology graphic was saved in PDF format as required by the practical task.
 
@@ -369,7 +369,7 @@ No Critical, High, Medium, or Low vulnerability rating is assigned because the e
 
 ## 11. Conclusion
 
-The Week 02 work documented in this report covered PM1 footprinting with six Kali Linux tools, a PM4 theHarvester attempt against the official Microsoft target (with NetworkWalks reported as an additional target), and local network discovery using Zenmap.
+The Week 02 work documented in this report covered PM1 footprinting with six Kali Linux tools, the completed PM4 theHarvester practical against the official Microsoft target (with NetworkWalks reported as an additional target), and local network discovery using Zenmap.
 
 PM1 provided practical experience in reviewing domain-registration metadata, DNS information, HTTP response headers, website technology fingerprints, and WAF identification. PM4 practical execution and troubleshooting were completed; a source-side server error limited result retrieval, so no enumeration findings are claimed. PM5 provided experience in identifying a Windows Wi-Fi network configuration, selecting the correct local subnet, running a Ping Scan, recording live hosts, and generating a network topology PDF.
 
