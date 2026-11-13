@@ -3,18 +3,12 @@
 **Owner:** Hafsa Khan  
 **Programme:** NetworkWalks Cybersecurity Internship
 
-Use this index to record genuine screenshots and outputs as the work is completed. Do not add placeholders as if they were evidence.
+This index tracks the screenshots reviewed so far. The original screenshot files were supplied in conversation ZIP uploads but have **not** yet been committed to this GitHub branch. Add redacted originals to the matching folders or submit them through the approved private channel.
 
-## Evidence folders
-
-Suggested structure:
+## Suggested evidence folders
 
 ```text
 Week-02/
-├── README.md
-├── LOA-DRAFT.md
-├── REPORT-TEMPLATE.md
-├── EVIDENCE-INDEX.md
 ├── PM1-Kali-Footprinting/
 ├── PM2-GHDB/
 ├── PM3-Maltego/
@@ -25,24 +19,38 @@ Week-02/
 
 ## Evidence register
 
-| Evidence ID | Module | Filename / path | Description | Verified |
-|---|---|---|---|---|
-| E-01 | PM1 | [Add after capture] | [What the screenshot proves] | No |
-| E-02 | PM2 | [Add after capture] | [What the screenshot proves] | No |
-| E-03 | PM3 | [Add after capture] | [What the screenshot proves] | No |
-| E-04 | PM4 | [Add after capture] | [What the screenshot proves] | No |
-| E-05 | PM5 | [Add after capture] | [What the screenshot proves] | No |
+| Evidence ID | Module | Evidence reviewed | Verification / limitation |
+|---|---|---|---|
+| PM1-01 | PM1 | WHOIS output for `networkwalks.com` | Reviewed in conversation; image not committed |
+| PM1-02 | PM1 | NSLOOKUP DNS query output | Reviewed in conversation; image not committed |
+| PM1-03 | PM1 | cURL HTTP response headers | Reviewed in conversation; image not committed |
+| PM1-04 | PM1 | WhatWeb fingerprint output | Reviewed in conversation; image not committed |
+| PM1-05 | PM1 | WAFW00F detection output | Reviewed in conversation; image not committed |
+| PM1-06 | PM1 | DNSRecon output | Reviewed in conversation; image not committed |
+| PM4-01 | PM4 | theHarvester 4.21.2 output for `github.com` | Reviewed in conversation; NetworkWalks assessment scope not established |
+| PM5-01 | PM5 | Zenmap scans/topology for private/local ranges | Reviewed in conversation; exact authorization scope and scan profile require validation |
+
+## Module status
+
+| Module | Status |
+|---|---|
+| PM1 | Completed practical work; evidence reviewed |
+| PM2 | Not completed |
+| PM3 | Not completed |
+| PM4 | Tool run reviewed; target-scope suitability unconfirmed |
+| PM5 | Screenshots reviewed; target/method scope checks outstanding |
+| PM-FINAL | Progress report drafted; final evidence and scope checks outstanding |
 
 ## Pre-submission checklist
 
 - [ ] Current authorization and exact scope confirmed privately by the target owner.
-- [ ] Selected elective module(s) completed.
+- [ ] At least one selected elective completed and supported by evidence.
 - [ ] Essential PM5 completed within approved scope.
 - [ ] Final report covers only modules actually completed.
-- [ ] Each finding is supported by a screenshot or saved output.
+- [ ] Every finding is supported by a screenshot or saved output.
 - [ ] Screenshots show enough context to identify the tool, command and result.
 - [ ] Credentials, tokens, personal data and unrelated network details redacted.
-- [ ] No signed authorization or confidential scope details published without permission.
+- [ ] Signed authorization is not publicly exposed.
 - [ ] Submission completed before the deadline in the assignment brief.
 
 ## Evidence handling
