@@ -10,7 +10,7 @@
 
 ### Report contents
 
-This directory is reserved for the final Week 02 penetration testing report PDF.
+The final Week 02 penetration testing report PDF is available below.
 
 The report documents the practical work and evidence for:
 
@@ -33,6 +33,6 @@ Original practical screenshots are maintained in the [Week 02 Evidence directory
 
 ### Final report
 
-Upload the final PDF into this directory using the filename:
+[**Open the Penetration Testing Report — NetworkWalks Week 02 (PDF)**](Penetration%20Testing%20Report%20%E2%80%94%20NetworkWalks%20Week%2002.pdf)
 
-`NetworkWalks_Week02_Penetration_Testing_Report_Hafsa_Khan.pdf`
+The report includes the selected PM1, PM4 and PM5 activities and their evidence-based observations.
