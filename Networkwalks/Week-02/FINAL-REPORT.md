@@ -28,7 +28,7 @@ This report documents the Week 02 practical work completed for the NetworkWalks 
 
 The PM1 activities returned domain and website information, including an A-record result of `192.232.216.135`, an HTTP `200 OK` response, WordPress/Apache technology fingerprints, a WAF identification result, and DNS record information.
 
-For PM5, the active Wi-Fi adapter had IPv4 address `192.168.100.33/24` and default gateway `192.168.100.1`. A Ping Scan of `192.168.100.0/24` checked 256 addresses and identified two live hosts: the gateway and the Windows computer running the scan. The output displayed a MAC address for the gateway only.
+For PM5, the active Wi-Fi adapter had IPv4 address `Windows host (local Wi-Fi)/24` and default gateway `local router`. A Ping Scan of `local Wi-Fi subnet (/24)` checked 256 addresses and identified two live hosts: the gateway and the Windows computer running the scan. The output displayed a MAC address for the gateway only.
 
 The work was limited to information gathering and host discovery. No exploitation, credential attacks, denial-of-service testing, or vulnerability validation is claimed. Tool fingerprints and publicly visible information are observations, not confirmed vulnerabilities.
 
@@ -50,8 +50,9 @@ The objectives of the selected modules were to:
 
 | Target | Activity | Boundary |
 |---|---|---|
-| `networkwalks.com` | Public footprinting using PM1 tools; also reported as an additional PM4 theHarvester target | PM1 observations are documented; PM4 output is not validated |\n| `microsoft.com` | Official PM4 theHarvester assignment target | Prescribed commands documented; execution output not validated |
-| Own local Wi-Fi network | Host discovery and topology visualization | Local subnet `192.168.100.0/24` |
+| `networkwalks.com` | Public footprinting using PM1 tools; also reported as an additional PM4 theHarvester target | PM1 observations are documented; PM4 output is not validated |
+| `microsoft.com` | Official PM4 theHarvester assignment target | Prescribed commands documented; execution output not validated |
+| Own local Wi-Fi network | Host discovery and topology visualization | Local subnet `local Wi-Fi subnet (/24)` |
 
 ### 3.2 Authorization
 
@@ -268,18 +269,18 @@ The active adapter was identified as Wi-Fi. Other listed adapters included disco
 | Detail | Observed value |
 |---|---|
 | Adapter | Wi-Fi |
-| IPv4 address | `192.168.100.33` |
+| IPv4 address | `Windows host (local Wi-Fi)` |
 | Subnet mask | `255.255.255.0` |
-| Default gateway | `192.168.100.1` |
-| Calculated subnet | `192.168.100.0/24` |
+| Default gateway | `local router` |
+| Calculated subnet | `local Wi-Fi subnet (/24)` |
 
 ### 6.3 Zenmap scan configuration
 
 | Setting | Value |
 |---|---|
-| Target | `192.168.100.0/24` |
+| Target | `local Wi-Fi subnet (/24)` |
 | Profile | Ping Scan |
-| Equivalent Nmap command | `nmap -sn 192.168.100.0/24` |
+| Equivalent Nmap command | `nmap -sn local Wi-Fi subnet (/24)` |
 | Scan purpose | Host discovery |
 | Port/service scan | Not performed in this PM5 scan |
 
@@ -291,10 +292,10 @@ The recorded Zenmap/Nmap output was:
 
 ```text
 Starting Nmap 7.991 ( https://nmap.org ) at 2026-11-13 09:58 +0500
-Nmap scan report for 192.168.100.1
+Nmap scan report for local router
 Host is up (0.0075s latency).
-MAC Address: 30:D1:7E:4D:EC:10 (Huawei Technologies)
-Nmap scan report for 192.168.100.33
+MAC Address: [redacted] (Huawei Technologies)
+Nmap scan report for Windows host (local Wi-Fi)
 Host is up.
 Nmap done: 256 IP addresses (2 hosts up) scanned in 13.84 seconds.
 ```
@@ -303,8 +304,8 @@ Nmap done: 256 IP addresses (2 hosts up) scanned in 13.84 seconds.
 
 | Host | IPv4 address | MAC address | Vendor / identification |
 |---|---|---|---|
-| Default gateway / router | `192.168.100.1` | `30:D1:7E:4D:EC:10` | Huawei Technologies |
-| Windows computer running the scan | `192.168.100.33` | Not displayed in the recorded Nmap output | Local Windows Wi-Fi adapter |
+| Default gateway / router | `local router` | `[redacted]` | Huawei Technologies |
+| Windows computer running the scan | `Windows host (local Wi-Fi)` | Not displayed in the recorded Nmap output | Local Windows Wi-Fi adapter |
 
 The second host is identified as the Windows computer because its address matches the active Wi-Fi adapter's IPv4 address from `ipconfig`. Its MAC address is not claimed here because it was not displayed in the supplied scan output.
 
@@ -312,7 +313,7 @@ The second host is identified as the Windows computer because its address matche
 
 | Metric | Actual result |
 |---|---|
-| Subnet scanned | `192.168.100.0/24` |
+| Subnet scanned | `local Wi-Fi subnet (/24)` |
 | Total IP addresses scanned | 256 |
 | Live hosts detected | **2** |
 | Scan duration | 13.84 seconds |
@@ -360,7 +361,7 @@ No Critical, High, Medium, or Low vulnerability rating is assigned because the e
 - The findings reflect the output reviewed at the time of the exercises and may change as DNS records and website technologies are updated.
 - WHOIS, WhatWeb, Wafw00f, and DNSRecon results are tool observations and were not independently validated against administrative systems.
 - The absence of a DNSSEC confirmation in the observed query is not proof that DNSSEC is disabled.
-- The PM5 scan covered only `192.168.100.0/24`.
+- The PM5 scan covered only `local Wi-Fi subnet (/24)`.
 - The recorded PM5 Nmap output displayed the router's MAC address but did not display the Windows host's MAC address.
 - PM5 used Ping Scan host discovery; it did not enumerate ports or services.
 - No exploitation, credential testing, vulnerability validation, or intrusive testing is claimed.
@@ -372,7 +373,7 @@ The Week 02 work documented in this report covered PM1 footprinting with six Kal
 
 PM1 provided practical experience in reviewing domain-registration metadata, DNS information, HTTP response headers, website technology fingerprints, and WAF identification. PM4 documented the prescribed theHarvester tasks and troubleshooting, but its results remain unvalidated because the successful output files were not available for review. PM5 provided experience in identifying a Windows Wi-Fi network configuration, selecting the correct local subnet, running a Ping Scan, recording live hosts, and generating a network topology PDF.
 
-The PM5 scan checked 256 addresses in `192.168.100.0/24` and identified two live hosts: `192.168.100.1` and `192.168.100.33`. The router's MAC address was displayed as `30:D1:7E:4D:EC:10`, with Huawei Technologies identified as the vendor.
+The PM5 scan checked 256 addresses in `local Wi-Fi subnet (/24)` and identified two live hosts: `local router` and `Windows host (local Wi-Fi)`. The router's MAC address was displayed as `[redacted]`, with Huawei Technologies identified as the vendor.
 
 The exercises reinforced the importance of using the correct scope, preserving actual tool output, separating observations from confirmed vulnerabilities, and documenting limitations clearly. All activities described here were limited to the stated educational and local-network scope.
 
@@ -388,7 +389,10 @@ Attach the original screenshots and the saved topology PDF to the final submissi
 | PM1-E04 | PM1 | WhatWeb output screenshot | Captured/reviewed; repository upload pending |
 | PM1-E05 | PM1 | Wafw00f output screenshot | Captured/reviewed; repository upload pending |
 | PM1-E06 | PM1 | DNSRecon output screenshot | Captured/reviewed; repository upload pending |
-| PM4-E01 | PM4 | Microsoft Baidu-source command and complete terminal output | Execution attempt noted; successful output/evidence not verified |\n| PM4-E02 | PM4 | Microsoft all-sources command and complete terminal output | Execution attempt noted; successful output/evidence not verified |\n| PM4-E03 | PM4 | Additional NetworkWalks-domain theHarvester output, if retained | User-reported additional run; output not verified |\n| PM5-E01 | PM5 | Windows `ipconfig` / `ipconfig /all` output | Captured in terminal; screenshot upload pending |
+| PM4-E01 | PM4 | Microsoft Baidu-source command and complete terminal output | Execution attempt noted; successful output/evidence not verified |
+| PM4-E02 | PM4 | Microsoft all-sources command and complete terminal output | Execution attempt noted; successful output/evidence not verified |
+| PM4-E03 | PM4 | Additional NetworkWalks-domain theHarvester output, if retained | User-reported additional run; output not verified |
+| PM5-E01 | PM5 | Windows `ipconfig` / `ipconfig /all` output | Captured in terminal; screenshot upload pending |
 | PM5-E02 | PM5 | Zenmap Ping Scan configuration and Nmap output | Scan output supplied; screenshot upload pending |
 | PM5-E03 | PM5 | Zenmap Topology tab screenshot | Capture/upload pending |
 | PM5-E04 | PM5 | `PM5-Network-Topology.pdf` | Saved locally; repository upload pending |
