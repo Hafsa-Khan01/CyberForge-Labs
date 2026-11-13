@@ -1,58 +1,75 @@
 # Week 02 — Evidence Index
 
-**Owner:** Hafsa Khan  
-**Programme:** NetworkWalks Cybersecurity Internship
+**Prepared by:** Hafsa Khan  
+**Programme:** NetworkWalks Cybersecurity & Ethical Hacking
 
-This index tracks the screenshots reviewed so far. The original screenshot files were supplied in conversation ZIP uploads but have **not** yet been committed to this GitHub branch. Add redacted originals to the matching folders or submit them through the approved private channel.
+This index tracks the evidence artifacts required for the selected modules PM1 and PM5. The final report documents the observed results. Original screenshots and the topology PDF still need to be uploaded to this repository after a privacy/scope review.
 
-## Suggested evidence folders
+## Suggested folder structure
 
 ```text
-Week-02/
+Networkwalks/Week-02/
 ├── PM1-Kali-Footprinting/
-├── PM2-GHDB/
-├── PM3-Maltego/
-├── PM4-theHarvester/
+│   ├── PM1-E01-WHOIS.png
+│   ├── PM1-E02-NSLOOKUP.png
+│   ├── PM1-E03-CURL.png
+│   ├── PM1-E04-WhatWeb.png
+│   ├── PM1-E05-WAFW00F.png
+│   └── PM1-E06-DNSRecon.png
 ├── PM5-Zenmap/
-└── Final-Report/
+│   ├── PM5-E01-Windows-IP-Configuration.png
+│   ├── PM5-E02-Zenmap-Ping-Scan.png
+│   ├── PM5-E03-Zenmap-Topology.png
+│   └── PM5-Network-Topology.pdf
+├── FINAL-REPORT.md
+├── README.md
+└── EVIDENCE-INDEX.md
 ```
 
 ## Evidence register
 
-| Evidence ID | Module | Evidence reviewed | Verification / limitation |
-|---|---|---|---|
-| PM1-01 | PM1 | WHOIS output for `networkwalks.com` | Reviewed in conversation; image not committed |
-| PM1-02 | PM1 | NSLOOKUP DNS query output | Reviewed in conversation; image not committed |
-| PM1-03 | PM1 | cURL HTTP response headers | Reviewed in conversation; image not committed |
-| PM1-04 | PM1 | WhatWeb fingerprint output | Reviewed in conversation; image not committed |
-| PM1-05 | PM1 | WAFW00F detection output | Reviewed in conversation; image not committed |
-| PM1-06 | PM1 | DNSRecon output | Reviewed in conversation; image not committed |
-| PM4-01 | PM4 | theHarvester 4.21.2 output for `github.com` | Reviewed in conversation; NetworkWalks assessment scope not established |
-| PM5-01 | PM5 | Zenmap scans/topology for private/local ranges | Reviewed in conversation; exact authorization scope and scan profile require validation |
+| Evidence ID | Module | Required artifact | What it demonstrates | Repository status |
+|---|---|---|---|---|
+| PM1-E01 | PM1 | WHOIS output screenshot | Domain registration/registrar information observed | Upload pending |
+| PM1-E02 | PM1 | Nslookup output screenshots | DNS queries and A-record result | Upload pending |
+| PM1-E03 | PM1 | cURL output screenshots | HTTP response status and headers | Upload pending |
+| PM1-E04 | PM1 | WhatWeb output screenshot | Visible web technology fingerprint | Upload pending |
+| PM1-E05 | PM1 | Wafw00f output screenshot | WAF detection result | Upload pending |
+| PM1-E06 | PM1 | DNSRecon output screenshot | DNS enumeration output | Upload pending |
+| PM5-E01 | PM5 | Windows `ipconfig` / `ipconfig /all` screenshot | Active Wi-Fi IPv4, subnet mask, gateway | Upload pending |
+| PM5-E02 | PM5 | Zenmap Ping Scan screenshot | Target subnet and actual Nmap output | Upload pending |
+| PM5-E03 | PM5 | Zenmap Topology screenshot | Discovered-host topology view | Upload pending |
+| PM5-E04 | PM5 | `PM5-Network-Topology.pdf` | Saved topology graphic with legend, if enabled | Saved locally; upload pending |
 
-## Module status
+## Verified PM5 values
 
-| Module | Status |
+| Item | Value |
 |---|---|
-| PM1 | Completed practical work; evidence reviewed |
-| PM2 | Not completed |
-| PM3 | Not completed |
-| PM4 | Tool run reviewed; target-scope suitability unconfirmed |
-| PM5 | Screenshots reviewed; target/method scope checks outstanding |
-| PM-FINAL | Progress report drafted; final evidence and scope checks outstanding |
+| Active adapter | Wi-Fi |
+| Windows IPv4 | `192.168.100.33` |
+| Subnet mask | `255.255.255.0` |
+| Default gateway | `192.168.100.1` |
+| Scanned subnet | `192.168.100.0/24` |
+| Scan profile | Ping Scan |
+| Equivalent command | `nmap -sn 192.168.100.0/24` |
+| Addresses scanned | 256 |
+| Live hosts | 2 |
+| Router MAC | `30:D1:7E:4D:EC:10` |
+| Router vendor | Huawei Technologies |
+| Windows host MAC | Not displayed in the recorded scan output |
 
 ## Pre-submission checklist
 
-- [ ] Current authorization and exact scope confirmed privately by the target owner.
-- [ ] At least one selected elective completed and supported by evidence.
-- [ ] Essential PM5 completed within approved scope.
-- [ ] Final report covers only modules actually completed.
-- [ ] Every finding is supported by a screenshot or saved output.
-- [ ] Screenshots show enough context to identify the tool, command and result.
-- [ ] Credentials, tokens, personal data and unrelated network details redacted.
-- [ ] Signed authorization is not publicly exposed.
-- [ ] Submission completed before the deadline in the assignment brief.
+- [ ] Confirm the report matches the original PM1 screenshots and command output.
+- [ ] Upload redacted PM1 screenshots.
+- [ ] Upload Windows network configuration evidence.
+- [ ] Upload Zenmap Ping Scan configuration/output screenshot.
+- [ ] Upload Zenmap Topology screenshot.
+- [ ] Upload the saved topology PDF.
+- [ ] Confirm the topology PDF and screenshots do not expose unrelated or sensitive network details.
+- [ ] Keep signed authorization private unless publication is explicitly permitted.
+- [ ] Do not claim PM4, PM2, or PM3 as completed in this selected-module report unless their required tasks and evidence are separately verified.
 
 ## Evidence handling
 
-Prefer cropped screenshots that retain relevant command/output context. Keep original captures privately. Never commit VM disk images, memory snapshots, private keys, credential files or raw packet captures containing third-party personal data.
+Retain original captures privately. Publish only redacted copies appropriate for the intended audience. Never commit passwords, tokens, private keys, VM images, or raw packet captures containing third-party personal information.
