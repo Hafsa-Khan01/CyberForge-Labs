@@ -9,21 +9,17 @@ This index tracks the evidence artifacts for PM1, the attempted PM4 theHarvester
 
 ```text
 Networkwalks/Week-02/
-├── PM1-Kali-Footprinting/
-│   ├── PM1-E01-WHOIS.png
-│   ├── PM1-E02-NSLOOKUP.png
-│   ├── PM1-E03-CURL.png
-│   ├── PM1-E04-WhatWeb.png
-│   ├── PM1-E05-WAFW00F.png
-│   └── PM1-E06-DNSRecon.png
-├── PM5-Zenmap/
-│   ├── PM5-E01-Windows-IP-Configuration.png
-│   ├── PM5-E02-Zenmap-Ping-Scan.png
-│   ├── PM5-E03-Zenmap-Topology.png
-│   └── PM5-Network-Topology.pdf
-├── FINAL-REPORT.md
+├── Evidence/
+│   ├── PM1-Footprinting/
+│   ├── PM4-theHarvester/
+│   └── PM5-Zenmap/
 ├── README.md
-└── EVIDENCE-INDEX.md
+├── FINAL-REPORT.md
+├── EVIDENCE-INDEX.md
+├── PROGRESS-REPORT.md
+├── PM4-THEHARVESTER.md
+├── REPORT-TEMPLATE.md
+└── LOA-DRAFT.md
 ```
 
 ## Evidence register
