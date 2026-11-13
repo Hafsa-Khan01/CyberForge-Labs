@@ -2,7 +2,7 @@
 
 **Focus:** Footprinting, reconnaissance and local network host discovery  
 **Prepared by:** Hafsa Khan  
-**Report:** [Week 02 Penetration Testing Report](FINAL-REPORT.md)
+**Report:** [Download the Final Penetration Testing Report](Report/Penetration%20Testing%20Report%20%E2%80%94%20NetworkWalks%20Week%2002.pdf)
 
 ## Module status
 
@@ -17,13 +17,14 @@ PM2 and PM3 are not represented as completed. PM4 was attempted, but a source-si
 
 ## Files
 
-- [Final report](FINAL-REPORT.md)
+- [Final PDF report](Report/Penetration%20Testing%20Report%20%E2%80%94%20NetworkWalks%20Week%2002.pdf)
+- [Technical Markdown report](FINAL-REPORT.md)
 - [Evidence index](EVIDENCE-INDEX.md)
 - [Evidence folders](Evidence/)
 
 ## Evidence status
 
-The report and index describe the evidence required for PM1, PM4 and PM5. Original screenshots and the topology PDF were not yet uploaded when this repository structure was prepared. Add reviewed, redacted evidence to the matching folders; do not use placeholders as proof of completion.
+The original practical screenshots for PM1, PM4 and PM5 are uploaded in the matching Evidence subfolders. The final PDF report is available in the Report directory. The separate topology PDF is not listed as a standalone upload unless explicitly present in the evidence folder.
 
 ## Scope and privacy
 
