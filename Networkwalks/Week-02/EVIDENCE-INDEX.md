@@ -3,7 +3,7 @@
 **Prepared by:** Hafsa Khan  
 **Programme:** NetworkWalks Cybersecurity & Ethical Hacking
 
-This index tracks the evidence artifacts for PM1, the attempted PM4 theHarvester exercise, and PM5. The final report documents the observed results. Original screenshots and the topology PDF still need to be uploaded to this repository after a privacy/scope review.
+This index tracks the evidence artifacts for PM1, the completed PM4 theHarvester practical (with a source-side server error limiting result retrieval), and PM5. The final report documents the observed results. Original screenshots and the topology PDF still need to be uploaded to this repository after a privacy/scope review.
 
 ## Repository evidence structure
 
@@ -28,9 +28,9 @@ Networkwalks/Week-02/
 | PM1-E04 | PM1 | WhatWeb output screenshot | Visible web technology fingerprint | `Evidence/PM1-Footprinting/` | Upload pending |
 | PM1-E05 | PM1 | Wafw00f output screenshot | WAF detection result | `Evidence/PM1-Footprinting/` | Upload pending |
 | PM1-E06 | PM1 | DNSRecon output screenshot | DNS enumeration output | `Evidence/PM1-Footprinting/` | Upload pending |
-| PM4-E01 | PM4 | Microsoft Baidu-source command/output screenshot | Official assignment task; successful output not verified | `Evidence/PM4-theHarvester/` | Pending verification |
-| PM4-E02 | PM4 | Microsoft all-sources command/output screenshot | Official assignment task; successful output not verified | `Evidence/PM4-theHarvester/` | Pending verification |
-| PM4-E03 | PM4 | Additional NetworkWalks-domain run output, if retained | Additional target reported by user; output not verified | `Evidence/PM4-theHarvester/` | Pending verification |
+| PM4-E01 | PM4 | Microsoft Baidu-source command/output screenshot, including server error | Official assignment task completed; source error limited result retrieval | `Evidence/PM4-theHarvester/` | Upload pending |
+| PM4-E02 | PM4 | Microsoft all-sources command/output screenshot | Practical completed; results not validated due to source-side error | `Evidence/PM4-theHarvester/` | Upload pending |
+| PM4-E03 | PM4 | Additional NetworkWalks-domain run output, if retained | Additional target run reported by user; output not independently verified | `Evidence/PM4-theHarvester/` | Optional / if retained |
 | PM5-E01 | PM5 | Windows `ipconfig` / `ipconfig /all` screenshot | Active Wi-Fi IPv4, subnet mask, gateway | `Evidence/PM5-Zenmap/` | Upload pending |
 | PM5-E02 | PM5 | Zenmap Ping Scan screenshot | Target subnet and actual Nmap output | `Evidence/PM5-Zenmap/` | Upload pending |
 | PM5-E03 | PM5 | Zenmap Topology screenshot | Discovered-host topology view | `Evidence/PM5-Zenmap/` | Upload pending |
@@ -56,7 +56,7 @@ Networkwalks/Week-02/
 ## Pre-submission checklist
 
 - [ ] Confirm the report matches the original PM1 screenshots and command output.
-- [ ] Review PM4 Microsoft Baidu-source and all-sources output files before reporting discovered items.
+- [ ] Add the PM4 terminal screenshot showing the source-side server error; do not report unverified discoveries.
 - [ ] Add the NetworkWalks PM4 run only if its original output is retained and reviewed.
 - [ ] Upload redacted PM1 screenshots.
 - [ ] Upload Windows network configuration evidence.
@@ -65,7 +65,7 @@ Networkwalks/Week-02/
 - [ ] Upload the saved topology PDF.
 - [ ] Confirm the topology PDF and screenshots do not expose unrelated or sensitive network details.
 - [ ] Keep signed authorization private unless publication is explicitly permitted.
-- [ ] Do not describe PM4 as a successful enumeration until its original output has been reviewed. PM2 and PM3 are not included as completed modules.
+- [x] PM4 practical execution and troubleshooting completed; source-side server error limited result retrieval. Do not claim unverified enumeration findings. PM2 and PM3 are not included as completed modules.
 
 ## Evidence handling
 
