@@ -1,7 +1,7 @@
 # DG Interns Hub
 ## Cybersecurity Technical Portfolio
 
-This section contains the technical records, practical documentation, room reports and supporting evidence associated with the DG Interns Hub cybersecurity programme.
+This section contains the technical records, practical documentation, room write-ups, detection exercises and supporting evidence associated with the DG Interns Hub programme.
 
 ## Weekly workstreams
 
@@ -10,10 +10,11 @@ This section contains the technical records, practical documentation, room repor
 | **01** | Linux foundations, networking fundamentals and lab preparation | [Week 01](Week-01/README.md) |
 | **02** | Network traffic analysis, Nmap and Windows security telemetry | [Week 02](Week-02/README.md) |
 | **03** | Linux logs, Sysmon, auditd, Snort IDS rules and MITRE ATT&CK mapping | [Week 03](Week-03/README.md) |
+| **04** | SIEM concepts, log ingestion, SPL basics, Wazuh architecture and SOC alert handling | [Week 04](Week-04/README.md) |
 
 ## Documentation standards
 
-- Keep each week's notes, practical records and evidence in its corresponding directory.
+- Keep each week's notes, practical records, reports and evidence in its corresponding directory.
 - Record commands, tool versions, relevant configuration and observed output where available.
 - Separate direct observations from interpretation and recommendations.
 - Preserve original evidence and use descriptive filenames.
