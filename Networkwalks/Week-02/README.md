@@ -6,55 +6,44 @@
 
 ## Assignment requirements
 
-The supplied Week 02 brief requires:
-- At least **one elective** from PM1–PM4.
-- Both essential projects: **PM5** and **PM-FINAL**.
-- The final report must cover only the modules actually selected and completed.
+The Week 02 brief requires at least one elective from PM1–PM4, plus both essential modules: PM5 and PM-FINAL. This branch tracks the work separately from `main`; no merge has been made.
 
-This workspace is prepared to track all four electives plus both essential modules as a stretch goal. Completion will be recorded only when supported by actual work and evidence.
+## Progress snapshot
 
-## Modules
-
-| ID | Assignment | Status |
+| ID | Assignment | Progress |
 |---|---|---|
-| W2-PM1 | Footprinting with multiple Kali tools (six tools on networkwalks.com, as stated in the brief) | Not started |
-| W2-PM2 | GHDB-based Footprinting Attacks | Not started |
-| W2-PM3 | Maltego-based Footprinting Attacks | Not started |
-| W2-PM4 | theHarvester-based Footprinting Attacks | Not started |
-| W2-PM5 | Zenmap-based Network Scanning | Not started |
-| W2-PM-FINAL | Detailed report covering selected and completed modules | Not started |
+| W2-PM1 | Footprinting with multiple Kali tools | Evidence captured; findings documented in the progress report |
+| W2-PM2 | GHDB-based Footprinting Attacks | Not completed |
+| W2-PM3 | Maltego-based Footprinting Attacks | Not completed |
+| W2-PM4 | theHarvester-based Footprinting Attacks | Tool run captured against `github.com`; target-scope suitability must be confirmed before counting it as NetworkWalks assessment evidence |
+| W2-PM5 | Zenmap-based Network Scanning | Scan screenshots captured; target/range authorization and scan profile review still required |
+| W2-PM-FINAL | Detailed report | Working progress report added; final scope/evidence checks remain |
 
-## Authorization and scope gate
+At least one elective has been worked on (PM1). PM2 and PM3 were not completed because of the Kali desktop display issue. Do not represent them as completed.
 
-The assignment PDF includes a **sample** Letter of Authorization. It is not an authorization issued to this repository owner or proof of current permission. The sample contains another tester's details and an August 2026 validity period.
+## Current work and findings
+
+See [PROGRESS-REPORT.md](PROGRESS-REPORT.md) for the evidence-based summary of PM1, PM4 and PM5, including limitations and items requiring verification.
+
+## Authorization and scope
+
+The assignment PDF includes a **sample** Letter of Authorization. It is not itself authorization for this tester or proof of current permission. The user has stated that NetworkWalks permission was provided separately; the actual signed authorization and exact scope are not present in this public repository.
 
 Before any active scan or testing:
-1. Obtain a current authorization addressed to the actual tester from the target owner / NetworkWalks.
-2. Confirm the exact approved domains, IP addresses, CIDR ranges, infrastructure, dates, allowed methods, rate limits and exclusions in writing.
-3. Keep the signed authorization private unless the issuer explicitly permits publication. Do not commit signatures, personal contact details or confidential scope data to this public repository.
-4. Until approval is confirmed, limit work to tool setup, reading, passive research and safe local exercises. Do not scan public targets or infer permission from the sample letter.
+1. Verify the current written authorization privately.
+2. Confirm the exact approved domains, IP addresses, CIDR ranges, dates, methods, rate limits and exclusions.
+3. Keep the signed authorization private unless the issuer explicitly permits publication. Do not commit signatures, personal contact details or confidential scope data.
+4. Do not treat a tool demonstration against a third-party domain or a private IP range as in-scope without confirmation that it is covered.
 
-The sample LOA layout is documented in [LOA-DRAFT.md](LOA-DRAFT.md). It is an unsigned request/template only and grants no permission.
+The [LOA-DRAFT.md](LOA-DRAFT.md) is an unsigned request/template only and grants no permission.
 
 ## Work products
 
 - [Authorization request / LOA draft](LOA-DRAFT.md)
 - [Final report template](REPORT-TEMPLATE.md)
 - [Evidence register](EVIDENCE-INDEX.md)
+- [Progress report](PROGRESS-REPORT.md)
 
 ## Evidence standard
 
-For every module, record:
-- Date and environment used.
-- Exact tool and version.
-- Target and scope source (only after approval).
-- Commands or queries actually run.
-- Unedited output / screenshots, with sensitive information redacted.
-- Observations separated from interpretation.
-- Limitations and issues encountered.
-
-Do not invent results, claim unperformed tests, publish credentials or upload raw captures containing third-party personal data.
-
-## Source brief
-
-The module names, minimum selection rule, sample-report reference, sample LOA and deadline are transcribed from the supplied **WK2 - Week2 Projects.pdf**. Video guides are linked in the assignment brief; they should be followed for module-specific procedures.
+Record the date/environment, tool/version, exact target and scope source, commands/queries actually run, unedited screenshots/output, observations separately from interpretation, and limitations. Do not invent results, claim unperformed tests, publish credentials, or upload raw captures containing third-party personal data.
