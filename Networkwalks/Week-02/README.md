@@ -1,47 +1,58 @@
 # NetworkWalks — Week 02 Project Work
 
 **Prepared by:** Hafsa Khan  
-**Programme:** NetworkWalks Cybersecurity Internship  
-**Submission deadline stated in the assignment PDF:** 23:00, Friday 13 November 2026
+**Programme:** NetworkWalks Cybersecurity & Ethical Hacking  
+**Assignment deadline:** 23:00, Friday 13 November 2026 (as stated in the assignment PDF)
 
-## Assignment requirements
+## Week 02 submission
 
-The Week 02 brief requires at least one elective from PM1–PM4, plus both essential modules: PM5 and PM-FINAL. This work is maintained on `week-02-project-work`; the `main` branch has not been changed or merged.
+The Week 02 brief requires at least one elective from PM1–PM4, plus both essential modules: PM5 and PM-FINAL.
 
-## Progress snapshot
-
-| ID | Assignment | Current status |
+| Module | Assignment | Status in this repository |
 |---|---|---|
-| W2-PM1 | Footprinting with multiple Kali tools | Practical commands run and screenshots reviewed; findings documented in the progress report |
-| W2-PM2 | GHDB-based Footprinting Attacks | Not completed |
-| W2-PM3 | Maltego-based Footprinting Attacks | Not completed |
-| W2-PM4 | theHarvester-based Footprinting Attacks | Screenshot reviewed for `github.com`; scope suitability for the NetworkWalks assessment is unconfirmed |
-| W2-PM5 | Zenmap-based Network Scanning | Screenshots reviewed; target/range authorization and scan-profile validation remain outstanding |
-| W2-PM-FINAL | Detailed report | Evidence-based progress report drafted; final checks and screenshot upload remain outstanding |
+| W2-PM1 | Footprinting with multiple Kali tools | Completed practical work documented in the final report |
+| W2-PM2 | GHDB-based Footprinting Attacks | Not included as a completed module |
+| W2-PM3 | Maltego-based Footprinting Attacks | Not included as a completed module |
+| W2-PM4 | theHarvester-based Footprinting Attacks | Not included in the selected-module final report; retain separate evidence if required |
+| W2-PM5 | Zenmap-based Network Scanning | Completed local Wi-Fi Ping Scan documented in the final report |
+| W2-PM-FINAL | Detailed report | Final report added |
 
-PM1 is the elective workstream documented as completed. PM2 and PM3 are not claimed as completed. PM4 and PM5 are documented with their scope/evidence limitations.
+PM1 provides the selected elective. PM5 and PM-FINAL are the essential modules.
 
-## Report and evidence
+## Main documents
 
-- [Evidence-based progress report](PROGRESS-REPORT.md)
-- [Report template](REPORT-TEMPLATE.md)
-- [Evidence index](EVIDENCE-INDEX.md)
-- [LOA draft / request template](LOA-DRAFT.md)
+- [Final Penetration Testing Report](FINAL-REPORT.md)
+- [Evidence Index](EVIDENCE-INDEX.md)
+- [Report Template](REPORT-TEMPLATE.md)
+- [LOA Draft / Request Template](LOA-DRAFT.md)
 
-The progress report distinguishes observed tool output from interpretation and does not label observations as confirmed vulnerabilities. Original screenshots have been reviewed in conversation but are not yet committed to this repository.
+## Key verified PM5 results
+
+- Active adapter: Windows Wi-Fi
+- IPv4: `192.168.100.33`
+- Subnet mask: `255.255.255.0`
+- Gateway: `192.168.100.1`
+- Scan target: `192.168.100.0/24`
+- Scan profile: Zenmap Ping Scan (`nmap -sn`)
+- Result: 256 IP addresses scanned; 2 hosts up
+- Router MAC shown in Nmap output: `30:D1:7E:4D:EC:10` (Huawei Technologies)
+- Windows host MAC: not displayed in the recorded Nmap output
+- Topology: saved locally as PDF; upload to the evidence folder is still required
 
 ## Authorization and scope
 
-The assignment PDF includes a **sample** Letter of Authorization. It is not itself authorization for this tester or proof of current permission. The user has stated that NetworkWalks permission was provided separately; the signed authorization and exact scope are not present in this public repository.
+The tester stated that NetworkWalks permission was provided separately. The assignment PDF contains a **sample** Letter of Authorization; it is not the tester's signed authorization. The signed authorization should be retained privately and shared with the programme supervisor when required. Do not publish signatures, personal contact details, or confidential scope information without the issuer's permission.
 
-Before any active scan or testing:
-1. Verify the current written authorization privately.
-2. Confirm the exact approved domains, IP addresses, CIDR ranges, dates, methods, rate limits and exclusions.
-3. Keep the signed authorization private unless the issuer explicitly permits publication. Do not commit signatures, personal contact details or confidential scope data.
-4. Do not treat a tool demonstration against a third-party domain or a private IP range as in-scope without confirmation that it is covered.
+The PM5 scan documented in the report was performed against the tester's own local Wi-Fi subnet. Do not treat other private IP ranges or third-party domains as authorized solely because they are reachable or appear in lab materials.
 
-The [LOA-DRAFT.md](LOA-DRAFT.md) is an unsigned request/template only and grants no permission.
+The [LOA-DRAFT.md](LOA-DRAFT.md) is an unsigned request/template and does not grant permission.
 
-## Evidence standard
+## Evidence status
 
-Record the date/environment, tool/version, exact target and scope source, commands/queries actually run, unedited screenshots/output, observations separately from interpretation, and limitations. Do not invent results, claim unperformed tests, publish credentials, or upload raw captures containing third-party personal data.
+The report identifies the required PM1 and PM5 evidence artifacts. Original screenshots and the topology PDF are not yet committed to this repository. Upload redacted originals to the appropriate evidence folders before treating the GitHub evidence pack as complete.
+
+Do not upload credentials, tokens, private keys, VM disk images, or unrelated personal/network data.
+
+## Branch policy
+
+This Week 02 work is maintained on `week-02-project-work`. The `main` branch has not been changed or merged.
