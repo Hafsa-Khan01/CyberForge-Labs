@@ -6,28 +6,33 @@
 
 ## Assignment requirements
 
-The Week 02 brief requires at least one elective from PM1–PM4, plus both essential modules: PM5 and PM-FINAL. This branch tracks the work separately from `main`; no merge has been made.
+The Week 02 brief requires at least one elective from PM1–PM4, plus both essential modules: PM5 and PM-FINAL. This work is maintained on `week-02-project-work`; the `main` branch has not been changed or merged.
 
 ## Progress snapshot
 
-| ID | Assignment | Progress |
+| ID | Assignment | Current status |
 |---|---|---|
-| W2-PM1 | Footprinting with multiple Kali tools | Evidence captured; findings documented in the progress report |
+| W2-PM1 | Footprinting with multiple Kali tools | Practical commands run and screenshots reviewed; findings documented in the progress report |
 | W2-PM2 | GHDB-based Footprinting Attacks | Not completed |
 | W2-PM3 | Maltego-based Footprinting Attacks | Not completed |
-| W2-PM4 | theHarvester-based Footprinting Attacks | Tool run captured against `github.com`; target-scope suitability must be confirmed before counting it as NetworkWalks assessment evidence |
-| W2-PM5 | Zenmap-based Network Scanning | Scan screenshots captured; target/range authorization and scan profile review still required |
-| W2-PM-FINAL | Detailed report | Working progress report added; final scope/evidence checks remain |
+| W2-PM4 | theHarvester-based Footprinting Attacks | Screenshot reviewed for `github.com`; scope suitability for the NetworkWalks assessment is unconfirmed |
+| W2-PM5 | Zenmap-based Network Scanning | Screenshots reviewed; target/range authorization and scan-profile validation remain outstanding |
+| W2-PM-FINAL | Detailed report | Evidence-based progress report drafted; final checks and screenshot upload remain outstanding |
 
-At least one elective has been worked on (PM1). PM2 and PM3 were not completed because of the Kali desktop display issue. Do not represent them as completed.
+PM1 is the elective workstream documented as completed. PM2 and PM3 are not claimed as completed. PM4 and PM5 are documented with their scope/evidence limitations.
 
-## Current work and findings
+## Report and evidence
 
-See [PROGRESS-REPORT.md](PROGRESS-REPORT.md) for the evidence-based summary of PM1, PM4 and PM5, including limitations and items requiring verification.
+- [Evidence-based progress report](PROGRESS-REPORT.md)
+- [Report template](REPORT-TEMPLATE.md)
+- [Evidence index](EVIDENCE-INDEX.md)
+- [LOA draft / request template](LOA-DRAFT.md)
+
+The progress report distinguishes observed tool output from interpretation and does not label observations as confirmed vulnerabilities. Original screenshots have been reviewed in conversation but are not yet committed to this repository.
 
 ## Authorization and scope
 
-The assignment PDF includes a **sample** Letter of Authorization. It is not itself authorization for this tester or proof of current permission. The user has stated that NetworkWalks permission was provided separately; the actual signed authorization and exact scope are not present in this public repository.
+The assignment PDF includes a **sample** Letter of Authorization. It is not itself authorization for this tester or proof of current permission. The user has stated that NetworkWalks permission was provided separately; the signed authorization and exact scope are not present in this public repository.
 
 Before any active scan or testing:
 1. Verify the current written authorization privately.
@@ -36,13 +41,6 @@ Before any active scan or testing:
 4. Do not treat a tool demonstration against a third-party domain or a private IP range as in-scope without confirmation that it is covered.
 
 The [LOA-DRAFT.md](LOA-DRAFT.md) is an unsigned request/template only and grants no permission.
-
-## Work products
-
-- [Authorization request / LOA draft](LOA-DRAFT.md)
-- [Final report template](REPORT-TEMPLATE.md)
-- [Evidence register](EVIDENCE-INDEX.md)
-- [Progress report](PROGRESS-REPORT.md)
 
 ## Evidence standard
 
