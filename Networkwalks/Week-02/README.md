@@ -22,7 +22,9 @@ PM1 provides the selected elective. PM5 and PM-FINAL are the essential modules. 
 ## Main documents
 
 - [Final Penetration Testing Report](FINAL-REPORT.md)
-- [Evidence Index](EVIDENCE-INDEX.md)\n- [PM4 theHarvester Notes](PM4-THEHARVESTER.md)
+- [Evidence Index](EVIDENCE-INDEX.md)
+- [Evidence Folder](Evidence/README.md)
+- [PM4 theHarvester Notes](PM4-THEHARVESTER.md)
 - [Report Template](REPORT-TEMPLATE.md)
 - [LOA Draft / Request Template](LOA-DRAFT.md)
 
@@ -49,7 +51,7 @@ The [LOA-DRAFT.md](LOA-DRAFT.md) is an unsigned request/template and does not gr
 
 ## Evidence status
 
-The report identifies the PM1, PM4, and PM5 evidence artifacts. Original screenshots and the topology PDF are not yet committed to this repository. Upload redacted originals to the appropriate evidence folders before treating the GitHub evidence pack as complete.
+The report identifies the PM1, PM4, and PM5 evidence artifacts. Original screenshots and the topology PDF are not yet committed to this repository. Upload redacted originals into the matching folders under [Evidence/](Evidence/README.md) before treating the GitHub evidence pack as complete.
 
 Do not upload credentials, tokens, private keys, VM disk images, or unrelated personal/network data.
 
