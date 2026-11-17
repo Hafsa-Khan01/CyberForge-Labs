@@ -1,14 +1,40 @@
-# Nexlevr Internship Work
+# NEXLEVR — Cloud Security Internship
 
-This directory contains work completed for the **Nexlevr Cloud Security Internship**.
+A collection of practical work completed for the **NEXLEVR Cloud Security Internship — Beginner Track**.
 
-## Track: Cloud Security
+This section brings all three beginner tasks together in one place. The task reports are kept in the `Cloud-Security/Beginner/Reports/` folder.
 
-### Beginner Track
-- [Task 1 — Launch a Website in the Cloud](Cloud-Security/Beginner/Task-01-Launch-a-Website-in-the-Cloud/)
-- [Task 2 — Cloud Hosting Explained](Cloud-Security/Beginner/Task-02-Cloud-Hosting-Explained/)
-- [Task 3 — Speed Up a Website](Cloud-Security/Beginner/Task-03-Speed-Up-a-Website/)
+## Beginner Tasks
 
-Each task has separate folders for deliverables and supporting evidence. Only verified final work and genuine screenshots should be added.
+### Task 01 — Launch a Website in the Cloud
+Published a portfolio website using GitHub Pages and documented the cloud website launch process.
 
-**Status:** Beginner track tasks marked complete on the Nexlevr portal. Public sharing links will be added after the corresponding posts are published.
+**Report:** [Task 01 report (PDF)](Cloud-Security/Beginner/Reports/Task-01-Launch-a-Website-in-the-Cloud.pdf)
+
+### Task 02 — Cloud Hosting Explained
+Compared shared hosting, website builders, and cloud platforms across architecture, cost, scalability, control, maintenance, and security. The task also included hosting recommendations for a café, an online clothing store, and a software startup.
+
+**Report:** [Task 02 report (PDF)](Cloud-Security/Beginner/Reports/Task-02-Cloud-Hosting-Explained.pdf)
+
+### Task 03 — Website Performance Analysis & Optimization
+Used Google PageSpeed Insights to assess a personal portfolio website, Wikipedia, and Shopify. Reviewed mobile and desktop results, Lighthouse scores, Core Web Vitals, and practical optimization opportunities.
+
+**Report:** Add the final Task 03 PDF to the [Reports folder](Cloud-Security/Beginner/Reports/) when ready.
+
+## Repository Structure
+
+```text
+Nexlevr/
+├── README.md
+└── Cloud-Security/
+    └── Beginner/
+        └── Reports/
+            ├── Task-01-Launch-a-Website-in-the-Cloud.pdf
+            ├── Task-02-Cloud-Hosting-Explained.pdf
+            └── Task-03-Website-Performance-Analysis-and-Optimization.pdf  (to be added)
+```
+
+---
+
+**Track:** Cloud Security · Beginner  
+**Program:** NEXLEVR Cloud Security Internship
