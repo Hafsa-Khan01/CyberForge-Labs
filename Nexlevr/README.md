@@ -1,25 +1,23 @@
 # NEXLEVR — Cloud Security Internship
 
-A collection of practical work completed for the **NEXLEVR Cloud Security Internship — Beginner Track**.
-
-This section brings all three beginner tasks together in one place. The task reports are kept in the `Cloud-Security/Beginner/Reports/` folder.
+This directory documents my completed work for the **NEXLEVR Cloud Security Internship — Beginner Track**. All three task reports are stored together in one folder.
 
 ## Beginner Tasks
 
 ### Task 01 — Launch a Website in the Cloud
-Published a portfolio website using GitHub Pages and documented the cloud website launch process.
+Published a personal portfolio website using GitHub Pages and documented the launch and hosting process.
 
-**Report:** [Task 01 report (PDF)](Cloud-Security/Beginner/Reports/Task-01-Launch-a-Website-in-the-Cloud.pdf)
+**Report:** [View Task 01 report (PDF)](Cloud-Security/Beginner/Reports/Task-01-Launch-a-Website-in-the-Cloud.pdf)
 
 ### Task 02 — Cloud Hosting Explained
-Compared shared hosting, website builders, and cloud platforms across architecture, cost, scalability, control, maintenance, and security. The task also included hosting recommendations for a café, an online clothing store, and a software startup.
+Researched and compared shared hosting, website builders, and cloud platforms. The comparison covered architecture, cost, scalability, technical control, maintenance, security, and suitable hosting choices for different business scenarios.
 
-**Report:** [Task 02 report (PDF)](Cloud-Security/Beginner/Reports/Task-02-Cloud-Hosting-Explained.pdf)
+**Report:** [View Task 02 report (PDF)](Cloud-Security/Beginner/Reports/Hafsa_Khan_Nexlevr_Cloud_Hosting_Explained_Task_02.pdf)
 
 ### Task 03 — Website Performance Analysis & Optimization
-Used Google PageSpeed Insights to assess a personal portfolio website, Wikipedia, and Shopify. Reviewed mobile and desktop results, Lighthouse scores, Core Web Vitals, and practical optimization opportunities.
+Tested a personal portfolio website, Wikipedia, and Shopify with Google PageSpeed Insights. Reviewed mobile and desktop performance, Lighthouse results, Core Web Vitals, and practical optimization opportunities.
 
-**Report:** Add the final Task 03 PDF to the [Reports folder](Cloud-Security/Beginner/Reports/) when ready.
+**Report:** [View Task 03 report (PDF)](Cloud-Security/Beginner/Reports/Hafsa_Khan_Nexlevr_Website_Performance_Analysis_Task_03.pdf)
 
 ## Repository Structure
 
@@ -30,11 +28,12 @@ Nexlevr/
     └── Beginner/
         └── Reports/
             ├── Task-01-Launch-a-Website-in-the-Cloud.pdf
-            ├── Task-02-Cloud-Hosting-Explained.pdf
-            └── Task-03-Website-Performance-Analysis-and-Optimization.pdf  (to be added)
+            ├── Hafsa_Khan_Nexlevr_Cloud_Hosting_Explained_Task_02.pdf
+            └── Hafsa_Khan_Nexlevr_Website_Performance_Analysis_Task_03.pdf
 ```
 
 ---
 
-**Track:** Cloud Security · Beginner  
-**Program:** NEXLEVR Cloud Security Internship
+**Program:** NEXLEVR — Cloud Security Internship  
+**Track:** Beginner  
+**Reports:** Tasks 01, 02, and 03
