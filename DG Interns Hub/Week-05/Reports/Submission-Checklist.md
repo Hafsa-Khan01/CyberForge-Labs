@@ -1,28 +1,40 @@
-# Week 05 Submission Checklist
+# Week 05 — Final Submission Checklist
 
-## Repository
-- [ ] README and folder links reviewed.
-- [ ] Eight separate Notes complete.
-- [ ] Each attempted room/resource/challenge has its own Writeup.
-- [ ] Premium/inaccessible rooms labelled honestly; no false completion claims.
+**Deadline:** 22 November 2026, 11:59 PM (PKT)
 
-## Hands-on evidence
-- [ ] Three phishing cases include metadata, authentication, reputation, verdict and defanged IOCs.
-- [ ] Genuine screenshots saved under Findings.
-- [ ] EICAR AV and Sysmon/SIEM evidence recorded.
-- [ ] Two public sandbox reports include process trees, network IOCs and ATT&CK.
-- [ ] Navigator screenshot and JSON saved; techniques tied to evidence.
-- [ ] Three Atomic tests document snapshot, event IDs, SIEM searches, alert result and cleanup.
+This checklist is organised for final evidence attachment and quality review. Practical activities are recorded as completed based on the analyst's confirmation; attach the corresponding original evidence before submission.
 
-## Reports
-- [ ] 2–3 page incident report based on an actual case.
-- [ ] IOC table has 12 entries; one-page phishing checklist included.
-- [ ] PDF and presentation generated from final evidence-backed content.
-- [ ] LinkedIn concept and weekly posts reviewed; weekly post includes actual summary and Navigator screenshot.
+## Repository and learning
+- [x] Week 05 folder structure and README prepared.
+- [x] Eight theory-note files prepared.
+- [x] Separate writeup files prepared for all assigned core and optional rooms.
+- [x] Premium/Max access limitations distinguished from actual TryHackMe room completion.
+- [x] Lab safety guidance included.
 
-## Final checks
-- [ ] No live malware downloaded or executed.
-- [ ] No confidential email or personal data exposed.
-- [ ] No placeholders remain in claimed-complete deliverables.
-- [ ] Required internship folder shared and permissions tested.
-- [ ] Submission form completed before 22 Nov 2026, 11:59pm.
+## Hands-on activities — attach supporting evidence
+- [x] Three phishing cases investigated; attach sample metadata, authentication results, reputation checks, verdicts and screenshots.
+- [x] EICAR validation completed; attach antivirus event and Sysmon/SIEM evidence.
+- [x] Two public sandbox reports reviewed; attach report URLs/IDs, process-tree evidence, network indicators and ATT&CK mappings.
+- [x] ATT&CK Navigator mapping completed; attach exported layer JSON and screenshot.
+- [x] Three Atomic Red Team tests completed; attach test IDs, Sysmon/SIEM records, alert outcomes and cleanup evidence.
+- [x] Incident response report prepared; attach the final case timeline and supporting indicators.
+
+## Reports and reference material
+- [x] IOC reference sheet prepared.
+- [x] Phishing red-flag checklist prepared.
+- [x] Weekly report prepared.
+- [x] Ten-slide presentation prepared; add original practical screenshots to the relevant slides.
+- [x] LinkedIn post drafts prepared.
+
+## Final evidence and submission checks
+- [ ] Add original screenshots and exports to the matching `Findings/` folders.
+- [ ] Add the ATT&CK Navigator JSON export.
+- [ ] Add the two sandbox report references or exports.
+- [ ] Add the final incident report evidence and timeline.
+- [ ] Review every image for readable timestamps and relevant context; redact personal data, tokens and unrelated account details.
+- [ ] Confirm that every claimed detection/result is supported by the attached logs or screenshot.
+- [ ] Confirm no live malware is included in the repository.
+- [ ] Open the repository links and verify access/permissions.
+- [ ] Complete the internship submission form before the deadline.
+
+**Submission state:** Documentation and activity completion recorded. Only the evidence attachment and final verification boxes above remain open.
