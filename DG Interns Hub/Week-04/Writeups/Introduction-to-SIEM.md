@@ -1,19 +1,32 @@
 # TryHackMe — Introduction to SIEM
 
-**Room:** https://tryhackme.com/room/introtosiem  
-**Completion status/date:** Record from the actual room progress.
+**Assigned room:** https://tryhackme.com/room/introtosiem  
+**Access status:** Premium access required in the learner's account; room not attempted.  
+**Completion claim:** Not completed. No room badge or completion screenshot is claimed.
 
-## Objective
-Summarize the room's SIEM concepts and practical learning outcomes.
+## Learning objective
+Understand how a SIEM collects security telemetry, makes it searchable, correlates events and supports SOC alert triage.
 
-## Tasks completed
-For each task, record its title, the concept learned and the answer/observation from your own session.
+## Alternative learning activity
+A self-contained, room-free exercise is provided in [Alternative Lab 01 — SIEM Fundamentals](../Alternative-Labs/01-SIEM-Fundamentals-Lab.md). It covers:
+- SIEM purpose and core components;
+- event sources, collection and parsing;
+- normalisation, indexing and correlation;
+- alerts, enrichment and tuning;
+- the SOC investigation lifecycle.
 
-## Practical observations
-Document the actual SIEM interface, event fields, searches or alert behavior observed. Do not invent event data.
+The companion [Log Ingestion and Validation lab](../Alternative-Labs/02-Log-Ingestion-and-Validation.md) covers Windows and Linux telemetry paths and data validation.
+
+## Reflection
+A SIEM is valuable only when its telemetry is complete, correctly timestamped and searchable. Detection logic must be based on fields that actually exist in the ingested data. An alert is a lead for investigation, not automatic proof of compromise.
 
 ## Evidence
-Add screenshots from your completed session and link them here.
+Attach screenshots from the actual local Splunk/Wazuh environment to the Week 04 evidence folder. The alternative lab is documented here; local execution should be marked complete only when supported by real evidence.
 
-## Key takeaways
-Explain how centralized collection, search, correlation and alerting support SOC investigations.
+## Learning outcome mapping
+| Room learning objective | Alternative documentation |
+|---|---|
+| SIEM architecture and purpose | [SIEM fundamentals](../Alternative-Labs/01-SIEM-Fundamentals-Lab.md) |
+| Data collection and ingestion | [Log ingestion](../Alternative-Labs/02-Log-Ingestion-and-Validation.md) |
+| Alert investigation | [SOC triage](../Alternative-Labs/05-SOC-Triage-Lab.md) |
+
