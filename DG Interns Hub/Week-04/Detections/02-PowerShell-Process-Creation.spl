@@ -1,0 +1,8 @@
+index=lab EventCode=1 (Image="*\\powershell.exe" OR Image="*\\pwsh.exe")
+| table _time host User Image ParentImage CommandLine ProcessId ParentProcessId
+| sort - _time
+
+# Detects PowerShell process creation recorded by Sysmon Event ID 1.
+# MITRE: T1059.001 - PowerShell.
+# L1 value: provides process, parent, user and command-line context.
+# Confirm Sysmon channel and field extraction.
