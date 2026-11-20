@@ -26,7 +26,9 @@ Work is separated by programme and week. Original evidence and technical records
 - [Week 02 — Footprinting and Network Scanning](Networkwalks/Week-02/README.md)
 - [Week 02 — Final penetration testing report](Networkwalks/Week-02/FINAL-REPORT.md)
 - [Week 02 — Evidence index](Networkwalks/Week-02/EVIDENCE-INDEX.md)
-- [Week 03 — Password Cracking Report](Networkwalks/Week-03-Report.md)
+- [Week 03 — Password Cracking](Networkwalks/Week-03/README.md)
+- [Week 03 — Final technical report](Networkwalks/Week-03/FINAL-REPORT.md)
+- [Week 03 — Evidence index](Networkwalks/Week-03/EVIDENCE-INDEX.md)
 
 ### DG Interns Hub
 - [Week 01 — Linux and networking foundations](DG%20Interns%20Hub/Week-01/README.md)
