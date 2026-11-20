@@ -1,0 +1,10 @@
+index=lab EventCode=4625
+| stats count as failed_attempts values(IpAddress) as source_ips by TargetUserName
+| sort - failed_attempts
+| rename TargetUserName as user
+| table user failed_attempts source_ips
+
+# Detects failed Windows logons grouped by target account.
+# MITRE: T1110 - Brute Force (validate observed behavior before assigning a sub-technique).
+# L1 value: highlights accounts receiving repeated authentication failures.
+# Verify actual field names in the ingested event.
