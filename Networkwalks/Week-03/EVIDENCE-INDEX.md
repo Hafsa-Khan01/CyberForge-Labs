@@ -2,35 +2,20 @@
 
 **Prepared by:** Hafsa Khan  
 **Programme:** NetworkWalks Academy — Cybersecurity & Ethical Hacking  
-**Overall status:** All compulsory practicals and verification activities completed
-
-This index records the evidence for both compulsory Week 03 modules: PM1 (John the Ripper) and PM2 (NetworkWalks Tools). Evidence files have been renamed consistently and arranged by module.
-
-## Repository evidence structure
-
-```text
-Networkwalks/Week-03/
-├── Evidence/
-│   ├── PM1-JTR/
-│   └── PM2-NW-Tools/
-├── Report/
-├── README.md
-├── FINAL-REPORT.md
-└── EVIDENCE-INDEX.md
-```
+**Overall status:** All compulsory practical activities completed
 
 ## Evidence register
 
 | Evidence ID | Module | Required artifact | What it demonstrates | Repository location | Status |
 |---|---|---|---|---|---|
-| PM1-E01 | PM1 | [Johnny/JTR setup and executable configuration](Evidence/PM1-JTR/PM1-03-Johnny-Jumbo-Executable-Configured.jpeg) | Johnny detects the John Jumbo executable from the extracted `run` directory | `Evidence/PM1-JTR/` | Completed |
-| PM1-E02 | PM1 | [Johnny installation and configuration evidence](Evidence/PM1-JTR/PM1-02-Johnny-Installer-Ready.jpeg) and [configured executable](Evidence/PM1-JTR/PM1-03-Johnny-Jumbo-Executable-Configured.jpeg) | Johnny installation and correct JTR engine configuration | `Evidence/PM1-JTR/` | Completed |
-| PM1-E03 | PM1 | JTR hash-input and recovery workflow | Supplied PDF hash preparation and successful JTR recovery workflow; password-bearing result image intentionally withheld from the public repository | Private lab evidence; public setup context in `Evidence/PM1-JTR/` | Completed |
-| PM1-E04 | PM1 | [Successful protected-PDF opening](Evidence/PM1-JTR/PM1-05-PDF-Recovery-Verified.jpeg) | Recovered password successfully opened the supplied training PDF | `Evidence/PM1-JTR/` | Completed |
-| PM2-E01 | PM2 | PDF hash extraction in NetworkWalks Hash Calculator | PDF-mode hash extraction was performed; raw hash screenshot is intentionally withheld from the public repository | Private lab evidence | Completed |
-| PM2-E02 | PM2 | NetworkWalks Password Cracker results | Password recovery was completed for all three supplied PDFs; screenshots displaying passwords or raw hashes are intentionally withheld | Private lab evidence | Completed |
-| PM2-E03 | PM2 | [PDF 1 opened successfully](Evidence/PM2-NW-Tools/PM2-04-PDF1-Opened.jpeg) and [PDF 2 opened successfully](Evidence/PM2-NW-Tools/PM2-06-PDF2-Opened.jpeg) | Successful document access verification for PDFs 1 and 2 | `Evidence/PM2-NW-Tools/` | Completed |
-| PM2-E04 | PM2 | [PDF 3 opened successfully](Evidence/PM2-NW-Tools/PM2-08-PDF3-Opened.jpeg) | Successful document access verification for PDF 3 | `Evidence/PM2-NW-Tools/` | Completed |
+| PM1-E01 | PM1 | [Johnny launch](Evidence/PM1-JTR/PM1-01-Johnny-Launch.jpeg) and [installer](Evidence/PM1-JTR/PM1-02-Johnny-Installer-Ready.jpeg) | Johnny launch and installation setup | `Evidence/PM1-JTR/` | Completed |
+| PM1-E02 | PM1 | [Johnny configured with John Jumbo](Evidence/PM1-JTR/PM1-03-Johnny-Jumbo-Executable-Configured.jpeg) | Correct John the Ripper Jumbo executable configuration | `Evidence/PM1-JTR/` | Completed |
+| PM1-E03 | PM1 | [JTR input files](Evidence/PM1-JTR/PM1-04-JTR-Hash-Input-Files.png) and [PDF hash extraction](Evidence/PM1-JTR/PM1-08-PDF2-Hash-Extraction.png) | Preparation of PDF hash input for password recovery | `Evidence/PM1-JTR/` | Completed |
+| PM1-E04 | PM1 | [PDF recovery verification](Evidence/PM1-JTR/PM1-05-PDF-Recovery-Verified.jpeg), [PDF3 password prompt](Evidence/PM1-JTR/PM1-06-PDF3-Password-Prompt.jpeg), and [JTR recovery result](Evidence/PM1-JTR/PM1-07-JTR-PDF3-Recovery-Result.jpeg) | Recovery workflow and successful protected-PDF access | `Evidence/PM1-JTR/` | Completed |
+| PM2-E01 | PM2 | [PDF1 password prompt](Evidence/PM2-NW-Tools/PM2-01-PDF1-Password-Prompt-Masked.jpeg) | Protected PDF access prompt | `Evidence/PM2-NW-Tools/` | Completed |
+| PM2-E02 | PM2 | [PDF1 cracker result](Evidence/PM2-NW-Tools/PM2-05-PDF1-Password-Cracker-Result.jpeg), [PDF2 cracker result](Evidence/PM2-NW-Tools/PM2-06-PDF2-Password-Cracker-Result.jpeg), and [PDF3 cracker result](Evidence/PM2-NW-Tools/PM2-07-PDF3-Password-Cracker-Result.jpeg) | Password recovery results for all three supplied PDFs | `Evidence/PM2-NW-Tools/` | Completed |
+| PM2-E03 | PM2 | [PDF1 opened](Evidence/PM2-NW-Tools/PM2-02-PDF1-Opened.jpeg) and [PDF2 opened](Evidence/PM2-NW-Tools/PM2-03-PDF2-Opened.jpeg) | Successful document access verification | `Evidence/PM2-NW-Tools/` | Completed |
+| PM2-E04 | PM2 | [PDF3 opened](Evidence/PM2-NW-Tools/PM2-04-PDF3-Opened.jpeg) and [PDF3 hash extraction](Evidence/PM2-NW-Tools/PM2-08-PDF3-Hash-Extraction.jpeg) | Hash extraction and successful document access verification | `Evidence/PM2-NW-Tools/` | Completed |
 
 ## Completion checklist
 
@@ -39,16 +24,16 @@ Networkwalks/Week-03/
 - [x] PM1 PDF hash preparation and recovery workflow completed.
 - [x] PM1 protected PDF opened successfully.
 - [x] NetworkWalks Hash Calculator used in PDF mode.
-- [x] Password Cracker used for all three supplied PDFs.
+- [x] NetworkWalks Password Cracker used for all three supplied PDFs.
 - [x] PDF 1 opened successfully.
 - [x] PDF 2 opened successfully.
 - [x] PDF 3 opened successfully.
-- [x] Evidence reviewed, renamed, and organized by module.
-- [x] Exact duplicate copies removed.
-- [x] Public evidence reviewed for sensitive values.
+- [x] Evidence screenshots reviewed and renamed consistently.
+- [x] Exact duplicate upload removed.
+- [x] Evidence organized under the correct module folders.
 
-## Evidence handling
+## Evidence handling note
 
-The practical work is complete. Screenshots that expose recovered passwords or raw PDF hashes have been excluded from the public repository to avoid publishing sensitive exercise data. The corresponding activities are recorded as completed; the original unredacted evidence should remain in private lab storage. Public screenshots show setup and successful document verification without publishing recovered credentials or raw hashes.
+The newly uploaded screenshots include visible training passwords and PDF hashes. They are retained as requested for practical evidence, but this means the repository is publicly exposing those exercise values. For a public portfolio, replace these copies with redacted versions. Use password-recovery tools only on files you own or are explicitly authorized to test.
 
-All activities were performed only on the files supplied for the NetworkWalks training exercise. Optional activities were not attempted and are intentionally excluded.
+Optional activities were not attempted and are intentionally excluded from this report.
