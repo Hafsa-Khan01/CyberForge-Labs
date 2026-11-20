@@ -1,26 +1,58 @@
-# DG Interns Hub — Week 04
+# Week 04 — SIEM in Practice: Splunk, Wazuh & Log Ingestion
 
-## SIEM and SOC fundamentals
+**Programme:** DG Interns Hub  
+**Focus:** SIEM deployment · Log ingestion · Detection engineering · Alert triage
 
-This directory contains the Week 04 study notes on SIEM architecture, log ingestion, search basics, Wazuh components, detection tuning and SOC alert handling.
+## Repository structure
 
-## Study notes
+| Folder / file | Contents |
+|---|---|
+| [Notes](Notes/) | Eight separate theoretical Q&A documents |
+| [Writeups](Writeups/) | Individual TryHackMe room writeups |
+| [Findings](Findings/) | Practical evidence index, screenshots and three triage records |
+| [Detections](Detections/) | Five SPL searches, scheduled-alert record and custom Wazuh rule |
+| [Cheat Sheet](Cheat%20Sheet/) | SPL command reference and SIEM alert troubleshooting table |
+| [Reports](Reports/) | Weekly report source and presentation outline |
 
-1. [What is a SIEM?](Notes/01-What-is-a-SIEM.md)
-2. [Log ingestion methods and agents](Notes/02-Log-Ingestion-Methods-and-Agents.md)
-3. [SPL basics](Notes/03-SPL-Basics.md)
-4. [Wazuh architecture, decoders and rules](Notes/04-Wazuh-Architecture-Decoders-and-Rules.md)
-5. [Detection accuracy and alert tuning](Notes/05-Detection-Accuracy-and-Alert-Tuning.md)
-6. [TTP-to-detection: brute force](Notes/06-TTP-to-Detection-Brute-Force.md)
-7. [Correlation, thresholds, baselines and allowlists](Notes/07-Correlation-Thresholds-Baselines-Allowlists.md)
-8. [SOC tiers and the alert lifecycle](Notes/08-SOC-Tiers-and-Alert-Lifecycle.md)
+## Theoretical coverage
+1. SIEM architecture and SIEM vs. log management, SOAR and EDR.
+2. Agent, syslog, API and file-based ingestion; Splunk UF vs. Wazuh agent.
+3. SPL: search, where, stats, table, eval, timechart and rex.
+4. Wazuh architecture, decoders, rules and rule levels.
+5. Detection outcomes, alert fatigue and tuning.
+6. Brute-force detection mapped to MITRE ATT&CK T1110.
+7. Correlation, thresholds, baselines and allowlists.
+8. SOC tiers, alert lifecycle and triage documentation.
 
-## Scope and recordkeeping
+## Practical work to document
+- Splunk Enterprise and dedicated `lab` index.
+- Windows Security/Sysmon and Ubuntu auth.log ingestion.
+- Wazuh deployment, Windows/Ubuntu agents and file integrity monitoring.
+- Controlled SSH authentication testing and Nmap SYN scan on owned lab systems.
+- Five SPL detections, two scheduled alerts and a four-panel dashboard.
+- Custom Wazuh rule tested with `wazuh-logtest`.
+- Three alert triage records.
 
-- These files are study notes and reference material; they should not be presented as proof of a deployed SIEM or completed detection exercise.
-- Add practical screenshots, configuration and observed outputs only when those activities have actually been performed.
-- Keep any future lab evidence in a dedicated `Evidence/` directory under this week.
-- Record tool versions, configuration context and limitations alongside practical results.
-- Do not include credentials, tokens or sensitive host data.
+## Evidence standard
+Practical claims must be backed by actual configuration, commands, SIEM events or screenshots. Preserve original screenshots, record tool versions and time zone, and redact secrets. A saved query or isolated `wazuh-logtest` match alone does not prove end-to-end ingestion or alerting. Do not publish invented outputs or completion claims.
+
+## Submission checklist
+- [ ] Notes reviewed.
+- [ ] Both TryHackMe room writeups completed with actual results.
+- [ ] Splunk/Wazuh setup and ingestion evidence added.
+- [ ] SSH and Nmap attack-to-alert evidence added.
+- [ ] Five SPL searches tested; two alerts and four-panel dashboard evidenced.
+- [ ] Custom Wazuh rule and logtest output included.
+- [ ] Three triage notes completed.
+- [ ] Cheat sheets completed.
+- [ ] Final PDF and presentation exported and reviewed.
+- [ ] Submission folder sharing permissions checked.
+
+## References
+- [Splunk documentation](https://docs.splunk.com/)
+- [Wazuh documentation](https://documentation.wazuh.com/)
+- [TryHackMe — Introduction to SIEM](https://tryhackme.com/room/introtosiem)
+- [TryHackMe — Splunk: Exploring SPL](https://tryhackme.com/room/splunkexploringspl)
+- [MITRE ATT&CK — T1110](https://attack.mitre.org/techniques/T1110/)
 
 [Return to DG Interns Hub](../README.md)
