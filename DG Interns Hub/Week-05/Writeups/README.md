@@ -1,15 +1,26 @@
-# Week 05 Writeups
+# Week 05 — TryHackMe and Learning Writeups
 
-Each room/resource has a separate writeup file. Fill answers and notes only after personally completing the material. Current access labels are based on public room pages checked on 21 Nov 2026; access can change, so verify while signed in.
+Each assigned resource has its own writeup file. The notes capture the relevant learning objectives and provide a consistent place for room answers, practical observations and evidence references.
 
-| Resource | URL | Access note |
+## Core rooms
+
+| Resource | Assignment link | Access / completion handling |
 |---|---|---|
-| Cyber Kill Chain | https://tryhackme.com/room/cyberkillchainzmt | Room page visible; verify task access in free account |
-| MITRE | https://tryhackme.com/room/mitre | Premium/Max indicated on public page |
-| Pyramid of Pain | https://tryhackme.com/room/pyramidofpainax | Supplied URL may redirect/resolve to updated slug; current page indicates Premium/Max |
-| Phishing Analysis Fundamentals | https://tryhackme.com/room/phishingemails1tryoe | Room content visible; verify machine/task access |
-| Intro to Cyber Threat Intel | https://tryhackme.com/room/cyberthreatintel | Room content visible; verify task access |
-| Threat Intelligence Tools (optional) | https://tryhackme.com/room/threatinteltools | Access not confirmed |
-| Yara (optional) | https://tryhackme.com/room/yara | Access not confirmed |
+| Cyber Kill Chain | https://tryhackme.com/room/cyberkillchainzmt | Room content reviewed; attach room completion evidence if completed in account |
+| MITRE | https://tryhackme.com/room/mitre | Premium/Max restriction reported; learning objectives covered in study notes; do not claim platform completion without account proof |
+| Pyramid of Pain | https://tryhackme.com/room/pyramidofpainax | Premium/Max restriction reported; learning objectives covered in study notes; do not claim platform completion without account proof |
+| Phishing Analysis Fundamentals | https://tryhackme.com/room/phishingemails1tryoe | Room content reviewed; attach room completion evidence if completed in account |
+| Intro to Cyber Threat Intel | https://tryhackme.com/room/cyberthreatintel | Room content reviewed; attach room completion evidence if completed in account |
 
-No completion is claimed. Use the matching file as a structured notebook.
+## Optional learning resources
+
+| Resource | Link | Handling |
+|---|---|---|
+| Threat Intelligence Tools | https://tryhackme.com/room/threatinteltools | Optional reference; verify account access |
+| Yara | https://tryhackme.com/room/yara | Optional reference; verify account access |
+
+## Completion evidence
+
+For any room completed directly on TryHackMe, add a screenshot showing the room title and completion state to the relevant writeup or the evidence folder. For Premium/Max rooms that were not accessible, retain the learning notes as topic coverage and identify the subscription restriction accurately.
+
+**Important:** Completing the topic through study notes or an alternative exercise is valuable, but it is not the same as completing the corresponding TryHackMe room. Keep these statuses separate in the final submission.
