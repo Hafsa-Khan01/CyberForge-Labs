@@ -26,8 +26,8 @@
 
 - **PM1:** Installed and configured Johnny with the John the Ripper Jumbo Windows x64 engine, prepared the supplied PDF hash input, completed the JTR recovery workflow, and verified access by opening the protected training document.
 - **PM2:** Used NetworkWalks PDF hash extraction and Password Cracker tools to process the three supplied PDFs. Each document was successfully opened to verify recovery.
-- **Evidence:** Screenshots are organized by module, renamed descriptively, and reviewed for duplicates. Public copies that exposed recovered passwords or raw PDF hashes were withheld; those practical activities remain recorded as completed.
+- **Evidence:** Screenshots are organized by module, renamed descriptively, and reviewed for duplicates. The newly added recovery-result and hash-extraction screenshots include visible exercise passwords and PDF hashes. These are retained as practical evidence in this repository; consider replacing them with redacted copies before sharing the repository publicly.
 
 ## Responsible use
 
-All activities were performed on the PDF files supplied for the NetworkWalks training exercise. Password recovery tools must only be used on files the tester owns or is explicitly authorised to assess. Recovered passwords and raw PDF hashes are not published in this repository.
+All activities were performed on the PDF files supplied for the NetworkWalks training exercise. Password recovery tools must only be used on files the tester owns or is explicitly authorised to assess. Some evidence screenshots visibly contain recovered exercise passwords and raw PDF hashes. Redact these values before making the repository public or sharing its evidence links.

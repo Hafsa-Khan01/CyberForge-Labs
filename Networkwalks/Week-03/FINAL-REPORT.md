@@ -130,7 +130,7 @@ Optional activities were not attempted and are excluded from this report.
 
 All activities described in this report were performed on files supplied for the NetworkWalks training exercise. Password recovery tools must only be used on documents the tester owns or is explicitly authorised to assess.
 
-Screenshots should be retained in the matching evidence folders and reviewed before publication. Raw PDF hashes, recovered passwords, credentials, and unrelated personal information should not be committed to a public repository.
+Screenshots should be retained in the matching evidence folders and reviewed before publication. Some of the newly added practical screenshots visibly contain recovered exercise passwords and raw PDF hashes. These screenshots are retained here as requested, but they should be replaced with redacted copies before the repository is shared publicly. Do not publish real account credentials or unrelated personal information.
 
 ---
 
