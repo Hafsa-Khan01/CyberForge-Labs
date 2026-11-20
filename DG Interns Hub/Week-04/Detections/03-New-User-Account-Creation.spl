@@ -1,0 +1,8 @@
+index=lab EventCode=4720
+| table _time host SubjectUserName TargetUserName TargetDomainName
+| sort - _time
+
+# Detects Windows Security events for user account creation.
+# MITRE: T1136 - Create Account (select sub-technique only with supporting context).
+# L1 value: highlights new accounts for authorization review.
+# Confirm Security log ingestion and field extraction.
