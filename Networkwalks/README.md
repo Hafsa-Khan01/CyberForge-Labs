@@ -8,8 +8,9 @@ Practical work and evidence for the NetworkWalks cybersecurity programme.
 |---|---|---|
 | [Week 01](Week-01/) | Virtual lab setup and Wireshark | Kali/VirtualBox setup, Wireshark SOC labs, reports and supporting screenshots |
 | [Week 02](Week-02/) | Footprinting and network scanning | Kali footprinting, theHarvester attempt (source server error/disconnection; output not validated), Zenmap Ping Scan and final report |
+| [Week 03 Report](Week-03-Report.md) | Password cracking | Both compulsory modules completed: John the Ripper and NetworkWalks tools |
 
-Each week folder contains its own README, reports and evidence index. Only verified results are presented as completed; incomplete exercises and evidence gaps are identified clearly.
+Weekly practical folders and standalone reports are linked here. Only verified results are presented as completed; incomplete exercises and evidence gaps are identified clearly. Only verified results are presented as completed; incomplete exercises and evidence gaps are identified clearly.
 
 ## Evidence and safety
 
