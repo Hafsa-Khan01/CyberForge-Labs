@@ -1,0 +1,17 @@
+<!--
+  SSH brute-force rule starter.
+  Verify the built-in SSH failure rule ID and decoder on your installed Wazuh manager.
+  Replace the parent rule ID below before deployment; do not leave the placeholder active.
+  Back up local_rules.xml and test positive/benign samples with wazuh-logtest.
+-->
+<group name="local,authentication,ssh,">
+  <rule id="100100" level="10" frequency="5" timeframe="300">
+    <if_matched_sid>REPLACE_WITH_VERIFIED_SSH_FAILURE_RULE_ID</if_matched_sid>
+    <same_source_ip />
+    <description>Multiple SSH authentication failures from the same source within five minutes.</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+    <group>authentication_failed,brute_force,</group>
+  </rule>
+</group>
