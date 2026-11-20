@@ -33,8 +33,8 @@ Original evidence screenshots are to be added under the relevant module Evidence
 
 ## 6. Responsible-use statement
 
-The exercises are limited to the files supplied for the NetworkWalks training tasks. Password recovery must not be applied to files, accounts or systems without permission. The optional Mediroza activity must not be performed against a live hospital service or real patient data; proceed only with explicit authorisation for an isolated training environment.
+The exercises are limited to the files supplied for the NetworkWalks training tasks. Password recovery must not be applied to files, accounts or systems without permission. 
 
 ---
 
-**Current status:** PM2 completed; PM1 in progress; both optional modules not started.
+**Current status:** PM2 completed; PM1 in progress.
