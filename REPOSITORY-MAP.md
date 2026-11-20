@@ -14,6 +14,7 @@ CyberForge-Labs/
 ├── Networkwalks/
 │   ├── Week-01/       # VirtualBox/Kali and Wireshark SOC labs
 │   └── Week-02/       # Footprinting, reconnaissance and scanning
+├── Networkwalks/Week-03-Report.md # Week 03 compulsory-module report
 ├── Progress-Log/     # Chronological progress records
 ├── Skills-and-Notes/ # General technical reference material
 ├── docs/             # Existing portfolio/site assets
