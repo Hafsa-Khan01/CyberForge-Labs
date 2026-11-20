@@ -1,0 +1,12 @@
+index=lab EventCode=1
+| stats count as pair_count values(host) as hosts by ParentImage Image
+| eventstats sum(pair_count) as total_events
+| eval prevalence=round(100*pair_count/total_events,2)
+| where pair_count <= 3
+| sort pair_count
+| table ParentImage Image pair_count prevalence hosts
+
+# Surfaces low-frequency Sysmon parent-child process combinations in the selected time range.
+# MITRE: no single technique is implied; map after investigating the process behavior.
+# L1 value: highlights unusual process relationships for contextual review.
+# Simple rarity heuristic only, not a statistical baseline or proof of maliciousness.
