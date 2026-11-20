@@ -13,8 +13,8 @@ CyberForge-Labs/
 │   └── Week-04/       # SIEM and SOC study notes
 ├── Networkwalks/
 │   ├── Week-01/       # VirtualBox/Kali and Wireshark SOC labs
-│   └── Week-02/       # Footprinting, reconnaissance and scanning
-├── Networkwalks/Week-03-Report.md # Week 03 compulsory-module report
+│   ├── Week-02/       # Footprinting, reconnaissance and scanning
+│   └── Week-03/       # JTR and NetworkWalks PDF password recovery
 ├── Progress-Log/     # Chronological progress records
 ├── Skills-and-Notes/ # General technical reference material
 ├── docs/             # Existing portfolio/site assets
