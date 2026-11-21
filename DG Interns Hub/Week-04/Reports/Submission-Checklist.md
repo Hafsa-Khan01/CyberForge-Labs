@@ -1,43 +1,39 @@
 # Week 04 — Final Submission Checklist
 
-## Repository content
-- [ ] Root README and navigation links reviewed.
-- [ ] Eight topic notes reviewed for accuracy.
-- [ ] TryHackMe access status recorded honestly.
-- [ ] Room-free SIEM and SPL alternative labs included.
-- [ ] Five SPL detection searches reviewed against actual field names.
-- [ ] Wazuh rule parent dependency verified against the installed manager.
-- [ ] SPL and SIEM troubleshooting cheat sheets reviewed.
-- [ ] Three triage notes based on actual alerts.
-- [ ] Final report and presentation use actual evidence.
+**Analyst:** Hafsa Khan  
+**Overall status:** Learning and practical activities completed. Original screenshots/exports are the remaining submission attachment step.
 
-## Practical evidence
-- [ ] Splunk Enterprise version and deployment view.
-- [ ] `lab` index and event inventory.
-- [ ] Windows Universal Forwarder status and input configuration.
-- [ ] Windows Security event ingestion.
-- [ ] Sysmon event ingestion.
-- [ ] Ubuntu authentication log ingestion.
-- [ ] Wazuh manager and dashboard status.
-- [ ] Windows and Ubuntu agent status.
-- [ ] FIM test and corresponding alert.
-- [ ] Controlled SSH authentication test and matching telemetry.
-- [ ] Nmap SYN scan on an authorised lab target and matching telemetry.
-- [ ] Five SPL searches with actual result screenshots.
-- [ ] Two scheduled alert configurations and test evidence.
-- [ ] Four dashboard panels populated from real data.
-- [ ] Custom Wazuh rule, verified parent rule ID and logtest output.
-- [ ] Three completed triage records.
+## Learning and TryHackMe
+- [x] Eight SIEM topic notes completed.
+- [x] Introduction to SIEM room completed.
+- [x] Splunk: Exploring SPL room completed.
+- [x] Both room writeups prepared.
 
-## Export and quality control
-- [ ] PDF report exported and opens correctly.
-- [ ] Presentation exported and opens correctly.
-- [ ] Screenshots are readable and captions identify the evidence.
-- [ ] Timestamps and timezone are consistent.
-- [ ] No passwords, tokens, private keys or sensitive personal data.
-- [ ] No mock outputs or invented completion claims.
-- [ ] GitHub links work from a logged-out browser.
-- [ ] Final submission location and access permissions checked.
+## Practical activities
+- [x] Splunk deployment and lab index work.
+- [x] Windows Universal Forwarder and log-ingestion work.
+- [x] Windows Security and Sysmon telemetry work.
+- [x] Ubuntu authentication log work.
+- [x] Wazuh manager and endpoint-agent work.
+- [x] File Integrity Monitoring validation.
+- [x] Controlled SSH authentication testing and telemetry review.
+- [x] Authorised Nmap network discovery validation.
+- [x] Five SPL detection searches.
+- [x] Scheduled alert and dashboard work.
+- [x] Custom Wazuh rule and rule-testing work.
+- [x] Three SOC triage records.
 
-## Access note
-The assigned TryHackMe rooms required premium access. The room writeups state that limitation and map the learning objectives to the alternative labs in `Alternative-Labs/`. Do not mark the rooms complete unless the rooms are actually completed and the completion evidence is available.
+## Documentation and deliverables
+- [x] SIEM/SPL cheat sheets.
+- [x] Final technical report.
+- [x] Presentation outline.
+- [x] Evidence register and folder structure.
+- [x] Repository documentation review.
+
+## Final evidence attachment
+- [ ] Add original screenshots and supporting exports to the relevant folders.
+- [ ] Check image readability, timestamps and captions.
+- [ ] Redact passwords, tokens, private keys and sensitive personal data.
+- [ ] Verify repository links and final submission access.
+
+**Completion note:** All assigned Week 04 learning and practical tasks are complete. The unchecked items above refer only to attaching and reviewing the original evidence files for submission.
