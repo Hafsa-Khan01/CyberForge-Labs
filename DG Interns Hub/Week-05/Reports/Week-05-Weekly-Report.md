@@ -1,5 +1,6 @@
 # Week 05 — Weekly Technical Report
 
+**Analyst:** Hafsa Khan  
 **Track:** DG Interns Hub  
 **Focus:** Phishing, Malware Triage, Threat Intelligence and Incident Response  
 **Reporting date:** 21 November 2026  
