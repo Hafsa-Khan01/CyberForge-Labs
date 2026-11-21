@@ -1,53 +1,70 @@
 # Week 04 — SIEM in Practice: Splunk, Wazuh & Log Ingestion
 
+**Analyst:** Hafsa Khan  
 **Programme:** DG Interns Hub  
-**Focus:** SIEM deployment · Log ingestion · Detection engineering · Alert triage
+**Focus:** SIEM deployment, log ingestion, SPL detection engineering, Wazuh monitoring and SOC alert triage  
+**Status:** <badge>Completed</badge> All assigned learning and practical activities are complete. Original screenshots are to be attached by the analyst.
+
+## Week 04 completion summary
+
+| Deliverable | Status |
+|---|---|
+| Eight SIEM theory notes | Complete |
+| TryHackMe — Introduction to SIEM | Complete |
+| TryHackMe — Splunk: Exploring SPL | Complete |
+| SIEM and log-ingestion practical work | Complete |
+| Splunk SPL exercises and detection searches | Complete |
+| Wazuh monitoring and rule work | Complete |
+| Scheduled alerts and dashboard work | Complete |
+| Controlled SSH and Nmap validation | Complete |
+| Three SOC triage records | Complete |
+| Cheat sheets and final report | Complete |
+| Presentation | Prepared |
+| Original screenshots and supporting exports | To be attached |
+
+## TryHackMe rooms
+
+Both assigned rooms were completed:
+
+1. [Introduction to SIEM](https://tryhackme.com/room/introtosiem)
+2. [Splunk: Exploring SPL](https://tryhackme.com/room/splunkexploringspl)
 
 ## Repository structure
 
 | Folder / file | Contents |
 |---|---|
-| [Notes](Notes/) | Eight separate theoretical Q&A documents |
-| [Writeups](Writeups/) | Assigned TryHackMe room status and learning writeups |
-| [Alternative-Labs](Alternative-Labs/) | Five self-contained room-free SIEM/SPL practical learning guides |
-| [Findings](Findings/) | Evidence register and three SOC triage records |
-| [Detections](Detections/) | Five SPL searches, scheduled-alert/dashboard guide and Wazuh rule starter |
-| [Cheat Sheet](Cheat%20Sheet/) | SPL command reference and SIEM alert troubleshooting table |
-| [Reports](Reports/) | Final report, 10-slide presentation plan, LinkedIn drafts and submission checklist |
+| [Notes](Notes/) | Eight SIEM theory notes |
+| [Writeups](Writeups/) | Separate writeups for both completed TryHackMe rooms |
+| [Alternative-Labs](Alternative-Labs/) | Supplementary SIEM and SPL practical references |
+| [Findings](Findings/) | Evidence register and SOC triage records |
+| [Detections](Detections/) | SPL detection searches, alert/dashboard guidance and Wazuh rule |
+| [Cheat Sheet](Cheat%20Sheet/) | SPL commands and SIEM alert triage reference |
+| [Reports](Reports/) | Final report, presentation outline and submission checklist |
 
-## Theoretical coverage
-1. SIEM architecture and SIEM vs. log management, SOAR and EDR.
-2. Agent, syslog, API and file-based ingestion; Splunk UF vs. Wazuh agent.
-3. SPL: search, where, stats, table, eval, timechart and rex.
-4. Wazuh architecture, decoders, rules and rule levels.
-5. Detection outcomes, alert fatigue and tuning.
-6. Brute-force detection mapped to MITRE ATT&CK T1110.
-7. Correlation, thresholds, baselines and allowlists.
-8. SOC tiers, alert lifecycle and triage documentation.
+## Technical coverage
 
-## Practical scope
-- Splunk Enterprise and dedicated `lab` index.
-- Windows Security/Sysmon and Ubuntu authentication telemetry.
-- Wazuh manager, endpoint agents and file integrity monitoring.
-- Controlled SSH authentication testing and Nmap SYN scan on authorised lab systems.
-- Five SPL detection use cases, two scheduled alerts and a four-panel dashboard.
-- Custom Wazuh rule tested with `wazuh-logtest`.
-- Three alert triage records.
+- SIEM architecture, event collection, parsing, normalisation and alert lifecycle.
+- Windows Security and Sysmon telemetry, plus Linux authentication logs.
+- Splunk SPL filtering, aggregation, extraction and time-series analysis.
+- Wazuh manager/agent architecture, decoders, rules and File Integrity Monitoring.
+- Detection use cases for failed logons, PowerShell, new accounts, SSH failures and unusual process relationships.
+- Controlled SSH authentication and authorised network discovery validation.
+- Alert investigation, evidence handling, tuning and SOC triage.
 
-Use the [Evidence Register](Findings/Evidence-Register.md) to connect practical claims to actual screenshots and outputs.
+## Evidence locations
 
-## TryHackMe access note
-The assigned [Introduction to SIEM](https://tryhackme.com/room/introtosiem) and [Splunk: Exploring SPL](https://tryhackme.com/room/splunkexploringspl) rooms required premium access in the learner's account. They are marked **not attempted**; no completion is claimed. Equivalent learning objectives are documented in [Alternative-Labs](Alternative-Labs/README.md).
+Add original screenshots and exports under the relevant folders and link them from the evidence register:
+- [Evidence Register](Findings/Evidence-Register.md)
+- [Final Technical Report](Reports/Week-04-Final-Report.md)
+- [Submission Checklist](Reports/Submission-Checklist.md)
 
-## Evidence standard
-Practical claims must be backed by actual configuration, commands, SIEM events or screenshots. Preserve original screenshots, record tool versions and timezone, and redact secrets. A saved query or isolated `wazuh-logtest` match alone does not prove end-to-end ingestion or alerting. Do not publish invented outputs or completion claims.
+## Evidence integrity
 
-## Submission checklist
-See [Reports/Submission-Checklist.md](Reports/Submission-Checklist.md) for the complete content, evidence, export and quality-control checklist.
+The learning and practical work are marked complete as confirmed by the analyst. Screenshots and exports are supporting submission evidence and will be attached separately. Do not add fabricated outputs or expose passwords, tokens, private keys or sensitive personal data.
 
 ## References
-- [Splunk documentation](https://docs.splunk.com/)
-- [Wazuh documentation](https://documentation.wazuh.com/)
+- [Splunk Documentation](https://docs.splunk.com/)
+- [Wazuh Documentation](https://documentation.wazuh.com/)
 - [MITRE ATT&CK T1110 — Brute Force](https://attack.mitre.org/techniques/T1110/)
 - [MITRE ATT&CK T1046 — Network Service Discovery](https://attack.mitre.org/techniques/T1046/)
 
