@@ -60,7 +60,7 @@ The Week 05 assignment includes rooms that may be restricted by the account's su
 
 ## Reports
 - [Weekly Report](Reports/Week-05-Weekly-Report.md)
-- [Professional Technical Report](Reports/Professional-Technical-Report.md)
+- [Weekly Report](Reports/Week-05-Weekly-Report.md)
 - [Submission Checklist](Reports/Submission-Checklist.md)
 
 ## Lab safety and evidence integrity
