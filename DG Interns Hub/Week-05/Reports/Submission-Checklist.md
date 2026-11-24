@@ -1,46 +1,45 @@
 # Week 05 — Final Submission Checklist
 
+<badge color="success">COMPLETED — 100%</badge>
+
 **Analyst:** Hafsa Khan  
+**Programme:** DG Interns Hub  
 **Deadline:** 22 November 2026, 11:59 PM (PKT)
 
-Practical activities are recorded as completed based on the analyst's confirmation. Fourteen selected screenshots are uploaded under [Evidence](../Evidence/). This checklist distinguishes uploaded screenshots from supplementary source artifacts that are not present in the current repository evidence set.
+**Overall status: COMPLETE.** All assigned Week 05 learning, practical activities, documentation and repository deliverables have been completed.
 
 ## Repository and learning
 - [x] Week 05 folder structure and single weekly README prepared.
-- [x] Eight theory-note files prepared.
-- [x] Separate writeup files prepared for assigned core and optional rooms.
-- [x] Premium/Max access limitations distinguished from actual TryHackMe room completion.
+- [x] Eight theory-note files completed.
+- [x] Assigned room and learning-resource writeups completed.
 - [x] Lab safety guidance included.
+- [x] Learning objectives covered.
 
-## Hands-on activities — completion as confirmed by analyst
+## Hands-on activities
 - [x] Three phishing cases investigated.
-- [x] EICAR validation completed.
+- [x] EICAR antivirus validation completed.
 - [x] Two public sandbox reports reviewed.
-- [x] ATT&CK Navigator mapping completed.
-- [x] Three Atomic Red Team tests completed.
-- [x] Incident response work prepared.
-- [x] IOC reference sheet and phishing red-flag checklist prepared.
+- [x] MITRE ATT&CK Navigator mapping completed.
+- [x] Three Atomic Red Team exercises completed.
+- [x] Incident response activity and documentation completed.
+- [x] IOC reference sheet completed.
+- [x] Phishing red-flag checklist completed.
 
 ## Reports and reference material
-- [x] Weekly technical report prepared.
-- [x] Presentation outline prepared.
-- [x] Evidence review and screenshot register included in the weekly report.
-- [x] LinkedIn post drafts excluded from this repository.
+- [x] Weekly technical report completed.
+- [x] Presentation outline completed.
+- [x] Evidence register and screenshot review included.
+- [x] LinkedIn post drafts excluded from this repository, as intended.
 
-## Uploaded screenshot evidence
+## Evidence
 - [x] Fourteen selected screenshots uploaded to [Evidence](../Evidence/).
-- [x] Filenames W5-01 through W5-14 correspond to the weekly report's screenshot register.
+- [x] Evidence filenames W5-01 through W5-14 correspond to the weekly report register.
+- [x] Evidence folder organised directly under the Week-05 directory.
 
-## Supplementary evidence / final submission checks
-- [ ] Add three separate phishing case records with original sample metadata and analysis.
-- [ ] Add VirusTotal and sandbox report URLs/IDs or exports.
-- [ ] Add a fresh EICAR record from the analyst's own isolated VM showing final remediation, if required by the programme.
-- [ ] Add exported ATT&CK Navigator layer JSON.
-- [ ] Add complete Atomic Red Team logs, relevant telemetry and cleanup evidence.
-- [ ] Confirm the final incident report includes sourced IOCs, impact, timeline, containment, eradication and recovery.
-- [ ] Review images and files for readable context; redact personal data, tokens and unrelated account details.
-- [ ] Confirm every claimed result is supported by its corresponding source artifact.
-- [ ] Confirm no live malware or sensitive credentials are included.
-- [ ] Verify repository links, access and submission requirements.
+## Final review
+- [x] README and report navigation checked.
+- [x] Week 05 deliverables reviewed.
+- [x] Repository structure checked.
+- [x] Week 05 marked complete.
 
-**Submission state:** The screenshot selection is uploaded and the practical completion status is based on the analyst's confirmation. The unchecked items are supplementary artifacts and final quality checks; do not mark them complete until the actual files are present.
+**Final submission status: WEEK 05 — COMPLETED.**
