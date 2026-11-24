@@ -1,12 +1,12 @@
 # Week 04 — Final Submission Checklist
 
 **Analyst:** Hafsa Khan  
-**Overall status:** Learning and practical activities completed. Original screenshots/exports are the remaining submission attachment step.
+**Overall status:** Learning and practical activities completed; eight selected screenshots uploaded.
 
 ## Learning and TryHackMe
 - [x] Eight SIEM topic notes completed.
-- [x] Introduction to SIEM room completed.
-- [x] Splunk: Exploring SPL room completed.
+- [x] Introduction to SIEM room completed, as confirmed by analyst.
+- [x] Splunk: Exploring SPL room completed, as confirmed by analyst.
 - [x] Both room writeups prepared.
 
 ## Practical activities
@@ -27,13 +27,14 @@
 - [x] SIEM/SPL cheat sheets.
 - [x] Final technical report.
 - [x] Presentation outline.
-- [x] Evidence register and folder structure.
-- [x] Repository documentation review.
+- [x] Evidence register.
+- [x] Eight selected screenshots uploaded under [Evidence](../Evidence/).
+- [x] Repository links and evidence filenames reviewed.
 
-## Final evidence attachment
-- [ ] Add original screenshots and supporting exports to the relevant folders.
-- [ ] Check image readability, timestamps and captions.
-- [ ] Redact passwords, tokens, private keys and sensitive personal data.
-- [ ] Verify repository links and final submission access.
+## Final quality checks
+- [ ] Confirm all screenshots are readable at full size.
+- [ ] Confirm no passwords, tokens, private keys or sensitive personal data are exposed.
+- [ ] Attach any additional raw exports required by the programme submission.
+- [ ] Verify final submission access and requirements.
 
-**Completion note:** All assigned Week 04 learning and practical tasks are complete. The unchecked items above refer only to attaching and reviewing the original evidence files for submission.
+**Completion note:** Assigned learning and practical tasks are complete as confirmed by the analyst. The selected screenshot set is uploaded; the remaining checks concern evidence quality, any additional source exports and final submission requirements.

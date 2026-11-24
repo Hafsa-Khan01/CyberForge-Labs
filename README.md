@@ -35,6 +35,7 @@ Work is separated by programme and week. Original evidence and technical records
 - [Week 02 — Network and Windows security fundamentals](DG%20Interns%20Hub/Week-02/README.md)
 - [Week 03 — Endpoint and network detection](DG%20Interns%20Hub/Week-03/README.md)
 - [Week 04 — SIEM and SOC fundamentals](DG%20Interns%20Hub/Week-04/README.md)
+- [Week 05 — Phishing, malware triage and incident response](DG%20Interns%20Hub/Week-05/README.md)
 
 ## Evidence and documentation principles
 

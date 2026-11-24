@@ -11,6 +11,7 @@ This section contains the technical records, practical documentation, room write
 | **02** | Network traffic analysis, Nmap and Windows security telemetry | [Week 02](Week-02/README.md) |
 | **03** | Linux logs, Sysmon, auditd, Snort IDS rules and MITRE ATT&CK mapping | [Week 03](Week-03/README.md) |
 | **04** | SIEM concepts, log ingestion, SPL basics, Wazuh architecture and SOC alert handling | [Week 04](Week-04/README.md) |
+| **05** | Phishing analysis, malware triage, threat intelligence and incident response | [Week 05](Week-05/README.md) |
 
 ## Documentation standards
 
