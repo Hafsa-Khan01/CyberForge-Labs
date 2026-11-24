@@ -82,3 +82,28 @@ Week 04 learning and practical activities are complete. The work demonstrates an
 - [Wazuh Ruleset](https://documentation.wazuh.com/current/user-manual/ruleset/index.html)
 - [MITRE ATT&CK T1110 — Brute Force](https://attack.mitre.org/techniques/T1110/)
 - [MITRE ATT&CK T1046 — Network Service Discovery](https://attack.mitre.org/techniques/T1046/)
+
+
+## 11. Evidence-based technical review
+
+The supplied screenshot set was reviewed separately from the learning notes. The eight selected Splunk screenshots show the following results:
+
+| Evidence ID | Observation |
+|---|---|
+| W4-01 | Windows Security EventCode 4625 search returned 40 matching events. |
+| W4-02 | Authentication dashboard displayed 476 successful, 4,927 failed and 5,403 total logons. |
+| W4-03 | Triggered Alerts displayed one High-severity alert named “Bruteforce Login Attempts”. |
+| W4-04 | Linux failed-authentication search `index=main failed` returned five events. |
+| W4-05 | Windows 4624/4625 aggregation showed 4,939 events and 102 statistics rows; the interface marked results as partial. |
+| W4-06 | Scheduled alert “kareem” was shown in configuration with a firewall-log search and result-count trigger. This proves configuration only, not that this alert fired. |
+| W4-07 | Windows Security Monitoring dashboard was in edit mode with a Failed Login Attempts (EventCode 4625) panel. |
+| W4-08 | Linux `linux_secure` SSH failed-password search returned three events. |
+
+### Evidence interpretation
+The screenshots demonstrate searches across Windows and Linux authentication telemetry, event aggregation, dashboard visualisation, and alert configuration/review. The displayed failed-logon count is higher than the successful count in that dashboard dataset; this is an observation about the displayed data and is not proof of compromise.
+
+### Evidence limitations
+The screenshots show different dates, hosts, interfaces and time ranges. The 4,939-event result is explicitly partial. The configured alert “kareem” and triggered alert “Bruteforce Login Attempts” are different alerts and must not be presented as one alert lifecycle. The dashboard screenshot is in edit mode, and the Add Data screenshot shows source selection rather than completed ingestion. TryHackMe completion pages were not included in the screenshot ZIP; room completion is based on the analyst's confirmation.
+
+### Final evidence attachments
+Attach the eight selected original Splunk screenshots, the two TryHackMe completion screenshots if required, and any available final dashboard/export files. Keep source images intact and redact credentials or unrelated personal information.
