@@ -1,16 +1,17 @@
 # Week 05 — Phishing, Malware Triage, Threat Intelligence & Incident Response
 
-**Track:** DG Interns Hub | **Focus:** Tier 1 / Tier 2 blue-team investigation  
+**Analyst:** Hafsa Khan  
+**Programme:** DG Interns Hub  
+**Focus:** Tier 1 / Tier 2 blue-team investigation  
 **Submission deadline:** 22 November 2026, 11:59 PM (PKT)
 
 ## Completion overview
-
-The Week 05 written and practical work is treated as completed based on the analyst's confirmation. The remaining submission step is to attach the original screenshots, exported reports and other supporting evidence to the relevant folders.
+The Week 05 written and practical work is treated as completed based on the analyst's confirmation. The remaining submission step is to attach original screenshots, exported reports and supporting evidence to the relevant folders.
 
 | Deliverable | Status |
 |---|---|
 | Eight theory notes | Complete |
-| Core room learning/writeups | Learning material prepared; see room-access note below |
+| Core room learning/writeups | Learning material prepared; see room-access note |
 | Optional learning resources | Reference notes prepared |
 | Three phishing investigations | Practical work reported complete; attach evidence |
 | EICAR validation | Practical work reported complete; attach AV/log evidence |
@@ -32,15 +33,14 @@ The Week 05 written and practical work is treated as completed based on the anal
 | Folder | Contents |
 |---|---|
 | [Notes](Notes/) | Eight separate theory answers |
-| [Writeups](Writeups/) | Separate room/resource/challenge writeups and access notes |
+| [Writeups](Writeups/) | Room/resource/challenge writeups and access notes |
 | [Findings](Findings/) | Phishing cases, EICAR, sandbox, Navigator and atomic-test evidence |
-| [Incident Report](Incident%20Report/) | Incident report template and worked fictional training scenario |
+| [Incident Report](Incident%20Report/) | Incident report and worked training scenario |
 | [Cheat Sheet](Cheat%20Sheet/) | IOC reference and phishing red-flag checklist |
-| [Reports](Reports/) | Weekly report, presentation outline, LinkedIn drafts and final checklist |
+| [Reports](Reports/) | Weekly report, professional technical report, presentation outline and final checklist |
 
 ## TryHackMe access and completion note
-
-The Week 05 assignment includes rooms that may be restricted by the account's subscription. In particular, the MITRE and Pyramid of Pain room pages indicate Premium/Max access. The corresponding learning objectives are covered in the Week 05 study material; however, a locked room must not be represented as a completed TryHackMe room unless its own completion state is visible in the account. Use the room-specific writeups to distinguish platform completion from equivalent topic coverage.
+The Week 05 assignment includes rooms that may be restricted by the account's subscription. The MITRE and Pyramid of Pain room pages indicated Premium/Max access in the earlier review. The corresponding learning objectives are covered in the Week 05 study material; however, a locked room must not be represented as a completed TryHackMe room unless its own completion state is visible in the account. Use room-specific writeups to distinguish platform completion from equivalent topic coverage.
 
 - [Cyber Kill Chain](https://tryhackme.com/room/cyberkillchainzmt)
 - [MITRE](https://tryhackme.com/room/mitre) — Premium/Max access indicated
@@ -50,9 +50,6 @@ The Week 05 assignment includes rooms that may be restricted by the account's su
 - Optional: [Threat Intelligence Tools](https://tryhackme.com/room/threatinteltools) and [Yara](https://tryhackme.com/room/yara)
 
 ## Evidence upload locations
-
-Add original evidence without changing the filenames or contents of the source exports where practical:
-
 - Three phishing case folders: `Findings/Phishing-01/`, `Phishing-02/`, `Phishing-03/`
 - EICAR: `Findings/EICAR/`
 - Sandbox reports: `Findings/Public-Sandbox-01/` and `Public-Sandbox-02/`
@@ -61,18 +58,22 @@ Add original evidence without changing the filenames or contents of the source e
 - Incident report attachments: `Incident Report/`
 - Presentation screenshots: `Reports/Presentation-Evidence/`
 
+## Reports
+- [Weekly Report](Reports/Week-05-Weekly-Report.md)
+- [Professional Technical Report](Reports/Professional-Technical-Report.md)
+- [Submission Checklist](Reports/Submission-Checklist.md)
+
 ## Lab safety and evidence integrity
 - Never download or execute live malware. Use EICAR only for local antivirus validation and public sandbox reports for behavioural review.
 - Do not click suspicious links. Use defanged indicators and reputation services; public scanners may disclose submitted data to third parties.
-- Use isolated, snapshotted VMs for authorised tests. Atomic Red Team tests must be run only on the user's own lab VM and reverted afterwards.
+- Use isolated, snapshotted VMs for authorised tests. Atomic Red Team tests must be run only on the analyst's own lab VM and reverted afterwards.
 - Keep original evidence read-only; record timezone, collection time, source and SHA-256 where applicable.
 - A template or example is not proof of execution. Screenshots and exports should support the exact activity being reported.
 
 ## References
-- NIST SP 800-61 Rev. 2: https://csrc.nist.gov/pubs/sp/800/61/r2/final
-- MITRE ATT&CK: https://attack.mitre.org/
-- Cyber Kill Chain: https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
-- ATT&CK Navigator: https://mitre-attack.github.io/attack-navigator/
-- TryHackMe free rooms: https://tryhackme.com/free-rooms
+- [NIST SP 800-61 Rev. 2](https://csrc.nist.gov/pubs/sp/800/61/r2/final)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [Cyber Kill Chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)
+- [ATT&CK Navigator](https://mitre-attack.github.io/attack-navigator/)
 
-**Overall status:** Week 05 documentation and practical activities reported complete. Screenshot/export attachment and final evidence review remain.
+[Return to DG Interns Hub](../README.md)
