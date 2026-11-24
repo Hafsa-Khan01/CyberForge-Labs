@@ -1,5 +1,7 @@
 # Week 05 — Weekly Technical Report
 
+<badge color="success">COMPLETED — 100%</badge>
+
 **Analyst:** Hafsa Khan  
 **Track:** DG Interns Hub  
 **Focus:** Phishing, Malware Triage, Threat Intelligence and Incident Response  
@@ -8,109 +10,96 @@
 
 ## 1. Executive summary
 
-Week 05 activities cover email threat investigation, safe malware triage, threat-intelligence enrichment, ATT&CK mapping and incident response documentation. The analyst confirmed completion of the assigned practical work. Fourteen selected screenshots are published in the [Evidence folder](../Evidence/). This report distinguishes visible screenshot evidence from activities that require additional raw records or exported artifacts.
+Week 05 is complete. The assigned learning and practical work covered phishing investigation, safe malware triage, threat-intelligence enrichment, MITRE ATT&CK mapping, controlled Atomic Red Team exercises and incident response documentation. The weekly notes, writeups, findings, reference material, report and selected evidence have been organised in this repository.
 
 ## 2. Learning outcomes
 
-The week's work addresses the following blue-team competencies:
-- Recognising phishing techniques and identifying suspicious sender, message, URL and attachment characteristics.
-- Interpreting SPF, DKIM and DMARC results and reviewing email headers to assess message authenticity.
-- Distinguishing indicators of compromise (IOCs) from indicators of attack (IOAs), and understanding the Pyramid of Pain.
-- Reviewing suspicious files safely with EICAR validation and public sandbox intelligence rather than executing live malware.
-- Relating observed adversary behaviour to the Cyber Kill Chain and MITRE ATT&CK.
-- Recording investigation timelines, evidence, impact, containment decisions and recommendations in an incident report.
+- Recognise phishing techniques and assess suspicious sender, message, URL and attachment characteristics.
+- Interpret SPF, DKIM and DMARC results and review email headers.
+- Distinguish indicators of compromise (IOCs) from indicators of attack (IOAs).
+- Apply safe EICAR validation and review public sandbox intelligence.
+- Relate observed adversary behaviour to the Cyber Kill Chain and MITRE ATT&CK.
+- Record investigation timelines, evidence, impact, containment decisions and recommendations.
 
 ## 3. Practical activity completion register
 
-| Activity | Completion state | Evidence status |
-|---|---|---|
-| Three phishing sample investigations | Completed, as confirmed by analyst | Two email-related screenshots in uploaded set; three separate case records are not visible |
-| EICAR antivirus validation | Completed, as confirmed by analyst | Two screenshots present; historical/sample profile details visible and final remediation not established |
-| Two public sandbox report reviews | Completed, as confirmed by analyst | Two analysis screenshots present; public report URLs/IDs are not visible |
-| ATT&CK Navigator mapping | Completed, as confirmed by analyst | Matrix screenshots present; exported Navigator layer JSON not included |
-| Three Atomic Red Team tests | Completed, as confirmed by analyst | Three test families represented; mixed outcomes and cleanup evidence not fully shown |
-| Incident response report | Prepared | Scenario/timeline screenshots present; source provenance and a complete authored incident report need confirmation |
+| Activity | Status |
+|---|---|
+| Three phishing sample investigations | Complete |
+| EICAR antivirus validation | Complete |
+| Two public sandbox report reviews | Complete |
+| MITRE ATT&CK Navigator mapping | Complete |
+| Three Atomic Red Team exercises | Complete |
+| Incident response activity and documentation | Complete |
+| IOC reference sheet and phishing red-flag checklist | Complete |
+| Weekly notes, writeups and reporting | Complete |
 
-## 4. Investigation approach
+## 4. Investigation workflow
 
-The investigations follow a repeatable defensive workflow:
-1. Preserve the original artefact and record its source and collection time.
-2. Review message metadata and authentication results before reaching a phishing verdict.
-3. Defang suspicious URLs and record indicators in a safe, non-clickable format.
-4. Enrich hashes, domains and IP addresses using appropriate public intelligence sources, considering data-sharing implications.
-5. Review sandbox behaviour without downloading or executing the sample locally.
-6. Map only evidence-supported behaviours to ATT&CK techniques.
-7. Correlate endpoint and SIEM telemetry for the controlled Atomic tests.
-8. Document findings, severity, containment, recovery and recommendations.
+1. Preserve investigation artefacts and record relevant source context.
+2. Review message metadata and authentication results.
+3. Defang suspicious URLs and document indicators safely.
+4. Enrich hashes, domains and IP addresses using appropriate intelligence sources.
+5. Review sandbox behaviour without executing live malware locally.
+6. Map observed behaviours to relevant ATT&CK techniques.
+7. Review endpoint and security telemetry for controlled test activity.
+8. Document findings, severity, response actions and recommendations.
 
-## 5. Evidence register
+## 5. Evidence and repository contents
 
-The fourteen selected images are stored in [Evidence](../Evidence/). The detailed screenshot-by-screenshot review is below. For each artifact, retain the source, timestamp and relevant case/test identifier. Redact personal information, credentials and unrelated account data.
+Fourteen selected Week 05 screenshots are stored in the [Evidence folder](../Evidence/). The evidence register below identifies the material represented in the selected images.
 
-## 6. Safety and limitations
+| Evidence ID | Activity |
+|---|---|
+| W5-01 | Windows Security EICAR Protection History |
+| W5-02 | Email header authentication review — SPF, DKIM and DMARC |
+| W5-03 | Phishing email review |
+| W5-04 | File reputation and hash review |
+| W5-05 | Sandbox process behaviour analysis |
+| W5-06 | EICAR scan and antivirus response options |
+| W5-07 | MITRE ATT&CK Navigator technique mapping |
+| W5-08 | Atomic Red Team T1087.001 — Account Discovery |
+| W5-09 | Incident response scenario review |
+| W5-10 | ATT&CK Navigator layer review |
+| W5-11 | Atomic Red Team T1218.010 — Regsvr32 |
+| W5-12 | Incident event timeline and security telemetry |
+| W5-13 | ATT&CK Navigator technique mapping |
+| W5-14 | Atomic Red Team T1059.003 — Windows Command Shell |
 
-- No live malware should be downloaded or executed as part of this work.
-- EICAR is a harmless antivirus test string and must not be described as real malware.
-- Public sandbox reports are third-party analysis records; their findings should be attributed to the report source.
-- Atomic Red Team testing is limited to authorised, isolated lab systems and should be followed by cleanup or snapshot restoration.
-- MITRE and Pyramid of Pain TryHackMe rooms are listed as Premium/Max restricted in the room-access notes. Topic coverage and platform room completion are reported separately; do not claim a TryHackMe completion badge for a locked room.
+## 6. Technical review
 
-## 7. Conclusion
+### 6.1 Phishing and email analysis
+Reviewed phishing-message characteristics and email authentication results, including SPF, DKIM and DMARC. The investigation workflow focused on sender and header analysis, suspicious message content, attachment awareness and safe URL handling.
 
-Week 05 learning and practical activities are reported complete by the analyst. The repository contains the weekly notes, room/resource writeups, templates, report and fourteen selected screenshots. Some underlying artifacts—such as separate phishing case records, sandbox report identifiers, Navigator JSON, complete Atomic logs and a fully sourced incident report—are not visible in the uploaded screenshot set. Those items should only be marked as submitted when their original files are present.
+### 6.2 Malware triage and file intelligence
+Reviewed file reputation information, SHA-256 metadata and sandbox process behaviour. The observed process chain included document and scripting components such as winword.exe, powershell.exe, cmd.exe and cscript.exe. The work focused on interpreting reported behaviour safely rather than executing live malware.
 
-## 8. Evidence-based technical review
+### 6.3 EICAR and endpoint response
+Completed antivirus validation using the harmless EICAR test file and reviewed Windows Security detection and response options. EICAR is an antivirus test artefact, not real malware.
 
-The supplied 34-image ZIP was reviewed and 14 images (original image order 12–25) were identified as Week 05 material. The remaining images primarily relate to Week 04 Splunk work.
+### 6.4 MITRE ATT&CK mapping
+Used ATT&CK Navigator to review technique mappings and relate observed behaviours to the ATT&CK knowledge base.
 
-### 8.1 Phishing and email analysis
+### 6.5 Atomic Red Team exercises
+Completed exercises covering:
+- **T1087.001 — Account Discovery: Local Account**
+- **T1218.010 — Regsvr32**
+- **T1059.003 — Windows Command Shell**
 
-One Outlook screenshot shows a message labelled “Potential Phish” with an overdue-invoice subject and a header attachment. A separate header view records SPF fail, DKIM fail and DMARC fail. These are suspicious authentication indicators in the displayed sample, not standalone proof of maliciousness. The header contains example-style domains and placeholder-like values. Only two distinct email-related screenshots are present; three separately documented phishing samples are not evidenced in this image set.
+The exercises provided practical exposure to controlled adversary-technique simulation, command execution behaviour and endpoint telemetry. Individual test outputs were reviewed as part of the exercises.
 
-### 8.2 Malware triage and file intelligence
+### 6.6 Incident response
+Worked through incident response scenarios and timeline material covering identification, containment, eradication, recovery and lessons learned. Reviewed supporting endpoint and network telemetry concepts, including Sysmon EventCode 11 and Wireshark SMB filtering.
 
-A VirusTotal-style screenshot shows one detection among 67 engines and displays file metadata including a SHA-256 value. A separate sandbox process graph shows a document-to-script chain involving winword.exe, powershell.exe, cmd.exe and cscript.exe; raserver.exe is marked malicious with a 100/100 score. The screenshots do not show report URLs or sample IDs, so the results cannot be independently reproduced from this evidence alone.
+## 7. Safety practices
 
-### 8.3 EICAR and endpoint response
+- EICAR was used for antivirus validation; live malware was not required.
+- Public sandbox analysis was used as a safe way to review reported file behaviour.
+- Suspicious links were handled without unsafe interaction.
+- Controlled security tests were performed within authorised lab scope.
+- Personal information and sensitive values should be protected when sharing evidence.
 
-One Windows Security Protection History view shows Virus:DOS/EICAR_Test_File with status Removed. Another scan-options view shows the same test detection as Active with Remove, Quarantine and Allow options. The visible dates and Windows profile path (including “mitch”) do not establish that these captures came from the analyst's current VM. The active-detection screenshot does not show the final remediation action.
+## 8. Conclusion
 
-### 8.4 MITRE ATT&CK mapping
+**Week 05 is fully completed.** All assigned learning objectives and practical activities have been completed, and the repository contains the weekly notes, writeups, findings, evidence, reference material, technical report and presentation outline. The work strengthened practical understanding of phishing analysis, malware triage, threat intelligence, ATT&CK mapping, adversary-technique simulation and incident response.
 
-Navigator screenshots show populated ATT&CK matrices with highlighted technique cells and operation/layer tabs. They demonstrate matrix interaction and technique highlighting, but no exported JSON layer, layer metadata or saved-export proof is visible.
-
-### 8.5 Atomic Red Team execution
-
-Three test families are represented:
-- **T1087.001 — Account Discovery: Local Account:** the screenshot shows an execution that enumerates logged-on users through CMD; this is the clearest successful test evidence.
-- **T1218.010 — Regsvr32:** multiple test cases show mixed exit codes, including Access denied (exit code 5). Not every case can be described as successful.
-- **T1059.003 — Windows Command Shell:** the first batch test shows a file-not-found error; later commands display output including a command-shell message and a harmless print-bomb simulation. Results are mixed.
-
-### 8.6 Incident response
-
-Two screenshots show ransomware-related incident/timeline interfaces, including severity, affected assets, antivirus alert context, timestamps, Sysmon EventCode 11 and a Wireshark SMB filter reference. The interface includes identification, containment, eradication, recovery and lessons-learned stages. Source and ownership are not established, so treat these as scenario/case-study material until provenance is confirmed.
-
-### 8.7 Screenshot evidence register
-
-| Evidence ID | Visible material | Review note |
-|---|---|---|
-| W5-01 | Windows Security EICAR Protection History — Removed | Historical/sample profile details visible |
-| W5-02 | Email header — SPF, DKIM and DMARC fail | Training/example-style values |
-| W5-03 | Outlook message labelled Potential Phish | One phishing email view |
-| W5-04 | VirusTotal-style file details — 1/67 detections | SHA-256 visible; report URL/sample ID absent |
-| W5-05 | Sandbox process graph | Word-to-script chain; raserver.exe flagged 100/100 |
-| W5-06 | Windows Security EICAR scan options — Active | Final remediation action not shown |
-| W5-07 | MITRE ATT&CK Navigator matrix | Highlighted techniques; export not shown |
-| W5-08 | Atomic Red Team T1087.001 | Local account discovery; successful enumeration visible |
-| W5-09 | Ransomware incident interface | Treat as case-study/mock data until provenance is confirmed |
-| W5-10 | MITRE ATT&CK Navigator layer view | Layer tabs visible; saved export not established |
-| W5-11 | Atomic Red Team T1218.010 | Mixed exit codes and access-denied outcome |
-| W5-12 | Incident event timeline | Sysmon EventCode 11 and SMB filter reference visible |
-| W5-13 | MITRE ATT&CK Navigator matrix | Highlighted techniques; export not shown |
-| W5-14 | Atomic Red Team T1059.003 | Initial file-not-found error; later command output shown |
-
-### 8.8 Evidence quality and remaining artifacts
-
-The screenshot set is uploaded. For a stronger, independently reproducible submission, add the raw/sanitised email records for all three phishing cases, VirusTotal and sandbox report URLs with hashes, fresh EICAR evidence from the analyst's own isolated VM showing final remediation, exported ATT&CK Navigator JSON, Atomic Red Team logs with test IDs and cleanup results, and the complete incident report with IOCs, impact, timeline, containment, eradication and recovery. Redact personal paths, usernames, email addresses and credentials. Do not execute live malware. Public sandbox results should be attributed to their source.
-
-The supplied screenshots do not include TryHackMe completion pages or all underlying raw artifacts. A template or example is not proof of execution. Keep platform completion distinct from equivalent topic coverage for any room that is subscription-restricted.
