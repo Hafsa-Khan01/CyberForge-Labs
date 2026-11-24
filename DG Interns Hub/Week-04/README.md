@@ -48,7 +48,7 @@
 
 ## Reports and evidence
 - [Week 04 Final Report](Reports/Week-04-Final-Report.md)
-- [Professional Technical Report](Reports/Professional-Technical-Report.md)
+- [Final Report](Reports/Week-04-Final-Report.md)
 - [Submission Checklist](Reports/Submission-Checklist.md)
 - [Evidence Register](Findings/Evidence-Register.md)
 
