@@ -6,21 +6,22 @@
 **Submission deadline:** 22 November 2026, 11:59 PM (PKT)
 
 ## Completion overview
-The Week 05 written and practical work is treated as completed based on the analyst's confirmation. The remaining submission step is to attach original screenshots, exported reports and supporting evidence to the relevant folders.
+
+The analyst has confirmed completion of the assigned learning and practical work. Fourteen selected screenshots from the supplied evidence set are uploaded under [Evidence](Evidence/). The weekly report records what each screenshot demonstrates and explicitly notes where additional source records or exports are not present.
 
 | Deliverable | Status |
 |---|---|
 | Eight theory notes | Complete |
-| Core room learning/writeups | Learning material prepared; see room-access note |
+| Core room learning/writeups | Prepared; see room-access note |
 | Optional learning resources | Reference notes prepared |
-| Three phishing investigations | Practical work reported complete; attach evidence |
-| EICAR validation | Practical work reported complete; attach AV/log evidence |
-| Two public sandbox reviews | Practical work reported complete; attach report references/screenshots |
-| ATT&CK Navigator mapping | Practical work reported complete; attach layer JSON and screenshot |
-| Three Atomic Red Team tests | Practical work reported complete; attach test outputs and telemetry |
-| Incident report | Report document prepared; add case-specific evidence and final timeline |
+| Phishing analysis | Practical work reported complete; two email-related screenshots in current evidence set |
+| EICAR validation | Practical work reported complete; supplied screenshots have historical/sample profile details |
+| Public sandbox reviews | Practical work reported complete; screenshots present, but source URLs/sample IDs are not visible |
+| ATT&CK Navigator mapping | Matrix screenshots uploaded; exported layer JSON not included |
+| Atomic Red Team tests | Three test families represented; outcomes include mixed results |
+| Incident response | Scenario/case-study screenshots uploaded; source provenance is not established |
 | IOC cheat sheet and phishing checklist | Complete |
-| Weekly report and presentation | Prepared; finalise evidence slides after screenshots are added |
+| Weekly report and presentation outline | Prepared |
 
 ## Objectives
 - Examine email headers and authentication results without interacting with suspicious links.
@@ -34,12 +35,14 @@ The Week 05 written and practical work is treated as completed based on the anal
 |---|---|
 | [Notes](Notes/) | Eight separate theory answers |
 | [Writeups](Writeups/) | Room/resource/challenge writeups and access notes |
-| [Findings](Findings/) | Phishing cases, EICAR, sandbox, Navigator and atomic-test evidence |
-| [Incident Report](Incident%20Report/) | Incident report and worked training scenario |
+| [Findings](Findings/) | Phishing cases, EICAR, sandbox, Navigator and atomic-test documentation |
+| [Incident Report](Incident%20Report/) | Incident report template and worked training scenario |
 | [Cheat Sheet](Cheat%20Sheet/) | IOC reference and phishing red-flag checklist |
-| [Reports](Reports/) | Weekly report, professional technical report, presentation outline and final checklist |
+| [Evidence](Evidence/) | Fourteen selected original screenshots |
+| [Reports](Reports/) | Weekly report, submission checklist and presentation outline |
 
 ## TryHackMe access and completion note
+
 The Week 05 assignment includes rooms that may be restricted by the account's subscription. The MITRE and Pyramid of Pain room pages indicated Premium/Max access in the earlier review. The corresponding learning objectives are covered in the Week 05 study material; however, a locked room must not be represented as a completed TryHackMe room unless its own completion state is visible in the account. Use room-specific writeups to distinguish platform completion from equivalent topic coverage.
 
 - [Cyber Kill Chain](https://tryhackme.com/room/cyberkillchainzmt)
@@ -49,19 +52,10 @@ The Week 05 assignment includes rooms that may be restricted by the account's su
 - [Intro to Cyber Threat Intel](https://tryhackme.com/room/cyberthreatintel)
 - Optional: [Threat Intelligence Tools](https://tryhackme.com/room/threatinteltools) and [Yara](https://tryhackme.com/room/yara)
 
-## Evidence upload locations
-- Three phishing case folders: `Findings/Phishing-01/`, `Phishing-02/`, `Phishing-03/`
-- EICAR: `Findings/EICAR/`
-- Sandbox reports: `Findings/Public-Sandbox-01/` and `Public-Sandbox-02/`
-- ATT&CK Navigator: `Findings/ATTACK-Navigator/`
-- Atomic tests: `Findings/Atomic-T1059.001/`, `Atomic-T1136.001/`, `Atomic-T1053.005/`
-- Incident report attachments: `Incident Report/`
-- Presentation screenshots: `Reports/Presentation-Evidence/`
-
-## Reports
-- [Weekly Report](Reports/Week-05-Weekly-Report.md)
-- [Weekly Report](Reports/Week-05-Weekly-Report.md)
+## Reports and evidence
+- [Week 05 Weekly Report](Reports/Week-05-Weekly-Report.md)
 - [Submission Checklist](Reports/Submission-Checklist.md)
+- [Uploaded Evidence](Evidence/)
 
 ## Lab safety and evidence integrity
 - Never download or execute live malware. Use EICAR only for local antivirus validation and public sandbox reports for behavioural review.

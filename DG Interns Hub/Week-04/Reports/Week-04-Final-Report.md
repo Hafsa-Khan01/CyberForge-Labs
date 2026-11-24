@@ -3,16 +3,15 @@
 **Analyst:** Hafsa Khan  
 **Programme:** DG Interns Hub  
 **Topic:** SIEM deployment, telemetry ingestion, detection engineering and SOC triage  
-**Reporting date:** 21 November 2026
+**Reporting date:** 24 November 2026
 
 ## Executive summary
 
-Week 04 focused on practical Security Information and Event Management (SIEM) workflows using Splunk and Wazuh. The assigned learning and practical activities have been completed, including both TryHackMe rooms, SIEM and log-ingestion work, SPL detection exercises, Wazuh monitoring, controlled validation and SOC triage documentation.
+Week 04 focused on practical Security Information and Event Management (SIEM) workflows using Splunk and Wazuh. The analyst confirmed completion of the assigned learning and practical activities, including both TryHackMe rooms, SIEM and log-ingestion work, SPL detection exercises, Wazuh monitoring, controlled validation and SOC triage documentation.
 
-The report consolidates the technical objectives, implementation workflow, detection coverage and investigation practices. Original screenshots and supporting exports will be attached to the corresponding evidence locations as the final submission step.
+This report consolidates the technical objectives, implementation workflow, detection coverage and investigation practices. Eight selected screenshots are published in the [Evidence folder](../Evidence/).
 
-## 1. Learning objectives completed
-
+## 1. Learning objectives
 - Explain SIEM architecture and the event-to-alert lifecycle.
 - Understand collection and ingestion from Windows and Linux endpoints.
 - Use SPL to filter, extract, aggregate and visualise security events.
@@ -23,8 +22,7 @@ The report consolidates the technical objectives, implementation workflow, detec
 
 ## 2. TryHackMe room completion
 
-Both assigned rooms were completed:
-
+The analyst confirmed completion of both assigned rooms:
 1. **Introduction to SIEM** — https://tryhackme.com/room/introtosiem
 2. **Splunk: Exploring SPL** — https://tryhackme.com/room/splunkexploringspl
 
@@ -56,9 +54,8 @@ Authorised lab activities included controlled SSH authentication testing and Nma
 Three triage records are included for investigating authentication failures, suspicious PowerShell activity and network discovery/unusual connections. The investigation workflow considers alert context, affected assets and accounts, related events, baseline behaviour, assessment, confidence, verdict and response actions.
 
 ## 8. Deliverables
-
 - Eight SIEM theory notes.
-- Two completed TryHackMe room writeups.
+- Two TryHackMe room writeups.
 - Supplementary SIEM and SPL practical references.
 - Five SPL detection searches.
 - Wazuh rule and monitoring documentation.
@@ -69,24 +66,9 @@ Three triage records are included for investigating authentication failures, sus
 
 ## 9. Evidence register
 
-Original screenshots and exports will be attached to the relevant folders and mapped through [Evidence Register](../Findings/Evidence-Register.md). The evidence set should include the SIEM interface, ingested telemetry, detection results, Wazuh monitoring, validation activity and triage records. Captions should identify the relevant host, tool, timestamp and what the image demonstrates.
+The [Evidence Register](../Findings/Evidence-Register.md) connects practical claims to artifacts. Eight selected screenshots are available in [Evidence](../Evidence/). Captions below describe only what is visible in each capture.
 
-## 10. Conclusion
-
-Week 04 learning and practical activities are complete. The work demonstrates an end-to-end understanding of SIEM telemetry, SPL-based detection, Wazuh monitoring and SOC alert triage. The remaining submission task is to attach the original screenshots and supporting exports, then perform the final repository review.
-
-## References
-- [Splunk Documentation](https://docs.splunk.com/)
-- [Splunk Search Reference](https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/WhatsInThisManual)
-- [Wazuh Documentation](https://documentation.wazuh.com/)
-- [Wazuh Ruleset](https://documentation.wazuh.com/current/user-manual/ruleset/index.html)
-- [MITRE ATT&CK T1110 — Brute Force](https://attack.mitre.org/techniques/T1110/)
-- [MITRE ATT&CK T1046 — Network Service Discovery](https://attack.mitre.org/techniques/T1046/)
-
-
-## 11. Evidence-based technical review
-
-The supplied screenshot set was reviewed separately from the learning notes. The eight selected Splunk screenshots show the following results:
+## 10. Evidence-based technical review
 
 | Evidence ID | Observation |
 |---|---|
@@ -100,10 +82,21 @@ The supplied screenshot set was reviewed separately from the learning notes. The
 | W4-08 | Linux `linux_secure` SSH failed-password search returned three events. |
 
 ### Evidence interpretation
+
 The screenshots demonstrate searches across Windows and Linux authentication telemetry, event aggregation, dashboard visualisation, and alert configuration/review. The displayed failed-logon count is higher than the successful count in that dashboard dataset; this is an observation about the displayed data and is not proof of compromise.
 
 ### Evidence limitations
-The screenshots show different dates, hosts, interfaces and time ranges. The 4,939-event result is explicitly partial. The configured alert “kareem” and triggered alert “Bruteforce Login Attempts” are different alerts and must not be presented as one alert lifecycle. The dashboard screenshot is in edit mode, and the Add Data screenshot shows source selection rather than completed ingestion. TryHackMe completion pages were not included in the screenshot ZIP; room completion is based on the analyst's confirmation.
 
-### Final evidence attachments
-Attach the eight selected original Splunk screenshots, the two TryHackMe completion screenshots if required, and any available final dashboard/export files. Keep source images intact and redact credentials or unrelated personal information.
+The screenshots show different dates, hosts, interfaces and time ranges. The 4,939-event result is explicitly partial. The configured alert “kareem” and triggered alert “Bruteforce Login Attempts” are different alerts and must not be presented as one alert lifecycle. The dashboard screenshot is in edit mode. The Add Data screenshot shows source selection rather than completed ingestion. TryHackMe completion pages were not included in the uploaded image set; room completion is based on the analyst's confirmation.
+
+## 11. Conclusion
+
+Week 04 learning and practical activities are complete as confirmed by the analyst. The repository contains the weekly notes, room writeups, detection references, triage documentation, report and eight selected screenshots. The report distinguishes observed screenshot results from broader completion claims and records the limitations visible in the evidence.
+
+## References
+- [Splunk Documentation](https://docs.splunk.com/)
+- [Splunk Search Reference](https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/WhatsInThisManual)
+- [Wazuh Documentation](https://documentation.wazuh.com/)
+- [Wazuh Ruleset](https://documentation.wazuh.com/current/user-manual/ruleset/index.html)
+- [MITRE ATT&CK T1110 — Brute Force](https://attack.mitre.org/techniques/T1110/)
+- [MITRE ATT&CK T1046 — Network Service Discovery](https://attack.mitre.org/techniques/T1046/)

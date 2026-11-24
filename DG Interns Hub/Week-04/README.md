@@ -3,24 +3,23 @@
 **Analyst:** Hafsa Khan  
 **Programme:** DG Interns Hub  
 **Focus:** SIEM deployment, log ingestion, SPL detection engineering, Wazuh monitoring and SOC alert triage  
-**Status:** Completed. Original screenshots and supporting exports are to be attached by the analyst.
+**Status:** Learning and practical activities completed; selected screenshot evidence uploaded.
 
 ## Week 04 completion summary
 
 | Deliverable | Status |
 |---|---|
 | Eight SIEM theory notes | Complete |
-| TryHackMe — Introduction to SIEM | Complete |
-| TryHackMe — Splunk: Exploring SPL | Complete |
-| SIEM and log-ingestion practical work | Complete |
-| Splunk SPL exercises and detection searches | Complete |
-| Wazuh monitoring and rule work | Complete |
-| Scheduled alerts and dashboard work | Complete |
-| Controlled SSH and Nmap validation | Complete |
-| Three SOC triage records | Complete |
+| TryHackMe — Introduction to SIEM | Complete, as confirmed by analyst |
+| TryHackMe — Splunk: Exploring SPL | Complete, as confirmed by analyst |
+| SIEM and log-ingestion practical work | Complete, as confirmed by analyst |
+| Splunk SPL exercises and detection searches | Complete, as confirmed by analyst |
+| Wazuh monitoring and rule work | Complete, as confirmed by analyst |
+| Scheduled alerts and dashboard work | Complete, as confirmed by analyst |
+| Controlled SSH and Nmap validation | Complete, as confirmed by analyst |
+| Three SOC triage records | Documented |
 | Cheat sheets and final report | Complete |
-| Presentation | Prepared |
-| Original screenshots and supporting exports | To be attached |
+| Selected screenshot evidence | Uploaded — 8 images |
 
 ## TryHackMe rooms
 1. [Introduction to SIEM](https://tryhackme.com/room/introtosiem)
@@ -30,12 +29,13 @@
 | Folder / file | Contents |
 |---|---|
 | [Notes](Notes/) | Eight SIEM theory notes |
-| [Writeups](Writeups/) | Writeups for both completed TryHackMe rooms |
+| [Writeups](Writeups/) | Writeups for both assigned rooms |
 | [Alternative-Labs](Alternative-Labs/) | Supplementary SIEM and SPL practical references |
 | [Findings](Findings/) | Evidence register and SOC triage records |
 | [Detections](Detections/) | SPL detection searches, alert/dashboard guidance and Wazuh rule |
 | [Cheat Sheet](Cheat%20Sheet/) | SPL commands and SIEM alert triage reference |
-| [Reports](Reports/) | Weekly report, professional technical report and submission checklist |
+| [Evidence](Evidence/) | Eight selected original Splunk screenshots |
+| [Reports](Reports/) | Weekly final report, submission checklist and presentation outline |
 
 ## Technical coverage
 - SIEM architecture, event collection, parsing, normalisation and alert lifecycle.
@@ -48,11 +48,11 @@
 
 ## Reports and evidence
 - [Week 04 Final Report](Reports/Week-04-Final-Report.md)
-- [Final Report](Reports/Week-04-Final-Report.md)
 - [Submission Checklist](Reports/Submission-Checklist.md)
 - [Evidence Register](Findings/Evidence-Register.md)
+- [Uploaded Evidence](Evidence/)
 
-Learning and practical work are marked complete as confirmed by the analyst. Screenshots and exports are supporting submission evidence and will be attached separately. Do not add fabricated outputs or expose passwords, tokens, private keys or sensitive personal data.
+The report's evidence review identifies what each uploaded screenshot demonstrates and notes limitations where the screenshot alone does not establish a complete alert lifecycle or final validation result. Do not add fabricated outputs or expose passwords, tokens, private keys or sensitive personal data.
 
 ## References
 - [Splunk Documentation](https://docs.splunk.com/)
