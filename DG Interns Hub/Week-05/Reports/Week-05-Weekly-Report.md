@@ -1,7 +1,5 @@
 # Week 05 — Weekly Technical Report
 
-<badge color="success">COMPLETED — 100%</badge>
-
 **Analyst:** Hafsa Khan  
 **Track:** DG Interns Hub  
 **Focus:** Phishing, Malware Triage, Threat Intelligence and Incident Response  
