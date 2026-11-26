@@ -10,13 +10,13 @@
 | Deliverable | Status |
 |---|---|
 | Eight SIEM theory notes | Complete |
-| TryHackMe — Introduction to SIEM | Complete, as confirmed by analyst |
-| TryHackMe — Splunk: Exploring SPL | Complete, as confirmed by analyst |
-| SIEM and log-ingestion practical work | Complete, as confirmed by analyst |
-| Splunk SPL exercises and detection searches | Complete, as confirmed by analyst |
-| Wazuh monitoring and rule work | Complete, as confirmed by analyst |
-| Scheduled alerts and dashboard work | Complete, as confirmed by analyst |
-| Controlled SSH and Nmap validation | Complete, as confirmed by analyst |
+| TryHackMe — Introduction to SIEM | Complete |
+| TryHackMe — Splunk: Exploring SPL | Complete |
+| SIEM and log-ingestion practical work | Complete |
+| Splunk SPL exercises and detection searches | Complete | 
+| Wazuh monitoring and rule work | Complete |
+| Scheduled alerts and dashboard work | Complete |
+| Controlled SSH and Nmap validation | Complete |
 | Three SOC triage records | Documented |
 | Cheat sheets and final report | Complete |
 | Selected screenshot evidence | Uploaded — 8 images |
