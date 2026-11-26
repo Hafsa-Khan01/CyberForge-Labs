@@ -34,7 +34,7 @@
 | [Findings](Findings/) | Evidence register and SOC triage records |
 | [Detections](Detections/) | SPL detection searches, alert/dashboard guidance and Wazuh rule |
 | [Cheat Sheet](Cheat%20Sheet/) | SPL commands and SIEM alert triage reference |
-| [Evidence](Evidence/) | Eight selected original Splunk screenshots |
+| [Evidence](Evidence/) | Eight reference/illustrative screenshots |
 | [Reports](Reports/) | Weekly final report, submission checklist and presentation outline |
 
 ## Technical coverage
