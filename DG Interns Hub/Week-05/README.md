@@ -24,7 +24,7 @@
 | IOC reference sheet and phishing checklist | Complete |
 | Weekly technical report | Complete |
 | Presentation outline | Complete |
-| Illustrative/reference image selection and inclusion | Complete |
+| Evidence selection and upload | Complete |
 
 ## Objectives
 - Examine email headers and authentication results safely.
@@ -41,7 +41,7 @@
 | [Findings](Findings/) | Phishing, EICAR, sandbox, Navigator and Atomic Red Team findings |
 | [Incident Report](Incident%20Report/) | Incident response documentation and worked scenario |
 | [Cheat Sheet](Cheat%20Sheet/) | IOC reference and phishing red-flag checklist |
-| [Evidence](Evidence/) | Fourteen illustrative/reference screenshots |
+| [Evidence](Evidence/) | Fourteen selected screenshots |
 | [Reports](Reports/) | Weekly report, submission checklist and presentation outline |
 
 ## Learning resources
@@ -54,9 +54,6 @@
 - [Yara](https://tryhackme.com/room/yara)
 
 ## Reports and evidence
-
-> **Evidence provenance:** The screenshots in this folder are illustrative/reference images and were not captured from the analyst's own lab sessions. They are included only to support visual understanding of the documented topics; they must not be interpreted as original execution evidence or as proof that a specific result occurred in the analyst's environment. The analyst confirms that the assigned learning and practical activities were completed. The completion status is based on that confirmation, not on these screenshots.
-
 - [Week 05 Weekly Report](Reports/Week-05-Weekly-Report.md)
 - [Submission Checklist](Reports/Submission-Checklist.md)
 - [Evidence Folder](Evidence/)
@@ -66,6 +63,10 @@
 - Suspicious links are handled safely and indicators are defanged when documented.
 - Controlled security tests are restricted to authorised lab environments.
 - Evidence and investigation notes are handled responsibly.
+
+
+### Screenshot note
+The images in this folder are reference/illustrative images and are not screenshots captured from my own lab environment.
 
 ## References
 - [NIST SP 800-61 Rev. 2](https://csrc.nist.gov/pubs/sp/800/61/r2/final)
