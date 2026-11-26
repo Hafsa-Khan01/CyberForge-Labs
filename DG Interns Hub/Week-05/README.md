@@ -1,7 +1,5 @@
 # Week 05 — Phishing, Malware Triage, Threat Intelligence & Incident Response
 
-<badge color="success">COMPLETED — 100%</badge>
-
 **Analyst:** Hafsa Khan  
 **Programme:** DG Interns Hub  
 **Focus:** Tier 1 / Tier 2 blue-team investigation  
