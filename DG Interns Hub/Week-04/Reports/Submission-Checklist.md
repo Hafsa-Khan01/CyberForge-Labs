@@ -28,7 +28,7 @@
 - [x] Final technical report.
 - [x] Presentation outline.
 - [x] Evidence register.
-- [x] Eight selected screenshots uploaded under [Evidence](../Evidence/).
+- [x] Eight illustrative/reference screenshots included under [Evidence](../Evidence/); not original lab captures.
 - [x] Repository links and evidence filenames reviewed.
 
 ## Final quality checks
@@ -37,4 +37,4 @@
 - [ ] Attach any additional raw exports required by the programme submission.
 - [ ] Verify final submission access and requirements.
 
-**Completion note:** Assigned learning and practical tasks are complete as confirmed by the analyst. The selected screenshot set is uploaded; the remaining checks concern evidence quality, any additional source exports and final submission requirements.
+**Completion note:** Assigned learning and practical tasks are complete as confirmed by the analyst. The images in the Evidence folder are illustrative/reference material, not screenshots captured from the analyst's own lab sessions. They are not presented as original execution proof.

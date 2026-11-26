@@ -3,7 +3,7 @@
 **Analyst:** Hafsa Khan  
 **Programme:** DG Interns Hub  
 **Focus:** SIEM deployment, log ingestion, SPL detection engineering, Wazuh monitoring and SOC alert triage  
-**Status:** Learning and practical activities completed; selected screenshot evidence uploaded.
+**Status:** Assigned learning and practical activities completed, as confirmed by the analyst.
 
 ## Week 04 completion summary
 
@@ -34,7 +34,7 @@
 | [Findings](Findings/) | Evidence register and SOC triage records |
 | [Detections](Detections/) | SPL detection searches, alert/dashboard guidance and Wazuh rule |
 | [Cheat Sheet](Cheat%20Sheet/) | SPL commands and SIEM alert triage reference |
-| [Evidence](Evidence/) | Eight selected original Splunk screenshots |
+| [Evidence](Evidence/) | Eight illustrative/reference screenshots |
 | [Reports](Reports/) | Weekly final report, submission checklist and presentation outline |
 
 ## Technical coverage
@@ -47,6 +47,9 @@
 - Alert investigation, evidence handling, tuning and SOC triage.
 
 ## Reports and evidence
+
+> **Evidence provenance:** The screenshots in this folder are illustrative/reference images and were not captured from the analyst's own lab sessions. They are included only to support visual understanding of the documented topics; they must not be interpreted as original execution evidence or as proof that a specific result occurred in the analyst's environment. The analyst confirms that the assigned learning and practical activities were completed. The completion status is based on that confirmation, not on these screenshots.
+
 - [Week 04 Final Report](Reports/Week-04-Final-Report.md)
 - [Submission Checklist](Reports/Submission-Checklist.md)
 - [Evidence Register](Findings/Evidence-Register.md)

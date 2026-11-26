@@ -9,7 +9,7 @@
 
 Week 04 focused on practical Security Information and Event Management (SIEM) workflows using Splunk and Wazuh. The analyst confirmed completion of the assigned learning and practical activities, including both TryHackMe rooms, SIEM and log-ingestion work, SPL detection exercises, Wazuh monitoring, controlled validation and SOC triage documentation.
 
-This report consolidates the technical objectives, implementation workflow, detection coverage and investigation practices. Eight selected screenshots are published in the [Evidence folder](../Evidence/).
+This report consolidates the technical objectives, implementation workflow, detection coverage and investigation practices. Eight illustrative/reference screenshots are included in the [Evidence folder](../Evidence/).
 
 ## 1. Learning objectives
 - Explain SIEM architecture and the event-to-alert lifecycle.
@@ -66,7 +66,10 @@ Three triage records are included for investigating authentication failures, sus
 
 ## 9. Evidence register
 
-The [Evidence Register](../Findings/Evidence-Register.md) connects practical claims to artifacts. Eight selected screenshots are available in [Evidence](../Evidence/). Captions below describe only what is visible in each capture.
+> **Evidence provenance:** The screenshots in this folder are illustrative/reference images and were not captured from the analyst's own lab sessions. They are included only to support visual understanding of the documented topics; they must not be interpreted as original execution evidence or as proof that a specific result occurred in the analyst's environment. The analyst confirms that the assigned learning and practical activities were completed. The completion status is based on that confirmation, not on these screenshots.
+
+
+The [Evidence Register](../Findings/Evidence-Register.md) connects practical claims to artifacts. Eight illustrative/reference screenshots are available in [Evidence](../Evidence/). The descriptions below explain the concepts represented by the images; they are not records of screenshots captured from the analyst's own lab.
 
 ## 10. Evidence-based technical review
 
@@ -83,11 +86,11 @@ The [Evidence Register](../Findings/Evidence-Register.md) connects practical cla
 
 ### Evidence interpretation
 
-The screenshots demonstrate searches across Windows and Linux authentication telemetry, event aggregation, dashboard visualisation, and alert configuration/review. The displayed failed-logon count is higher than the successful count in that dashboard dataset; this is an observation about the displayed data and is not proof of compromise.
+The reference images depict examples of Windows and Linux authentication searches, event aggregation, dashboard visualisation and alert configuration/review. They do not establish that these exact outputs were generated in the analyst's own environment. The displayed failed-logon count is higher than the successful count in that dashboard dataset; this is an observation about the displayed data and is not proof of compromise.
 
 ### Evidence limitations
 
-The screenshots show different dates, hosts, interfaces and time ranges. The 4,939-event result is explicitly partial. The configured alert “kareem” and triggered alert “Bruteforce Login Attempts” are different alerts and must not be presented as one alert lifecycle. The dashboard screenshot is in edit mode. The Add Data screenshot shows source selection rather than completed ingestion. TryHackMe completion pages were not included in the uploaded image set; room completion is based on the analyst's confirmation.
+The reference screenshots show different dates, hosts, interfaces and time ranges. The 4,939-event result is explicitly partial. The configured alert “kareem” and triggered alert “Bruteforce Login Attempts” are different alerts and must not be presented as one alert lifecycle. The dashboard screenshot is in edit mode. The Add Data screenshot shows source selection rather than completed ingestion. TryHackMe completion pages were not included in the uploaded image set; room completion is based on the analyst's confirmation.
 
 ## 11. Conclusion
 

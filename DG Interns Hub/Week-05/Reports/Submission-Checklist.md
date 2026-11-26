@@ -32,8 +32,8 @@
 - [x] LinkedIn post drafts excluded from this repository, as intended.
 
 ## Evidence
-- [x] Fourteen selected screenshots uploaded to [Evidence](../Evidence/).
-- [x] Evidence filenames W5-01 through W5-14 correspond to the weekly report register.
+- [x] Fourteen illustrative/reference screenshots included in [Evidence](../Evidence/); not original lab captures.
+- [x] Reference image filenames W5-01 through W5-14 correspond to the weekly report's topic register.
 - [x] Evidence folder organised directly under the Week-05 directory.
 
 ## Final review
@@ -41,5 +41,7 @@
 - [x] Week 05 deliverables reviewed.
 - [x] Repository structure checked.
 - [x] Week 05 marked complete.
+
+**Evidence note:** The images in the Evidence folder are illustrative/reference material, not screenshots captured from the analyst's own lab sessions. They are not presented as original execution proof.
 
 **Final submission status: WEEK 05 — COMPLETED.**
