@@ -34,13 +34,12 @@ Testing of a live hospital system must be supported by explicit written authoriz
 
 ## 3. Methodology and Tools
 
-| Phase | Assessment focus | Tools / methods |
-|---|---|---|
-| M1 — Initial reconnaissance | Domain, DNS, TLS, HTTP responses, technology fingerprinting and public portal inspection | Kali Linux, WHOIS, DNSRecon, Nslookup, Dig, Nmap, cURL, WhatWeb, WAFW00F and browser inspection |
-| M2 — PDF document security | Password-protection review and hash-based password testing of three protected PDFs | PDF hash utilities, John the Ripper and document validation |
-| M3 — Legacy data exposure | Public legacy directory and database-backup exposure review | Browser, command-line inspection and SQL analysis utilities |
-| M4 — Reporting | Evidence review, findings, risk assessment and remediation | Technical report preparation |
-
+| Phase | Assessment focus | Tools / methods | Status |
+|---|---|---|---|
+| M1 — Reconnaissance and Network Enumeration | Domain, DNS, TLS, HTTP responses, technology fingerprinting and network/service observations | Kali Linux, WHOIS, DNSRecon, Nslookup, Dig, Nmap, cURL, WhatWeb, WAFW00F and browser inspection | Documented in the assessment report |
+| M2 — Patient Portal Assessment | Public patient/staff portal review, PHP/MySQL error disclosure and access-control considerations | Browser inspection and response review | Documented in the assessment report |
+| M3 — PDF Document Password Security Testing | Password-protection review and hash-based password testing of three protected PDFs | PDF hash utilities, John the Ripper and document validation | Documented in the assessment report |
+| M4 — Legacy Directory and SQL Backup Exposure | Public legacy directory listing and database-backup exposure review | Browser, command-line inspection and SQL analysis utilities | Documented in the assessment report |
 ## 4. M1 — Reconnaissance and Network Enumeration
 
 ### 4.1 Domain and network reconnaissance
