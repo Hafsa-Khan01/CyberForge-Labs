@@ -65,32 +65,29 @@ The patient portal review identified an area requiring authorization testing. A 
 
 The assessment report documents public patient-portal inspection and PHP/MySQL warning or error disclosure. It also identifies an access-control concern requiring further validation. A dashboard view or error response alone does not demonstrate cross-patient access.
 
-The public repository does not include the original PDFs, their contents, patient details, recovery hashes or recovered passwords. Those materials are sensitive and must remain excluded from public version control.
+The report records a patient-portal access-control concern that requires further validation. A dashboard view alone does not prove cross-patient access. Validation should use approved test accounts and synthetic records only.
 
-**Security impact:** If confidential documents rely on weak or guessable passwords, an unauthorized party who obtains a copy may be able to recover the password and read the contents.
+**Security impact:** Verbose application errors may disclose implementation details. An authorization weakness, if confirmed, could permit access to records outside a user's permissions.
 
 **Recommended controls:**
-- Use strong, unique encryption passwords generated and distributed through a separate secure channel.
-- Avoid treating PDF passwords as the only access-control boundary.
-- Restrict document storage and downloads through authenticated, server-side authorization.
-- Monitor access and download events for unusual activity.
-- Review document-sharing and retention procedures.
+- Disable detailed PHP/MySQL error display in production and log diagnostic details privately.
+- Return generic error messages to users.
+- Validate server-side object-level authorization using approved test accounts and synthetic patient records.
+- Ensure each account can access only its own authorized records.
 
 ## 6. M3 — PDF Document Password Security Testing
 
 The assessment report documents password-security testing against three protected PDF files, including hash-based password testing and verification that the documents could be opened after password recovery.
 
-No personal names, contact details, identity numbers, salary figures, ownership percentages, database rows or raw backup contents are reproduced here.
+The public repository does not include the original PDFs, their contents, patient details, recovery hashes or recovered passwords. Those materials are sensitive and must remain excluded from public version control.
 
-**Security impact:** Public access to an unprotected database backup can expose sensitive business and personal information and may enable further compromise if the backup contains credentials, configuration details or other secrets.
+**Security impact:** Weak or guessable document passwords can allow an unauthorized party who obtains a copy to recover the password and read confidential contents.
 
 **Recommended controls:**
-- Remove database backups and legacy archives from public web roots.
-- Store backups in private, access-controlled storage.
-- Apply least-privilege access and strong encryption at rest and in transit.
-- Rotate any credentials or secrets that may have been included in an exposed backup.
-- Review web-server access logs and incident timelines to determine whether the files were accessed.
-- Establish a controlled backup lifecycle, including retention and secure deletion.
+- Use strong, unique encryption passwords generated and distributed through a separate secure channel.
+- Do not rely on PDF passwords as the only access-control boundary.
+- Restrict document storage and downloads through authenticated, server-side authorization.
+- Monitor access and download events for unusual activity.
 
 ## 7. M4 — Legacy Directory and SQL Backup Exposure
 
