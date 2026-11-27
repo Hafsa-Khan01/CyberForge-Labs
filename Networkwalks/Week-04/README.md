@@ -16,10 +16,10 @@ The technical report records the procedures, observations, risk assessment, limi
 
 | Phase | Focus | Reported outcome |
 |---|---|---|
-| M1 — Initial reconnaissance | DNS, WHOIS, TLS, HTTP responses, technology fingerprinting and public login-page inspection | Completed |
-| M2 — PDF document security | Review of three password-protected PDF files, hash-based password testing and document-open verification | Completed in the private assessment report; sensitive document contents excluded |
-| M3 — Legacy data exposure | Review of a publicly exposed legacy directory and database-backup exposure | Exposure documented in the private assessment report; personal and financial records excluded |
-| M4 — Reporting | Findings, risk assessment, limitations and remediation recommendations | Completed |
+| M1 — Reconnaissance and Network Enumeration | DNS, WHOIS, TLS, HTTP responses, technology fingerprinting and network/service observations | Documented |
+| M2 — Patient Portal Assessment | Public portal review, PHP/MySQL error disclosure and access-control considerations | Documented; cross-patient access remains unvalidated |
+| M3 — PDF Document Password Security Testing | Password-protection review, hash-based testing and document-open verification for three PDFs | Documented in the assessment report; sensitive document contents excluded |
+| M4 — Legacy Directory and SQL Backup Exposure | Review of public legacy directory listing and exposed database-backup material | Exposure documented; personal and financial records excluded |
 
 ## Principal observations documented
 
