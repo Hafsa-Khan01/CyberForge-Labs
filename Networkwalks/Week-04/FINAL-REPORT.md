@@ -50,21 +50,13 @@ The assessment recorded public DNS and domain-registration information, the reso
 
 The web server was identified as LiteSpeed in the captured responses. WhatWeb and cURL returned different HTTP status codes during separate requests. The difference was recorded as an observation; no definitive cause is assigned without repeatable validation under controlled request conditions.
 
-### 4.3 Public portal inspection
-
-The staff and patient login pages were reviewed for their visible form structure and response behaviour. The report also records PHP/MySQL warning or error disclosure.
-
-Verbose application errors can reveal implementation details and should not be returned to unauthenticated users. The report treats the error disclosure as an information-exposure concern; it does not infer a successful authentication bypass solely from an error message.
-
-### 4.4 Access-control considerations
-
-The patient portal review identified an area requiring authorization testing. A portal dashboard or page response is not sufficient evidence of cross-user data access. Validation should be performed only with approved test accounts and synthetic patient records, confirming that each user can access only their own authorized resources.
-
 ## 5. M2 — Patient Portal Assessment
 
-The assessment report documents public patient-portal inspection and PHP/MySQL warning or error disclosure. It also identifies an access-control concern requiring further validation. A dashboard view or error response alone does not demonstrate cross-patient access.
+The staff and patient login pages were reviewed for their visible form structure and response behaviour. The assessment report documents PHP/MySQL warning or error disclosure and records the patient-portal access-control review.
 
-The report records a patient-portal access-control concern that requires further validation. A dashboard view alone does not prove cross-patient access. Validation should use approved test accounts and synthetic records only.
+A portal dashboard or application error alone does not demonstrate cross-patient access. Any cross-account authorization claim must be supported by controlled testing with approved test accounts and synthetic patient records. This report does not present cross-patient access as a confirmed finding.
+
+Verbose application errors can reveal implementation details and should not be returned to unauthenticated users. The report treats the error disclosure as an information-exposure concern; it does not infer a successful authentication bypass solely from an error message.
 
 **Security impact:** Verbose application errors may disclose implementation details. An authorization weakness, if confirmed, could permit access to records outside a user's permissions.
 
