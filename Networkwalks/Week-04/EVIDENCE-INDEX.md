@@ -8,11 +8,10 @@
 
 | Evidence ID | Phase | Evidence category | Reported purpose | Handling |
 |---|---|---|---|---|
-| M1-E01–M1-E04 | M1 — Reconnaissance | DNS, WHOIS, TLS, HTTP and technology-review captures | Support domain and public-surface observations | Keep raw outputs private; sanitize before publication |
-| M1-E05–M1-E06 | M1 — Portal review | Public login-page and form-structure captures | Document visible login-page behaviour without exposing credentials | Redact URLs/parameters if they contain sensitive values |
-| M2-E01–M2-E09 | M2 — PDF security | PDF metadata/hash-testing and document-open verification captures | Support the report's assessment of three protected PDF files | Private evidence only; never publish patient documents, contents, hashes usable for recovery, or passwords |
-| M3-E01–M3-E03 | M3 — Legacy exposure | Public directory and database-backup exposure captures | Support the report's legacy exposure observations | Private evidence only; redact or exclude all personal and financial records |
-| M4-E01 | M4 — Reporting | Final report and findings summary | Consolidate methodology, observations, risk and remediation | Publish only the sanitized report |
+| M1-E01–M1-E04 | M1 — Reconnaissance and Network Enumeration | DNS, WHOIS, TLS, HTTP and network/service reconnaissance captures | Support domain and public-surface observations | Keep raw outputs private; sanitize before publication |
+| M2-E01–M2-E02 | M2 — Patient Portal Assessment | Portal interface and PHP/MySQL error-related captures | Document portal observations and error disclosure; access-control concern remains unvalidated | Redact URLs, parameters and sensitive values |
+| M3-E01–M3-E09 | M3 — PDF Document Password Security Testing | PDF hash/password-testing and document-open verification captures | Support the assessment of three protected PDF files | Private evidence only; never publish patient documents, contents, recovery hashes or passwords |
+| M4-E01–M4-E03 | M4 — Legacy Directory and SQL Backup Exposure | Public directory and database-backup exposure captures | Support the legacy exposure observations | Private evidence only; exclude personal and financial records |
 
 ## Evidence status and limitations
 
