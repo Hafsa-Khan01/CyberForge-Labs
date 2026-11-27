@@ -1,25 +1,37 @@
 # Week 04 — Evidence Index
 
-**Project:** Mediroza General Hospital — Black-box Penetration Testing  
-**Prepared by:** Hafsa Khan
+**Project:** Mediroza General Hospital — Black-box Web Application Penetration Test  
+**Prepared by:** Hafsa Khan  
+**Programme:** NetworkWalks Academy
 
 ## Evidence register
 
-| Evidence ID | Activity | Evidence file | What it records | Status |
+| Evidence ID | Phase | Evidence category | Reported purpose | Handling |
 |---|---|---|---|---|
-| M1-E01 | Passive reconnaissance | `M1-Passive-Recon.txt` | DNS, WHOIS, TLS and initial HTTP observations | Captured locally |
-| M1-E02 | Reconnaissance checks | `M1-Phases-1-3.txt` | Initial public-surface checks; includes command environment errors | Captured locally; retain as raw record |
-| M1-E03 | Corrected public endpoint review | `M1-Phase3-Corrected.txt` | HTTP status checks and publicly exposed page links/forms | Captured locally |
-| M1-E04 | Public login-page review | `M1-Phase4-Login-Review.txt` | Staff/patient login page status, form methods and visible fields | Captured locally |
-| M1-E05 | Browser screenshots | Not uploaded | Visual confirmation of publicly accessible login pages | Not yet supplied |
+| M1-E01–M1-E04 | M1 — Reconnaissance | DNS, WHOIS, TLS, HTTP and technology-review captures | Support domain and public-surface observations | Keep raw outputs private; sanitize before publication |
+| M1-E05–M1-E06 | M1 — Portal review | Public login-page and form-structure captures | Document visible login-page behaviour without exposing credentials | Redact URLs/parameters if they contain sensitive values |
+| M2-E01–M2-E09 | M2 — PDF security | PDF metadata/hash-testing and document-open verification captures | Support the report's assessment of three protected PDF files | Private evidence only; never publish patient documents, contents, hashes usable for recovery, or passwords |
+| M3-E01–M3-E03 | M3 — Legacy exposure | Public directory and database-backup exposure captures | Support the report's legacy exposure observations | Private evidence only; redact or exclude all personal and financial records |
+| M4-E01 | M4 — Reporting | Final report and findings summary | Consolidate methodology, observations, risk and remediation | Publish only the sanitized report |
 
-## Evidence handling
+## Evidence status and limitations
 
-- The command outputs are currently in the local Week 04 working directory and have not yet been uploaded here.
-- Review and redact credentials, personal information, tokens and any sensitive data before committing screenshots or logs.
-- Keep original raw outputs separate from edited report summaries.
-- Do not include patient records, employee salary details, shareholder data or other confidential information in this public repository.
+This index describes the evidence categories referenced by the assessment report. It does not imply that every original screenshot or raw output is uploaded to this public repository. The detailed evidence set is maintained separately.
 
-## Current scope of documented work
+Before public upload, inspect each file and remove:
+- Patient names, dates of birth, diagnoses, medical record numbers and report contents
+- Employee and shareholder names, contact details, identity numbers, salaries and ownership information
+- Credentials, recovered passwords, session identifiers, API keys and other secrets
+- Raw database contents and any data that could identify an individual
 
-The available evidence supports public reconnaissance and non-invasive login-page inspection only. It does not demonstrate authentication bypass, restricted-area access, retrieval of patient PDFs, PDF decryption, or confidential data exposure.
+## Evidence integrity
+
+- Preserve original evidence in a restricted location.
+- Do not alter original captures; create separately labelled redacted copies for approved publication.
+- Keep report statements traceable to the corresponding original evidence ID.
+- Distinguish confirmed observations from items that require further validation.
+- Do not publish hashes or artefacts that would enable recovery of protected confidential documents.
+
+## Public repository boundary
+
+This repository is a sanitized presentation of the project. It intentionally excludes confidential source documents, patient records, employee/shareholder records, credentials and raw database backups.
