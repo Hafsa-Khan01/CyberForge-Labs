@@ -1,62 +1,52 @@
 # NetworkWalks — Week 04
 
-**Project:** Penetration Testing — Mediroza General Hospital  
-**Assessment type:** Black-box web application assessment  
+**Project:** Mediroza General Hospital — Web Application Penetration Test  
+**Assessment type:** Black-box assessment  
 **Prepared by:** Hafsa Khan  
-**Programme:** NetworkWalks Academy — Cybersecurity & Ethical Hacking
+**Programme:** NetworkWalks Academy  
+**Target:** https://medirozahospital.com
 
-## Work log
+## Project overview
 
-This week’s work has focused on the initial, non-invasive assessment of the target's publicly exposed web surface. The activities documented below are limited to passive reconnaissance and inspection of publicly accessible pages and response metadata.
+Week 04 documents a four-phase web application security assessment covering public-surface reconnaissance, patient-portal security review, PDF document protection, and exposure of legacy files and database backups.
 
-| Activity | Work performed | Status |
+The technical report records the procedures, observations, risk assessment, limitations and remediation guidance. This repository contains a sanitized project summary only. Patient documents, personal information, employee/shareholder records, credentials, recovered passwords and raw database contents must not be committed.
+
+## Assessment phases
+
+| Phase | Focus | Reported outcome |
 |---|---|---|
-| Initial reconnaissance | Domain, DNS records, WHOIS information and TLS certificate review | Completed |
-| Technology fingerprinting | Web server and publicly returned technology indicators reviewed with WhatWeb | Completed |
-| Public endpoint review | Homepage, robots.txt, sitemap.xml and favicon response checks | Completed |
-| Login-page inspection | Public staff and patient login pages, form methods and visible input structure reviewed without submitting credentials | Completed |
-| Security-header review | Initial response headers captured; further verification remains a separate follow-up | In progress |
+| M1 — Initial reconnaissance | DNS, WHOIS, TLS, HTTP responses, technology fingerprinting and public login-page inspection | Completed |
+| M2 — PDF document security | Review of three password-protected PDF files, hash-based password testing and document-open verification | Completed in the private assessment report; sensitive document contents excluded |
+| M3 — Legacy data exposure | Review of a publicly exposed legacy directory and database-backup exposure | Exposure documented in the private assessment report; personal and financial records excluded |
+| M4 — Reporting | Findings, risk assessment, limitations and remediation recommendations | Completed |
 
-## Key observations
+## Principal observations documented
 
-- DNS resolution returned `199.188.201.16`.
-- The observed web server identified itself as LiteSpeed.
-- The captured TLS certificate was issued for `medirozahospital.com`; the observed validity window was 14 August 2026 to 28 February 2027.
-- The homepage and the two public login pages returned HTTP 200 in the captured requests.
-- The staff and patient login pages exposed POST forms with username and password fields. The patient page also displayed an additional checkbox.
-- WhatWeb returned a 403 response during one request, while separate cURL requests returned 200. This difference is recorded as an observation, not as a confirmed vulnerability.
-- The public endpoint checks returned 200 for `/`, `/robots.txt` and `/sitemap.xml`; `/favicon.ico` returned 404.
+- Public DNS, TLS and web-server information was collected during reconnaissance.
+- The target returned different HTTP status codes to separate WhatWeb and cURL requests; the difference was recorded without assuming a cause.
+- Public staff and patient login pages and their visible form structures were reviewed.
+- The assessment report documents weak password protection affecting three PDF files. No patient names, diagnoses, report contents or recovered passwords are published here.
+- The report documents a publicly accessible legacy directory and an exposed database backup. No employee or shareholder personal, contact, identity or financial records are reproduced in this repository.
+- PHP/MySQL error disclosure and access-control concerns are discussed with appropriate evidence limitations. A login page or error message alone is not treated as proof of an authentication bypass or unauthorized patient-record access.
 
-## Tools used
+## Risk summary
 
-Kali Linux, WHOIS, DNS utilities, WhatWeb, cURL and Python.
+The private assessment report records the risk ratings and supporting evidence for the observations. Public repository material intentionally avoids reproducing sensitive records or operational details that could expose individuals. Findings that require additional validation are identified as such rather than presented as confirmed exploit paths.
 
-## Final report
+## Tools and environment
 
-- [Final assessment report](FINAL-REPORT.md)
+Kali Linux, Nmap, DNSRecon, Nslookup, Dig, WHOIS, cURL, WhatWeb, WAFW00F, John the Ripper, PDF hash utilities, browser inspection and SQL analysis utilities.
+
+## Repository contents
+
+- [Final report — sanitized project version](FINAL-REPORT.md)
 - [Evidence index](EVIDENCE-INDEX.md)
 
-## Evidence organization
+## Evidence handling
 
-Command output was saved in the local working directory under:
+The detailed report and original evidence are maintained separately from this public summary. Before uploading any supporting screenshot or log, redact patient information, employee/shareholder details, credentials, session tokens, recovered passwords, and database contents. Evidence entries marked as local or private are not represented as files available in this repository.
 
-`Networkwalks/Week-04/M1-Initial-Access/Recon/`
+## Responsible disclosure and scope
 
-Relevant local records include:
-
-- `M1-Passive-Recon.txt`
-- `M1-Phases-1-3.txt`
-- `M1-Phase3-Corrected.txt`
-- `M1-Phase4-Login-Review.txt`
-
-These local output files and screenshots still need to be reviewed for sensitive information and added to the repository before they can be linked as uploaded evidence.
-
-## Assessment status
-
-The initial public reconnaissance and login-page inspection activities are documented. This does **not** represent completion of the full penetration test. No authentication bypass, restricted-area access, patient-record retrieval, PDF decryption, or employee/shareholder data extraction is claimed.
-
-Any further authentication or access-control validation must use an instructor-approved test environment, test credentials and synthetic records. Do not access or publish real patient or employee information.
-
-## Responsible testing
-
-Testing must remain within the written assessment scope. No denial-of-service activity, social engineering, credential guessing, or access to real confidential records is included in this public work log.
+This is a training assessment record. Testing of live systems must remain within the owner's written authorization and the agreed scope. No confidential patient, employee or shareholder information should be published. The public report is deliberately sanitized and is not a substitute for the restricted full technical report.
