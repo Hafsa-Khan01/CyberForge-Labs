@@ -31,6 +31,11 @@ This week’s work has focused on the initial, non-invasive assessment of the ta
 
 Kali Linux, WHOIS, DNS utilities, WhatWeb, cURL and Python.
 
+## Final report
+
+- [Final assessment report](FINAL-REPORT.md)
+- [Evidence index](EVIDENCE-INDEX.md)
+
 ## Evidence organization
 
 Command output was saved in the local working directory under:
