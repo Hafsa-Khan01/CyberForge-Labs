@@ -41,7 +41,7 @@ Testing of a live hospital system must be supported by explicit written authoriz
 | M3 — Legacy data exposure | Public legacy directory and database-backup exposure review | Browser, command-line inspection and SQL analysis utilities |
 | M4 — Reporting | Evidence review, findings, risk assessment and remediation | Technical report preparation |
 
-## 4. M1 — Initial Reconnaissance and Portal Review
+## 4. M1 — Reconnaissance and Network Enumeration
 
 ### 4.1 Domain and network reconnaissance
 
@@ -61,9 +61,9 @@ Verbose application errors can reveal implementation details and should not be r
 
 The patient portal review identified an area requiring authorization testing. A portal dashboard or page response is not sufficient evidence of cross-user data access. Validation should be performed only with approved test accounts and synthetic patient records, confirming that each user can access only their own authorized resources.
 
-## 5. M2 — PDF Document Security
+## 5. M2 — Patient Portal Assessment
 
-The assessment report documents review of three password-protected PDF files, including hash-based password testing and verification that the documents could be opened after password recovery.
+The assessment report documents public patient-portal inspection and PHP/MySQL warning or error disclosure. It also identifies an access-control concern requiring further validation. A dashboard view or error response alone does not demonstrate cross-patient access.
 
 The public repository does not include the original PDFs, their contents, patient details, recovery hashes or recovered passwords. Those materials are sensitive and must remain excluded from public version control.
 
@@ -76,9 +76,9 @@ The public repository does not include the original PDFs, their contents, patien
 - Monitor access and download events for unusual activity.
 - Review document-sharing and retention procedures.
 
-## 6. M3 — Legacy Directory and Database-Backup Exposure
+## 6. M3 — PDF Document Password Security Testing
 
-The assessment report documents a publicly accessible legacy directory and an exposed SQL database backup. The report describes the backup as containing sensitive employee and shareholder information categories.
+The assessment report documents password-security testing against three protected PDF files, including hash-based password testing and verification that the documents could be opened after password recovery.
 
 No personal names, contact details, identity numbers, salary figures, ownership percentages, database rows or raw backup contents are reproduced here.
 
@@ -92,7 +92,21 @@ No personal names, contact details, identity numbers, salary figures, ownership 
 - Review web-server access logs and incident timelines to determine whether the files were accessed.
 - Establish a controlled backup lifecycle, including retention and secure deletion.
 
-## 7. Findings Summary
+## 7. M4 — Legacy Directory and SQL Backup Exposure
+
+The assessment report documents a publicly accessible legacy directory and an exposed SQL database backup. The backup is reported to contain staff-related and shareholder-related information categories. No personal names, contact details, identity numbers, salary figures, ownership percentages, database rows or raw backup contents are reproduced here.
+
+**Security impact:** Public access to an unprotected database backup can expose sensitive business and personal information and may disclose internal schema details.
+
+**Recommended controls:**
+- Remove database backups and legacy archives from public web roots.
+- Store backups in private, access-controlled storage.
+- Apply least-privilege access and strong encryption at rest and in transit.
+- Rotate any credentials or secrets that may have been included in exposed backups.
+- Review web-server access logs to determine whether the files were accessed.
+- Disable directory indexing and establish a controlled backup lifecycle.
+
+## 8. Findings Summary
 
 | ID | Finding | Severity in assessment | Public-report treatment |
 |---|---|---|---|
@@ -105,7 +119,7 @@ No personal names, contact details, identity numbers, salary figures, ownership 
 
 Severity labels above reflect the assessment report's recorded ratings. They should be interpreted alongside the underlying restricted evidence and the stated validation limitations.
 
-## 8. Remediation Priorities
+## 9. Remediation Priorities
 
 1. Immediately remove public access to database backups, legacy archives and confidential document directories.
 2. Determine whether exposed files were accessed, preserve relevant logs, and follow the organization's incident-response process.
@@ -116,7 +130,7 @@ Severity labels above reflect the assessment report's recorded ratings. They sho
 7. Review security headers, TLS configuration, exposed services and web-server configuration as part of routine hardening.
 8. Establish periodic external exposure reviews and secure backup-retention procedures.
 
-## 9. Limitations and Evidence Handling
+## 10. Limitations and Evidence Handling
 
 - This is a sanitized public summary, not the full restricted evidence pack.
 - No patient records, employee/shareholder records, credentials, recovered passwords, raw database rows or original PDF files are included.
@@ -124,7 +138,7 @@ Severity labels above reflect the assessment report's recorded ratings. They sho
 - Findings and severity ratings should be checked against the original evidence before being used for operational remediation decisions.
 - Public repository screenshots and logs must be individually reviewed and redacted before publication.
 
-## 10. Conclusion
+## 11. Conclusion
 
 The Week 04 assessment report documents reconnaissance, portal review, PDF document-security testing, and legacy directory/database-backup exposure analysis. The most significant reported risks relate to publicly accessible backup material and weak protection of confidential PDF documents. The recommended response is to restrict exposed resources, investigate potential access, rotate affected secrets, strengthen document controls and verify patient-portal authorization using a controlled test environment.
 
